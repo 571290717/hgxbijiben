@@ -1,1 +1,43 @@
 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
+
+
+
+使用方法：
+第一次：
+git clone https//:xxxxxx.git
+
+git config --global user.email "571290717@qq.com"
+git config --global user.name "hgx"
+
+cd xxxxxx
+
+
+git branch dev
+
+git pull
+
+git add . 
+
+git commit -m "XXXXX"
+
+git push
+
+后面就
+
+git pull
+
+
+git add .
+
+git commit -m "XXXX"
+
+git push
+
+
+
+
+
+
+
+
+ 
