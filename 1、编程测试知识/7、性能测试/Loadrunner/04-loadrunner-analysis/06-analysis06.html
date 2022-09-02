@@ -1,0 +1,795 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>附件2-Linux相关监控 | 性能测试大纲</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-chapter-fold/chapter-fold.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="../04-loadrunner-analysis/05-analysis05.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4.6"
+        data-chapter-title="附件2-Linux相关监控"
+        data-filepath="04-loadrunner-analysis/06-analysis06.md"
+        data-basepath=".."
+        data-revision="Wed May 15 2019 15:43:32 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        课程概览
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="01-overview/readme.html">
+            
+                
+                    <a href="../01-overview/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        性能测试基础知识
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01-overview/why.html">
+            
+                
+                    <a href="../01-overview/why.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        为什么学习性能测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-overview/classification_index.html">
+            
+                
+                    <a href="../01-overview/classification_index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        性能测试分类及常用指标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01-overview/process.html">
+            
+                
+                    <a href="../01-overview/process.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        性能测试流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="01-overview/loadrunner.html">
+            
+                
+                    <a href="../01-overview/loadrunner.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        LoadRunner 11安装
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="02-loadrunner/readme.html">
+            
+                
+                    <a href="../02-loadrunner/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        性能测试工具-LoadRunner
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="02-loadrunner/01-loadrunner.html">
+            
+                
+                    <a href="../02-loadrunner/01-loadrunner.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        LoadRunner介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02-loadrunner/02-VuGen01.html">
+            
+                
+                    <a href="../02-loadrunner/02-VuGen01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        VuGen操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="02-loadrunner/03-VuGen02.html">
+            
+                
+                    <a href="../02-loadrunner/03-VuGen02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        VuGen-扩展(录制、回放)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="02-loadrunner/04-VuGen03.html">
+            
+                
+                    <a href="../02-loadrunner/04-VuGen03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        VuGen-手动编写脚本
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="02-loadrunner/05-VuGen04.html">
+            
+                
+                    <a href="../02-loadrunner/05-VuGen04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        VuGen-参数化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="02-loadrunner/06-VuGen05.html">
+            
+                
+                    <a href="../02-loadrunner/06-VuGen05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        VuGen-关联
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="02-loadrunner/07-VuGen06.html">
+            
+                
+                    <a href="../02-loadrunner/07-VuGen06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        VuGen-检查点
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="02-loadrunner/08-VuGen07.html">
+            
+                
+                    <a href="../02-loadrunner/08-VuGen07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        VuGen-事务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="02-loadrunner/09-VuGen08.html">
+            
+                
+                    <a href="../02-loadrunner/09-VuGen08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        VuGen-集合点
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="03-loadrunner-controller/readme.html">
+            
+                
+                    <a href="../03-loadrunner-controller/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        LoadRunner-Controller
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="03-loadrunner-controller/01-controller01.html">
+            
+                
+                    <a href="../03-loadrunner-controller/01-controller01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Controller运行及Scenario(场景)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="03-loadrunner-controller/02-controller02.html">
+            
+                
+                    <a href="../03-loadrunner-controller/02-controller02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Goal-Oriented Scenario(目标场景)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="03-loadrunner-controller/03-controller03.html">
+            
+                
+                    <a href="../03-loadrunner-controller/03-controller03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Manual Scenario(手工场景)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="03-loadrunner-controller/04-controller04.html">
+            
+                
+                    <a href="../03-loadrunner-controller/04-controller04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        负载生成器与场景运行
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="03-loadrunner-controller/05-controller05.html">
+            
+                
+                    <a href="../03-loadrunner-controller/05-controller05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        服务器 性能资源指标监控与服务水平协议(SLA)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="03-loadrunner-controller/06-controller06.html">
+            
+                
+                    <a href="../03-loadrunner-controller/06-controller06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        IP Wizard的应用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="04-loadrunner-analysis/readme.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        LoadRunner-Analysis
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="04-loadrunner-analysis/01-analysis01.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/01-analysis01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Analysis Summary
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="04-loadrunner-analysis/02-analysis02.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/02-analysis02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        拐点图分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="04-loadrunner-analysis/03-analysis03.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/03-analysis03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        合并图的应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="04-loadrunner-analysis/04-analysis04.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/04-analysis04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        交叉结果与性能报告生成
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="04-loadrunner-analysis/05-analysis05.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/05-analysis05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        附件1-主要图表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.6" data-path="04-loadrunner-analysis/06-analysis06.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/06-analysis06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        附件2-Linux相关监控
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >性能测试大纲</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x9644;&#x4EF6;2linux&#x76F8;&#x5173;&#x76D1;&#x63A7;"><center>&#x9644;&#x4EF6;2-Linux&#x76F8;&#x5173;&#x76D1;&#x63A7;</center></h2>
+<h4 id="&#x76EE;&#x6807;">&#x76EE;&#x6807;</h4>
+<p>&#x4E86;&#x89E3;Linux&#x7CFB;&#x7EDF;&#x5E38;&#x7528;&#x76D1;&#x63A7;&#x547D;&#x4EE4;&#x548C;&#x5DE5;&#x5177;</p>
+<h4 id="linux&#x8D44;&#x6E90;&#x76D1;&#x63A7;&#x65B9;&#x5F0F;">Linux&#x8D44;&#x6E90;&#x76D1;&#x63A7;&#x65B9;&#x5F0F;</h4>
+<ol>
+<li>&#x547D;&#x4EE4;</li>
+<li>&#x7B2C;&#x4E09;&#x65B9;&#x5DE5;&#x5177;(nmon)</li>
+<li>LR(&#x9700;&#x8981;&#x5B89;&#x88C5;RPC&#x76F8;&#x5E94;&#x670D;&#x52A1;&#x5305;&#x548C;&#x5F00;&#x542F;&#x670D;&#x52A1;)</li>
+</ol>
+<h4 id="&#x4E00;&#x3001;&#x547D;&#x4EE4;-&#x65B9;&#x5F0F;">&#x4E00;&#x3001;&#x547D;&#x4EE4; &#x65B9;&#x5F0F;</h4>
+<ol>
+<li>top (&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x5668;)</li>
+<li>vmstat (&#x67E5;&#x770B;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x72B6;&#x6001;)</li>
+<li>free(&#x67E5;&#x770B;&#x672A;&#x4F7F;&#x7528;&#x7684;&#x548C;&#x5DF2;&#x4F7F;&#x7528;&#x7684;&#x5185;&#x5B58;&#x6570;&#x76EE;)</li>
+<li>iostat (&#x67E5;&#x770B;io&#x78C1;&#x76D8;&#x4FE1;&#x606F;)</li>
+<li>sar &#x7F51;&#x7EDC;</li>
+</ol>
+<h5 id="11-&#x547D;&#x4EE4;-top&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x5668;">1.1 &#x547D;&#x4EE4; top(&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x5668;)</h5>
+<p><img src="../images3/linux_01.png" alt="top"></p>
+<ol>
+<li>top&#x547D;&#x4EE4;&#x7C7B;&#x4F3C;&#x4E0E;windows&#x7684;&#x4EFB;&#x52A1;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x67E5;&#x770B;&#x5185;&#x5B58;&#x3001;CPU&#x3001;&#x8FDB;&#x7A0B;&#x7B49;&#x64CD;&#x4F5C;&#x4FE1;&#x606F;</li>
+<li>&#x5728;Linux&#x7CFB;&#x7EDF;&#x4E2D;&#x5E38;&#x7528;top&#x547D;&#x4EE4;&#x505A;&#x8D44;&#x6E90;&#x6027;&#x80FD;&#x5206;&#x6790;&#x5DE5;&#x5177;</li>
+</ol>
+<p>&#x6838;&#x5FC3;&#xFF1A;</p>
+<pre><code>1). &#x524D;&#x4E94;&#x884C;&#x663E;&#x793A;&#x7CFB;&#x7EDF;&#x6574;&#x4F53;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF1B;
+2). load average &#x4EE3;&#x8868;&#x8D1F;&#x8F7D;&#x961F;&#x5217;&#x5230;&#x73B0;&#x5728;&#x5E73;&#x5747;&#x957F;&#x5EA6;(&#x4E09;&#x4E2A;&#x65F6;&#x95F4;&#x6BB5;)&#xFF0C;1&#x5206;&#x949F;&#x3001;5&#x5206;&#x949F;&#x3001;15&#x5206;&#x949F; &#x3010;&#x91CD;&#x70B9;&#x5173;&#x6CE8;&#x3011;
+</code></pre><p>&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code>1). &#x7B2C;&#x4E00;&#x884C; &#x4EFB;&#x52A1;&#x5217;&#x961F;&#x57FA;&#x672C;&#x4FE1;&#x606F; &#x3010;&#x5173;&#x6CE8;&#x7CFB;&#x7EDF;&#x8D1F;&#x8F7D;&#x3011;
+    - 06:49:14 &#xFF1A;&#x7CFB;&#x7EDF;&#x5F53;&#x524D;&#x65F6;&#x95F4;
+    - up 2:32 &#xFF1A;&#x7CFB;&#x7EDF;&#x8FD0;&#x884C;&#x65F6;&#x95F4; 2&#x5C0F;&#x65F6;32&#x5206;&#x949F;
+    - 3 users&#xFF1A;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7528;&#x6237;&#x6570;
+    - load average&#xFF1A;&#x7CFB;&#x7EDF;&#x8D1F;&#x8F7D;&#xFF0C;&#x5373;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x7684;&#x5E73;&#x5747;&#x957F;&#x5EA6;-&#xFF08;1&#x5206;&#x949F;&#x3001;5&#x5206;&#x949F;&#x3001;15&#x5206;&#x949F;&#xFF09;&#x5230;&#x73B0;&#x5728;&#x7684;&#x5E73;&#x5747;&#x957F;&#x5EA6;
+2). &#x7B2C;&#x4E8C;&#x884C; &#x8FDB;&#x7A0B;&#x5217;&#x961F;&#x4FE1;&#x606F; &#x3010;&#x4E86;&#x89E3;&#x3011;
+    - Tasks : 201 total  &#x8FDB;&#x7A0B;&#x603B;&#x6570;
+    - 2 running  &#x6B63;&#x5728;&#x8FD0;&#x884C;&#x8FDB;&#x7A0B;&#x6570;
+    - 199  sleeping  &#x7761;&#x7720;&#x8FDB;&#x7A0B;&#x6570;
+3). &#x7B2C;&#x4E09;&#x884C; CPU&#x4FE1;&#x606F;
+    - 0.3 %us:&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x5360;&#x7528;CPU&#x767E;&#x5206;&#x6BD4;
+    - 0.3 %sy: &#x5185;&#x6838;&#x7A7A;&#x95F4;&#x5360;&#x7528;CPU&#x767E;&#x5206;&#x6BD4;
+    - 99.2%id: &#x7A7A;&#x95F2;CPU&#x767E;&#x5206;&#x6BD4; &#x3010;&#x5173;&#x6CE8;&#x3011;
+4). &#x7B2C;&#x56DB;&#x884C; &#x5185;&#x5B58;&#x4FE1;&#x606F;
+    - Mem : 3908524k ktotal  &#x7269;&#x7406;&#x5185;&#x5B58;&#x603B;&#x91CF;
+    - 1294032k k used  &#x4F7F;&#x7528;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#x603B;&#x91CF;
+    - 2614492k k free  &#x7A7A;&#x95F2;&#x5185;&#x5B58;&#x603B;&#x91CF;    &#x3010;&#x5173;&#x6CE8;&#x3011;
+    - 74352k k buffers  &#x7528;&#x4F5C;&#x5185;&#x6838;&#x7F13;&#x5B58;&#x7684;&#x5185;&#x5B58;&#x91CF;
+5). &#x7B2C;&#x4E94;&#x884C; &#x4EA4;&#x6362;&#x533A;&#x5185;&#x5B58;    &#x3010;&#x4E86;&#x89E3;&#x3011;
+    - Swap : 4046844 k total  &#x4EA4;&#x6362;&#x5206;&#x533A;&#x603B;&#x91CF;
+    - 0 k used  &#x4F7F;&#x7528;&#x7684;&#x4EA4;&#x6362;&#x533A;&#x603B;&#x91CF;
+    - 4046844 k free  &#x7A7A;&#x95F2;&#x4EA4;&#x6362;&#x533A;&#x603B;&#x91CF;
+    - 297720 k cached   &#x7F13;&#x51B2;&#x7684;&#x4EA4;&#x6362;&#x533A;&#x603B;&#x91CF;
+</code></pre><h5 id="12-&#x547D;&#x4EE4;-vmstat&#x67E5;&#x770B;&#x5185;&#x5B58;&#x660E;&#x7EC6;">1.2 &#x547D;&#x4EE4; vmstat(&#x67E5;&#x770B;&#x5185;&#x5B58;&#x660E;&#x7EC6;)</h5>
+<pre><code>1. Procs&#xFF08;&#x8FDB;&#x7A0B;&#xFF09;
+    r: &#x8FD0;&#x884C;&#x961F;&#x5217;&#x4E2D;&#x8FDB;&#x7A0B;&#x6570;&#x91CF;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x4E5F;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x662F;&#x5426;&#x9700;&#x8981;&#x589E;&#x52A0;CPU&#x3002;
+2. Memory&#xFF08;&#x5185;&#x5B58;&#xFF09;
+    swpd: &#x4F7F;&#x7528;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;&#x5982;&#x679C;swpd&#x7684;&#x503C;&#x4E0D;&#x4E3A;0&#xFF0C;&#x4F46;&#x662F;SI&#xFF0C;SO&#x7684;&#x503C;&#x957F;&#x671F;&#x4E3A;0&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x3002;
+    free: &#x7A7A;&#x95F2;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#x3002;
+3. Swap
+    si: &#x6BCF;&#x79D2;&#x4ECE;&#x4EA4;&#x6362;&#x533A;&#x5199;&#x5230;&#x5185;&#x5B58;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x7531;&#x78C1;&#x76D8;&#x8C03;&#x5165;&#x5185;&#x5B58;&#x3002;
+    so: &#x6BCF;&#x79D2;&#x5199;&#x5165;&#x4EA4;&#x6362;&#x533A;&#x7684;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;&#x7531;&#x5185;&#x5B58;&#x8C03;&#x5165;&#x78C1;&#x76D8;&#x3002;
+4. IO&#xFF08;&#x73B0;&#x5728;&#x7684;Linux&#x7248;&#x672C;&#x5757;&#x7684;&#x5927;&#x5C0F;&#x4E3A;1kb&#xFF09;
+    bi: &#x6BCF;&#x79D2;&#x8BFB;&#x53D6;&#x7684;&#x5757;&#x6570;
+    bo: &#x6BCF;&#x79D2;&#x5199;&#x5165;&#x7684;&#x5757;&#x6570;
+5. system&#xFF08;&#x7CFB;&#x7EDF;&#xFF09;
+    in: &#x6BCF;&#x79D2;&#x4E2D;&#x65AD;&#x6570;&#xFF0C;&#x5305;&#x62EC;&#x65F6;&#x949F;&#x4E2D;&#x65AD;&#x3002;
+    cs: &#x6BCF;&#x79D2;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x6570;&#x3002;
+    &#x6CE8;&#x610F;&#xFF1A;&#x4E0A;&#x9762;2&#x4E2A;&#x503C;&#x8D8A;&#x5927;&#xFF0C;&#x4F1A;&#x770B;&#x5230;&#x7531;&#x5185;&#x6838;&#x6D88;&#x8017;&#x7684;CPU&#x65F6;&#x95F4;&#x4F1A;&#x8D8A;&#x5927;&#x3002;
+6. CPU&#xFF08;&#x4EE5;&#x767E;&#x5206;&#x6BD4;&#x8868;&#x793A;&#xFF09;
+    us&#xFF1A;&#x7528;&#x6237;&#x8FDB;&#x7A0B;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x767E;&#x5206;&#x6BD4;(user time)
+    sy&#xFF1A;&#x5185;&#x6838;&#x7CFB;&#x7EDF;&#x8FDB;&#x7A0B;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x767E;&#x5206;&#x6BD4;(system time)
+    id: &#x7A7A;&#x95F2;&#x65F6;&#x95F4;&#x767E;&#x5206;&#x6BD4;
+    wa: IO&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#x767E;&#x5206;&#x6BD4;
+</code></pre><h5 id="13-&#x547D;&#x4EE4;-free&#x67E5;&#x770B;&#x5185;&#x5B58;-&#x3010;&#x63A8;&#x8350;&#x3011;">1.3 &#x547D;&#x4EE4; free(&#x67E5;&#x770B;&#x5185;&#x5B58;) &#x3010;&#x63A8;&#x8350;&#x3011;</h5>
+<p>&#x663E;&#x793A;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x672A;&#x4F7F;&#x7528;&#x7684;&#x548C;&#x5DF2;&#x4F7F;&#x7528;&#x7684;&#x5185;&#x5B58;&#x6570;&#x76EE;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x88AB;&#x5185;&#x6838;&#x4F7F;&#x7528;&#x7684;&#x5185;&#x5B58;&#x7F13;&#x51B2;&#x533A;&#x3002;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code>free [options]
+</code></pre><p>&#x5E38;&#x7528;&#xFF1A;</p>
+<pre><code>free -m (-m&#xFF1A;&#x4EE5;MB&#x4E3A;&#x5355;&#x4F4D;&#x663E;&#x793A;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x60C5;&#x51B5;)
+</code></pre><p>Mem&#x884C;&#x89E3;&#x91CA;&#xFF1A;</p>
+<pre><code>total&#xFF1A;&#x5185;&#x5B58;&#x603B;&#x6570;&#xFF1B;
+used&#xFF1A;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#x7684;&#x5185;&#x5B58;&#x6570;&#xFF1B;
+free&#xFF1A;&#x7A7A;&#x95F2;&#x7684;&#x5185;&#x5B58;&#x6570;&#xFF1B;
+shared&#xFF1A;&#x5F53;&#x524D;&#x5DF2;&#x7ECF;&#x5E9F;&#x5F03;&#x4E0D;&#x7528;&#xFF1B;
+buffers Buffer&#xFF1A;&#x7F13;&#x51B2;&#x5185;&#x5B58;&#x6570;&#xFF1B;
+cached Page&#xFF1A;&#x7F13;&#x5B58;&#x5185;&#x5B58;&#x6570;&#x3002;
+</code></pre><p>(-/+ buffers/cache)&#x89E3;&#x91CA;:</p>
+<pre><code>(-buffers/cache) used&#x5185;&#x5B58;&#x6570;&#xFF1A;&#x7B2C;&#x4E00;&#x90E8;&#x5206;Mem&#x884C;&#x4E2D;&#x7684; used &#x2013; buffers &#x2013; cached=&#x7A0B;&#x5E8F;&#x5360;&#x7528;&#x5185;&#x5B58;&#x6570;
+(+buffers/cache) free&#x5185;&#x5B58;&#x6570;: &#x7B2C;&#x4E00;&#x90E8;&#x5206;Mem&#x884C;&#x4E2D;&#x7684; free + buffers + cached=&#x53EF;&#x632A;&#x7528;&#x5185;&#x5B58;&#x6570;
+</code></pre><h5 id="14-&#x547D;&#x4EE4;-iostat&#x67E5;&#x770B;io&#x78C1;&#x76D8;">1.4 &#x547D;&#x4EE4; iostat(&#x67E5;&#x770B;io&#x78C1;&#x76D8;)</h5>
+<p>iostat&#x662F;&#x67E5;&#x770B;Linux&#x7CFB;&#x7EDF;io&#x662F;&#x5426;&#x5B58;&#x5728;&#x74F6;&#x9888;&#x5F88;&#x597D;&#x7528;&#x7684;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code>Usage: iostat [ options ] [ &lt;interval&gt; [ &lt;count&gt; ] ]
+options:&#x9009;&#x9879; interval:&#x95F4;&#x9694; count:&#x8BA1;&#x6570;
+</code></pre><p>&#x5E38;&#x7528;&#xFF1A;</p>
+<pre><code>iostat -x 1 1
+(x:&#x8F93;&#x51FA;&#x5217;&#xFF0C;1&#xFF1A;&#x95F4;&#x9694;1&#x79D2;&#xFF0C;1&#xFF1A;&#x91C7;&#x96C6;1&#x6B21;)
+</code></pre><p>CPU&#xFF1A;</p>
+<pre><code>1.%user: &#x5728;&#x7528;&#x6237;&#x7EA7;&#x522B;&#x8FD0;&#x884C;&#x6240;&#x4F7F;&#x7528;&#x7684;CPU&#x7684;&#x767E;&#x5206;&#x6BD4;
+2.%sys: &#x5728;&#x7CFB;&#x7EDF;&#x7EA7;&#x522B;(kernel)&#x8FD0;&#x884C;&#x6240;&#x4F7F;&#x7528;CPU&#x7684;&#x767E;&#x5206;&#x6BD4;
+3.%iowait: CPU&#x7B49;&#x5F85;&#x786C;&#x4EF6;I/O&#x65F6;,&#x6240;&#x5360;&#x7528;CPU&#x767E;&#x5206;&#x6BD4;
+4.%idle: CPU&#x7A7A;&#x95F2;&#x65F6;&#x95F4;&#x7684;&#x767E;&#x5206;&#x6BD4;
+</code></pre><p>Device&#xFF1A;&#x3010;&#x91CD;&#x70B9;&#x3011;</p>
+<pre><code>1.tps: &#x6BCF;&#x79D2;&#x949F;&#x53D1;&#x9001;&#x5230;&#x7684;I/O&#x8BF7;&#x6C42;&#x6570;
+2.avgqu-sz: &#x662F;&#x5E73;&#x5747;&#x8BF7;&#x6C42;&#x961F;&#x5217;&#x7684;&#x957F;&#x5EA6;,&#x6BEB;&#x65E0;&#x7591;&#x95EE;&#xFF0C;&#x961F;&#x5217;&#x957F;&#x5EA6;&#x8D8A;&#x77ED;&#x8D8A;&#x597D;
+3.await&#xFF1A;&#x6BCF;&#x4E00;&#x4E2A;IO&#x8BF7;&#x6C42;&#x7684;&#x5904;&#x7406;&#x7684;&#x5E73;&#x5747;&#x65F6;&#x95F4;&#xFF08;&#x5355;&#x4F4D;&#x662F;&#x6BEB;&#x79D2;)
+4.rkB/s: &#x6BCF;&#x79D2;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x91CF;(&#x5355;&#x4F4D;kb)
+5.wkB/s: &#x6BCF;&#x79D2;&#x5199;&#x5165;&#x6570;&#x636E;&#x91CF;(&#x5355;&#x4F4D;kb)
+6.%util: &#x78C1;&#x76D8;&#x7684;&#x7E41;&#x5FD9;&#x7A0B;&#x5EA6;&#xFF0C;&#x5982;&#x63A5;&#x8FD1;100%&#x90A3;&#x8BF4;&#x660E;&#x78C1;&#x76D8;&#x5DF2;&#x7ECF;&#x5230;&#x74F6;&#x9888;
+</code></pre><h5 id="15-&#x547D;&#x4EE4;-sar-&#x67E5;&#x770B;&#x7F51;&#x7EDC;">1.5 &#x547D;&#x4EE4; sar (&#x67E5;&#x770B;&#x7F51;&#x7EDC;)</h5>
+<p>sar&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53C2;&#x6570;&#x5355;&#x72EC;&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x67D0;&#x4E2A;&#x5C40;&#x90E8;&#x7684;&#x4F7F;&#x7528;&#x60C5;&#x51B5;</p>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code>sar [options] [-A] [-o file] t [n]
+</code></pre><p>&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>sar -n DEV 1 2 
+(-n&#xFF1A;&#x7F51;&#x7EDC;&#x8BBE;&#x5907;;DEV:&#x78C1;&#x76D8;&#x8BBE;&#x5907;)
+1&#xFF1A;&#x8868;&#x793A;&#x4E00;&#x79D2;&#x91C7;&#x96C6;&#x4E00;&#x6B21;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x81EA;&#x884C;&#x8BBE;&#x5B9A;
+2: &#x8868;&#x793A;&#x91C7;&#x96C6;&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x53EF;&#x81EA;&#x884C;&#x8BBE;&#x5B9A;
+</code></pre><p>&#x5173;&#x6CE8;&#x6307;&#x6807;&#xFF1A;</p>
+<pre><code>1. rxkB/s: &#x6BCF;&#x79D2;&#x63A5;&#x6536;&#x7684;&#x6570;&#x636E;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;kb
+2. txkB/s: &#x6BCF;&#x79D2;&#x53D1;&#x9001;&#x7684;&#x6570;&#x636E;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;kb
+</code></pre><p>&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF1A;</p>
+<pre><code>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7F51;&#x7EDC;&#x6570;&#x636E;&#x5305;&#x5927;&#x5C0F;&#xFF0C;&#x662F;&#x5426;&#x5B58;&#x5728;&#x7F51;&#x7EDC;&#x74F6;&#x9888;
+</code></pre><h4 id="&#x4E8C;&#x3001;&#x5DE5;&#x5177;-nmon">&#x4E8C;&#x3001;&#x5DE5;&#x5177; nmon</h4>
+<p>nmon &#x662F;&#x5206;&#x6790; AIX &#x548C; Linux &#x6027;&#x80FD;&#x7684;&#x514D;&#x8D39;&#x5DE5;&#x5177;&#x3002;&#xFF08;&#x5176;&#x4E3B;&#x8981;&#x662F;IBM&#x4E3A;&#x81EA;&#x5DF1;&#x7684;AIX&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x5728;&#x5176;&#x4ED6;Linux&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#xFF09;</p>
+<h5 id="21-nmon&#x4F7F;&#x7528;&#x6B65;&#x9AA4;">2.1 nmon&#x4F7F;&#x7528;&#x6B65;&#x9AA4;</h5>
+<ol>
+<li>&#x89E3;&#x538B;&#x6587;&#x4EF6;</li>
+<li>&#x590D;&#x5236;&#x79FB;&#x52A8;&#x5BF9;&#x5E94;&#x7CFB;&#x7EDF;&#x7684;nmon&#x5DE5;&#x5177;</li>
+<li>&#x6267;&#x884C;&#x5DE5;&#x5177;</li>
+<li>&#x4F7F;&#x7528;Excel&#x5206;&#x6790;&#x5DE5;&#x5177;&#x5206;&#x6790;</li>
+</ol>
+<h6 id="1-&#x89E3;&#x538B;&#x6587;&#x4EF6;">1. &#x89E3;&#x538B;&#x6587;&#x4EF6;</h6>
+<p><img src="../images3/nmon01.png" alt="&#x89E3;&#x538B;"></p>
+<p>&#x89E3;&#x538B;&#xFF1A;</p>
+<pre><code>tar -zxvf nmon_linux_14i.tar.gz
+</code></pre><p>&#x6CE8;&#x610F;:</p>
+<pre><code>1.nmon_linux_14i.tar.gz&#x5BF9;&#x5E94;&#x7684;gz&#x5305;&#x540D;
+2.z:gzip&#x538B;&#x7F29;&#x5305;&#xFF1B;x:&#x89E3;&#x538B;&#x3001;v&#xFF1A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x3001;f:&#x6587;&#x4EF6;(&#x5FC5;&#x987B;&#x653E;&#x53C2;&#x6570;&#x6700;&#x540E;,&#x6587;&#x4EF6;&#x524D;&#x9762;)
+</code></pre><h6 id="2-&#x79FB;&#x52A8;&#x590D;&#x5236;&#x6587;&#x4EF6;">2. &#x79FB;&#x52A8;/&#x590D;&#x5236;&#x6587;&#x4EF6;</h6>
+<p><img src="../images3/nmon02.png" alt="&#x79FB;&#x52A8;/&#x590D;&#x5236;&#x6587;&#x4EF6;"></p>
+<p>1). rm:&#x79FB;&#x52A8;&#x547D;&#x4EE4;
+2). /tmp&#xFF1A;&#x79FB;&#x52A8;&#x5230;/tmp&#x4E34;&#x65F6;&#x76EE;&#x5F55; (&#x5EFA;&#x8BAE;&#xFF1A;&#x76F4;&#x63A5;&#x653E;&#x5230; /usr/local/bin&#x76EE;&#x5F55;&#x4E0B;)
+3). nmon&#xFF1A;&#x79FB;&#x52A8;&#x8FC7;&#x53BB;&#x540E;&#x91CD;&#x540D;&#x547D;&#x540D;&#x4E3A;nmon</p>
+<h6 id="3-&#x8FD0;&#x884C;-nmon">3. &#x8FD0;&#x884C; nmon</h6>
+<p><img src="../images3/linux_03.png" alt="&#x8FD0;&#x884C;"></p>
+<p>./nmon -s3 -c10 -f -m /mnt/hgfs/vmwareShare/result<br>
+(3&#x79D2;&#x949F;&#x91C7;&#x96C6;&#x4E00;&#x6B21;&#xFF0C;&#x5171;&#x91C7;&#x96C6;10&#x6B21;&#xFF0C;&#x4FDD;&#x5B58;&#x5230;/mnt/hgfs/vmwareShare/result) </p>
+<pre><code>1)./nmon&#xFF1A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C;nmon&#x6587;&#x4EF6;
+2). -s&#xFF1A;&#x65F6;&#x957F;-&#x91C7;&#x96C6;&#x6570;&#x636E;&#x9891;&#x7387;
+3). -c&#xFF1A;&#x91C7;&#x96C6;&#x6B21;&#x6570;
+4). -f&#xFF1A;&#x751F;&#x6210;&#x6587;&#x4EF6;&#x540D;&#x5305;&#x542B;&#x6587;&#x4EF6;&#x521B;&#x5EFA;&#x65F6;&#x95F4;
+5). -m&#xFF1A;&#x6307;&#x5B9A;&#x751F;&#x6210;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x76EE;&#x5F55; 
+</code></pre><p><strong>nmon&#x5DE5;&#x5177;&#x53EA;&#x662F;&#x91C7;&#x96C6;&#x7ED3;&#x679C;&#xFF0C;&#x7ED3;&#x679C;&#x6587;&#x4EF6;&#x4E3A;.nmon&#xFF0C;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x6253;&#x5F00;&#x4F7F;&#x7528;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;Excel&#x5206;&#x6790;&#x5DE5;&#x5177;&#x63D0;&#x53D6;&#x6570;&#x636E;</strong></p>
+<h6 id="4-excel&#x5206;&#x6790;&#x5DE5;&#x5177;">4. Excel&#x5206;&#x6790;&#x5DE5;&#x5177;</h6>
+<p><img src="../images3/linux_04.png" alt="Excel&#x5206;&#x6790;&#x5DE5;&#x5177;"></p>
+<p>1). &#x70B9;&#x51FB; &#x6807;1 &#x6D4F;&#x89C8;nmon&#x6587;&#x4EF6;<br>
+2). &#x70B9;&#x51FB; &#x6807;2 &#x6253;&#x5F00;nmon&#x6587;&#x4EF6;(&#x5206;&#x6790;&#x5B8C;&#x6210;&#x540E;&#x4F1A;&#x63D0;&#x793A;&#x4FDD;&#x5B58;&#x4E3A;excel&#x6587;&#x4EF6;&#xFF0C;&#x9009;&#x53D6;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#x8FDB;&#x884C;&#x4FDD;&#x5B58;)</p>
+<p>&#x63D0;&#x793A;&#xFF1A;</p>
+<pre><code>1). Excel&#x9700;&#x8981;&#x5F00;&#x542F;&#x5B8F;&#x8BBE;&#x7F6E;&#xFF1B;
+2). &#x5982;&#x679C;&#x63D0;&#x793A;&#x52A0;&#x8F7D;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x9519;&#x8BEF;&#xFF0C;&#x628A;&#x7535;&#x8111;&#x53F3;&#x4E0B;&#x89D2;&#x7684;&#x661F;&#x671F;&#x90E8;&#x5206;&#x53BB;&#x6389;(&#x5220;&#x9664;dddd)
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../04-loadrunner-analysis/05-analysis05.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 附件1-主要图表"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"expandable-chapters-small":{},"splitter":{},"chapter-fold":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

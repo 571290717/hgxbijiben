@@ -1,0 +1,1021 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <!-- Start book django项目 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>静态文件 | django项目</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../01-day/file/app.html" />
+    
+    
+    <link rel="prev" href="../../01-day/file/settings.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="1.11.2"
+        data-chapter-title="静态文件"
+        data-filepath="01-day/file/static.md"
+        data-basepath="../.."
+        data-revision="Sun May 26 2019 23:26:52 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Python Web 框架要点
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="01-day.html">
+            
+                
+                    <a href="../../01-day.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Django流程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01-day/django.html">
+            
+                
+                    <a href="../../01-day/django.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Django介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-day/env.html">
+            
+                
+                    <a href="../../01-day/env.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        虚拟环境
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01-day/project.html">
+            
+                
+                    <a href="../../01-day/project.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        创建Django项目
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01-day/project/pro.html">
+            
+                
+                    <a href="../../01-day/project/pro.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.1.</b>
+                        
+                        创建工程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="01-day/project/app.html">
+            
+                
+                    <a href="../../01-day/project/app.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.2.</b>
+                        
+                        创建子应用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="01-day/model.html">
+            
+                
+                    <a href="../../01-day/model.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        模型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="01-day/site.html">
+            
+                
+                    <a href="../../01-day/site.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        站点管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="01-day/view.html">
+            
+                
+                    <a href="../../01-day/view.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        视图和URL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="01-day/viewurl-flow.html">
+            
+                
+                    <a href="../../01-day/viewurl-flow.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        总结View和URL匹配流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="01-day/template.html">
+            
+                
+                    <a href="../../01-day/template.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        模板
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="01-day/viewtemplate-flow.html">
+            
+                
+                    <a href="../../01-day/viewtemplate-flow.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        总结View-Templates流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="01-day/case.html">
+            
+                
+                    <a href="../../01-day/case.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        案例实现
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="01-day/file.html">
+            
+                
+                    <a href="../../01-day/file.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.</b>
+                        
+                        配置文件和静态文件
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="01-day/file/settings.html">
+            
+                
+                    <a href="../../01-day/file/settings.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.1.</b>
+                        
+                        settings配置文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11.2" data-path="01-day/file/static.html">
+            
+                
+                    <a href="../../01-day/file/static.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.2.</b>
+                        
+                        静态文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="01-day/file/app.html">
+            
+                
+                    <a href="../../01-day/file/app.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.11.3.</b>
+                        
+                        App应用配置
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="02-day.html">
+            
+                
+                    <a href="../../02-day.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        模型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="02-day/orm.html">
+            
+                
+                    <a href="../../02-day/orm.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        MVT图解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02-day/prepare.html">
+            
+                
+                    <a href="../../02-day/prepare.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        项目准备
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="02-day/configure.html">
+            
+                
+                    <a href="../../02-day/configure.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="02-day/model.html">
+            
+                
+                    <a href="../../02-day/model.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        定义模型类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="02-day/shell.html">
+            
+                
+                    <a href="../../02-day/shell.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        shell工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="02-day/operation.html">
+            
+                
+                    <a href="../../02-day/operation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        数据库操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="02-day/select.html">
+            
+                
+                    <a href="../../02-day/select.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        查询
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.7.1" data-path="02-day/select/base.html">
+            
+                
+                    <a href="../../02-day/select/base.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.1.</b>
+                        
+                        基础条件查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.2" data-path="02-day/select/fq.html">
+            
+                
+                    <a href="../../02-day/select/fq.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.2.</b>
+                        
+                        F和Q对象
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.3" data-path="02-day/select/aggregate.html">
+            
+                
+                    <a href="../../02-day/select/aggregate.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.3.</b>
+                        
+                        聚合函数和排序函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.4" data-path="02-day/select/join.html">
+            
+                
+                    <a href="../../02-day/select/join.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.4.</b>
+                        
+                        关联查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.5" data-path="02-day/select/queryset.html">
+            
+                
+                    <a href="../../02-day/select/queryset.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.5.</b>
+                        
+                        查询集QuerySet
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="03-day.html">
+            
+                
+                    <a href="../../03-day.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        视图
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="03-day/intro.html">
+            
+                
+                    <a href="../../03-day/intro.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        视图介绍和项目准备
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="03-day/urlconf.html">
+            
+                
+                    <a href="../../03-day/urlconf.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        URLconf
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="03-day/namespace.html">
+            
+                
+                    <a href="../../03-day/namespace.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        路由命名与reverse反解析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="03-day/postman.html">
+            
+                
+                    <a href="../../03-day/postman.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        使用 PostMan 对请求进行测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="03-day/request.html">
+            
+                
+                    <a href="../../03-day/request.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        HttpRequest对象
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="03-day/response.html">
+            
+                
+                    <a href="../../03-day/response.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        HttpResponse对象
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="03-day/status.html">
+            
+                
+                    <a href="../../03-day/status.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        状态保持
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" data-path="03-day/status/cookie.html">
+            
+                
+                    <a href="../../03-day/status/cookie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.1.</b>
+                        
+                        Cookie
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.2" data-path="03-day/status/session.html">
+            
+                
+                    <a href="../../03-day/status/session.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.2.</b>
+                        
+                        Session
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="03-day/middleclassview.html">
+            
+                
+                    <a href="../../03-day/middleclassview.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        类视图与中间件
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.1" data-path="03-day/middleclassview/classview.html">
+            
+                
+                    <a href="../../03-day/middleclassview/classview.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.1.</b>
+                        
+                        类视图
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.1.1" data-path="03-day/middleclassview/classview/use.html">
+            
+                
+                    <a href="../../03-day/middleclassview/classview/use.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.1.1.</b>
+                        
+                        类视图使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.1.2" data-path="03-day/middleclassview/classview/decorator.html">
+            
+                
+                    <a href="../../03-day/middleclassview/classview/decorator.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.1.2.</b>
+                        
+                        类视图的多继承重写dispatch
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2" data-path="03-day/middleclassview/middle.html">
+            
+                
+                    <a href="../../03-day/middleclassview/middle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.2.</b>
+                        
+                        中间件
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="03-day/t.html">
+            
+                
+                    <a href="../../03-day/t.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        模板
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="03-day/t/djaongtemplate.html">
+            
+                
+                    <a href="../../03-day/t/djaongtemplate.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Django使用自带模板
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="03-day/t/djaongtemplate/filter.html">
+            
+                
+                    <a href="../../03-day/t/djaongtemplate/filter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.1.</b>
+                        
+                        过滤器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="03-day/t/djaongtemplate/extends.html">
+            
+                
+                    <a href="../../03-day/t/djaongtemplate/extends.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.2.</b>
+                        
+                        模板继承
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="03-day/t/jinja2template.html">
+            
+                
+                    <a href="../../03-day/t/jinja2template.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Django使用Jinja2模板
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="03-day/t/csrf.html">
+            
+                
+                    <a href="../../03-day/t/csrf.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        CSRF
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本書使用 GitBook 釋出
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >django项目</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x9759;&#x6001;&#x6587;&#x4EF6;">&#x9759;&#x6001;&#x6587;&#x4EF6; </h1>
+<p>&#x9879;&#x76EE;&#x4E2D;&#x7684;CSS&#x3001;&#x56FE;&#x7247;&#x3001;js&#x90FD;&#x662F;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x3002;&#x4E00;&#x822C;&#x4F1A;&#x5C06;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x653E;&#x5230;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x4EE5;&#x65B9;&#x4FBF;&#x7BA1;&#x7406;&#x3002;&#x5728;html&#x9875;&#x9762;&#x4E2D;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;Django&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x89E3;&#x6790;&#x7684;&#x65B9;&#x5F0F;&#x914D;&#x7F6E;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3002;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x5E94;&#x7528;&#x7684;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x7531;&#x4E8E;&#x6709;&#x4E9B;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x662F;&#x901A;&#x7528;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x63A8;&#x8350;&#x653E;&#x5728;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x65B9;&#x4FBF;&#x7BA1;&#x7406;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x63D0;&#x4F9B;&#x9759;&#x6001;&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li><strong>STATICFILES_DIRS</strong>&#x5B58;&#x653E;&#x67E5;&#x627E;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x7684;&#x76EE;&#x5F55;</li>
+<li><strong>STATIC_URL</strong>&#x8BBF;&#x95EE;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x7684;URL&#x524D;&#x7F00;</li>
+</ul>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B; </h2>
+<p>1&#xFF09; &#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;static&#x76EE;&#x5F55;&#x6765;&#x4FDD;&#x5B58;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x3002;</p>
+<p>2&#xFF09; &#x5728;bookmanager/settings.py&#x4E2D;&#x4FEE;&#x6539;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x7684;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;</p>
+<pre><code>STATIC_URL = &apos;/static/&apos;
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, &apos;static&apos;),
+]
+</code></pre><p>3&#xFF09;&#x6B64;&#x65F6;&#x5728;static&#x6DFB;&#x52A0;&#x7684;&#x4EFB;&#x4F55;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7F51;&#x5740;<strong>/static/&#x6587;&#x4EF6;&#x5728;static&#x4E2D;&#x7684;&#x8DEF;&#x5F84;</strong>&#x6765;&#x8BBF;&#x95EE;&#x4E86;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x5411;static&#x76EE;&#x5F55;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;index.html&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;127.0.0.1:8000/static/index.html&#x6765;&#x8BBF;&#x95EE;&#x3002;</p>
+<p>&#x6216;&#x8005;&#x6211;&#x4EEC;&#x5728;static&#x76EE;&#x5F55;&#x4E2D;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x5B50;&#x76EE;&#x5F55;&#x548C;&#x6587;&#x4EF6;book/detail.html&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;127.0.0.1:8000/static/book/detail.html&#x6765;&#x8BBF;&#x95EE;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../01-day/file/settings.html" class="navigation navigation-prev " aria-label="Previous page: settings配置文件"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../01-day/file/app.html" class="navigation navigation-next " aria-label="Next page: App应用配置"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/fontsettings.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontsettings":{"family":"sans","size":2,"theme":"white"},"toggle-chapters":{},"splitter":{},"emphasize":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book django项目 -->
+</html>

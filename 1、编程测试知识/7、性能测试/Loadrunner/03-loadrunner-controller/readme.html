@@ -1,0 +1,656 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>LoadRunner-Controller | 性能测试大纲</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-chapter-fold/chapter-fold.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../03-loadrunner-controller/01-controller01.html" />
+    
+    
+    <link rel="prev" href="../02-loadrunner/09-VuGen08.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3"
+        data-chapter-title="LoadRunner-Controller"
+        data-filepath="03-loadrunner-controller/readme.md"
+        data-basepath=".."
+        data-revision="Wed May 15 2019 15:43:32 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        课程概览
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="01-overview/readme.html">
+            
+                
+                    <a href="../01-overview/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        性能测试基础知识
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01-overview/why.html">
+            
+                
+                    <a href="../01-overview/why.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        为什么学习性能测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-overview/classification_index.html">
+            
+                
+                    <a href="../01-overview/classification_index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        性能测试分类及常用指标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01-overview/process.html">
+            
+                
+                    <a href="../01-overview/process.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        性能测试流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="01-overview/loadrunner.html">
+            
+                
+                    <a href="../01-overview/loadrunner.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        LoadRunner 11安装
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="02-loadrunner/readme.html">
+            
+                
+                    <a href="../02-loadrunner/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        性能测试工具-LoadRunner
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="02-loadrunner/01-loadrunner.html">
+            
+                
+                    <a href="../02-loadrunner/01-loadrunner.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        LoadRunner介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02-loadrunner/02-VuGen01.html">
+            
+                
+                    <a href="../02-loadrunner/02-VuGen01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        VuGen操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="02-loadrunner/03-VuGen02.html">
+            
+                
+                    <a href="../02-loadrunner/03-VuGen02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        VuGen-扩展(录制、回放)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="02-loadrunner/04-VuGen03.html">
+            
+                
+                    <a href="../02-loadrunner/04-VuGen03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        VuGen-手动编写脚本
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="02-loadrunner/05-VuGen04.html">
+            
+                
+                    <a href="../02-loadrunner/05-VuGen04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        VuGen-参数化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="02-loadrunner/06-VuGen05.html">
+            
+                
+                    <a href="../02-loadrunner/06-VuGen05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        VuGen-关联
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="02-loadrunner/07-VuGen06.html">
+            
+                
+                    <a href="../02-loadrunner/07-VuGen06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        VuGen-检查点
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="02-loadrunner/08-VuGen07.html">
+            
+                
+                    <a href="../02-loadrunner/08-VuGen07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        VuGen-事务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="02-loadrunner/09-VuGen08.html">
+            
+                
+                    <a href="../02-loadrunner/09-VuGen08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        VuGen-集合点
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="3" data-path="03-loadrunner-controller/readme.html">
+            
+                
+                    <a href="../03-loadrunner-controller/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        LoadRunner-Controller
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="03-loadrunner-controller/01-controller01.html">
+            
+                
+                    <a href="../03-loadrunner-controller/01-controller01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Controller运行及Scenario(场景)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="03-loadrunner-controller/02-controller02.html">
+            
+                
+                    <a href="../03-loadrunner-controller/02-controller02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Goal-Oriented Scenario(目标场景)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="03-loadrunner-controller/03-controller03.html">
+            
+                
+                    <a href="../03-loadrunner-controller/03-controller03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Manual Scenario(手工场景)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="03-loadrunner-controller/04-controller04.html">
+            
+                
+                    <a href="../03-loadrunner-controller/04-controller04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        负载生成器与场景运行
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="03-loadrunner-controller/05-controller05.html">
+            
+                
+                    <a href="../03-loadrunner-controller/05-controller05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        服务器 性能资源指标监控与服务水平协议(SLA)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="03-loadrunner-controller/06-controller06.html">
+            
+                
+                    <a href="../03-loadrunner-controller/06-controller06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        IP Wizard的应用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="04-loadrunner-analysis/readme.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        LoadRunner-Analysis
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="04-loadrunner-analysis/01-analysis01.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/01-analysis01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Analysis Summary
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="04-loadrunner-analysis/02-analysis02.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/02-analysis02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        拐点图分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="04-loadrunner-analysis/03-analysis03.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/03-analysis03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        合并图的应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="04-loadrunner-analysis/04-analysis04.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/04-analysis04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        交叉结果与性能报告生成
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="04-loadrunner-analysis/05-analysis05.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/05-analysis05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        附件1-主要图表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="04-loadrunner-analysis/06-analysis06.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/06-analysis06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        附件2-Linux相关监控
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >性能测试大纲</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="loadrunnercontroller"><center>LoadRunner-Controller</center></h2>
+<h4 id="&#x76EE;&#x6807;">&#x76EE;&#x6807;</h4>
+<ol>
+<li>&#x4E86;&#x89E3;&#x76EE;&#x6807;&#x573A;&#x666F;&#x7684;&#x642D;&#x5EFA;</li>
+<li>&#x638C;&#x63E1;&#x624B;&#x5DE5;&#x573A;&#x666F;&#x7684;&#x642D;&#x5EFA;</li>
+<li>&#x638C;&#x63E1;LR&#x76D1;&#x63A7;&#x670D;&#x52A1;&#x5668;&#x786C;&#x4EF6;&#x8D44;&#x6E90;&#x6307;&#x6807;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>&#x638C;&#x63E1;&#x8D1F;&#x8F7D;&#x673A;&#x7684;&#x52A0;&#x8F7D;&#x4E0E;&#x4F7F;&#x7528;</li>
+<li>&#x4E86;&#x89E3;&#x670D;&#x52A1;&#x6C34;&#x5E73;&#x534F;&#x8BAE;&#x7684;&#x529F;&#x80FD;&#x548C;&#x4F5C;&#x7528;&#x53CA;&#x5176;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</li>
+</ol>
+<h4 id="controller-&#x7B80;&#x8FF0;">Controller &#x7B80;&#x8FF0;</h4>
+<ol>
+<li>LoadRunner &#x4E2D;&#x7684; Controller &#x662F;&#x7528;&#x6765;&#x7BA1;&#x7406;&#x548C;&#x7EF4;&#x62A4;&#x573A;&#x666F;&#x7684;&#x5DE5;&#x5177;;</li>
+<li>&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x53F0;&#x5DE5;&#x4F5C;&#x7AD9;(&#x670D;&#x52A1;&#x5668;)&#x4E0A;&#x63A7;&#x5236;&#x4E00;&#x4E2A;&#x573A;&#x666F;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x865A;&#x62DF;&#x7528;&#x6237;(Vuser);</li>
+<li>&#x901A;&#x8FC7;&#x6A21;&#x62DF;&#x591A;&#x4E2A;&#x865A;&#x62DF;&#x7528;&#x6237;&#x4EE3;&#x66FF;&#x771F;&#x5B9E;&#x7684;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#x884C;&#x4E3A;&#xFF0C;&#x5E76;&#x652F;&#x6301;&#x591A;&#x673A;&#x8054;&#x5408;&#x6D4B;&#x8BD5;;</li>
+<li>&#x5145;&#x5206;&#x5229;&#x7528;&#x6709;&#x9650;&#x7684;&#x786C;&#x4EF6;&#x8D44;&#x6E90;&#xFF0C;&#x89E3;&#x51B3;&#x4E86;&#x624B;&#x5DE5;&#x64CD;&#x4F5C;&#x7684;&#x4E0D;&#x540C;&#x6B65;&#x548C;&#x4EBA;&#x529B;&#x3001;&#x7269;&#x529B;&#x8D44;&#x6E90;&#x4E25;&#x91CD;&#x6D6A;&#x8D39;&#x7684;&#x95EE;&#x9898;&#x3002;</li>
+</ol>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../02-loadrunner/09-VuGen08.html" class="navigation navigation-prev " aria-label="Previous page: VuGen-集合点"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../03-loadrunner-controller/01-controller01.html" class="navigation navigation-next " aria-label="Next page: Controller运行及Scenario(场景)"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"expandable-chapters-small":{},"splitter":{},"chapter-fold":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

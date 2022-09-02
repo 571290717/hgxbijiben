@@ -1,0 +1,767 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>第1章: 接口测试基础 | 接口测试</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../C01-api_test_base/api_concept.html" />
+    
+    
+    <link rel="prev" href="../index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1"
+        data-chapter-title="第1章: 接口测试基础"
+        data-filepath="C01-api_test_base/Readme.md"
+        data-basepath=".."
+        data-revision="Sun Apr 21 2019 14:12:06 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        接口测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1" data-path="C01-api_test_base/Readme.html">
+            
+                
+                    <a href="../C01-api_test_base/Readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        第1章: 接口测试基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="C01-api_test_base/api_concept.html">
+            
+                
+                    <a href="../C01-api_test_base/api_concept.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        接口及接口测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="C01-api_test_base/api_tools.html">
+            
+                
+                    <a href="../C01-api_test_base/api_tools.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        接口测试工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="C01-api_test_base/restful.html">
+            
+                
+                    <a href="../C01-api_test_base/restful.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        RestFul(了解)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="C01-api_test_base/project_env.html">
+            
+                
+                    <a href="../C01-api_test_base/project_env.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        项目环境搭建
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="C02-Jmeter_Base/Readme.html">
+            
+                
+                    <a href="../C02-Jmeter_Base/Readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        第2章: Jmeter基本使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="C02-Jmeter_Base/introduction_jmeter.html">
+            
+                
+                    <a href="../C02-Jmeter_Base/introduction_jmeter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Jmeter简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="C02-Jmeter_Base/jmeter_env.html">
+            
+                
+                    <a href="../C02-Jmeter_Base/jmeter_env.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        搭建Jmeter环境
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="C02-Jmeter_Base/jmeter_abstract.html">
+            
+                
+                    <a href="../C02-Jmeter_Base/jmeter_abstract.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Jmeter基本使用流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="C02-Jmeter_Base/import_element.html">
+            
+                
+                    <a href="../C02-Jmeter_Base/import_element.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Jmeter八大元件及执行顺序
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="C03-jmeter_core_knowledge/Readme.html">
+            
+                
+                    <a href="../C03-jmeter_core_knowledge/Readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        第3章: Jmeter核心知识点
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="C03-jmeter_core_knowledge/argument.html">
+            
+                
+                    <a href="../C03-jmeter_core_knowledge/argument.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        参数化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="C03-jmeter_core_knowledge/connection_database.html">
+            
+                
+                    <a href="../C03-jmeter_core_knowledge/connection_database.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        数据库
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="C03-jmeter_core_knowledge/relationship.html">
+            
+                
+                    <a href="../C03-jmeter_core_knowledge/relationship.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        关联
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="C03-jmeter_core_knowledge/assertions.html">
+            
+                
+                    <a href="../C03-jmeter_core_knowledge/assertions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        断言
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="C03-jmeter_core_knowledge/synchronizing.html">
+            
+                
+                    <a href="../C03-jmeter_core_knowledge/synchronizing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        集合点(同步定时器)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="C03-jmeter_core_knowledge/helper_func.html">
+            
+                
+                    <a href="../C03-jmeter_core_knowledge/helper_func.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        函数
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="C04-distruted_extend/Readme.html">
+            
+                
+                    <a href="../C04-distruted_extend/Readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        第4章:分布式、插件
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="C04-distruted_extend/distruted.html">
+            
+                
+                    <a href="../C04-distruted_extend/distruted.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        分布式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="C04-distruted_extend/logic_controller.html">
+            
+                
+                    <a href="../C04-distruted_extend/logic_controller.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        逻辑控制器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="C04-distruted_extend/map_extend.html">
+            
+                
+                    <a href="../C04-distruted_extend/map_extend.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        图形监视器扩展插件
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="C05-project/readme.html">
+            
+                
+                    <a href="../C05-project/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        第5章:项目接口文档分析、功能脚本设计
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="C05-project/apis_list.html">
+            
+                
+                    <a href="../C05-project/apis_list.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        项目接口清单整理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="C05-project/api_documents.html">
+            
+                
+                    <a href="../C05-project/api_documents.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        api文档
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="C05-project/function_des.html">
+            
+                
+                    <a href="../C05-project/function_des.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        项目功能脚本设计
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="C05-project/testcase.html">
+            
+                
+                    <a href="../C05-project/testcase.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        项目接口用例设计
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="C05-project/arguments.html">
+            
+                
+                    <a href="../C05-project/arguments.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        项目用例中测试数据参数化
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="C06-project_javascript/readme.html">
+            
+                
+                    <a href="../C06-project_javascript/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        第6章:项目接口自动化脚本设计、性能测试脚本设计
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="C06-project_javascript/auto_test.html">
+            
+                
+                    <a href="../C06-project_javascript/auto_test.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        接口自动化脚本设计
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="C06-project_javascript/ya_script.html">
+            
+                
+                    <a href="../C06-project_javascript/ya_script.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        接口性能压测脚本设计
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="C06-project_javascript/generate_blog.html">
+            
+                
+                    <a href="../C06-project_javascript/generate_blog.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        生成html报告
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="C06-project_javascript/defence.html">
+            
+                
+                    <a href="../C06-project_javascript/defence.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        接口测试基于jmeter项目总结
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="C06-project_javascript/qps.html">
+            
+                
+                    <a href="../C06-project_javascript/qps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        jemter性能知识点-科普
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="C07-jmeter_others_func/readme.html">
+            
+                
+                    <a href="../C07-jmeter_others_func/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        第7章:Jmeter其他功能点
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="C07-jmeter_others_func/ftp.html">
+            
+                
+                    <a href="../C07-jmeter_others_func/ftp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        jmeter ftp
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="C07-jmeter_others_func/test_fragment.html">
+            
+                
+                    <a href="../C07-jmeter_others_func/test_fragment.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        jmeter test fragment
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="C07-jmeter_others_func/desktop.html">
+            
+                
+                    <a href="../C07-jmeter_others_func/desktop.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        jmeter 工作台、非测试元件
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >接口测试</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;">&#x5B66;&#x4E60;&#x76EE;&#x6807;</h1>
+<h2 id="1-&#x7406;&#x89E3;&#x63A5;&#x53E3;&#x7684;&#x6982;&#x5FF5;">1. &#x7406;&#x89E3;&#x63A5;&#x53E3;&#x7684;&#x6982;&#x5FF5;</h2>
+<h2 id="2&#x4EC0;&#x4E48;&#x662F;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;">2.&#x4EC0;&#x4E48;&#x662F;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;</h2>
+<h2 id="3-&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;">3. &#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x7684;&#x57FA;&#x672C;&#x6D41;&#x7A0B;</h2>
+<h2 id="4-&#x5B66;&#x4E60;&#x638C;&#x63E1;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;restclient&#x3001;postman&#x7684;&#x4F7F;&#x7528;">4. &#x5B66;&#x4E60;&#x638C;&#x63E1;&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;RESTClient&#x3001;Postman&#x7684;&#x4F7F;&#x7528;</h2>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: 接口测试"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../C01-api_test_base/api_concept.html" class="navigation navigation-next " aria-label="Next page: 接口及接口测试"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

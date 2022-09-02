@@ -36,6 +36,20 @@ git push
 
 
 
+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
+
+
+
+
+报错：
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/571290717/hgxbijiben.git/'
+
+
+
+重新生成token
+
+github————settings-----Developer setting---Personal access tokens
 
 
 

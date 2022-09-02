@@ -1,0 +1,8 @@
+{
+	"plugins": [
+    "-search",
+    "expandable-chapters-small",
+    "splitter",
+    "chapter-fold"
+	]
+}

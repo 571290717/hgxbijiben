@@ -1,0 +1,732 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>VuGen操作 | 性能测试大纲</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-chapter-fold/chapter-fold.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../02-loadrunner/03-VuGen02.html" />
+    
+    
+    <link rel="prev" href="../02-loadrunner/01-loadrunner.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.2"
+        data-chapter-title="VuGen操作"
+        data-filepath="02-loadrunner/02-VuGen01.md"
+        data-basepath=".."
+        data-revision="Wed May 15 2019 15:43:32 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        课程概览
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="01-overview/readme.html">
+            
+                
+                    <a href="../01-overview/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        性能测试基础知识
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="01-overview/why.html">
+            
+                
+                    <a href="../01-overview/why.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        为什么学习性能测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-overview/classification_index.html">
+            
+                
+                    <a href="../01-overview/classification_index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        性能测试分类及常用指标
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01-overview/process.html">
+            
+                
+                    <a href="../01-overview/process.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        性能测试流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="01-overview/loadrunner.html">
+            
+                
+                    <a href="../01-overview/loadrunner.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        LoadRunner 11安装
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="02-loadrunner/readme.html">
+            
+                
+                    <a href="../02-loadrunner/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        性能测试工具-LoadRunner
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="02-loadrunner/01-loadrunner.html">
+            
+                
+                    <a href="../02-loadrunner/01-loadrunner.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        LoadRunner介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="02-loadrunner/02-VuGen01.html">
+            
+                
+                    <a href="../02-loadrunner/02-VuGen01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        VuGen操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="02-loadrunner/03-VuGen02.html">
+            
+                
+                    <a href="../02-loadrunner/03-VuGen02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        VuGen-扩展(录制、回放)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="02-loadrunner/04-VuGen03.html">
+            
+                
+                    <a href="../02-loadrunner/04-VuGen03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        VuGen-手动编写脚本
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="02-loadrunner/05-VuGen04.html">
+            
+                
+                    <a href="../02-loadrunner/05-VuGen04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        VuGen-参数化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="02-loadrunner/06-VuGen05.html">
+            
+                
+                    <a href="../02-loadrunner/06-VuGen05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        VuGen-关联
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="02-loadrunner/07-VuGen06.html">
+            
+                
+                    <a href="../02-loadrunner/07-VuGen06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        VuGen-检查点
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="02-loadrunner/08-VuGen07.html">
+            
+                
+                    <a href="../02-loadrunner/08-VuGen07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        VuGen-事务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="02-loadrunner/09-VuGen08.html">
+            
+                
+                    <a href="../02-loadrunner/09-VuGen08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        VuGen-集合点
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="03-loadrunner-controller/readme.html">
+            
+                
+                    <a href="../03-loadrunner-controller/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        LoadRunner-Controller
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="03-loadrunner-controller/01-controller01.html">
+            
+                
+                    <a href="../03-loadrunner-controller/01-controller01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Controller运行及Scenario(场景)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="03-loadrunner-controller/02-controller02.html">
+            
+                
+                    <a href="../03-loadrunner-controller/02-controller02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Goal-Oriented Scenario(目标场景)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="03-loadrunner-controller/03-controller03.html">
+            
+                
+                    <a href="../03-loadrunner-controller/03-controller03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Manual Scenario(手工场景)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="03-loadrunner-controller/04-controller04.html">
+            
+                
+                    <a href="../03-loadrunner-controller/04-controller04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        负载生成器与场景运行
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="03-loadrunner-controller/05-controller05.html">
+            
+                
+                    <a href="../03-loadrunner-controller/05-controller05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        服务器 性能资源指标监控与服务水平协议(SLA)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="03-loadrunner-controller/06-controller06.html">
+            
+                
+                    <a href="../03-loadrunner-controller/06-controller06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        IP Wizard的应用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="04-loadrunner-analysis/readme.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        LoadRunner-Analysis
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="04-loadrunner-analysis/01-analysis01.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/01-analysis01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Analysis Summary
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="04-loadrunner-analysis/02-analysis02.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/02-analysis02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        拐点图分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="04-loadrunner-analysis/03-analysis03.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/03-analysis03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        合并图的应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="04-loadrunner-analysis/04-analysis04.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/04-analysis04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        交叉结果与性能报告生成
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="04-loadrunner-analysis/05-analysis05.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/05-analysis05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        附件1-主要图表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="04-loadrunner-analysis/06-analysis06.html">
+            
+                
+                    <a href="../04-loadrunner-analysis/06-analysis06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        附件2-Linux相关监控
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >性能测试大纲</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="vugen&#x64CD;&#x4F5C;"><center>VuGen&#x64CD;&#x4F5C;</center></h2>
+<h3 id="&#x4E00;&#x3001;vugen&#x4ECB;&#x7ECD;">&#x4E00;&#x3001;VuGen&#x4ECB;&#x7ECD;</h3>
+<p>VuGen&#xFF08;Virtual User Generator&#xFF09;&#x5F55;&#x5236;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x5173;&#x4EA4;&#x4E92;&#x6D3B;&#x52A8;&#xFF0C;&#x5B83;&#x5C06;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x76F8;&#x5173;&#x6A21;&#x62DF;
+&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x7684;API&#xFF08;Application Programming Interface&#xFF09;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code>&#x63D0;&#x793A;&#xFF1A;
+    1. LR&#x5F55;&#x5236;&#x811A;&#x672C;&#x529F;&#x80FD;&#x7531;&#x4E8E;&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;&#xFF0C;&#x975E;&#x5E38;&#x4E0D;&#x597D;&#x4F7F;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5E73;&#x65F6;&#x5728;&#x5DE5;&#x4F5C;&#x4E2D;&#x4E5F;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x5F55;&#x5236;&#x7684;&#x65B9;&#x5F0F;&#xFF1B;
+    2. &#x7531;&#x4E8E;&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;&#x548C;&#x5F55;&#x5236;&#x4F1A;&#x4EA7;&#x751F;&#x591A;&#x4F59;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x56E0;&#x6B64;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x624B;&#x5199;&#x811A;&#x672C;&#xFF1B;
+    3. &#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x5B66;&#x4E60;VuGen&#xFF0C;&#x6211;&#x4EEC;&#x57FA;&#x4E8E;LR11&#x81EA;&#x5E26;&#x7684;&#x8BA2;&#x7968;&#x7CFB;&#x7EDF;&#x4E3A;&#x6848;&#x4F8B;&#xFF0C;&#x7EC3;&#x4E60;&#x4F7F;&#x7528;VuGen&#x3002;
+</code></pre><h4 id="&#x6848;&#x4F8B;1">&#x6848;&#x4F8B;1</h4>
+<pre><code>&#x9700;&#x6C42;&#xFF1A;1. &#x5F55;&#x5236;&#x673A;&#x7968;&#x7F51;&#x7AD9;&#x7684;&#x767B;&#x5F55;&#x3001;&#x9000;&#x51FA;&#x811A;&#x672C;
+&#x4F7F;&#x7528;&#xFF1A;
+    1. &#x542F;&#x52A8;&#x7F51;&#x7AD9;&#x670D;&#x52A1;&#x7A0B;&#x5E8F;
+    2. &#x8BBF;&#x95EE;&#x5730;&#x5740;&#xFF1A;http://127.0.0.1:1080/WebTours/
+    3. &#x767B;&#x5F55;&#x8D26;&#x6237;&#xFF1A;&#x7528;&#x6237;&#x540D;&#xFF1A;jojo &#x5BC6;&#x7801;&#xFF1A;bean
+</code></pre><h4 id="&#x3010;&#x6848;&#x4F8B;&#x3011;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x7A0B;&#x5E8F;">&#x3010;&#x6848;&#x4F8B;&#x3011;-&#x542F;&#x52A8;&#x670D;&#x52A1;&#x7A0B;&#x5E8F;</h4>
+<p><img src="../images/WebTours01.png" alt="&#x521B;&#x5EFA;&#x811A;&#x672C;"></p>
+<pre><code>&#x4F4D;&#x7F6E;&#xFF1A;&#x5F00;&#x59CB;&#x83DC;&#x5355; -&gt; HP LoadRunner -&gt; Samples -&gt; Web -&gt; Start Web Server
+&#x63D0;&#x793A;&#xFF1A;WebTours&#x9879;&#x76EE;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;1080&#x7AEF;&#x53E3;&#xFF0C;&#x5982;&#x679C;&#x542F;&#x52A8;&#x5931;&#x8D25;&#xFF0C;&#x770B;&#x662F;&#x5426;&#x7AEF;&#x53E3;&#x88AB;&#x5360;&#x7528;&#x6216;&#x8005;&#x662F;&#x5426;&#x6709;&#x6743;&#x9650;&#xFF1B;
+</code></pre><p><img src="../images/WebTours02.png" alt="&#x521B;&#x5EFA;&#x811A;&#x672C;"></p>
+<p>&#x542F;&#x52A8;&#x6210;&#x529F;&#x754C;&#x9762;</p>
+<h4 id="&#x4E8C;&#x3001;&#x6848;&#x4F8B;1&#x5B9E;&#x65BD;&#x6B65;&#x9AA4;&#x5206;&#x6790;">&#x4E8C;&#x3001;&#x6848;&#x4F8B;1-&#x5B9E;&#x65BD;&#x6B65;&#x9AA4;&#x5206;&#x6790;</h4>
+<pre><code>1. &#x542F;&#x52A8;VuGen
+2. &#x521B;&#x5EFA;&#x811A;&#x672C;
+3. &#x9009;&#x62E9;&#x5F55;&#x5236;&#x534F;&#x8BAE; Web(HTTP/HTML)&#x3010;&#x91CD;&#x8981;&#x3011;
+4. &#x5F55;&#x5236;&#x8BBE;&#x7F6E;
+5. &#x811A;&#x672C;&#x5F55;&#x5236;
+6. &#x8FD0;&#x884C;&#x811A;&#x672C;
+</code></pre><h5 id="21-&#x542F;&#x52A8;vugen">2.1 &#x542F;&#x52A8;VuGen</h5>
+<p>&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x76F4;&#x63A5;&#x8FD0;&#x884C;VuGen&#x56FE;&#x6807;&#x542F;&#x52A8;&#x3010;&#x63A8;&#x8350;&#x3011;</p>
+<p>&#x5F00;&#x59CB;&#x83DC;&#x5355; -&gt; HP LoadRunner -&gt; Applications -&gt; Virtual User Generator
+<img src="../images/start01.png" alt="VuGen&#x542F;&#x52A8;"></p>
+<p>&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x901A;&#x8FC7;LoadRunner&#x7BA1;&#x7406;&#x5668;&#x542F;&#x52A8;</p>
+<p>&#x5F00;&#x59CB;&#x83DC;&#x5355; -&gt; HP LoadRunner -&gt; LoadRunner</p>
+<p><img src="../images/start02.png" alt="VuGen&#x542F;&#x52A8;02"></p>
+<p><img src="../images/start03.png" alt="VuGen&#x542F;&#x52A8;03"></p>
+<p>&#x70B9;&#x51FB;&#xFF1A;Create/Edit Scripts</p>
+<h5 id="22-&#x521B;&#x5EFA;&#x811A;&#x672C;">2.2 &#x521B;&#x5EFA;&#x811A;&#x672C;</h5>
+<p><img src="../images/create01.png" alt="&#x521B;&#x5EFA;&#x811A;&#x672C;"></p>
+<pre><code>1. &#x83DC;&#x5355;&#x680F;(File) -&gt; New &#x5FEB;&#x6377;&#x952E;&#xFF08;Ctrl + N&#xFF09;
+2. &#x5E38;&#x7528;&#x5DE5;&#x5177;&#x680F; -&gt; &#x7B2C;&#x4E00;&#x4E2A;&#x56FE;&#x6807;&#x65B0;&#x5EFA;
+3. Start Page&#xFF1A;&#x70B9;&#x51FB;&#x5FEB;&#x6377;&#x521B;&#x5EFA;&#x811A;&#x672C;&#x56FE;&#x6807;(new Script)&#x3010;&#x63A8;&#x8350;&#x3011;
+</code></pre><h5 id="23-&#x9009;&#x62E9;&#x534F;&#x8BAE;">2.3 &#x9009;&#x62E9;&#x534F;&#x8BAE;</h5>
+<p><img src="../images/Protocol_01.png" alt="&#x9009;&#x62E9;&#x534F;&#x8BAE;"></p>
+<pre><code>1. New Single Protocol Script:&#x5355;&#x4E00;&#x534F;&#x8BAE;
+2. Popular Protocols:&#x4E3B;&#x6D41;&#x534F;&#x8BAE;
+3. Web(HTTP/HTML):HTTP&#x534F;&#x8BAE;&#x3010;&#x9009;&#x62E9;&#x3011;
+</code></pre><h5 id="24-&#x5F55;&#x5236;&#x8BBE;&#x7F6E;">2.4 &#x5F55;&#x5236;&#x8BBE;&#x7F6E;</h5>
+<p><img src="../images/Record_01.png" alt="&#x5F55;&#x5236;&#x9009;&#x9879;"></p>
+<pre><code>1. Application type:Internet Applications&#x3010;&#x9009;&#x62E9;&#x3011;(Internet Applications:HTTP&#x534F;&#x8BAE;&#x4F7F;&#x7528;)
+2. Program to record:&#x9009;&#x62E9;&#x6D4F;&#x89C8;&#x5668;
+    1). IE8&#xFF1A;(&#x63D0;&#x793A;&#xFF1A;64&#x4F4D;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5FC5;&#x987B;&#x9009;&#x62E9;32&#x4F4D;IE8!)&#x3010;&#x9009;&#x62E9;&#x3011;
+    2). &#x706B;&#x72D0;&#x6D4F;&#x89C8;&#x5668;v24&#x7248;&#x672C;&#xFF1B;
+3. URL Address:http://127.0.0.1:1080/WebTours/(&#x9879;&#x76EE;&#x7F51;&#x5740;)
+4. Working directory:&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#xFF08;&#x9ED8;&#x8BA4;&#x5373;&#x53EF;&#xFF09;
+5. Record into Action:&#x5F55;&#x5236;&#x811A;&#x672C;&#x5B58;&#x653E;&#x7684;&#x8BA1;&#x5212;&#x540D;
+    1). vuser_init:&#x9996;&#x5148;&#x6267;&#x884C;&#xFF1B;&#x8FED;&#x4EE3;&#x8FD0;&#x884C;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x4F1A;&#x8FD0;&#x884C;&#x4E00;&#x6B21;
+    2). Action:&#x53EF;&#x8FED;&#x4EE3;&#x8FD0;&#x884C;&#x3001;&#x53EF;&#x65B0;&#x589E;&#x3010;&#x9009;&#x62E9;&#x3011;
+    3). vuser_end:&#x6700;&#x540E;&#x6267;&#x884C;&#xFF1B;&#x8FED;&#x4EE3;&#x8FD0;&#x884C;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x4F1A;&#x8FD0;&#x884C;&#x4E00;&#x6B21;
+6. &#x70B9;&#x51FB;OK -&gt; &#x5F00;&#x59CB;&#x5F55;&#x5236;
+</code></pre><h5 id="25-&#x811A;&#x672C;&#x5F55;&#x5236;">2.5 &#x811A;&#x672C;&#x5F55;&#x5236;</h5>
+<p><img src="../images/WebTours03.png" alt="WebTours"></p>
+<pre><code>1. Recording...(xxx events):&#x5F55;&#x5236;&#x4E8B;&#x4EF6;
+2. &#x7528;&#x6237;&#x540D;&#xFF1A;jojo &#x5BC6;&#x7801;&#xFF1A;bean
+3. &#x70B9;&#x51FB;Login
+4. &#x70B9;&#x51FB;Sign Off&#x9000;&#x51FA;&#x767B;&#x5F55;
+5. &#x505C;&#x6B62;&#x5F55;&#x5236;
+6. &#x751F;&#x6210;&#x811A;&#x672C;
+</code></pre><p>&#x9000;&#x51FA;&#x767B;&#x5F55;</p>
+<p><img src="../images/WebTours04.png" alt="WebTours"></p>
+<p>&#x505C;&#x6B62;&#x5F55;&#x5236;</p>
+<p><img src="../images/WebTours05.png" alt="WebTours"></p>
+<p>&#x751F;&#x6210;&#x811A;&#x672C;</p>
+<p><img src="../images/WebTours06.png" alt="WebTours"></p>
+<h5 id="26-&#x8FD0;&#x884C;&#x56DE;&#x653E;&#x811A;&#x672C;">2.6 &#x8FD0;&#x884C;(&#x56DE;&#x653E;)&#x811A;&#x672C;</h5>
+<p>&#x9A8C;&#x8BC1;&#x5F55;&#x5236;&#x811A;&#x672C;&#x662F;&#x5426;&#x80FD;&#x6B63;&#x5E38;&#x8FD0;&#x884C;</p>
+<p><img src="../images/Replay_01.png" alt="WebTours"></p>
+<pre><code>1. &#x70B9;&#x51FB; Run &#x6309;&#x94AE;
+2. &#x5FEB;&#x6377;&#x952E;&#xFF1A;F5&#x952E;
+</code></pre><p>&#x67E5;&#x770B;&#x56DE;&#x653E;&#x811A;&#x672C;&#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;</p>
+<p><img src="../images/Replay_02.png" alt="WebTours"></p>
+<pre><code>&#x83DC;&#x5355;(View) -&gt; Test Results...
+</code></pre><h4 id="&#x4E09;&#x3001;&#x603B;&#x7ED3;">&#x4E09;&#x3001;&#x603B;&#x7ED3;</h4>
+<pre><code>1. &#x542F;&#x52A8;VuGen&#x65B9;&#x5F0F;
+2. &#x5F55;&#x5236;HTTP&#x9879;&#x76EE;&#x534F;&#x8BAE;
+3. &#x5F55;&#x5236;&#x8BBE;&#x7F6E;&#x5404;&#x9009;&#x9879;&#x542B;&#x4E49;
+    1). Application type
+    2). Program to record
+    3). URL Address
+    4). Working directory
+    5). Record into Action
+4. &#x5982;&#x4F55;&#x8FD0;&#x884C;&#x811A;&#x672C;
+5. &#x5982;&#x4F55;&#x67E5;&#x770B;&#x8FD0;&#x884C;&#x811A;&#x672C;&#x7684;&#x7ED3;&#x679C;
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../02-loadrunner/01-loadrunner.html" class="navigation navigation-prev " aria-label="Previous page: LoadRunner介绍"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../02-loadrunner/03-VuGen02.html" class="navigation navigation-next " aria-label="Next page: VuGen-扩展(录制、回放)"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"expandable-chapters-small":{},"splitter":{},"chapter-fold":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
