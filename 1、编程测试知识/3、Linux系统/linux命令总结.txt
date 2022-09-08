@@ -1,0 +1,57 @@
+一、linux管理和目录命令
+pwd 显示当前路径地址
+cd 改变当前用户的目录
+ls 查看当前文件夹下的文件
+mkdir  新建文件夹目录
+rmdir  删除文件夹目录
+touch  新建文件
+cat    查看文本内容
+mv     移动
+cp	复制
+rm	删除
+grep	字符串查找
+
+二、线上查找
+man 查看当前或者一个命令的使用方法
+locate 根据一个关键字或者关键词定位
+whatis 查看某个命令的含义
+三、文件阅读命令
+head	从头开始查看
+tail 	从尾开始查看
+more	分页查看
+四、文件或目录的压缩和解压缩
+tar 
+gzip
+bizip2
+gunzip
+bunzip
+五权限管理
+chmod	修改权限
+useradd	用户添加
+userdel 用户删除
+su	切换用户
+passwd	修改密码
+chgrp	修改文件所在组
+chown	用来修改文件的所有者
+六、文件的定位和查找
+which  定位
+whereis	查找
+七、磁盘操作
+df 查看文件系统使用情况
+du 查看文件磁盘占用情况
+八、系统命令
+reboot重启
+shutdown 关机
+halt	关机
+ps	进程
+toop	进程
+date	日期
+cal	日历
+exit	退出
+kill	结束进程
+九网络
+ipconfig 显示网络状态
+ping	监测主机
+netstat	知道整个linux系统的网络情况或显示网络状态
+
+
