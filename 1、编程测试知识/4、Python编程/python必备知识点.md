@@ -4738,20 +4738,21 @@ old_name = input('请输入您要备份的文件名：')
 
    2.2 组织备份的文件名，xx[备份]后缀
 
-``` python
-# 2.1 提取文件后缀点的下标
-index = old_name.rfind('.')
-
-# print(index)  # 后缀中.的下标
-
-# print(old_name[:index])  # 源文件名（无后缀）
-
-# 2.2 组织新文件名 旧文件名 + [备份] + 后缀
-new_name = old_name[:index] + '[备份]' + old_name[index:]
-
-# 打印新文件名（带后缀）
-# print(new_name)
-```
+> ``` python
+> # 2.1 提取文件后缀点的下标
+> index = old_name.rfind('.')
+> 
+> # print(index)  # 后缀中.的下标
+> 
+> # print(old_name[:index])  # 源文件名（无后缀）
+> 
+> # 2.2 组织新文件名 旧文件名 + [备份] + 后缀
+> new_name = old_name[:index] + '[备份]' + old_name[index:]
+> 
+> # 打印新文件名（带后缀）
+> # print(new_name)
+> ```
+>
 
 3. 备份文件写入数据
 
