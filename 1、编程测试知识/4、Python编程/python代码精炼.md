@@ -543,23 +543,480 @@ baoname.modulename.mubiao
     import multiprocessing
     
     Processs([group[,terget[,name[,args[,kwargs]]]])
-     group:指定进程组   
-     terget：执行的目标任务名字
+     		 group:指定进程组   
+     		 terget：执行的目标任务名字
               name：进程名字
               args：以元组方式给执行任务传参
               kwargs：以字典形参传参
-     
+    Process创建的实例对象的常用方法：
+              start（）：启动子进程实例（创建子进程）
+    		join（）：等待子进程执行结束
+              terminate（）：不管任务是否完成，立即终止子进程
+              
+terminate	英[ˈtɜːmɪneɪt]
+美[ˈtɜːrmɪneɪt]
+v.	终止; (使)停止; 结束; 到达终点站;
+adj.	终止的; 有限的(小数等);
+
+    name：当前进程的别名，默认为Process-N，N为从1开始递增的整数
     
     
+   import multiprocessing
+   import time
+              
+    def dance():
+              for i in range(5);
+              		print('dancing。。。')
+               		time.sleep(0.2)
+    # 唱歌任务
+    def sing():
+        for i in range(5):
+            print("唱歌中...")
+            time.sleep(0.2)	
+    
+     if __name__ == '__main__':
+     		#创建跳舞子进程
+     		#group表示进程组，目前只能用None
+     		#target：表示执行的目标任务名（函数名、方法名）
+     		#name：进程名称，默认Process-1，......
+     		dance_process = multiprocessing.Process(target = dance           ,name="myprocess1")
+     		sing_process = multiprocessing.Process(target=sing)
+    		
+    		#启动子进程执行对应的任务
+    		dance_process.start()
+    		sing_process.start()
+    		
+   
+   #总结
+   import multiprocessing
+   sub_process=multiprocessing.Process(target=任务名)
+   sub_process.start()
+   
+    ###获取进程编号的目的是验证主进程和子进程的关系，可以得知子进程是由那个主进程创建出来的
+    
+    os.getpid()#获取当前进程编号
+    os.kill(os.getpid(),9)#根据进程编号杀死进程
+    os.getppid()#获取当前父进程编号
+    
+    ###带参数,元组形式tuple
+    sub_process = mutiprocessing.Process(target=XXX ,arg=(x,xx))
+    #kwargs:表示以字典方式传入参数
+    sub_process = multiprocessing.Process(target=task,kwargs={'xxx'=xxx})
+    
+- **元组方式传参(args)**: 元组方式传参一定要和参数的顺序保持一致。
+- **字典方式传参(kwargs)**: 字典方式传参字典中的key一定要和参数名保持一致    
     
     
-    
-    
-    
-    
-    
-    
-    
+1. 进程之间不共享全局变量
+2. 主进程会等待所有的子进程执行结束再结束
+
+**守护主进程:**
+
+- 守护主进程就是主进程退出子进程销毁不再执行
+
+sub_process.daemon = True
+
+- 为了保证子进程能够正常的运行，主进程会等所有的子进程执行完成以后再销毁，设置守护主进程的目的是**主进程退出子进程销毁，不让主进程再等待子进程去执行**。
+- 设置守护主进程方式： **子进程对象.daemon = True**
+- 销毁子进程方式： **子进程对象.terminate()
+
+
+
+####线程
+多线程可以完成多任务
+
+import threading
+
+Thread([group[,target[,name[,args[,kwargs]]]]])
+- group: 线程组，目前只能使用None
+- target: 执行的目标任务名
+- args: 以元组的方式给执行任务传参
+- kwargs: 以字典方式给执行任务传参
+- name: 线程名，一般不用设置
+
+start()
+
+##eg:
+import threading
+
+sub_thread = threading.Thread(target=任务名,arg=(xx,xx),kwarg={'xxx'=xx})
+
+sub_thread.start()
+
+1. 线程之间执行是无序的
+2. 主线程会等待所有的子线程执行结束再结束
+3. 线程之间共享全局变量
+4. 线程之间共享全局变量数据出现错误问题
+
+
+
+**守护主线程:**
+
+- 守护主线程就是主线程退出子线程销毁不再执行
+
+**设置守护主线程有两种方式：**
+
+1. threading.Thread(target=show_info, daemon=True)
+2. 线程对象.setDaemon(True)
+
+
+if __name__ == '__main__':
+    # 创建两个线程
+    first_thread = threading.Thread(target=sum_num1)
+    second_thread = threading.Thread(target=sum_num2)
+
+    # 启动线程
+    first_thread.start()
+    # 主线程等待第一个线程执行完成以后代码再继续执行，让其执行第二个线程
+    # 线程同步： 一个任务执行完成以后另外一个任务才能执行，同一个时刻只有一个任务在执行
+    first_thread.join()
+    # 启动线程
+    second_thread.start()
+
+
+线程之间共享全局变量可能会导致数据出现错误问题，可以使用线程同步方式来解决这个问题。
+
+- 线程等待(join)
+
+互斥锁: 对共享数据进行锁定，保证同一时刻只能有一个线程去操作。
+
+mutex = threading.Lock()
+mutex.acquire()
+xxxxx
+xxxxXXX
+...
+mutex.release()
+# 提示：加上互斥锁，那个线程抢到这个锁我们决定不了，那线程抢到锁那个线程先执行，没有抢到的线程需要等待
+    # 加上互斥锁多任务瞬间变成单任务，性能会下降，也就是说同一时刻只能有一个线程去执行
+
+###用互斥锁完成2个线程对同一个全局变量各加100万次的操作
+import threading
+
+g_num = 0
+
+lock = threading.Locck()
+
+def sum_num1():
+	lock.acquire()
+	for i in range(1000000):
+		global g_num
+		g_num +=1
+	print("sum1:", g_num)
+	lockrelease()
+	
+def sum_num2():
+	lock.acquire()
+	for i in range(1000000):
+		global g_num
+		g_num +=1
+	print("sum1:", g_num)
+	lockrelease()	
+
+if __name__ == '__main__':
+	first_thread = threading.Thread(target=sum_num1)
+	second_thread = threading.Thread(target=sum_num2)
+	
+	first_thread.start()
+	second_thread.start()
+	
+- 使用互斥锁的时候需要注意死锁的问题，要在合适的地方注意释放锁。
+- 死锁一旦产生就会造成应用程序的停止响应，应用程序无法再继续往下执行了。
+
+
+
+####IP地址
+ifconfig  or  ipconfig 
+ping 
+IP 地址的作用是标识网络中唯一的一台设备的
+IP 地址的表现形式分为: IPv4 和 IPv6
+查看网卡信息：ifconfig
+检查网络： ping
+端口是传输数据的通道，是数据传输必经之路。
+端口的作用就是给运行的应用程序提供传输数据的通道。
+端口号的作用是用来区分和管理不同端口的，通过端口号能找到唯一个的一个端口。
+端口号可以分为两类： 知名端口号 和 动态端口号
+知名端口号的范围是0到1023
+动态端口号的范围是1024到65535
+TCP 是一个稳定、可靠的传输协议，常用于对数据进行准确无误的传输，比如: 文件下载，浏览器上网。
+进程之间网络数据的传输可以通过 socket 来完成， socket 就是进程间网络数据通信的工具。
+
+###TCP 客户端程序开发流程的介绍
+步骤说明:
+创建客户端套接字对象
+和服务端套接字建立连接
+发送数据
+接收数据
+关闭客户端套接字
+
+导入socket模块
+创建TCP套接字‘socket’
+参数1: ‘AF_INET’, 表示IPv4地址类型
+参数2: ‘SOCK_STREAM’, 表示TCP传输协议类型
+发送数据‘send’
+参数1: 要发送的二进制数据， 注意: 字符串需要使用encode()方法进行编码
+接收数据‘recv’
+参数1: 表示每次接收数据的大小，单位是字节
+关闭套接字‘socket’表示通信完成
+
+#介绍 socket
+import socket
+socket.socket(AddressFamily,Type)
+
+connect((host,port))
+send(data)
+recv(buffersize)
+
+import socket
+
+if __name__ == '__main__':
+	tcp_client_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+	tcp_client_socket = connect(('localhost',8080))
+	send_data = "XXXXXXX".encode('gbk')
+	tcp_client_socket.send(send_data)
+	recv_data = tcp_client_socket.recv(1024)
+	print(recv_data)
+	recv_content = recv_data.decode('gbk')
+	print('recv_content:',recv_content)
+	tcp_click_socket.close()
+	
+##开发 TCP 服务端程序开发步骤回顾
+创建服务端端套接字对象
+绑定端口号
+设置监听
+等待接受客户端的连接请求
+接收数据
+发送数据
+关闭套接字
+
+import socket
+socket.socket(AddressFamily,Type)
+bind((host,port))
+listen(backlog)
+accept()
+send(data)
+recv(buffersize)  buffersize 是每次接收数据的长度
+
+
+buffer	英[ˈbʌfə(r)]
+美[ˈbʌfər]
+n.	缓冲器; 缓冲物; 起缓冲作用的人; (火车头尾或轨道末端的)减震器; 缓存区; 缓冲存储器; 愚蠢老头;
+vt.	缓存; 减少(伤害); 保护; 使不受…的侵害; 缓冲; 存储;
+buffersize 缓冲区大小
+
+
+
+##eg:
+import socket
+
+if __name__ =='__main__':
+	tcp_server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+	tcp_server_socket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,True)
+	tcp_server_socket.bind(("",8989))
+	tcp_server_socket.listen(128)
+	service_client_socket,ip_port = tcp_server_socket.accept()
+	print("客户端的ip地址和端口号",ip_port)
+	recv_data = service_client_socket.recv(1024)
+	send_data = "ok,xxxxx".encode('gbk')
+	service_client_socket.send(send_data)
+	service_client_socket.close()
+	tcp_server_socket.close()
+	
+# 参数1: 表示当前套接字
+# 参数2: 设置端口号复用选项
+# 参数3: 设置端口号复用选项对应的值
+tcp_server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, True)
+
+###多任务版TCP服务端程序的示例代码:
+
+import socket
+import threading
+
+def handle_client_request(service_client_socket,ip_port):
+	while True:
+		recv_data = service_client_socket.recv(1024)
+		if recv_data:
+			print(recv_data.decode("gbk"),ip_port)
+			service_client_socket.send("ok，问题真正处理中。。。".encode("gbk"))
+		else:
+			print("XXXX",ip_port)
+			break
+	service_client_socket.close()
+	
+
+
+if __name__ =='__main__':
+	tcp_server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+	tcp_server_socket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,True)
+	tcp_server_socket.bind(("",9090))
+	tcp_server_socket.listen(128)
+	while True;
+		service_client_socket,ip_port = tcp_server_socket.accpet()
+		print("客户端连接成功:", ip_port)
+		sub_thread = threading.Thread(target= handle_client_request,args=(service_client_socket,ip_port))
+		sub_thread.setDaemon(True)
+		sub_thread.start()
+
+
+- HTTP协议是一个超文本传输协议
+- HTTP协议是一个基于TCP传输协议传输数据的
+- HTTP协议规定了浏览器和 Web 服务器通信数据的格式
+
+**URL的组成部分:**
+
+1. **协议部分**: https://、http://、ftp://
+2. **域名部分**: news.163.com
+3. **资源路径部分**: /18/1122/10/E178J2O4000189FH.html
+4.   查询参数部分 [可选]
+
+GET POST
+
+200 请求成功
+307 重定向
+400 请求错误，请求地址或者参数错误
+404 请求资源在服务器不存在
+500 服务器内部源代码出现错误
+
+#请求行 请求头 空行 
+#请求行 请求头 空行 请求体
+
+#响应行 响应头 空行 响应体
+
+搭建Python自带的静态Web服务器：
+
+python -m http.server xxxx (default:8000)
+
+###静态Web服务器-返回固定页面数据的示例代码
+import socket
+
+if __name__ == "__main__":
+	tcp_server_socket = socket.socket (socket.AF_INET , socket.SOCK_STREAM)
+	tcp_server_socket.setsocket(socket.SOL_SOCKET.SO_REUSEADDR,True)
+	tcp_server_socket.bind(("",9000))
+	tcp_server_socket.listen(128)
+	while True:
+		new_socket,ip_port = tcp_server_socket.accept()
+		recv_client_data = new_socket.recv(4096)
+		recv_client_content = recv_client_data.decode("utf-8")
+		print(recv_client_content)
+		
+		with open("static/index.html","rb") as file:
+			file_data = file.read()
+			
+		response_line = "HTTP/1.1 200 OK\r\n"
+		response_header = "Server : PWS1.0\r\n"
+		
+		response_body = file_data
+		
+		response_data = (response_line + response_header + "\r\n").encode("utf-8") +response_body
+		new_socket.send(response_data)
+		
+		new_socket.close()
+
+
+
+##eg:返回指定页面、多任务版、面对对象开发、命令行启动动态绑定端口号，的 web服务器
+import socket
+import threading
+import sys
+
+
+class HttpWebServer(object):
+	def __init__(self,port):
+		tcp_server_socket = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
+		tcp_server_socket = setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,True)
+		tcp_server_socket.bind(("",port))
+		tcp_server_socket.listen(128)
+		self.tcp_server_socket = tcp_server_socket
+	
+	@staticmethod
+	def handle_client_request(new_socket):
+		recv_client_data = new_socket.recv(4096)
+		if len(recv_client_data) == 0:
+			print("DOWN!!!")
+			new_socket.close()
+			return
+		
+		recv_client_content=recv_client_data.decode("utf-8")
+		print(recv_client_content)
+		request_list = recv_client_content.Split(" ",maxsplit=2)
+		
+		request_path=request_list[1]
+		print(request_path)
+		
+		if request_path == "/":
+	'''request_path = "/index.html"
+
+        try:
+            # 动态打开指定文件
+            with open("static" + request_path, "rb") as file:
+                # 读取文件数据
+                file_data = file.read()
+        except Exception as e:
+            # 请求资源不存在，返回404数据
+            # 响应行
+            response_line = "HTTP/1.1 404 Not Found\r\n"
+            # 响应头
+            response_header = "Server: PWS1.0\r\n"
+            with open("static/error.html", "rb") as file:
+                file_data = file.read()
+            # 响应体
+            response_body = file_data
+
+            # 拼接响应报文
+            response_data = (response_line + response_header + "\r\n").encode("utf-8") + response_body
+            # 发送数据
+            new_socket.send(response_data)
+        else:
+            # 响应行
+            response_line = "HTTP/1.1 200 OK\r\n"
+            # 响应头
+            response_header = "Server: PWS1.0\r\n"
+
+            # 响应体
+            response_body = file_data
+
+            # 拼接响应报文
+            response_data = (response_line + response_header + "\r\n").encode("utf-8") + response_body
+            # 发送数据
+            new_socket.send(response_data)
+        finally:
+            # 关闭服务与客户端的套接字
+            new_socket.close()
+'''
+	
+
+	
+	
+	def start(self):
+		while True:
+			new_socket,ip_port = self.tcp_server_socket.accept()
+			sub_thread = threading.Thread(target=self.handle_client_request,args=(new_socket,))
+			sub_thread.setDaemon(True)
+			sub_thread.start()
+			
+def main():
+	prit(sys.argv)
+	if len(sys.argv)!=2:
+		print("执行命令如下: python3 xxx.py 8000")
+		return
+		
+	if not sys.argv[1].isdigit():
+		print("执行命令如下: python3 xxx.py 8000")
+		return
+	port = int(sys.argv[1])
+	web_sever = HttpWebServer(port)
+	web_server.start()
+	
+if __name__ == '__main__':
+	main()
+	
+
+
+
+
+
+
+
 
 
 
@@ -666,3 +1123,49 @@ baoname.modulename.mubiao
   - from 模块名 import *
   - import 模块名 as 别名
   - from 模块名 import 功能名 as 别名
+
+
+### 1. 进程和线程的对比的三个方向
+
+1. 关系对比
+2. 区别对比
+3. 优缺点对比
+
+### 2. 关系对比
+
+1. 线程是依附在进程里面的，没有进程就没有线程。
+2. 一个进程默认提供一条线程，进程可以创建多个线程。
+### 2. 区别对比
+
+1. 进程之间不共享全局变量
+2. 线程之间共享全局变量，但是要注意资源竞争的问题，解决办法: 互斥锁或者线程同步
+3. 创建进程的资源开销要比创建线程的资源开销要大
+4. 进程是操作系统资源分配的基本单位，线程是CPU调度的基本单位
+5. 线程不能够独立执行，必须依存在进程中
+6. 多进程开发比单进程多线程开发稳定性要强
+
+### 3. 优缺点对比
+
+- 进程优缺点:
+  - 优点：可以用多核
+  - 缺点：资源开销大
+- 线程优缺点:
+  - 优点：资源开销小
+  - 缺点：不能使用多核
+
+### 4. 小结
+
+- 进程和线程都是完成多任务的一种方式
+- 多进程要比多线程消耗的资源多，但是多进程开发比单进程多线程开发稳定性要强，某个进程挂掉不会影响其它进程。
+- 多进程可以使用cpu的多核运行，多线程可以共享全局变量。
+- 线程不能单独执行必须依附在进程里面
+
+
+
+
+
+
+
+
+
+
