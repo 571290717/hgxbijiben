@@ -1,6 +1,6 @@
 ```python
 print()
-
+1
 type()
 
 
@@ -944,47 +944,23 @@ class HttpWebServer(object):
 		print(request_path)
 		
 		if request_path == "/":
-	'''request_path = "/index.html"
-
+              request_path="/index.html"
         try:
-            # 动态打开指定文件
-            with open("static" + request_path, "rb") as file:
-                # 读取文件数据
-                file_data = file.read()
-        except Exception as e:
-            # 请求资源不存在，返回404数据
-            # 响应行
-            response_line = "HTTP/1.1 404 Not Found\r\n"
-            # 响应头
-            response_header = "Server: PWS1.0\r\n"
-            with open("static/error.html", "rb") as file:
-                file_data = file.read()
-            # 响应体
-            response_body = file_data
-
-            # 拼接响应报文
-            response_data = (response_line + response_header + "\r\n").encode("utf-8") + response_body
-            # 发送数据
-            new_socket.send(response_data)
-        else:
-            # 响应行
-            response_line = "HTTP/1.1 200 OK\r\n"
-            # 响应头
-            response_header = "Server: PWS1.0\r\n"
-
-            # 响应体
-            response_body = file_data
-
-            # 拼接响应报文
-            response_data = (response_line + response_header + "\r\n").encode("utf-8") + response_body
-            # 发送数据
-            new_socket.send(response_data)
-        finally:
-            # 关闭服务与客户端的套接字
-            new_socket.close()
-'''
-	
-
+              with open("static" + request_path ,"rb") as file:
+              file_data = file.read()
+         except Exception as e:
+              response_line = "HTTP/1.1 404 Not Found\r\n"
+              response_header = "Server :PWS1.0\r\n"
+			  with open("static/error.html","rb") as file:
+              	file_data = file.read()
+              response_body =file_data
+              response_data= (response_line + response_header + "\r\n").encode("utf-8") + response_body
+              new_socket.send(response_data)
+       finally:
+       		new_socket .close()
+       		
+              
+     
 	
 	
 	def start(self):
@@ -1010,6 +986,144 @@ def main():
 if __name__ == '__main__':
 	main()
 	
+
+
+####闭包#####
+用外部函数变量的内部函数称为闭
+
+def  func_out(num1):
+	def func_inner(num2):
+		result = num1 + num2
+		print("结果是："，result)
+	return func_inner
+
+f = fun_out(1)
+f(2)
+闭包可以对外部函数的变量进行保存
+闭包还可以提高代码的可重用性，不需要再手动定义额外的功能函数。
+
+修改闭包内使用的外部函数变量使用 nonlocal 关键字来完成。
+
+nonlocal xxx1
+xxx1 = xxxx
+
+####  装饰器的定义
+
+就是**给已有函数增加额外功能的函数，它本质上就是一个闭包函数**。
+
+**装饰器的功能特点:**
+
+1. 不修改已有函数的源代码
+2. 不修改已有函数的调用方式
+3. 给已有函数增加额外的功能
+
+def decorator(fn):
+	def inner():
+		'''执行函数之前'''
+		fn()
+		'''执行函数之后'''
+	return inner
+	
+@XXX ==>  func = XXX(func)
+
+
+import time 
+
+def get_time(func):
+	def inner():
+		begin = time.time()
+		func()
+		end = time.time()
+		print("函数执行花费%f" % (end-begin))
+	return inner
+
+@get_time
+def func1():
+	xxxxxx
+
+finc1()
+
+#通用装饰器
+def logging(fn):
+	def inner(*args,**kwargs):
+		print("--正在计算————")
+		result = fn(*args,**kwargs)
+		return result
+	
+	return inner
+	
+多个装饰器的装饰过程是: 离函数最近的装饰器先装饰，然后外面的装饰器再进行装饰，由内到外的装饰过程  -$$#由内到外
+# 装饰过程: 1 content = make_p(content) 2 content = make_div(content)
+# content = make_div(make_p(content))
+@make_div
+@make_p
+def content():
+
+		
+###  类装饰器的介绍
+
+装饰器还有一种特殊的用法就是类装饰器，就是通过定义一个类来装饰函数
+
+#eg:
+class Check(object):
+	def __init__(self,fn):
+		self.__fn = fn
+		
+	def __call__(self,*args,**kwargs):
+		print("xxxx")
+		self.__fn()
+		
+@Check
+def comment():
+	print("xxxx")
+	
+comment()
+
+@Check 等价于 comment = Check(comment),
+
+web服务器主要是接收用户的http请求,根据用户的请求返回不同的资源数据
+web框架专门负责处理用户的动态资源请求，这个web框架其实就是一个为web服务器提供服务的应用程序**，简称web框架。
+
+WSGI协议规定web服务器把动态资源的请求信息传给web框架处理，web框架把处理好的结果返回给web服务器。
+
+###mini-Web框架 （自己写一个简单系统）
+
+个人编写一个：web框架+web服务器 +mysql+ajax渲染+logging日志的网页系统
+
+
+系统内部流程分析：
+web浏览器——》web服务器-->web框架———》模板--》mysql———》web框架汇总--》
+web服务器———》发web浏览器
+
+要是静态网页直接 浏览器———》服务器--》拿资源--》服务器发给浏览器
+
+框架就是用来处理资源
+第一步
+搭建好服务器（socket+多线程）
+
+设计：
+
+	导包xxx
+	面对对象写一class
+	写socket监听
+	处理发送（这里是web框架）
+	写启动（多线程启动）
+	定义主函数（可使用终端命令行的方式启动）
+	运行
+
+代码编写：
+ 服务器代码：
+ 		
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1159,7 +1273,6 @@ if __name__ == '__main__':
 - 多进程要比多线程消耗的资源多，但是多进程开发比单进程多线程开发稳定性要强，某个进程挂掉不会影响其它进程。
 - 多进程可以使用cpu的多核运行，多线程可以共享全局变量。
 - 线程不能单独执行必须依附在进程里面
-
 
 
 
