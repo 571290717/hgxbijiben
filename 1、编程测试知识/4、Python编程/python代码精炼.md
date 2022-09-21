@@ -1111,33 +1111,465 @@ web服务器———》发web浏览器
 	定义主函数（可使用终端命令行的方式启动）
 	运行
 
+              python中装饰器是随着程序的加载运行而自动加载的，跟调不调用方法没有关系.所以只要是装饰器内部函数以外的部分都会自动加载执行，不用调用。注释的分类
+              
 代码编写：
  服务器代码：
- 		
+ 
+import socket
+import os
+import threading
+import sys
+import framework
 
+class HttpWebServer(object):
+	def __init__(self,port):
+		tcp_server_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+		tcp_server_socket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,True)
+		tcp_server_socket.bind(("",port))
+		tcp_server_socket.listen(128)
+		self.tcp_server_socket = tcp_server_socket
+		
+	@staticmethod
+	def handle_client_request(new_socket):
+		recv_data = new_socket.recv(4096)
+		if len(recv_data) == 0:
+			new_socket.close()
+			return
+		recv_content = recv_data.decode("utf-8")
+		
+		request_list = recv_content.split(" ", maxsplit=2)
+        
+        request_path = request_list[1]
+        
+        if request_path == "/":
+        	request_path = "/index.html"
+        
+        if request_path.endswith(".html"):
+        	'''web框架'''
+        	env = {
+        		"request_path":request_path,
+        		
+        	}
+            
+            status ,header,response_body = framework.handle_request(env)
+            print(staus.headers,response_body)
+            response_line = "HTTP/1.1 %s\r\n"%status
+            response_header = ""
+            for header in headers:
+            	response_header +="%s: %s\r\n" % header
+            
+            	response_data = (reaponse_line +
+            		response_header +
+            		"\r\n" +
+            		response_body).encode("utf-8")
+            	
+            	new_socket.send(response_data）
+            	
+            	new_socket.close()
+         else:
+         	try:
+         		with open("static","rb") as file:
+         			file_data = file.read()
+         	except Exception as e:
+         		response_line = "HTTP/1.1 404 Not Found\r\n"
+         		response_header = "Server : PWS/1.0\r\n"
+         		with open("statc","rb") as file:
+         			file_data = file.read()
+         		response_body = file_data
+         		response_data = (reaponse_line +
+            		response_header +
+            		"\r\n" ).encode("utf-8") + response_body
+            	
+            	new_socket.send(response)
+            else:
+            	response_line = "HTTP/1.1 404 Not Found\r\n"
+         		response_header = "Server : PWS/1.0\r\n"
+            	response_body = file_data
+         		response_data = (reaponse_line +
+            		response_header +
+            		"\r\n" ).encode("utf-8") + response_body
+            	
+            	new_socket.send(response)
+            finally:
+            	new_socket.close()
+    
+    def start(self):
+    	while True:
+    		new_socket,ip_port = self.tcp_server_socket.accept()
+    		sub_thread = threading.Thread(target=self.handle_client_request,args=(new_socket,))
+    		sub_thread.setDaemon(True)
+    		sub_thread.start(),
+    
+    def main():
+    	web_server = HttpWebServer(8000)
+    	web_server.start()
+    	
+    
+    if __name__ == '__main':
+    	main()
+    	
+    	
+####Web框架
+import time
+import pymysql
+import json
 
+route_list = [       ]
 
+def route(path):
+	def decorator(func):
+		route_list.append((path,func))
+		
+		def inner():
+			
+			result = func()
+			return result
+		
+		return inner
+    return decorator
+    
+@route("/index.html")
+def index():
+	status = "200 ok"
+	response_header = [("server","PWS/1.1")]
+	with open("static","rb") as file:
+		file_data = file.read()
+	
+	conn = pymysql.connect(host="localhost",
+							port=3306,
+							user="root",
+							password = "XXXXXX",
+							database="XXXXX",
+							charset="utf8"
+							)
+	
+	cursor = conn.cusor()
+    sql = "select * form info ;"
+    cursor.excute(sql)
+    result = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    
+    data = ""
+    for row in result:
+    	data +='''
+    	
+    	        xxx
+    	        xxx
+    	        xxx
+    	'''%row
+    response_body = file_data.replace("{% xxxx%}") , data)
+    
+    return status ,response_header , response_body
+    
+@route("/center_data.html")
+def center_data():
+	
+	
+	conn = pymysql.connect(host="localhost",
+							port=3306,
+							user="root",
+							password = "XXXXXX",
+							database="XXXXX",
+							charset="utf8"
+							)
+    cursor = conn.cursor()
+    sql = '''select i.code , i.short,i.cha,i.turnover,i.price,i.highs, f.note_info
+    form info as i  inner join focus as f
+     on i.id = f.info_id'''
+    cursor.execute(sql)
+  	result = cursor.fetchall()
+    center_data_list = [{
+        "code" : row[0],
+        "short": row[1],
+        "chg":row[2],
+        "turnover":row[3],
+        "price":str(row[4]),
+        "highs":str(row[5]),
+        "note_info": row[6]
+    } for row in result ]
+     
+	json_str = json.dupms(center_data_list,ensure_ascii = False)             
+    '''
+    json.dumps()函数是将字典转化为字符串
+    json.loads()函数是将字符串转化为字典
+    json.dump()用于将dict类型的数据转成str，并写入到json文件中。
+    json.dump(name_emb,open(emb_filename,"w"))
+    res=json.load(file) file为文件路径
+    '''          
+    cursor.close()         
+	conn.close()  
+    status = "200 OK"          
+  	response_header= [
+        ("Server","PWS/1.1"),
+        ("Content-Type","text/html;charset=utf-8")
+        
+    ]
+    return status ,response_header,json_str
+              
+  @route("/center.html")
+  def center():
+      status = "200 OK"
+      response_header =  [("Server","PWS/1.1")]
+      with open("static","r",encoding='utf-8') as file:
+              file_data = file.read()
+      response_body = file_data.replace("{%content%}","")
+      return status , response_header ,response_body
+       
+  def not_found():
+              status = "404 Not Found"
+			 response_header = [("Server","PWS/1.1")]
+              data = "not found"
+              return status,response_header,data
+              
+  def handle_request(env):
+              request_path = env["request_path"]
+              print("动态资源请求的地址："，request_path)
+              print(route_list)
+              
+              for path , func in route_list:
+              	if request_path == path：
+              		result = func()
+              		return result
+              else:
+              	result = not_found()
+              	return result
+              
+   if __name__ == '__main__':
+         center_data()
+  
+       
+  
+      #############logging 日志
+              
+       1-->5
+       DEBUG
+   	   INFO
+       WARNING
+       ERROR
+       CRITICAL
+       
+              
+  import logging
+              
+    logging.debug('这是一个debug级别的日志信息')
+    logging.info('这是一个info级别的日志信息')
+    logging.warning('这是一个warning级别的日志信息')
+    logging.error('这是一个error级别的日志信息')
+    logging.critical('这是一个critical级别的日志信息')
 
+  
+       
+  import logging
+              
+  logging.basicConfig(level = logging.DEBUG,
+                     format = '%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s : %(message)s')
+              
+     logging.debug('这是一个debug级别的日志信息')
+    logging.info('这是一个info级别的日志信息')
+    logging.warning('这是一个warning级别的日志信息')
+    logging.error('这是一个error级别的日志信息')
+    logging.critical('这是一个critical级别的日志信息')             
 
+level 表示设置的日志等级
+format 表示日志的输出格式, 参数说明:
+%(levelname)s: 打印日志级别名称
+%(filename)s: 打印当前执行程序名
+%(lineno)d: 打印日志的当前行号
+%(asctime)s: 打印日志的时间
+%(message)s: 打印日志信息
+  
+       
+项目中使用：
+              
+              
+   import logging
+              
+   logging.basicConfig(level= logging.DEBUG,
+                      format="%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s",
+                       filename ="log.txt"
+                       filemode="w"
+                      )
+              
+  INFO级别的日志输出，示例代码:       
+   if request_path.endswith(".html"):
+     """这里是动态资源请求，把请求信息交给框架处理"""
+     logging.info("动态资源请求:" + request_path)
+     ...
+ else:
+     """这里是静态资源请求"""
+     logging.info("静态资源请求:" + request_path)
+     ...  
+       
+ WARNING级别的日志输出，示例代码:
 
+ if len(sys.argv) != 2:
+     print("执行命令如下: python3 xxx.py 9000")
+     logging.warning("用户在命令行启动程序参数个数不正确!")
+     return
+              
+ if not sys.argv[1].isdigit():
+     print("执行命令如下: python3 xxx.py 9000")
+     logging.warning("用户在命令行启动程序参数不是数字字符串!")
+     return  
+              
+              
+ ERROR级别的日志输出，示例代码:
+ def handle_request(env):
+     
+     request_path = env["request_path"]
+     print("接收到的动态资源请求:", request_path)
 
+     for path, func in route_list:
+         if request_path == path:
+             result = func()
+             return result
+     else:
+         logging.error("没有设置相应的路由:" + request_path)
+        
+         result = not_found()
+         return result       
+              
+              
+              
+  ####正则表达式
+              
+  在业务处理时经常需要在数据的读取和存入前对数据进行预处理，通过@property和@*.setter两个装饰器就可以方便的实现。
 
+ 
 
+#@property
 
+　　python中的@property装饰器可以总结为两个作用：
 
+让函数可以像普通变量一样使用
+对要读取的数据进行预处理
+              
+# @*.setter
 
+　　python中的@*.setter装饰器可以总结为两个作用：
 
+对要存入的数据进行预处理
+设置可读属性(不可修改)
+　　注意：@*.setter装饰器必须在@property装饰器的后面，且两个被修饰的函数的名称必须保持一致，* 即为函数名称。             
+              
+ 
+property	英[ˈprɒpəti]
+美[ˈprɑːpərti]
+n.	所有物; 财产; 财物; 不动产; 房地产; 房屋及院落; 庄园; 性质;
+              
+定义property属性有两种方式:
+装饰器方式
+类属性方式
+              
+装饰器方式:
+@property 修饰获取值的方法
+@方法名.setter 修饰设置值的方法
+              
+类属性方式:
+类属性 = property(获取值方法, 设置值方法)
+              
+ @property
+ def get_age():
+              xxxxx
+ @age.setter
+  def set_age():
+				xxxx
+           
+    2\
+              age = property(get_age,set_age)
+              
+              
+              
+      with(oprn('1.txt','w'))as f:
+              f.write("xxx")
+              
+              
+       __enter__
+       __exit__
+       
+              
+       根据程序员制定的规则循环生成数据，当条件不成立时则生成数据结束。数据不是一次性全部生成处理，而是使用一个，再生成一个，可以节约大量的内存       
+     yield 关键字:
 
-
-
-
-
-
-
-
-
-
-
+只要在def函数里面看到有 yield 关键字那么就是生成器  
+              
+              
+ 浅拷贝使用copy.copy函数
+深拷贝使用copy.deepcopy函数             
+              
+  # 正则表达式是匹配符合某些规则的字符串数据           
+              
+              
+   import re
+   
+ 	result = re.match(正则表达式，str)
+    
+  	result.group()
+   
+              #eg:
+              import re
+              
+              result = re.match("itcast","itcast.cn")
+              
+              info = result.group()
+              print(info)
+              
+              
+              
+              
+              
+代码	功能
+.	匹配任意1个字符（除了\n）
+[ ]	匹配[ ]中列举的字符
+\d	匹配数字，即0-9
+\D	匹配非数字，即不是数字
+\s	匹配空白，即 空格，tab键
+\S	匹配非空白
+\w	匹配非特殊字符，即a-z、A-Z、0-9、_、汉字
+\W	匹配特殊字符，即非字母、非数字、非汉字
+              
+  *	匹配前一个字符出现0次或者无限次，即可有可无
++	匹配前一个字符出现1次或者无限次，即至少有1次
+?	匹配前一个字符出现1次或者0次，即要么有1次，要么没有
+{m}	匹配前一个字符出现m次
+{m,n}	匹配前一个字符出现从m到n次            
+              
+^	匹配字符串开头
+$	匹配字符串结尾              
+              
+              
+  |	匹配左右任意一个表达式
+(ab)	将括号中字符作为一个分组
+\num	引用分组num匹配到的字符串
+(?P<name>)	分组起别名
+(?P=name)	引用别名为name分组匹配到的字符串            
+              
+              
+ #需求：匹配出163、126、qq等邮箱             
+   import re
+   
+              match_obj = re.match("[a-zA-Z0-9_]{4,9}@(163|126|qq|sina|yahoo)\.com","hello@163.com")
+              if match_obj:
+              	print(match_obj.group())
+              	print(match_obj.group(1))
+             else:
+              	print("匹配失败")
+             
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+       
 
 
 
@@ -1280,5 +1712,18 @@ web服务器———》发web浏览器
 
 
 
+**python中装饰器是随着程序的加载运行而自动加载的，跟调不调用方法没有关系.所以只要是装饰器内部函数以外的部分都会自动加载执行，不用调用。**
 
+- DEBUG：程序调试bug时使用
+- INFO：程序正常运行时使用
+- WARNING：程序未按预期运行时使用，但并不是错误，如:用户登录密码错误
+- ERROR：程序出错误时使用，如:IO操作失败
+- CRITICAL：特别严重的问题，导致程序不能再继续运行时使用，如:磁盘空间为空，一般很少使用
+- 默认的是WARNING等级，当在WARNING或WARNING之上等级的才记录日志信息。
+- 日志等级从低到高的顺序是: DEBUG < INFO < WARNING < ERROR < CRITICAL
 
+- 浅拷贝使用copy.copy函数
+- 深拷贝使用copy.deepcopy函数
+- 不管是给对象进行深拷贝还是浅拷贝，只要拷贝成功就会开辟新的内存空间存储拷贝的对象。
+- 浅拷贝和深拷贝的区别是:
+  - 浅拷贝最多拷贝对象的一层，深拷贝可能拷贝对象的多层。
