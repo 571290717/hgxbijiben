@@ -1,0 +1,4 @@
+1、在controller机器的jmeter的bin目录下，找到jmeter.properties文件，编辑该文件，将slave设备的地址均写入该文件，如：修改：remote_hosts=172.121.13.12:1099,172.16.13.13:1099
+2、从压测机设置（需要协助加压的机器）bin目录中jmeter.properties中取消server_port=1099的注释启用
+3、修改jmeter.properties 参数：server.rmi.ssl.disable=true
+4、压测机启动jmeter-server.bat
