@@ -216,3 +216,9 @@ class Login2Spider(scrapy.Spider):
 2. 直接携带cookie登陆：cookie只能传递给cookies参数接收
 3. scrapy.Request()发送post请求
 
+
+
+
+
+
+
