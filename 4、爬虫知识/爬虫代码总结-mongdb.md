@@ -1,3 +1,14 @@
+class ProxyMiddleware(object):
+    def process_request(self,request,spider):
+        # proxies可以在settings.py中，也可以来源于代理ip的webapi
+        # proxy = random.choice(proxies) 
+
+        # 免费的会失效，报 111 connection refused 信息！重找一个代理ip再试
+        proxy = 'https://1.71.188.37:3128' 
+    
+        request.meta['proxy'] = proxy
+        return None # 可以不写return
+
 # 爬虫代码总结（自己敲）
 
 ````mysql
@@ -1269,3 +1280,474 @@ W3School官方文档：<http://www.w3school.com.cn/xpath/index.asp>
 2. 极验验证码智能识别辅助：http://jiyandoc.c2567.com/
 
    能够解决复杂验证码的识别
+
+<img src="./images/7.mongodb总结.png" width = "100%" />
+
+![image-20221109110132405](%E7%88%AC%E8%99%AB%E4%BB%A3%E7%A0%81%E6%80%BB%E7%BB%93-mongdb.assets/image-20221109110132405.png)
+
+
+
+
+
+# scrapy爬虫框架
+
+- scrapy的概念作用和工作流程
+- scrapy的入门使用
+- scrapy构造并发送请求
+- scrapy模拟登陆
+- scrapy管道的使用
+- scrapy中间件的使用	
+- scrapy_redis概念作用和流程
+- scrapy_redis原理分析并实现断点续爬以及分布式爬虫
+- scrapy_splash组件的使用
+- scrapy的日志信息与配置
+- scrapyd部署scrapy项目
+
+
+
+![image-20221109110431815](%E7%88%AC%E8%99%AB%E4%BB%A3%E7%A0%81%E6%80%BB%E7%BB%93-mongdb.assets/image-20221109110431815.png)
+
+
+
+![image-20221109110522433](%E7%88%AC%E8%99%AB%E4%BB%A3%E7%A0%81%E6%80%BB%E7%BB%93-mongdb.assets/image-20221109110522433.png)
+
+# scrapy的入门使用
+
+### 1 掌握 scrapy的安装
+
+​	pip install scrapy
+
+### 2 scrapy项目开发流程
+
+1. 创建项目:<br/>
+   &ensp;&ensp;&ensp;&ensp;scrapy startproject mySpider
+2. 生成一个爬虫:<br/>
+   &ensp;&ensp;&ensp;&ensp;scrapy genspider itcast itcast.cn
+3. 提取数据:<br/>
+   &ensp;&ensp;&ensp;&ensp;根据网站结构在spider中实现数据采集相关内容
+4. 保存数据:<br/>
+   &ensp;&ensp;&ensp;&ensp;使用pipeline进行数据后续处理和保存
+
+
+
+![image-20221109110954384](%E7%88%AC%E8%99%AB%E4%BB%A3%E7%A0%81%E6%80%BB%E7%BB%93-mongdb.assets/image-20221109110954384.png)
+
+```python
+#安装
+pip install scrapy
+#创建scrapy项目
+scrapy startproject mySpider
+#进入创建的项目目录
+cd mySpider
+#创建一个爬虫文件 scrapy genspider 《爬虫名字》 《允许爬取的域名》
+scrapy genspider itcast itcast.cn
+
+
+#开始完善爬虫提取数据
+import scrapy
+
+class ItcastSpider(scrapy.Spider):
+    #爬虫名字
+    name = 'itcast'
+	#允许爬取的范围
+	allowed_domains = ['itcast.cn']
+    #开始爬取的url地址
+    start_urls = ['http://xxxxx.itcast.cn/xxxxx']
+	
+    #数据提取的方法，接受下载中间件传过来的response
+    def parse(self,response):
+        #scrapy的response对象可以直接进行xpath
+        names = response.xpath(' xxx/text()')
+        print(names)
+        
+        #获取具体数据文本的方式如下
+        #分组
+        li_list= response.xpath('//xxx')
+        for li in li_list:
+            #创建一个数据字典
+            item = {}
+            #利用scrapy封装好的xpath选择器定位元素，并通过extract()或extract_frist()来获取结果
+            item['name'] = li.xpath('./xx/text()').extract_first()#老师的名字
+            item['level'] = li.xpath('./xx/text()').extract_first()#老师的级别
+            print(item)
+    '''
+    注意：
+    必须有名为parse的解析
+    解析函数中提取的url地址如果要发送请求，则必须属于allowed_domains范围内
+    项目路径下启动
+    解析函数中的yield能够传递的对象只能是：BaseItem, Request, dict, None
+    extract() -- >list
+    extract_first()  -->第一个string
+
+response响应对象的常用属性
+
+1. response.url：当前响应的url地址
+2. response.request.url：当前响应对应的请求的url地址
+3. response.headers：响应头
+4. response.requests.headers：当前响应的请求头
+5. response.body：响应体，也就是html代码，byte类型
+6. response.status：响应状态码
+    
+    
+    '''        
+    
+    
+    
+    
+    
+    
+    #保存数据 --》 pipeline
+        
+    import json
+    
+      #定义一个管道类
+    class ItcastPipeline():
+        #爬虫文件中提取数据的方法每yiled一次item，就会运行一次
+        #该方法为固定名称函数
+      #重写管道类方法的process_item
+        def process_item(self,item,spider):
+            print(item)
+            
+      #process_item方法处理完item之后必须返回给引擎
+    		return item
+ 
+
+# 注意：setting中需要配置启用管道
+ITEM_PIPELINES = {
+    'myspider.pipelines.ItcastPipeline': 400
+}
+
+
+'''
+项目目录下执行scrapy crawl 《爬虫名字》
+
+'''
+
+   #### scrapy模拟登陆        
+      #直接携带cookies
+        #找到url地址，发送post请求储存cookie
+            
+#应用场景：如果start_url地址中的url是需要登录后才能访问的url地址，则需要重写start_request方法并在其中手动添加上cookie
+        
+import scrapy
+import re
+
+class Login1Spider(scrapy.Spider):
+    name = 'login1'
+    allowed_domains = ['github.com']
+    start_urls = ['https://github.com/NoobPythoner'] # 这是一个需要登陆以后才能访问的页面       
+    #重写start_request方法并手动添加cookies
+    def start_request(self):
+        #这个cookies_str是抓包获取的
+        cookies_str = "..." #抓包获取
+        #将cookies_str 转换为cookies_dict
+        cookies_dict = {i.split("=")[0]:i.split('=')[1] for i in cookies_str.split(";")}
+        yield scrapy.Request(
+        	self.start_urls[0],
+            callback=self.parse,
+            cookies=cookies_dict
+        )
+        
+        
+   def parse(self, response): # 通过正则表达式匹配用户名来验证是否登陆成功
+        # 正则匹配的是github的用户名
+        result_list = re.findall(r'noobpythoner|NoobPythoner', response.body.decode()) 
+        print(result_list)
+        pass     
+        
+     
+```
+
+```python
+#####通常使用scrapy.FormRequest()来发送post请求
+
+import scrapy
+import re
+
+class Login2Spider(scrapy.Spider):
+   name = 'login2'
+   allowed_domains = ['github.com']
+   start_urls = ['https://github.com/login']
+
+##1. 找到post的url地址：点击登录按钮进行抓包，然后定位url地址为https://github.com /session
+
+#2. 找到请求体的规律：分析post请求的请求体，其中包含的参数均在前一次的响应中
+
+#3. 否登录成功：通过请求个人主页，观察是否包含用户名
+	
+    def parse(self,response):
+       authenticity_token = response.xpath("//input[@name='authenticity_token']/@value").extract_first()
+       utf8 = response.xpath("//input[@name='utf8']/@value").extract_first()
+       commit = response.xpath("//input[@name='commit']/@value").extract_first()
+       #构造POST请求，返回引擎
+        yield scrapy.FormRequest(
+        "https://github.com/session",
+        formdata = {
+            "authenticity_token":authenticity_token,
+            "utf8":utf8,
+            "commit":commit,
+            "login":"noobpythoner",
+            "password":"***"
+            
+            
+        },
+        callback = self.parse_login
+        )
+     
+    def parse_login(self,response):
+       ret = re.findall(r"noobpythoner|NoobPythoner",response.text)
+       print(ret) 
+
+#在settings.py中通过设置COOKIES_DEBUG=TRUE 能够在终端看到cookie的传递传递过程
+
+
+
+
+
+```
+
+```python
+#scrapy管道
+#pipeline
+'''
+### 1. pipeline中常用的方法：
+
+1. process_item(self,item,spider): 
+   - 管道类中必须有的函数
+   - 实现对item数据的处理
+   - 必须return item
+2. open_spider(self, spider): 在爬虫开启的时候仅执行一次
+3. close_spider(self, spider): 在爬虫关闭的时候仅执行一次
+'''
+
+import json
+from pymongo import MongoClient
+
+class WangyiFilePipeline(object):
+    def opne_spider(self,spider): #爬虫开启的时候执行一次
+        if spider.name == 'itcast':
+            self.f = open('json.txt','a',encoding = 'utf-8')
+            
+    def close_spider(self,spider): #爬虫关闭的时候仅执行一次
+        if spider.name == 'itcast':
+            self.f.close()
+    def process_item(self,item,spider):
+        if spider.name == 'itcast':
+            self.f.write(json.dumps(dict(item),ensure_assii = False , indent=2) + ",\n")
+        # 不return的情况下，另一个权重较低的pipeline将不会获得item  
+         return item
+
+class WangyiMongoPipeline(object):
+    def open_spider (self,spider):
+        if spider.name == "itcast":
+            con = MongoClient(host='127.0.0.1',port=27017)# 实例化mongoclient
+            self.collection = con.itcast.teachers# 创建数据库名为itcast,集合名为teachers的集合操作对象
+    def process_item(self,item,spider):
+        if spider.name =='itcast':
+            self.collection.insert(item)
+            # 此时item对象必须是一个字典,再插入
+            # 如果此时item是BaseItem则需要先转换为字典：dict(BaseItem)
+        # 不return的情况下，另一个权重较低的pipeline将不会获得item
+        return item  
+
+    
+###在settings.py设置开启pipeline
+......
+ITEM_PIPELINES = {
+    'myspider.pipelines.ItcastFilePipeline': 400, # 400表示权重
+    'myspider.pipelines.ItcastMongoPipeline': 500, # 权重值越小，越优先执行！
+}
+......
+**别忘了开启mongodb数据库 ```sudo service mongodb start```**
+**并在mongodb数据库中查看 ```mongo```**
+
+
+
+```
+
+```python
+###scrapy中间件
+##### 学习目标：
+
+1. 应用 scrapy中使用间件使用随机UA的方法
+2. 应用 scrapy中使用代理ip的的方法
+3. 应用 scrapy与selenium配合使用
+
+1、下载中间件
+2、爬虫中间件
+#####  scrapy中间的作用：预处理request和response对象
+
+1. 对header以及cookie进行更换和处理
+2. 使用代理ip等
+3. 对请求进行定制化操作，
+
+但在scrapy默认的情况下 两种中间件都在middlewares.py一个文件中
+
+爬虫中间件使用方法和下载中间件相同，且功能重复，通常使用下载中间件
+
+
+
+##> 编写一个Downloader Middlewares和我们编写一个pipeline一样，定义一个类，然后在setting中开启
+
+#Downloader Middlewares默认的方法：
+
+
+process_request(self, request, spider)：
+      1. 当每个request通过下载中间件时，该方法被调用。
+       2. 返回None值：没有return也是返回None，该request对象传递给下载器，或通过引擎传递给其他权重低的process_request方法
+       3. 返回Response对象：不再请求，把response返回给引擎
+       4. 返回Request对象：把request对象通过引擎交给调度器，此时将不通过其他权重低的process_request方法
+
+process_response(self, request, response, spider)：
+    1. 当下载器完成http请求，传递响应给引擎的时候调用
+       2. 返回Resposne：通过引擎交给爬虫处理或交给权重更低的其他下载中间件的process_response方法
+       3. 返回Request对象：通过引擎交给调取器继续请求，此时将不通过其他权重低的process_request方法
+
+  - 在settings.py中配置开启中间件，权重值越小越优先执行
+
+### 3. 定义实现随机User-Agent的下载中间件
+
+#### 3.1 在middlewares.py中完善代码
+'''
+3.1 在middlewares.py中完善代码
+3.2 在settings中设置开启自定义的下载中间件，设置方法同管道
+3.3 在settings中添加UA的列表
+'''
+import random 
+from Tencent.settngs import USER_AGENTS_LIST
+
+class UserAgentMiddleware(object):
+    def process_request(self,request,spider):
+        user_agent = random.chice(USER_AGENTS_LIST)
+        request.headers['User-Agent'] = user_agent
+		#不写return
+class CheckUA:
+    def process_response(self,request,response,spider):
+        print(request.header['User_Agent'])
+        return response
+
+##  settings中设置开启自定义的下载中间件  
+DOWNLOADER_MIDDLEWARES = {
+   'Tencent.middlewares.UserAgentMiddleware': 543, # 543是权重值
+   'Tencent.middlewares.CheckUA': 600, # 先执行543权重的中间件，再执行600的中间件
+}
+##在settings中添加UA的列表
+USER_AGENTS_LIST = [
+    "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 2.0.50727; Media Center PC 6.0)",
+    "Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 1.0.3705; .NET CLR 1.1.4322)",
+    "Mozilla/4.0 (compatible; MSIE 7.0b; Windows NT 5.2; .NET CLR 1.1.4322; .NET CLR 2.0.50727; InfoPath.2; .NET CLR 3.0.04506.30)",
+    "Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN) AppleWebKit/523.15 (KHTML, like Gecko, Safari/419.3) Arora/0.3 (Change: 287 c9dfb30)",
+    "Mozilla/5.0 (X11; U; Linux; en-US) AppleWebKit/527+ (KHTML, like Gecko, Safari/419.3) Arora/0.6",
+    "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.2pre) Gecko/20070215 K-Ninja/2.1.1",
+    "Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9) Gecko/20080705 Firefox/3.0 Kapiko/3.0",
+    "Mozilla/5.0 (X11; Linux i686; U;) Gecko/20070322 Kazehakase/0.4.5"
+]
+
+
+
+
+
+
+
+```
+
+```python
+0#代理IP
+
+1. 代理添加的位置：request.meta中增加`proxy`字段
+2. 获取一个代理ip，赋值给`request.meta['proxy']`
+   - 代理池中随机选择代理ip
+   - 代理ip的webapi发送请求获取一个代理ip
+
+class ProxyMiddleware(object):
+    def process_request(self,request,spider):
+        # proxies可以在settings.py中，也可以来源于代理ip的webapi
+        # proxy = random.choice(proxies) 
+
+        # 免费的会失效，报 111 connection refused 信息！重找一个代理ip再试
+        proxy = 'https://1.71.188.37:3128' 
+
+        request.meta['proxy'] = proxy
+        return None # 可以不写return
+
+    
+    
+# 人民币玩家的代码(使用abuyun提供的代理ip)
+import base64
+
+# 代理隧道验证信息  这个是在那个网站上申请的
+proxyServer = 'http://proxy.abuyun.com:9010' # 收费的代理ip服务器地址，这里是abuyun
+proxyUser = 用户名
+proxyPass = 密码
+proxyAuth = "Basic " + base64.b64encode(proxyUser + ":" + proxyPass)
+
+class ProxyMiddleware(object):
+    def process_request(self, request, spider):
+        # 设置代理
+        request.meta["proxy"] = proxyServer
+        # 设置认证
+        request.headers["Proxy-Authorization"] = proxyAuth
+    
+    
+class ProxyMiddleware(object):
+    ......
+    def process_response(self, request, response, spider):
+        if response.status != '200':
+            request.dont_filter = True # 重新发送的请求对象能够再次进入队列
+            return requst   
+
+
+在settings.py中开启该中间件
+
+### 5. 在中间件中使用selenium
+
+##> 以github登陆为例
+
+import scrapy
+
+class Login4Spider(scrapy.Spider):
+    name = 'login4'
+    allowed_domains = ['github.com']
+    start_urls = ['https://github.com/1596930226'] # 直接对验证的url发送请求
+
+    def parse(self, response):
+        with open('check.html', 'w') as f:
+            f.write(response.body.decode())
+            
+  ####中间件中使用selenium
+import time
+from selenium import webdriver
+
+
+def getCookies():
+    # 使用selenium模拟登陆，获取并返回cookie
+    username = input('输入github账号:')
+    password = input('输入github密码:')
+    options = webdriver.ChromeOptions()
+    options.add_argument('--headless')
+    options.add_argument('--disable-gpu')
+    driver = webdriver.Chrome('/home/worker/Desktop/driver/chromedriver',
+                              chrome_options=options)
+    driver.get('https://github.com/login')
+    time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="login_field"]').send_keys(username)
+    time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="password"]').send_keys(password)
+    time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="login"]/form/div[3]/input[3]').click()
+    time.sleep(2)
+    cookies_dict = {cookie['name']: cookie['value'] for cookie in driver.get_cookies()}
+    driver.quit()
+    return cookies_dict
+
+class LoginDownloaderMiddleware(object):
+
+    def process_request(self, request, spider):
+        cookies_dict = getCookies()
+        print(cookies_dict)
+        request.cookies = cookies_dict # 对请求对象的cookies属性进行替换         
+            
+            
+```
+
+# scrapy_redis概念作用和流程
