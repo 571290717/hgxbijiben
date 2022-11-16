@@ -1,0 +1,31 @@
+pip install virtualenv -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+1
+virtualenv -p 指定版本python的python.exe所在的路径 虚拟环境名字
+virtualenv -p D:\python3.9.7\python.exe test_env01
+
+
+cd test_env01\Scripts
+
+activate
+
+python -V
+
+pip list
+
+decativate.bat
+
+
+
+
+
+
+
+
+
+2
+virtualenv 虚拟环境名字
+virtualenv test_env02
+
+
