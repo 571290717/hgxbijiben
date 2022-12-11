@@ -74,7 +74,7 @@
      {'animal': ['data1', 'data2']}
   ```
 
-- 方式二
+- 方式一
 
   ```yaml
   data.yaml
