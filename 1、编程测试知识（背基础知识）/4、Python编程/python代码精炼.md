@@ -93,6 +93,50 @@ upper()
 lstrip()
 rstrip()
 strip()
+'''它的函数原型：string.strip(s[, chars])，它返回的是字符串的副本，并删除前导和后缀字符。
+（意思就是你想去掉字符串里面的哪些字符，那么你就把这些字符当参数传入。此函数只会删除头和尾的字符，中间的不会删除。）
+如果strip()的参数为空，那么会默认删除字符串头和尾的空白字符(包括\n，\r，\t这些)。
+lstrip()：去除左边
+rstrip()：去除右边
+
+示例一：
+>>> str = ' ab cd '
+>>> str
+' ab cd '
+>>> str.strip() #删除头尾空格
+'ab cd'
+>>> str.lstrip() #删除开头空格
+'ab cd '
+>>> str.rstrip() #删除结尾空格
+' ab cd'
+
+示例二：
+>>> str2 = '1a2b12c21'
+>>> str2.strip('12') #删除头尾的1和2
+'a2b12c'
+>>> str2.lstrip('12') #删除开头的1和2
+'a2b12c21'
+>>> str2.rstrip('12') #删除结尾的1和2
+'1a2b12c'
+
+
+示例三：
+a="aabcacb1111acbba"
+print(a.strip("abc"))
+print(a.strip("acb"))
+print(a.strip("bac"))
+print(a.strip("bca"))
+print(a.strip("cab"))
+print(a.strip("cba"))
+
+输出：
+1111
+1111
+1111
+1111
+1111
+1111'''
+
 
 #ljust()返回一个原字符串对齐，使用指定字符填充对应长度的新字符串
 str.ljust(length,tianstr)
