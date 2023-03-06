@@ -161,6 +161,157 @@ html是用来开发网页的，它是开发网页的语言。
 | <wbr>                                                        | 定义视频。                                         |
 | <xmp>                                                        | 定义预格式文本。                                   |
 
+
+
+
+
+
+
+| 标签                                                       | 描述                                                         |
+| :--------------------------------------------------------- | :----------------------------------------------------------- |
+| **基础**                                                   |                                                              |
+| [](https://www.runoob.com/tags/tag-doctype.html)           | 定义文档类型。                                               |
+| [](https://www.runoob.com/tags/tag-html.html)              | 定义一个 HTML 文档                                           |
+| [](https://www.runoob.com/tags/tag-title.html)             | 为文档定义一个标题                                           |
+| [](https://www.runoob.com/tags/tag-body.html)              | 定义文档的主体                                               |
+| [ to ](https://www.runoob.com/tags/tag-hn.html)            | 定义 HTML 标题                                               |
+| [](https://www.runoob.com/tags/tag-p.html)                 | 定义一个段落                                                 |
+| [](https://www.runoob.com/tags/tag-br.html)                | 定义简单的折行。                                             |
+| [](https://www.runoob.com/tags/tag-hr.html)                | 定义水平线。                                                 |
+| [](https://www.runoob.com/tags/tag-comment.html)           | 定义一个注释                                                 |
+| **格式**                                                   |                                                              |
+| [](https://www.runoob.com/tags/tag-acronym.html)           | HTML5不再支持。 定义只取首字母的缩写。                       |
+| [](https://www.runoob.com/tags/tag-abbr.html)              | 定义一个缩写。                                               |
+| [](https://www.runoob.com/tags/tag-address.html)           | 定义文档作者或拥有者的联系信息。                             |
+| [](https://www.runoob.com/tags/tag-b.html)                 | 定义粗体文本。                                               |
+| [](https://www.runoob.com/tags/tag-bdi.html)**New**        | 允许您设置一段文本，使其脱离其父元素的文本方向设置。         |
+| [](https://www.runoob.com/tags/tag-bdo.html)               | 定义文本的方向。                                             |
+| [](https://www.runoob.com/tags/tag-big.html)               | HTML5不再支持。 定义大号文本。                               |
+| [](https://www.runoob.com/tags/tag-blockquote.html)        | 定义块引用。                                                 |
+| [](https://www.runoob.com/tags/tag-center.html)            | HTML5不再支持。 HTML 4.01 已废弃。定义居中文本。             |
+| [](https://www.runoob.com/tags/tag-cite.html)              | 定义引用(citation)。                                         |
+| [](https://www.runoob.com/tags/tag-code.html)              | 定义计算机代码文本。                                         |
+| [](https://www.runoob.com/tags/tag-del.html)               | 定义被删除文本。                                             |
+| [](https://www.runoob.com/tags/tag-dfn.html)               | 定义定义项目。                                               |
+| [](https://www.runoob.com/tags/tag-em.html)                | 定义强调文本。                                               |
+| [](https://www.runoob.com/tags/tag-font.html)              | HTML5不再支持。 HTML 4.01 已废弃。 定义文本的字体、尺寸和颜色 |
+| [](https://www.runoob.com/tags/tag-i.html)                 | 定义斜体文本。                                               |
+| [](https://www.runoob.com/tags/tag-ins.html)               | 定义被插入文本。                                             |
+| [](https://www.runoob.com/tags/tag-kbd.html)               | 定义键盘文本。                                               |
+| [](https://www.runoob.com/tags/tag-mark.html)**New**       | 定义带有记号的文本。                                         |
+| [](https://www.runoob.com/tags/tag-meter.html)**New**      | 定义度量衡。仅用于已知最大和最小值的度量。                   |
+| [](https://www.runoob.com/tags/tag-pre.html)               | 定义预格式文本                                               |
+| [](https://www.runoob.com/tags/tag-progress.html)**New**   | 定义运行中的任务进度（进程）。                               |
+| [](https://www.runoob.com/tags/tag-q.html)                 | 定义短的引用。                                               |
+| [](https://www.runoob.com/tags/tag-rp.html)**New**         | 定义不支持 ruby 元素的浏览器所显示的内容。                   |
+| [](https://www.runoob.com/tags/tag-rt.html)**New**         | 定义字符（中文注音或字符）的解释或发音。                     |
+| [](https://www.runoob.com/tags/tag-ruby.html)**New**       | 定义 ruby 注释（中文注音或字符）。                           |
+| [](https://www.runoob.com/tags/tag-s.html)                 | 定义加删除线的文本。                                         |
+| [](https://www.runoob.com/tags/tag-samp.html)              | 定义计算机代码样本。                                         |
+| [](https://www.runoob.com/tags/tag-small.html)             | 定义小号文本。                                               |
+| [](https://www.runoob.com/tags/tag-strike.html)            | HTML5不再支持。 HTML 4.01 已废弃。 定义加删除线的文本。      |
+| [](https://www.runoob.com/tags/tag-strong.html)            | 定义语气更为强烈的强调文本。                                 |
+| [](https://www.runoob.com/tags/tag-sub.html)               | 定义下标文本。                                               |
+| [](https://www.runoob.com/tags/tag-sup.html)               | 定义上标文本。                                               |
+| [](https://www.runoob.com/tags/tag-time.html)**New**       | 定义一个日期/时间                                            |
+| [](https://www.runoob.com/tags/tag-tt.html)                | HTML5不再支持。 定义打字机文本。                             |
+| [](https://www.runoob.com/tags/tag-u.html)                 | 定义下划线文本。                                             |
+| [](https://www.runoob.com/tags/tag-var.html)               | 定义文本的变量部分。                                         |
+| [](https://www.runoob.com/tags/tag-wbr.html)**New**        | 规定在文本中的何处适合添加换行符。                           |
+| **表单**                                                   |                                                              |
+| [](https://www.runoob.com/tags/tag-form.html)              | 定义一个 HTML 表单，用于用户输入。                           |
+| [](https://www.runoob.com/tags/tag-input.html)             | 定义一个输入控件                                             |
+| [](https://www.runoob.com/tags/tag-textarea.html)          | 定义多行的文本输入控件。                                     |
+| [](https://www.runoob.com/tags/tag-button.html)            | 定义按钮。                                                   |
+| [](https://www.runoob.com/tags/tag-select.html)            | 定义选择列表（下拉列表）。                                   |
+| [](https://www.runoob.com/tags/tag-optgroup.html)          | 定义选择列表中相关选项的组合。                               |
+| [](https://www.runoob.com/tags/tag-option.html)            | 定义选择列表中的选项。                                       |
+| [](https://www.runoob.com/tags/tag-label.html)             | 定义 input 元素的标注。                                      |
+| [](https://www.runoob.com/tags/tag-fieldset.html)          | 定义围绕表单中元素的边框。                                   |
+| [](https://www.runoob.com/tags/tag-legend.html)            | 定义 fieldset 元素的标题。                                   |
+| [](https://www.runoob.com/tags/tag-datalist.html)**New**   | 规定了 input 元素可能的选项列表。                            |
+| [](https://www.runoob.com/tags/tag-keygen.html)**New**     | 规定用于表单的密钥对生成器字段。                             |
+| [](https://www.runoob.com/tags/tag-output.html)**New**     | 定义一个计算的结果                                           |
+| **框架**                                                   |                                                              |
+| [](https://www.runoob.com/tags/tag-frame.html)             | HTML5不再支持。 定义框架集的窗口或框架。                     |
+| [](https://www.runoob.com/tags/tag-frameset.html)          | HTML5不再支持。定义框架集。                                  |
+| [](https://www.runoob.com/tags/tag-noframes.html)          | HTML5不再支持。 定义针对不支持框架的用户的替代内容。         |
+| [](https://www.runoob.com/tags/tag-iframe.html)            | 定义内联框架。                                               |
+| **图像**                                                   |                                                              |
+| [](https://www.runoob.com/tags/tag-img.html)               | 定义图像。                                                   |
+| [](https://www.runoob.com/tags/tag-map.html)               | 定义图像映射。                                               |
+| [](https://www.runoob.com/tags/tag-area.html)              | 定义图像地图内部的区域。                                     |
+| [](https://www.runoob.com/tags/tag-canvas.html)**New**     | 通过脚本（通常是 JavaScript）来绘制图形（比如图表和其他图像）。 |
+| [](https://www.runoob.com/tags/tag-figcaption.html)**New** | 定义一个 caption for a <figure> element                      |
+| [](https://www.runoob.com/tags/tag-figure.html)**New**     | figure 标签用于对元素进行组合。                              |
+| **Audio/Video**                                            |                                                              |
+| [](https://www.runoob.com/tags/tag-audio.html)**New**      | 定义声音，比如音乐或其他音频流。                             |
+| [](https://www.runoob.com/tags/tag-source.html)**New**     | 定义media元素 (<video> 和 <audio>)的媒体资源。media          |
+| [](https://www.runoob.com/tags/tag-track.html)**New**      | 为媒体(<video> 和 <audio>)元素定义外部文本轨道。             |
+| [](https://www.runoob.com/tags/tag-video.html)**New**      | 定义一个音频或者视频                                         |
+| **链接**                                                   |                                                              |
+| [](https://www.runoob.com/tags/tag-a.html)                 | 定义一个链接                                                 |
+| [](https://www.runoob.com/tags/tag-link.html)              | 定义文档与外部资源的关系。                                   |
+| [](https://www.runoob.com/tags/tag-main.html)              | 定义文档的主体部分。                                         |
+| [](https://www.runoob.com/tags/tag-nav.html)**New**        | 定义导航链接                                                 |
+| **列表**                                                   |                                                              |
+| [](https://www.runoob.com/tags/tag-ul.html)                | 定义一个无序列表                                             |
+| [](https://www.runoob.com/tags/tag-ol.html)                | 定义一个有序列表                                             |
+| [](https://www.runoob.com/tags/tag-li.html)                | 定义一个列表项                                               |
+| [](https://www.runoob.com/tags/tag-dir.html)               | HTML5不再支持。 HTML 4.01 已废弃。 定义目录列表。            |
+| [](https://www.runoob.com/tags/tag-dl.html)                | 定义一个定义列表                                             |
+| [](https://www.runoob.com/tags/tag-dt.html)                | 定义一个定义定义列表中的项目。                               |
+| [](https://www.runoob.com/tags/tag-dd.html)                | 定义定义列表中项目的描述。                                   |
+| [](https://www.runoob.com/tags/tag-menu.html)              | 定义菜单列表。                                               |
+| [](https://www.runoob.com/tags/tag-command.html)**New**    | 定义用户可能调用的命令（比如单选按钮、复选框或按钮）。       |
+| **表格**                                                   |                                                              |
+| [](https://www.runoob.com/tags/tag-table.html)             | 定义一个表格                                                 |
+| ](https://www.runoob.com/tags/tag-caption.html)            | 定义表格标题。                                               |
+| ](https://www.runoob.com/tags/tag-th.html)                 | 定义表格中的表头单元格。                                     |
+|                                                            | 定义表格中的行。                                             |
+| ](https://www.runoob.com/tags/tag-td.html)                 | 定义表格中的单元。                                           |
+|                                                            | 定义表格中的表头内容。                                       |
+|                                                            | 定义表格中的主体内容。                                       |
+|                                                            | 定义表格中的表注内容（脚注）。                               |
+|                                                            | 定义表格中一个或多个列的属性值。                             |
+|                                                            | 定义表格中供格式化的列组。                                   |
+| **样式/节**                                                |                                                              |
+| [](https://www.runoob.com/tags/tag-style.html)             | 定义文档的样式信息。                                         |
+| [](https://www.runoob.com/tags/tag-div.html)               | 定义文档中的节。                                             |
+| [](https://www.runoob.com/tags/tag-span.html)              | 定义文档中的节。                                             |
+| [](https://www.runoob.com/tags/tag-header.html)**New**     | 定义一个文档头部部分                                         |
+| [](https://www.runoob.com/tags/tag-footer.html)**New**     | 定义一个文档底部                                             |
+| [](https://www.runoob.com/tags/tag-section.html)**New**    | 定义了文档的某个区域                                         |
+| [](https://www.runoob.com/tags/tag-article.html)**New**    | 定义一个文章内容                                             |
+| [](https://www.runoob.com/tags/tag-aside.html)**New**      | 定义其所处内容之外的内容。                                   |
+| [](https://www.runoob.com/tags/tag-details.html)**New**    | 定义了用户可见的或者隐藏的需求的补充细节。                   |
+| [](https://www.runoob.com/tags/tag-dialog.html)**New**     | 定义一个对话框或者窗口                                       |
+| [](https://www.runoob.com/tags/tag-summary.html)**New**    | 定义一个可见的标题。 当用户点击标题时会显示出详细信息。      |
+| **元信息**                                                 |                                                              |
+| [](https://www.runoob.com/tags/tag-head.html)              | 定义关于文档的信息                                           |
+| [](https://www.runoob.com/tags/tag-meta.html)              | 定义关于 HTML 文档的元信息。                                 |
+| [](https://www.runoob.com/tags/tag-base.html)              | 定义页面中所有链接的默认地址或默认目标。                     |
+| [](https://www.runoob.com/tags/tag-basefont.html)          | HTML5不再支持。 HTML 4.01 已废弃。 定义页面中文本的默认字体、颜色或尺寸。 |
+| **程序**                                                   |                                                              |
+| [](https://www.runoob.com/tags/tag-script.html)            | 定义客户端脚本。                                             |
+| [](https://www.runoob.com/tags/tag-noscript.html)          | 定义针对不支持客户端脚本的用户的替代内容。                   |
+| [](https://www.runoob.com/tags/tag-applet.html)            | HTML5不再支持。 HTML 4.01 已废弃。 定义嵌入的 applet。       |
+| [](https://www.runoob.com/tags/tag-embed.html)**New**      | 定义了一个容器，用来嵌入外部应用或者互动程序（插件）。       |
+| [](https://www.runoob.com/tags/tag-object.html)            | 定义嵌入的对象。                                             |
+| [](https://www.runoob.com/tags/tag-param.html)             | 定义对象的参数。                                             |
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 1. 常用的 html 标签
 
 ```html
