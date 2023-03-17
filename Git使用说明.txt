@@ -1,26 +1,38 @@
-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
 
 
 
 使用方法：
 第一次：
-git clone https//:xxxxxx.git
+( 找一个文件夹、这个文件夹最好一种不变)
+
+git init
 
 git config --global user.email "571290717@qq.com"
 git config --global user.name "hgx"
 
-cd xxxxxx
 
+git clone https://github.com/571290717/huangtingting.git  
 
-git branch dev
+cd huangtingting
+
 
 git pull
+
+（自己加文件）
 
 git add . 
 
 git commit -m "XXXXX"
 
 git push
+
+（输入账号：571290717）
+（输入token令牌：xxx）存到自己电脑其他地方别放git里被查到会作废的
+
+
+
+
+
 
 后面就
 
@@ -29,11 +41,30 @@ git pull
 
 git add .
 
-git commit -m "XXXX"
+git commit -m "XXXX"（多次修改多次commit 后出现  On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
 
-git push
+nothing to commit, working tree clean
+————————————————
+ ）
+
+git push   （这里就变成 git push origin main）
 
 
+
+
+
+
+
+
+
+
+
+
+
+以下都不是：
+git branch dev
 
 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
 
