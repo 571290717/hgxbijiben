@@ -1,0 +1,1220 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4. 基于Django框架的项目搭建 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="5.html" />
+    
+    
+    <link rel="prev" href="3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    一、Django点餐项目之后台开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1. 项目需求分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="1.1.html">
+            
+                <a href="1.1.html">
+            
+                    
+                    ①. 项目开发流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="1.2.html">
+            
+                <a href="1.2.html">
+            
+                    
+                    ②. 点餐项目需求分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2. 项目的数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    3. 项目架构的程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    4. 基于Django框架的项目搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5. 项目实战之后台员工信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6. 项目实战之后台管理员登陆与退出
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="6.1.html">
+            
+                <a href="6.1.html">
+            
+                    
+                    ①. 添加中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    ②. 登录与退出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    ③. 添加验证码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7. 项目实战之后台店铺信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="8.html">
+            
+                <a href="8.html">
+            
+                    
+                    8. 项目实战之后台菜品类别信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="9.html">
+            
+                <a href="9.html">
+            
+                    
+                    9. 项目实战之后台菜品信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    10.项目实战之后会员信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    本周作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4. 基于Django框架的项目搭建</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="4-&#x57FA;&#x4E8E;django&#x6846;&#x67B6;&#x7684;&#x9879;&#x76EE;&#x642D;&#x5EFA;">4. &#x57FA;&#x4E8E;Django&#x6846;&#x67B6;&#x7684;&#x9879;&#x76EE;&#x642D;&#x5EFA;</h1>
+<h3 id="1-&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;-osdb">(1). &#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93; <code>osdb</code></h3>
+<ul>
+<li>&#x8FDB;&#x5165;MySQL&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x540D;&#x4E3A;&#xFF1A;osdb</li>
+<li>&#x5C06;&#x4E0A;&#x8282;&#x300A;&#x9879;&#x76EE;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;&#x300B;&#x4E2D;&#x51C6;&#x5907;&#x597D;&#x7684;osdb.sql&#x811A;&#x672C;&#x5BFC;&#x5165;&#x5230;<code>osdb</code>&#x6570;&#x636E;&#x5E93;&#x4E2D;</li>
+</ul>
+<h3 id="2-&#x521B;&#x5EFA;&#x9879;&#x76EE;-myobject-&#x6846;&#x67B6;&#x548C;&#x5E94;&#x7528;-myamdin&#x3001;web&#x548C;mobile&#x3002;">(2). &#x521B;&#x5EFA;&#x9879;&#x76EE; <code>myobject</code> &#x6846;&#x67B6;&#x548C;&#x5E94;&#x7528; <code>myamdin</code>&#x3001;<code>web</code>&#x548C;<code>mobile</code>&#x3002;</h3>
+<pre><code>    # &#x521B;&#x5EFA;&#x9879;&#x76EE;&#x6846;&#x67B6; `myobject`
+    $ django-admin startproject myobject
+
+    $ cd myobject
+
+    # &#x5728;&#x9879;&#x76EE;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;myadmin&#x5E94;&#x7528;(&#x9879;&#x76EE;&#x7684;&#x540E;&#x53F0;&#x7BA1;&#x7406;)
+    $ python manage.py startapp myadmin
+
+    # &#x5728;&#x9879;&#x76EE;&#x4E2D;&#x518D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;web&#x5E94;&#x7528;(&#x9879;&#x76EE;&#x524D;&#x53F0;&#x5927;&#x5802;&#x70B9;&#x9910;&#x5E94;&#x7528;)
+    $ python manage.py startapp web
+
+    # &#x5728;&#x9879;&#x76EE;&#x4E2D;&#x518D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;mobile&#x5E94;&#x7528;(&#x79FB;&#x52A8;&#x5BA2;&#x6237;&#x70B9;&#x9910;&#x7AEF;&#x5E94;&#x7528;)
+    $ python manage.py startapp mobile
+
+    # &#x521B;&#x5EFA;&#x6A21;&#x677F;&#x76EE;&#x5F55;
+    $ mkdir templates
+    $ mkdir templates/myadmin
+    $ mkdir templates/web
+    $ mkdir templates/mobile
+
+    # &#x521B;&#x5EFA;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x76EE;&#x5F55;
+    $ mkdir static
+    $ mkdir static/myadmin
+    $ mkdir static/web
+    $ mkdir static/mobile
+    $ mkdir static/uploads
+
+    # &#x521B;&#x5EFA;&#x524D;&#x540E;&#x53F0;&#x5E94;&#x7528;&#x6A21;&#x677F;&#x76EE;&#x5F55;,&#x5E76;&#x5728;&#x91CC;&#x9762;&#x5404;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;`__init__.py`&#x548C;`index.py`&#x7684;&#x7A7A;&#x6587;&#x4EF6;
+    $ mkdir myadmin/views
+    $ touch myadmin/views/__init__.py
+    $ touch myadmin/views/index.py
+    $ mkdir web/views
+    $ touch web/views/__init__.py
+    $ touch web/views/index.py
+    $ mkdir mobile/views
+    $ touch mobile/views/__init__.py
+    $ touch mobile/views/index.py
+
+    # &#x5220;&#x9664;&#x524D;&#x540E;&#x53F0;&#x5E94;&#x7528;&#x7684;&#x9ED8;&#x8BA4;&#x6A21;&#x677F;&#x6587;&#x4EF6;
+    # rm -rf myadmin/views.py
+    # rm -rf web/views.py
+    # rm -rf mobile/views.py
+
+    # &#x62F7;&#x8D1D;&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#x5230;&#x5E94;&#x7528;&#x76EE;&#x5F55;&#x4E2D;
+    $ cp myobject/urls.py   myadmin/urls.py
+    $ cp myobject/urls.py   web/urls.py
+    $ cp myobject/urls.py   mobile/urls.py
+
+    # &#x9000;&#x51FA;&#x9879;&#x76EE;&#x76EE;&#x5F55;
+    $ cd ..
+
+    #&#x67E5;&#x770B;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x7ED3;&#x6784;
+    $ tree myobject
+
+    myobject/
+        &#x251C;&#x2500;&#x2500; manage.py
+        &#x251C;&#x2500;&#x2500; myobject
+        &#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; settings.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; urls.py
+        &#x2502;   &#x2514;&#x2500;&#x2500; wsgi.py
+        &#x251C;&#x2500;&#x2500; myadmin
+        &#x2502;   &#x251C;&#x2500;&#x2500; admin.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; apps.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; migrations
+        &#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; __init__.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; views
+        &#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+        &#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; index.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; models.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; tests.py
+        &#x2502;   &#x2514;&#x2500;&#x2500; urls.py
+        &#x251C;&#x2500;&#x2500; web
+        &#x2502;   &#x251C;&#x2500;&#x2500; admin.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; apps.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; migrations
+        &#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; views
+        &#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+        &#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; index.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; models.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; tests.py
+        &#x2502;   &#x2514;&#x2500;&#x2500; urls.py
+        &#x251C;&#x2500;&#x2500; mobile
+        &#x2502;   &#x251C;&#x2500;&#x2500; admin.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; apps.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; migrations
+        &#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; views
+        &#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+        &#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; index.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; models.py
+        &#x2502;   &#x251C;&#x2500;&#x2500; tests.py
+        &#x2502;   &#x2514;&#x2500;&#x2500; urls.py
+        &#x251C;&#x2500;&#x2500; static
+        &#x2502;   &#x251C;&#x2500;&#x2500; myadmin/
+        &#x2502;   &#x251C;&#x2500;&#x2500; web/
+        &#x2502;   &#x251C;&#x2500;&#x2500; mobile/
+        &#x2502;   &#x2514;&#x2500;&#x2500; uploads/
+        &#x2514;&#x2500;&#x2500; templates
+            &#x251C;&#x2500;&#x2500; myadmin/
+            &#x251C;&#x2500;&#x2500; web/
+            &#x2514;&#x2500;&#x2500; mobile/
+</code></pre><h3 id="3-&#x9879;&#x76EE;&#x6846;&#x67B6;&#x914D;&#x7F6E;">(3). &#x9879;&#x76EE;&#x6846;&#x67B6;&#x914D;&#x7F6E;</h3>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x6B64;&#x914D;&#x7F6E;&#x9700;&#x8981;&#x5B89;&#x88C5;mysql&#x6570;&#x636E;&#x5E93;mysqlclient&#x8F6F;&#x4EF6;&#x5305;&#xFF0C; &#x5982;&#xFF1A;<code>$ pip install mysqlclient</code></p>
+<ul>
+<li>3.2 &#x7F16;&#x8F91;myobject/myobject/settings.py&#x6587;&#x4EF6;:</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># myobject/myobject/settings.py  &#x9879;&#x76EE;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+
+<span class="hljs-comment"># 1. &#x914D;&#x7F6E;&#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x4FE1;&#x606F;</span>
+ALLOWED_HOSTS = [<span class="hljs-string">&apos;*&apos;</span>]
+&#x6216;
+ALLOWED_HOSTS = [<span class="hljs-string">&apos;localhost&apos;</span>,<span class="hljs-string">&apos;127.0.0.1&apos;</span>,<span class="hljs-string">&apos;192.168.2.240&apos;</span>]
+
+...
+
+<span class="hljs-comment"># 2. &#x5C06;myadmin&#x548C;web&#x7684;&#x5E94;&#x7528;&#x6DFB;&#x52A0;&#x5230;&#x9879;&#x76EE;&#x6846;&#x67B6;&#x7ED3;&#x6784;&#x4E2D;</span>
+INSTALLED_APPS = [
+    <span class="hljs-string">&apos;django.contrib.admin&apos;</span>,
+    <span class="hljs-string">&apos;django.contrib.auth&apos;</span>,
+    <span class="hljs-string">&apos;django.contrib.contenttypes&apos;</span>,
+    <span class="hljs-string">&apos;django.contrib.sessions&apos;</span>,
+    <span class="hljs-string">&apos;django.contrib.messages&apos;</span>,
+    <span class="hljs-string">&apos;django.contrib.staticfiles&apos;</span>,
+    <span class="hljs-string">&apos;myadmin&apos;</span>,
+    <span class="hljs-string">&apos;web&apos;</span>,
+    <span class="hljs-string">&apos;mobile&apos;</span>,
+]
+
+...
+
+<span class="hljs-comment"># 3. &#x914D;&#x7F6E;&#x6A21;&#x677F;&#x76EE;&#x5F55; os.path.join(BASE_DIR,&apos;templates&apos;)</span>
+TEMPLATES = [
+    {
+        <span class="hljs-string">&apos;BACKEND&apos;</span>: <span class="hljs-string">&apos;django.template.backends.django.DjangoTemplates&apos;</span>,
+        <span class="hljs-string">&apos;DIRS&apos;</span>: [os.path.join(BASE_DIR,<span class="hljs-string">&apos;templates&apos;</span>)],
+        <span class="hljs-string">&apos;APP_DIRS&apos;</span>: <span class="hljs-keyword">True</span>,
+        <span class="hljs-string">&apos;OPTIONS&apos;</span>: {
+            <span class="hljs-string">&apos;context_processors&apos;</span>: [
+                <span class="hljs-string">&apos;django.template.context_processors.debug&apos;</span>,
+                <span class="hljs-string">&apos;django.template.context_processors.request&apos;</span>,
+                <span class="hljs-string">&apos;django.contrib.auth.context_processors.auth&apos;</span>,
+                <span class="hljs-string">&apos;django.contrib.messages.context_processors.messages&apos;</span>,
+            ],
+        },
+    },
+]
+
+...
+
+<span class="hljs-comment"># 4. &#x914D;&#x7F6E;&#x9879;&#x76EE;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x4FE1;&#x606F;&#xFF1A;</span>
+DATABASES = {
+    <span class="hljs-string">&apos;default&apos;</span>: {
+        <span class="hljs-string">&apos;ENGINE&apos;</span>: <span class="hljs-string">&apos;django.db.backends.mysql&apos;</span>,
+        <span class="hljs-string">&apos;NAME&apos;</span>: <span class="hljs-string">&apos;osdb&apos;</span>,
+        <span class="hljs-string">&apos;USER&apos;</span>: <span class="hljs-string">&apos;root&apos;</span>,
+        <span class="hljs-string">&apos;PASSWORD&apos;</span>: <span class="hljs-string">&apos;&apos;</span>,
+        <span class="hljs-string">&apos;HOST&apos;</span>: <span class="hljs-string">&apos;localhost&apos;</span>,
+        <span class="hljs-string">&apos;PORT&apos;</span>: <span class="hljs-string">&apos;3306&apos;</span>,
+    }
+}
+
+...
+
+<span class="hljs-comment"># 5. &#x8BBE;&#x7F6E;&#x65F6;&#x533A;&#x548C;&#x8BED;&#x8A00; </span>
+LANGUAGE_CODE = <span class="hljs-string">&apos;zh-hans&apos;</span>
+
+TIME_ZONE = <span class="hljs-string">&apos;Asia/Shanghai&apos;</span>
+
+...
+
+<span class="hljs-comment"># 6. &#x914D;&#x7F6E;&#x7F51;&#x7AD9;&#x7684;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x76EE;&#x5F55;</span>
+STATIC_URL = <span class="hljs-string">&apos;/static/&apos;</span>
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, <span class="hljs-string">&apos;static&apos;</span>),
+]
+</code></pre>
+<h3 id="4-&#x9879;&#x76EE;urls&#x8DEF;&#x7531;&#x4FE1;&#x606F;&#x914D;&#x7F6E;">(4). &#x9879;&#x76EE;urls&#x8DEF;&#x7531;&#x4FE1;&#x606F;&#x914D;&#x7F6E;</h3>
+<ul>
+<li>4.1 &#x6253;&#x5F00;&#x6839;&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#xFF1A;myobject/myobject/urls.py&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#xFF0C;&#x7F16;&#x5199;&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># myobject/myobject/urls.py</span>
+
+<span class="hljs-comment">#from django.contrib import admin</span>
+<span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> include,path
+
+urlpatterns = [
+    <span class="hljs-comment">#path(&apos;admin/&apos;, admin.site.urls),</span>
+    path(<span class="hljs-string">&apos;&apos;</span>, include(<span class="hljs-string">&quot;web.urls&quot;</span>)),                <span class="hljs-comment"># &#x9ED8;&#x8BA4;&#x524D;&#x53F0;&#x5927;&#x5802;&#x70B9;&#x9910;&#x7AEF;</span>
+    path(<span class="hljs-string">&apos;myadmin/&apos;</span>, include(<span class="hljs-string">&quot;myadmin.urls&quot;</span>)),     <span class="hljs-comment"># &#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7AEF;</span>
+    path(<span class="hljs-string">&apos;mobile/&apos;</span>, include(<span class="hljs-string">&quot;mobile.urls&quot;</span>)),    <span class="hljs-comment"># &#x79FB;&#x52A8;&#x4F1A;&#x5458;&#x7AEF;</span>
+]
+</code></pre>
+<ul>
+<li>4.2 &#x6253;&#x5F00;&#x9879;&#x76EE;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#xFF1A;myobject/myadmin/urls.py&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#xFF0C;&#x7F16;&#x5199;&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># myobject/myadmin/urls.py</span>
+
+<span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path
+
+<span class="hljs-keyword">from</span> myadmin.views <span class="hljs-keyword">import</span> index
+
+urlpatterns = [
+    <span class="hljs-comment"># &#x540E;&#x53F0;&#x9996;&#x9875;</span>
+    path(<span class="hljs-string">&apos;&apos;</span>, index.index, name=<span class="hljs-string">&quot;myadmin_index&quot;</span>),
+
+]
+</code></pre>
+<ul>
+<li>4.3 &#x6253;&#x5F00;&#x9879;&#x76EE;&#x524D;&#x53F0;&#x5927;&#x5802;&#x70B9;&#x9910;&#x7AEF;&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#xFF1A;myobject/web/urls.py&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#xFF0C;&#x7F16;&#x5199;&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># myobject/web/urls.py</span>
+
+<span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path
+
+<span class="hljs-keyword">from</span> web.views <span class="hljs-keyword">import</span> index
+
+urlpatterns = [
+   <span class="hljs-comment"># path(&apos;&apos;, index.index, name=&quot;index&quot;),</span>
+]
+</code></pre>
+<ul>
+<li>4.4 &#x6253;&#x5F00;&#x9879;&#x76EE;&#x79FB;&#x52A8;&#x4F1A;&#x5458;&#x7AEF;&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#xFF1A;myobject/mobile/urls.py&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#xFF0C;&#x7F16;&#x5199;&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># myobject/mobile/urls.py</span>
+
+<span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path
+
+<span class="hljs-keyword">from</span> web.views <span class="hljs-keyword">import</span> index
+
+urlpatterns = [
+   <span class="hljs-comment"># path(&apos;&apos;, index.index, name=&quot;index&quot;),</span>
+]
+</code></pre>
+<h3 id="5-&#x7F16;&#x5199;&#x540E;&#x53F0;&#x89C6;&#x56FE;&#x6D4B;&#x8BD5;">(5). &#x7F16;&#x5199;&#x540E;&#x53F0;&#x89C6;&#x56FE;&#x6D4B;&#x8BD5;</h3>
+<ul>
+<li>5.1 &#x7F16;&#x8F91;&#x540E;&#x53F0;&#x3001;&#x524D;&#x53F0;&#x548C;&#x79FB;&#x52A8;&#x7AEF;&#x7684;&#x89C6;&#x56FE;&#x6587;&#x4EF6;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># myobject/myadmin/views/index.py</span>
+<span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
+<span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse
+
+<span class="hljs-comment">#&#x540E;&#x53F0;&#x9996;&#x9875;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;&#x6B22;&#x8FCE;&#x8FDB;&#x5165;&#x70B9;&#x9910;&#x7CFB;&#x7EDF;&#x7F51;&#x7AD9;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#xFF01;&apos;</span>)
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># myobject/web/views/index.py</span>
+<span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
+<span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse
+
+<span class="hljs-comment">#&#x524D;&#x53F0;&#x9996;&#x9875;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;&#x6B22;&#x8FCE;&#x8FDB;&#x5165;&#x5927;&#x5802;&#x70B9;&#x9910;&#x524D;&#x53F0;&#x9996;&#x9875;&#xFF01;&apos;</span>)
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># myobject/mobile/views/index.py</span>
+<span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
+<span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse
+
+<span class="hljs-comment">#&#x79FB;&#x52A8;&#x7AEF;&#x9996;&#x9875;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;&#x6B22;&#x8FCE;&#x8FDB;&#x5165;&#x79FB;&#x52A8;&#x4F1A;&#x5458;&#x7AEF;&#x9996;&#x9875;&#xFF01;&apos;</span>)
+</code></pre>
+<ul>
+<li><p>5.2 &#x8FD0;&#x884C;&#x6D4B;&#x8BD5;</p>
+</li>
+<li><p>&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x542F;&#x52A8;&#x670D;&#x52A1;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x6D4B;&#x8BD5;&#xFF1A;<a href="http://localhost:8000/myadmin" target="_blank">http://localhost:8000/myadmin</a></p>
+</li>
+</ul>
+<pre><code>[root@localhost myobject]# pwd
+/python/myobject
+[root@localhost myobject]# ls
+manage.py  myadmin  myobject  web  mobile  static  templates
+[root@localhost myobject]# python manage.py runserver 0.0.0.0:8000
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+April 06, 2020 - 14:29:36
+Django version 1.11, using settings &apos;myobject.settings&apos;
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C[root@localhost myobject]#
+</code></pre><h3 id="6-&#x6446;&#x653E;&#x540E;&#x53F0;&#x9996;&#x9875;&#x9762;&#xFF1A;">(6). &#x6446;&#x653E;&#x540E;&#x53F0;&#x9996;&#x9875;&#x9762;&#xFF1A;</h3>
+<p><img src="../images/admin/admin_main.png" alt=""></p>
+<ul>
+<li><p>6.1. &#x4F7F;&#x7528;&#x4E8B;&#x5148;&#x51C6;&#x5907;&#x597D;&#x7684;&#x540E;&#x53F0;&#x6A21;&#x677F;&#xFF1A;</p>
+<ul>
+<li>&#x4ECE;github&#x4E0A;&#x4E0B;&#x8F7D;&#x4E00;&#x4E2A;&#x540E;&#x53F0;&#x7B80;&#x6D01;&#x6A21;&#x677F;&#xFF1A;<a href="https://github.com/ColorlibHQ/AdminLTE" target="_blank">https://github.com/ColorlibHQ/AdminLTE</a></li>
+<li>&#x5C06;&#x540E;&#x53F0;&#x6A21;&#x677F;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x8D44;&#x6E90;&#x76EE;&#x5F55;&#xFF1A;<code>bower_components</code>&#x3001;<code>dist</code>&#x3001;<code>local</code>&#x3001;<code>package.json</code>&#x590D;&#x5236;&#x5230;&#x9879;&#x76EE;&#x7684;&#x540E;&#x53F0;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x76EE;&#x5F55;<code>static/myadmin/</code>&#x4E2D;</li>
+<li>&#x5728;<code>templates/myadmin/</code>&#x76EE;&#x5F55;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x57FA;&#x7C7B;&#x7236;&#x6A21;&#x677F;&#x6587;&#x4EF6;<code>base.html</code></li>
+<li>&#x5728;<code>templates/myadmin/index/</code>&#x76EE;&#x5F55;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9996;&#x9875;&#x6A21;&#x677F;&#x6587;&#x4EF6;<code>index.html</code></li>
+<li>&#x5728;<code>templates/myadmin/</code>&#x76EE;&#x5F55;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4FE1;&#x606F;&#x63D0;&#x793A;&#x6A21;&#x677F;&#x6587;&#x4EF6;<code>info.html</code></li>
+<li>&#x4FEE;&#x6539;<code>myobject/myadmin/views/index.py</code>&#x89C6;&#x56FE;&#x6587;&#x4EF6;&#x4E2D;index&#x51FD;&#x6570;&#x4E2D;&#x4EE3;&#x7801;&#xFF1A;<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">(request)</span>:</span>
+  <span class="hljs-string">&apos;&apos;&apos;&#x7BA1;&#x7406;&#x540E;&#x53F0;&#x9996;&#x9875;&apos;&apos;&apos;</span>
+  <span class="hljs-keyword">return</span> render(request,<span class="hljs-string">&quot;myadmin/index/index.html&quot;</span>)
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>6.2. &#x7F16;&#x8F91;&#x7236;&#x7C7B;&#x6A21;&#x677F;&#xFF1A;/templates/myadmin/base.html</p>
+</li>
+</ul>
+<pre><code class="lang-html">{% load static from staticfiles %}
+<span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;IE=edge&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>&#x8BA2;&#x9910;&#x7CFB;&#x7EDF;&#x540E;&#x53F0;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- &#x652F;&#x6301;&#x54CD;&#x5E94;&#x5F0F;&#x5E03;&#x5C40; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/bower_components/bootstrap/dist/css/bootstrap.min.css&apos;%}&quot;</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- &#x8C61;&#x5F62;&#x5B57;&#x4F53; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/bower_components/font-awesome/css/font-awesome.min.css&apos;%}&quot;</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- &#x56FE;&#x6807; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/bower_components/Ionicons/css/ionicons.min.css&apos;%}&quot;</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- &#x4E3B;&#x9898;&#x98CE;&#x683C;&#x6837;&#x5F0F; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/dist/css/AdminLTE.min.css&apos;%}&quot;</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- AdminLTE &#x76AE;&#x80A4;.&#x8FD9;&#x91CC;&#x9009;&#x62E9;&#x7684;&#x662F;skin-blue&#x6837;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x6709;&#x5176;&#x4ED6;&#x76AE;&#x80A4;&#x53EF;&#x4EE5;&#x9009;&#x62E9;. --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/dist/css/skins/skin-blue.min.css&apos;%}&quot;</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- &#x517C;&#x5BB9;IE9&#x4EE5;&#x4E0B;&#x6D4F;&#x89C8;&#x5668; --&gt;</span>
+  <span class="hljs-comment">&lt;!--[if lt IE 9]&gt;
+  &lt;script src=&quot;{% static &apos;myadmin/local/js/html5shiv.min.js&apos;%}&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;{% static &apos;myadmin/local/js/respond.min.js&apos;%}&quot;&gt;&lt;/script&gt;
+  &lt;![endif]--&gt;</span>
+  <span class="hljs-comment">&lt;!-- Google Font --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/local/css/google_fonts.css&apos;%}&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hold-transition skin-blue sidebar-mini&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Main Header &#x4E3B;&#x4F53;&#x9875;&#x5934; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main-header&quot;</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Logo --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;index2.html&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;logo&quot;</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- &#x4FA7;&#x680F;&#x8FF7;&#x4F60;&#x5FBD;&#x6807; mini 50x50 pixels --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;logo-mini&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>&#x9910;<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- &#x5E38;&#x89C4;&#x72B6;&#x6001;&#x6807;&#x5FD7;&#x548C;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x6807;&#x5FD7; --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;logo-lg&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>&#x8BA2;&#x9910;&#x7CFB;&#x7EDF;&#x540E;&#x53F0;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Header Navbar &#x9996;&#x90E8;&#x5BFC;&#x822A;&#x680F; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;navbar navbar-static-top&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;navigation&quot;</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- Sidebar toggle button &#x4FA7;&#x8FB9;&#x680F;&#x5207;&#x6362;&#x6309;&#x94AE; --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sidebar-toggle&quot;</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">&quot;push-menu&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sr-only&quot;</span>&gt;</span>&#x5207;&#x6362;&#x5BFC;&#x822A;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- &#x53F3;&#x680F;&#x83DC;&#x5355; --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;navbar-custom-menu&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav navbar-nav&quot;</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- messages-menu &#x6D88;&#x606F;&#x83DC;&#x5355;: &#x6837;&#x5F0F;&#x53EF;&#x4EE5;&#x5728; dropdown.less &#x4E2D;&#x627E;&#x5230; --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown messages-menu&quot;</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- Menu toggle button &#x83DC;&#x5355;&#x5207;&#x6362;&#x6309;&#x94AE; --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown-toggle&quot;</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-envelope-o&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label label-success&quot;</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown-menu&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>&#x4F60;&#x6709;4&#x4E2A;&#x77ED;&#x4FE1;&#x606F;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-comment">&lt;!-- &#x5185;&#x90E8;&#x83DC;&#x5355;&#xFF1A;&#x5305;&#x542B;&#x6D88;&#x606F; --&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-comment">&lt;!-- start message &#x4FE1;&#x606F;&#x5F00;&#x59CB; --&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pull-left&quot;</span>&gt;</span>
+                        <span class="hljs-comment">&lt;!-- User Image &#x4F7F;&#x7528;&#x56FE;&#x7247; --&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/dist/img/user2-160x160.jpg&apos;%}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img-circle&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;User Image&quot;</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                      <span class="hljs-comment">&lt;!-- &#x6D88;&#x606F;&#x6807;&#x9898;&#x548C;&#x65F6;&#x95F4; --&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>
+                        &#x6211;&#x4EEC;&#x90FD;&#x652F;&#x6301;&#x56E2;&#x961F;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-clock-o&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> 5 &#x5206;&#x949F;<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+                      <span class="hljs-comment">&lt;!-- The message --&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Why not buy a new awesome theme?<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                  <span class="hljs-comment">&lt;!-- end message --&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-comment">&lt;!-- /.menu --&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;footer&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>&#x67E5;&#x770B;&#x6240;&#x6709;&#x4FE1;&#x606F;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- /.messages-menu --&gt;</span>
+
+          <span class="hljs-comment">&lt;!-- Notifications Menu &#x901A;&#x77E5;&#x83DC;&#x5355; --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown notifications-menu&quot;</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- Menu toggle button  &#x83DC;&#x5355;&#x5207;&#x6362;&#x6309;&#x94AE; --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown-toggle&quot;</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-bell-o&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label label-warning&quot;</span>&gt;</span>10<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown-menu&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>&#x4F60;&#x6709;10&#x6761;&#x901A;&#x77E5;&#x4FE1;&#x606F;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-comment">&lt;!-- Inner Menu: contains the notifications --&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-comment">&lt;!-- start notification --&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-users text-aqua&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> &#x4ECA;&#x5929;&#x6709;5&#x540D;&#x65B0;&#x6210;&#x5458;&#x52A0;&#x5165;
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                  <span class="hljs-comment">&lt;!-- end notification --&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;footer&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>&#x67E5;&#x770B;&#x5168;&#x90E8;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- Tasks Menu &#x4EFB;&#x52A1;&#x83DC;&#x5355; --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown tasks-menu&quot;</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- Menu Toggle Button &#x83DC;&#x5355;&#x5207;&#x6362;&#x6309;&#x94AE; --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown-toggle&quot;</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-flag-o&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;label label-danger&quot;</span>&gt;</span>9<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown-menu&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>&#x4F60;&#x6709;9&#x4E2A;&#x4EFB;&#x52A1;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-comment">&lt;!-- Inner menu: contains the tasks --&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-comment">&lt;!-- Task item --&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+                      <span class="hljs-comment">&lt;!-- Task title and progress text --&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>
+                        &#x8BBE;&#x8BA1;&#x4E00;&#x4E9B;&#x6309;&#x94AE;
+                        <span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pull-right&quot;</span>&gt;</span>20%<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                      <span class="hljs-comment">&lt;!-- The progress bar --&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;progress xs&quot;</span>&gt;</span>
+                        <span class="hljs-comment">&lt;!-- Change the css width attribute to simulate progress --&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;progress-bar progress-bar-aqua&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 20%&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;progressbar&quot;</span>
+                             <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">&quot;20&quot;</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">&quot;100&quot;</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sr-only&quot;</span>&gt;</span>20% &#x5B8C;&#x6210;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                  <span class="hljs-comment">&lt;!-- end task item --&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;footer&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>&#x67E5;&#x770B;&#x6240;&#x6709;&#x4EFB;&#x52A1;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- User Account Menu --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown user user-menu&quot;</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- Menu Toggle Button --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown-toggle&quot;</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">&quot;dropdown&quot;</span>&gt;</span>
+              <span class="hljs-comment">&lt;!-- The user image in the navbar--&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/dist/img/user2-160x160.jpg&apos;%}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;user-image&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;User Image&quot;</span>&gt;</span>
+              <span class="hljs-comment">&lt;!-- hidden-xs hides the username on small devices so only the image appears. --&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hidden-xs&quot;</span>&gt;</span>{{request.session.adminuser.nickname}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown-menu&quot;</span>&gt;</span>
+              <span class="hljs-comment">&lt;!-- The user image in the menu --&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;user-header&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/dist/img/user2-160x160.jpg&apos;%}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img-circle&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;User Image&quot;</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+                  &#x5F20;&#x65E0;&#x5FCC; - &#x7BA1;&#x7406;&#x5458;
+                  <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>2020&#x5E74;07&#x6708;16&#x65E5;&#x52A0;&#x5165;<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-comment">&lt;!-- Menu Footer--&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;user-footer&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pull-left&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-default btn-flat&quot;</span>&gt;</span>&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pull-right&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-default btn-flat&quot;</span>&gt;</span>&#x9000; &#x51FA;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- &#x5DE6;&#x4FA7;&#x67F1;&#x3002;&#x5305;&#x542B;&#x5FBD;&#x6807;&#x548C;&#x8FB9;&#x680F; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main-sidebar&quot;</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- sidebar: style can be found in sidebar.less --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sidebar&quot;</span>&gt;</span>
+
+      <span class="hljs-comment">&lt;!-- Sidebar user panel (optional) --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;user-panel&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pull-left image&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/dist/img/user2-160x160.jpg&apos;%}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;img-circle&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;User Image&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pull-left info&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x5F20;&#x65E0;&#x5FCC; . &#x7BA1;&#x7406;&#x5458;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- Status --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-circle text-success&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> &#x5728;&#x7EBF;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+      <span class="hljs-comment">&lt;!-- Sidebar Menu --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sidebar-menu&quot;</span> <span class="hljs-attr">data-widget</span>=<span class="hljs-string">&quot;tree&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>&#x4E3B;&#x8981;&#x5BFC;&#x822A;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- &#x5BFC;&#x822A;&#x5217;&#x8868;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x66F4;&#x6539;&#x56FE;&#x6807; --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;active&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;admin.html&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-home&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;member.html&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-users&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x4F1A;&#x5458;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;shop.html&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-sitemap&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x5E97;&#x94FA;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;treeview&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;category.html&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-cutlery&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x83DC;&#x54C1;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pull-right-container&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-angle-left pull-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;treeview-menu&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;category.html&quot;</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-circle-o&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> &#x83DC;&#x54C1;&#x5206;&#x7C7B;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;product.html&quot;</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-circle-o&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> &#x83DC;&#x54C1;&#x4FE1;&#x606F;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;orders.html&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-shopping-cart&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x8BA2;&#x5355;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-user&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x8D26;&#x53F7;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-key&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x6743;&#x9650;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-gear&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-unlock-alt&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x8BA4;&#x8BC1;&#x4F53;&#x7CFB;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- /.sidebar-menu --&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- /.sidebar --&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Content Wrapper. Contains page content --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content-wrapper&quot;</span>&gt;</span>
+    {% block main_body %}
+    {% endblock %}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- /.content-wrapper --&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Main Footer --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main-footer&quot;</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- To the right --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pull-right hidden-xs&quot;</span>&gt;</span>
+      <span class="hljs-comment">&lt;!--&#x9910;&#x996E;&#x7BA1;&#x7406;&#x5E73;&#x53F0;--&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Default to the left --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Copyright &amp;copy; 2020 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>&#x5317;&#x4EAC;*******&#x6709;&#x9650;&#x516C;&#x53F8;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> &#x7248;&#x6743;&#x6240;&#x6709;
+  <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- &#x6DFB;&#x52A0;&#x4FA7;&#x680F;&#x7684;&#x80CC;&#x666F;&#x3002;&#x5FC5;&#x987B;&#x653E;&#x7F6E;&#x6B64;&#x5904;&#x7D27;&#x63A5;&#x5728;&#x63A7;&#x5236;&#x4FA7;&#x8FB9;&#x680F;&#x4E4B;&#x540E; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;control-sidebar-bg&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- ./wrapper --&gt;</span>
+
+<span class="hljs-comment">&lt;!-- edu-model&#x63D0;&#x793A;&#x6846;&#x6A21;&#x677F; --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;edu-alert&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-dialog modal-sm&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-content&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-header&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">&quot;modal&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>&#xD7;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sr-only&quot;</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-title&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-exclamation-circle&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> [Title]<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-body small&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>[Message]<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-footer&quot;</span> &gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary ok&quot;</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">&quot;modal&quot;</span>&gt;</span>[BtnOk]<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-default cancel&quot;</span> <span class="hljs-attr">data-dismiss</span>=<span class="hljs-string">&quot;modal&quot;</span>&gt;</span>[BtnCancel]<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- edu-model-end --&gt;</span>
+
+<span class="hljs-comment">&lt;!-- REQUIRED JS SCRIPTS --&gt;</span>
+
+<span class="hljs-comment">&lt;!-- jQuery 3 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/bower_components/jquery/dist/jquery.min.js&apos;%}&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- Bootstrap 3.3.7 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/bower_components/bootstrap/dist/js/bootstrap.min.js&apos;%}&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- AdminLTE App --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/dist/js/adminlte.min.js&apos;%}&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{% static &apos;myadmin/dist/js/edu-modal-alert-confirm.js&apos;%}&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- &#x6B64;&#x5904;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;SimLoopl&#x548C;FastClick&#x63D2;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x589E;&#x5F3A;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x3002; --&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript">
+  <span class="hljs-comment">//&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;Ajax&#x4FE1;&#x606F;&#x5220;&#x9664;&#x7684;&#x51FD;&#x6570;</span>
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doDelete</span>(<span class="hljs-params">del_url</span>)</span>{
+    Modal.confirm({
+      msg: <span class="hljs-string">&quot;&#x786E;&#x5B9A;&#x8981;&#x5220;&#x9664;&#x5417;&#xFF1F;&quot;</span>,
+      title: <span class="hljs-string">&apos; &#x4FE1;&#x606F;&#x63D0;&#x793A;&apos;</span>,
+      btnok: <span class="hljs-string">&apos;&#x786E;&#x5B9A;&apos;</span>,
+      btncl:<span class="hljs-string">&apos;&#x53D6;&#x6D88;&apos;</span>
+    }).on(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>)</span>{
+      <span class="hljs-keyword">if</span>(e){ <span class="hljs-comment">//&#x5224;&#x65AD;&#x662F;&#x5426;&#x70B9;&#x51FB;&#x4E86;&#x786E;&#x5B9A;&#x6309;&#x94AE;</span>
+        $.ajax({
+          type:<span class="hljs-string">&apos;get&apos;</span>,
+          url:del_url,
+          dataType:<span class="hljs-string">&apos;json&apos;</span>,
+          <span class="hljs-keyword">async</span>: <span class="hljs-literal">false</span>,
+          success:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>)</span>{
+            Modal.alert({msg:res.info, title:<span class="hljs-string">&apos; &#x4FE1;&#x606F;&#x63D0;&#x793A;&apos;</span>,btnok: <span class="hljs-string">&apos;&#x786E;&#x5B9A;&apos;</span>,btncl:<span class="hljs-string">&apos;&#x53D6;&#x6D88;&apos;</span>});
+            <span class="hljs-built_in">window</span>.location.reload(); <span class="hljs-comment">//&#x5237;&#x65B0;&#x5F53;&#x524D;&#x9875;&#x9762;.</span>
+          },
+        });
+      }
+    });
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+{% block loadjavascript %}
+<span class="hljs-comment">&lt;!-- &#x6B64;&#x5904;&#x53EF;&#x52A0;&#x8F7D;&#x72EC;&#x7ACB;&#x7684;javascript&#x7A0B;&#x5E8F; --&gt;</span>
+{% endblock %}
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<ul>
+<li>6.3. &#x7F16;&#x8F91;&#x540E;&#x53F0;&#x9996;&#x9875;&#x6A21;&#x677F;&#xFF1A;/templates/myadmin/index.html</li>
+</ul>
+<pre><code class="lang-html">{% extends &apos;myadmin/base.html&apos; %}
+
+{% block main_body %}
+    <span class="hljs-comment">&lt;!-- Content Header (Page header) --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content-header&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>
+        &#x9996;&#x9875;
+        <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>&#x8BA2;&#x9910;&#x7CFB;&#x7EDF;&#x540E;&#x53F0;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;breadcrumb&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-dashboard&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> Level<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;active&quot;</span>&gt;</span>Here<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Main content --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content container-fluid&quot;</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- Small boxes (Stat box) --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-lg-3 col-xs-6&quot;</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- small box --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;small-box bg-aqua&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;inner&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>150<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x65B0;&#x8BA2;&#x5355;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;icon&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ion ion-bag&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;small-box-footer&quot;</span>&gt;</span>&#x66F4;&#x591A;&#x4FE1;&#x606F; <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-arrow-circle-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- ./col --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-lg-3 col-xs-6&quot;</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- small box --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;small-box bg-green&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;inner&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>53<span class="hljs-tag">&lt;<span class="hljs-name">sup</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;font-size: 20px&quot;</span>&gt;</span>%<span class="hljs-tag">&lt;/<span class="hljs-name">sup</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Bounce Rate<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;icon&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ion ion-stats-bars&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;small-box-footer&quot;</span>&gt;</span>&#x66F4;&#x591A;&#x4FE1;&#x606F; <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-arrow-circle-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- ./col --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-lg-3 col-xs-6&quot;</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- small box --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;small-box bg-yellow&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;inner&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>44<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x7528;&#x6237;&#x6CE8;&#x518C;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;icon&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ion ion-person-add&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;small-box-footer&quot;</span>&gt;</span>&#x66F4;&#x591A;&#x4FE1;&#x606F; <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-arrow-circle-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- ./col --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-lg-3 col-xs-6&quot;</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- small box --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;small-box bg-red&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;inner&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>65<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Unique Visitors<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;icon&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ion ion-pie-graph&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;small-box-footer&quot;</span>&gt;</span>More info <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-arrow-circle-right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- ./col --&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- /.content --&gt;</span>
+{% endblock %}
+</code></pre>
+<ul>
+<li>6.4. &#x540E;&#x53F0;&#x516C;&#x5171;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#x6A21;&#x677F;&#xFF1A;/templates/myadmin/info.html</li>
+</ul>
+<pre><code class="lang-html">{% extends &quot;myadmin/base.html&quot; %}
+
+{% block main_body %}                
+    <span class="hljs-comment">&lt;!-- Content Header (Page header) --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content-header&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>
+        &#x4FE1;&#x606F;&#x63D0;&#x793A;:
+      <span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pad margin no-print&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;callout callout-info&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;margin-bottom: 0!important;padding-left: 50px&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-exclamation-triangle&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>  &amp;nbsp; {{ info }}<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+{% endblock %}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3.html" class="navigation navigation-prev " aria-label="Previous page: 3. 项目架构的程序设计">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="5.html" class="navigation navigation-next " aria-label="Next page: 5. 项目实战之后台员工信息管理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4. 基于Django框架的项目搭建","level":"1.3.4","depth":2,"next":{"title":"5. 项目实战之后台员工信息管理","level":"1.3.5","depth":2,"path":"admin/5.md","ref":"admin/5.md","articles":[]},"previous":{"title":"3. 项目架构的程序设计","level":"1.3.3","depth":2,"path":"admin/3.md","ref":"admin/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"admin/4.md","mtime":"2020-07-25T02:21:49.711Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-18T03:45:26.604Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

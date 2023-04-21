@@ -1,0 +1,706 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>10.项目实战之后会员信息管理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="11.html" />
+    
+    
+    <link rel="prev" href="9.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    一、Django点餐项目之后台开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1. 项目需求分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="1.1.html">
+            
+                <a href="1.1.html">
+            
+                    
+                    ①. 项目开发流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="1.2.html">
+            
+                <a href="1.2.html">
+            
+                    
+                    ②. 点餐项目需求分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2. 项目的数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    3. 项目架构的程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    4. 基于Django框架的项目搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5. 项目实战之后台员工信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6. 项目实战之后台管理员登陆与退出
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="6.1.html">
+            
+                <a href="6.1.html">
+            
+                    
+                    ①. 添加中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    ②. 登录与退出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    ③. 添加验证码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7. 项目实战之后台店铺信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="8.html">
+            
+                <a href="8.html">
+            
+                    
+                    8. 项目实战之后台菜品类别信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="9.html">
+            
+                <a href="9.html">
+            
+                    
+                    9. 项目实战之后台菜品信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.10" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    10.项目实战之后会员信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    本周作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >10.项目实战之后会员信息管理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="10-&#x9879;&#x76EE;&#x5B9E;&#x6218;&#x4E4B;&#x540E;&#x53F0;&#x4F1A;&#x5458;&#x4FE1;&#x606F;&#x7BA1;&#x7406;">10. &#x9879;&#x76EE;&#x5B9E;&#x6218;&#x4E4B;&#x540E;&#x53F0;&#x4F1A;&#x5458;&#x4FE1;&#x606F;&#x7BA1;&#x7406;</h1>
+<ul>
+<li>&#x672C;&#x9875;&#x9762;&#x5B8C;&#x6210;&#x9879;&#x76EE;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x4E2D;&#x7684;&#x4F1A;&#x5458;&#x4FE1;&#x606F;&#x6A21;&#x5757;&#x64CD;&#x4F5C;</li>
+</ul>
+<h3 id="1-&#x4F1A;&#x5458;&#x4FE1;&#x606F;&#x6570;&#x636E;&#x8868;&#xFF1A;member">(1). &#x4F1A;&#x5458;&#x4FE1;&#x606F;&#x6570;&#x636E;&#x8868;&#xFF1A;member</h3>
+<ul>
+<li>&#x5728;&#x6570;&#x636E;&#x5E93; <code>osdb</code> &#x4E2D;&#x521B;&#x5EFA;<code>member</code>&#x8868;&#xFF0C;&#x82E5;&#x6B64;&#x8868;&#x5DF2;&#x5B58;&#x5728;&#x8BF7;&#x8DF3;&#x8FC7;</li>
+</ul>
+<pre><code class="lang-mysql">
+CREATE TABLE `member` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x4F1A;&#x5458;&#x8868;id&apos;,
+  `nickname` varchar(50) DEFAULT NULL COMMENT &apos;&#x6635;&#x79F0;&apos;,
+  `avatar` varchar(255) DEFAULT NULL COMMENT &apos;&#x5934;&#x50CF;&apos;,
+  `mobile` varchar(50) DEFAULT NULL COMMENT &apos;&#x7535;&#x8BDD;&apos;,
+  `status` tinyint(3) unsigned NOT NULL DEFAULT &apos;1&apos; COMMENT &apos;&#x72B6;&#x6001;:1&#x6B63;&#x5E38;/2&#x7981;&#x7528;/9&#x5220;&#x9664;&apos;,
+  `create_at` datetime DEFAULT NULL COMMENT &apos;&#x6DFB;&#x52A0;&#x65F6;&#x95F4;&apos;,
+  `update_at` datetime DEFAULT NULL COMMENT &apos;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&apos;,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+</code></pre>
+<h3 id="2-&#x5B9A;&#x4E49;&#x6A21;&#x578B;model&#x7C7B;">(2). &#x5B9A;&#x4E49;&#x6A21;&#x578B;Model&#x7C7B;</h3>
+<ul>
+<li>&#x8FDB;&#x5165;myadmin&#x5E94;&#x7528;&#x76EE;&#x5F55;&#x4E2D;,&#x7F16;&#x8F91;&#xFF1A;<code>myobject/myadmin/models.py</code> &#x6A21;&#x578B;&#x6587;&#x4EF6;,&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x4EE3;&#x7801;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models
+
+<span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime
+
+<span class="hljs-comment">#&#x4F1A;&#x5458;&#x4FE1;&#x606F;&#x6A21;&#x578B;</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Member</span><span class="hljs-params">(models.Model)</span>:</span>
+    nickname = models.CharField(max_length=<span class="hljs-number">50</span>)    <span class="hljs-comment">#&#x6635;&#x79F0;</span>
+    avatar = models.CharField(max_length=<span class="hljs-number">255</span>)    <span class="hljs-comment">#&#x5934;&#x50CF;</span>
+    mobile = models.CharField(max_length=<span class="hljs-number">50</span>)    <span class="hljs-comment">#&#x7535;&#x8BDD;</span>
+    status = models.IntegerField(default=<span class="hljs-number">1</span>)        <span class="hljs-comment">#&#x72B6;&#x6001;:1&#x6B63;&#x5E38;/2&#x7981;&#x7528;/9&#x5220;&#x9664;</span>
+    create_at = models.DateTimeField(default=datetime.now)    <span class="hljs-comment">#&#x521B;&#x5EFA;&#x65F6;&#x95F4;</span>
+    update_at = models.DateTimeField(default=datetime.now)    <span class="hljs-comment">#&#x4FEE;&#x6539;&#x65F6;&#x95F4;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">toDict</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> {<span class="hljs-string">&apos;id&apos;</span>:self.id,<span class="hljs-string">&apos;nickname&apos;</span>:self.nickname,<span class="hljs-string">&apos;avatar&apos;</span>:self.avatar,<span class="hljs-string">&apos;mobile&apos;</span>:self.mobile,<span class="hljs-string">&apos;status&apos;</span>:self.status,<span class="hljs-string">&apos;create_at&apos;</span>:self.create_at.strftime(<span class="hljs-string">&apos;%Y-%m-%d %H:%M:%S&apos;</span>),<span class="hljs-string">&apos;update_at&apos;</span>:self.update_at.strftime(<span class="hljs-string">&apos;%Y-%m-%d %H:%M:%S&apos;</span>)}
+
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        db_table = <span class="hljs-string">&quot;member&quot;</span>  <span class="hljs-comment"># &#x66F4;&#x6539;&#x8868;&#x540D;</span>
+</code></pre>
+<h3 id="3-&#x9879;&#x76EE;urls&#x8DEF;&#x7531;&#x4FE1;&#x606F;&#x914D;&#x7F6E;">(3). &#x9879;&#x76EE;urls&#x8DEF;&#x7531;&#x4FE1;&#x606F;&#x914D;&#x7F6E;</h3>
+<ul>
+<li>&#x6253;&#x5F00;&#x6839;&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#xFF1A;myobject/myadmin/urls.py&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#xFF0C;&#x7F16;&#x8F91;&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</li>
+</ul>
+<pre><code class="lang-python">
+<span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path
+
+<span class="hljs-keyword">from</span> myadmin.views <span class="hljs-keyword">import</span> member
+
+urlpatterns = [
+    ...
+    <span class="hljs-comment">#&#x4F1A;&#x5458;&#x7BA1;&#x7406;&#x8DEF;&#x7531;</span>
+    path(<span class="hljs-string">&apos;member/&lt;int:pIndex&gt;&apos;</span>, member.index, name=<span class="hljs-string">&quot;myadmin_member_index&quot;</span>), <span class="hljs-comment">#&#x6D4F;&#x89C8;&#x4F1A;&#x5458;</span>
+]
+</code></pre>
+<h3 id="&#x3000;4&#x3000;&#x7F16;&#x8F91;&#x89C6;&#x56FE;&#x6587;&#x4EF6;">&#x3000;(4).&#x3000;&#x7F16;&#x8F91;&#x89C6;&#x56FE;&#x6587;&#x4EF6;</h3>
+<ul>
+<li>&#x65B0;&#x5EFA;&#x89C6;&#x56FE;&#x6587;&#x4EF6;&#xFF1A;myobject/myadmin/views/member.py &#x89C6;&#x56FE;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x7F16;&#x8F91;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment">#&#x4F1A;&#x5458;&#x4FE1;&#x606F;&#x89C6;&#x56FE;&#x6587;&#x4EF6;</span>
+<span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
+<span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse
+<span class="hljs-keyword">from</span> django.core.paginator <span class="hljs-keyword">import</span> Paginator
+
+<span class="hljs-keyword">from</span> myadmin.models <span class="hljs-keyword">import</span> Member
+
+<span class="hljs-comment"># ==============&#x540E;&#x53F0;&#x4F1A;&#x5458;&#x4FE1;&#x606F;&#x7BA1;&#x7406;======================</span>
+<span class="hljs-comment"># &#x6D4F;&#x89C8;&#x4F1A;&#x5458;&#x4FE1;&#x606F;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">(request,pIndex=<span class="hljs-number">1</span>)</span>:</span>
+    mod = Member.objects
+
+    list = mod.filter(status__lt=<span class="hljs-number">9</span>)
+    <span class="hljs-comment">#&#x6267;&#x884C;&#x5206;&#x9875;&#x5904;&#x7406;</span>
+    pIndex = int(pIndex)
+    page = Paginator(list,<span class="hljs-number">5</span>) <span class="hljs-comment">#&#x4EE5;5&#x6761;&#x6BCF;&#x9875;&#x521B;&#x5EFA;&#x5206;&#x9875;&#x5BF9;&#x8C61;</span>
+    maxpages = page.num_pages <span class="hljs-comment">#&#x6700;&#x5927;&#x9875;&#x6570;</span>
+    <span class="hljs-comment">#&#x5224;&#x65AD;&#x9875;&#x6570;&#x662F;&#x5426;&#x8D8A;&#x754C;</span>
+    <span class="hljs-keyword">if</span> pIndex &gt; maxpages:
+        pIndex = maxpages
+    <span class="hljs-keyword">if</span> pIndex &lt; <span class="hljs-number">1</span>:
+        pIndex = <span class="hljs-number">1</span>
+    list2 = page.page(pIndex) <span class="hljs-comment">#&#x5F53;&#x524D;&#x9875;&#x6570;&#x636E;</span>
+    plist = page.page_range   <span class="hljs-comment">#&#x9875;&#x7801;&#x6570;&#x5217;&#x8868;</span>
+
+    <span class="hljs-comment">#&#x5C01;&#x88C5;&#x4FE1;&#x606F;&#x52A0;&#x8F7D;&#x6A21;&#x677F;&#x8F93;&#x51FA;</span>
+    context = {<span class="hljs-string">&quot;memberlist&quot;</span>:list2,<span class="hljs-string">&apos;plist&apos;</span>:plist,<span class="hljs-string">&apos;pIndex&apos;</span>:pIndex,<span class="hljs-string">&apos;maxpages&apos;</span>:maxpages}
+    <span class="hljs-keyword">return</span> render(request,<span class="hljs-string">&quot;myadmin/member/index.html&quot;</span>,context)
+</code></pre>
+<h3 id="5-&#x7F16;&#x5199;&#x6A21;&#x677F;&#x6587;&#x4EF6;">(5). &#x7F16;&#x5199;&#x6A21;&#x677F;&#x6587;&#x4EF6;</h3>
+<ul>
+<li>5.1. &#x6253;&#x5F00;&#x7236;&#x7C7B;&#x6A21;&#x677F;&#xFF1A;/templates/myadmin/base.html &#xFF0C;&#x7F16;&#x8F91;&#x5BFC;&#x822A;&#x680F;&#x4EE3;&#x7801;</li>
+</ul>
+<pre><code class="lang-html">    ...
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;myadmin_member_index&apos; 1 %}&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-users&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x4F1A;&#x5458;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    ...
+</code></pre>
+<ul>
+<li>5.2. &#x540E;&#x53F0;&#x4F1A;&#x5458;&#x4FE1;&#x606F;&#x6D4F;&#x89C8;&#x9875;&#x6A21;&#x677F;&#xFF1A;/templates/myadmin/member/index.html</li>
+</ul>
+<p><img src="../images/admin/member_index.png" alt=""></p>
+<pre><code class="lang-html">{% extends &apos;myadmin/base.html&apos; %}
+{% load static from staticfiles %}
+
+{% block main_body %}
+    <span class="hljs-comment">&lt;!-- Content Header (Page header) --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content-header&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>
+        &#x4F1A;&#x5458;&#x7BA1;&#x7406;
+        <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>&#x8BA2;&#x9910;&#x7CFB;&#x7EDF;&#x540E;&#x53F0;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;breadcrumb&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-dashboard&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> &#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;active&quot;</span>&gt;</span>&#x4F1A;&#x5458;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Main content --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content container-fluid&quot;</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-xs-12&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;box&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;box-header&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;box-title&quot;</span>&gt;</span>&#x4F1A;&#x5458;&#x4FE1;&#x606F;&#x8868;<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;box-tools&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;input-group input-group-sm&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 150px;&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;table_search&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-control pull-right&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Search&quot;</span>&gt;</span>
+
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;input-group-btn&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-default&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-search&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- /.box-header --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;box-body table-responsive no-padding&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;table table-hover&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>ID<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>&#x6635;&#x79F0;<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>&#x5934;&#x50CF;<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>&#x8054;&#x7CFB;&#x7535;&#x8BDD;<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>&#x5F53;&#x524D;&#x72B6;&#x6001;<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>&#x6DFB;&#x52A0;&#x65F6;&#x95F4;<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>&#x4FEE;&#x6539;&#x65F6;&#x95F4;<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;200&quot;</span>&gt;</span>&#x64CD;&#x4F5C;<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                {% for vo in memberlist %}
+                <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{{ vo.id }}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{{ vo.nickname }}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{{ vo.avatar }}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/static/uploads/member/{{ vo.avatar }}&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;40&quot;</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{{ vo.mobile }}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
+                    {% if vo.status == 1 %}
+                      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color:green&quot;</span>&gt;</span>&#x6B63;&#x5E38;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                    {% elif vo.status == 2 %}
+                      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color:red&quot;</span>&gt;</span>&#x7981;&#x505C;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                    {% elif vo.status == 9 %}
+                      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color:red&quot;</span>&gt;</span>&#x5DF2;&#x5220;&#x9664;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                    {% else %}
+                      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color:red&quot;</span>&gt;</span>&#x672A;&#x77E5;&#x72B6;&#x6001;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                    {% endif %}
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;15%&quot;</span>&gt;</span>{{ vo.create_at|date:&apos;Y-m-d H:i:s&apos; }}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;15%&quot;</span>&gt;</span>{{ vo.update_at|date:&apos;Y-m-d H:i:s&apos; }}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;22%&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-success btn-xs&quot;</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;glyphicon glyphicon-edit&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> &#x7F16;&#x8F91;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>  <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-danger btn-xs&quot;</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;glyphicon glyphicon-trash&quot;</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> &#x5220;&#x9664;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                {% endfor %}
+              <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- /.box-body --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;box-footer clearfix&quot;</span>&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pagination pagination-sm no-margin pull-right&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;myadmin_member_index&apos; pIndex|add:-1 %}&quot;</span>&gt;</span>&amp;laquo;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                {% for p in plist %}
+                  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> {% <span class="hljs-attr">if</span> <span class="hljs-attr">p</span> =<span class="hljs-string">=</span> <span class="hljs-attr">pIndex</span> %}<span class="hljs-attr">class</span>=<span class="hljs-string">&quot;active&quot;</span><span class="hljs-string">{%</span> <span class="hljs-attr">endif</span> %}&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;myadmin_member_index&apos; p %}&quot;</span>&gt;</span>{{p}}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                {% endfor %}
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;myadmin_member_index&apos; pIndex|add:1 %}&quot;</span>&gt;</span>&amp;raquo;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- /.box --&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- /.content --&gt;</span>
+{% endblock %}
+</code></pre>
+<ul>
+<li>&#x5176;&#x4ED6;&#x529F;&#x80FD;&#x6B64;&#x5904;&#x7701;&#x7565;&#x3002;&#x3002;&#x3002;&#x3002;</li>
+</ul>
+<h3 id="&#xFF08;6-&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;">&#xFF08;6). &#x8FD0;&#x884C;&#x6D4B;&#x8BD5;</h3>
+<ul>
+<li>&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x542F;&#x52A8;&#x670D;&#x52A1;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x6D4B;&#x8BD5;&#xFF1A;<a href="http://localhost:8000/myadmin" target="_blank">http://localhost:8000/myadmin</a></li>
+</ul>
+<pre><code>[root@localhost myobject]# pwd
+/python/myobject
+[root@localhost myobject]# ls
+manage.py  myadmin  myobject  myweb  static  templates
+[root@localhost myobject]# python3 manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+April 08, 2018 - 12:20:30
+Django version 1.11, using settings &apos;myobject.settings&apos;
+Starting development server at http://0:8000/
+Quit the server with CONTROL-C.
+^C[root@localhost myobject]#
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="9.html" class="navigation navigation-prev " aria-label="Previous page: 9. 项目实战之后台菜品信息管理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="11.html" class="navigation navigation-next " aria-label="Next page: 本周作业">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"10.项目实战之后会员信息管理","level":"1.3.10","depth":2,"next":{"title":"本周作业","level":"1.3.11","depth":2,"path":"admin/11.md","ref":"admin/11.md","articles":[]},"previous":{"title":"9. 项目实战之后台菜品信息管理","level":"1.3.9","depth":2,"path":"admin/9.md","ref":"admin/9.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"admin/10.md","mtime":"2020-08-13T08:17:44.542Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-18T03:45:26.604Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

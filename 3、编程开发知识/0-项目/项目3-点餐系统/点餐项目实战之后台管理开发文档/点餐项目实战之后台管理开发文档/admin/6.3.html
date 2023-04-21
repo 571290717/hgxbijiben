@@ -1,0 +1,647 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>③. 添加验证码 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="7.html" />
+    
+    
+    <link rel="prev" href="6.2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    一、Django点餐项目之后台开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1. 项目需求分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="1.1.html">
+            
+                <a href="1.1.html">
+            
+                    
+                    ①. 项目开发流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="1.2.html">
+            
+                <a href="1.2.html">
+            
+                    
+                    ②. 点餐项目需求分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2. 项目的数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    3. 项目架构的程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    4. 基于Django框架的项目搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5. 项目实战之后台员工信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6. 项目实战之后台管理员登陆与退出
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="6.1.html">
+            
+                <a href="6.1.html">
+            
+                    
+                    ①. 添加中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    ②. 登录与退出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.6.3" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    ③. 添加验证码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7. 项目实战之后台店铺信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="8.html">
+            
+                <a href="8.html">
+            
+                    
+                    8. 项目实战之后台菜品类别信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="9.html">
+            
+                <a href="9.html">
+            
+                    
+                    9. 项目实战之后台菜品信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    10.项目实战之后会员信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    本周作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >③. 添加验证码</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x2462;-&#x5728;&#x540E;&#x53F0;&#x767B;&#x5F55;&#x5904;&#x6DFB;&#x52A0;&#x9A8C;&#x8BC1;&#x7801;">&#x2462; &#x5728;&#x540E;&#x53F0;&#x767B;&#x5F55;&#x5904;&#x6DFB;&#x52A0;&#x9A8C;&#x8BC1;&#x7801;</h1>
+<h3 id="1&#x3000;&#x914D;&#x7F6E;&#x8DEF;&#x7531;">(1).&#x3000;&#x914D;&#x7F6E;&#x8DEF;&#x7531;</h3>
+<ul>
+<li>&#x914D;&#x7F6E;&#x8DEF;&#x7531; <code>myobject/myadmin/urls.py</code> &#x52A0;&#x5165;&#x5982;&#x4E0B;&#x4EE3;&#x7801;</li>
+</ul>
+<pre><code class="lang-python"> ....
+
+    <span class="hljs-comment"># &#x540E;&#x53F0;&#x7BA1;&#x7406;&#x5458;&#x8DEF;&#x7531;</span>
+    path(<span class="hljs-string">&apos;login&apos;</span>, index.login, name=<span class="hljs-string">&quot;myadmin_login&quot;</span>),
+    path(<span class="hljs-string">&apos;dologin&apos;</span>, index.dologin, name=<span class="hljs-string">&quot;myadmin_dologin&quot;</span>),
+    path(<span class="hljs-string">&apos;logout&apos;</span>, index.logout, name=<span class="hljs-string">&quot;myadmin_logout&quot;</span>),
+    path(<span class="hljs-string">&apos;verify&apos;</span>, index.verify, name=<span class="hljs-string">&quot;myadmin_verify&quot;</span>), <span class="hljs-comment">#&#x9A8C;&#x8BC1;&#x7801;</span>
+ ....
+</code></pre>
+<h3 id="&#xFF12;&#x3000;&#x7F16;&#x5199;&#x89C6;&#x56FE;&#x6587;&#x4EF6;">(&#xFF12;).&#x3000;&#x7F16;&#x5199;&#x89C6;&#x56FE;&#x6587;&#x4EF6;</h3>
+<p><img src="../images/admin/login.png" alt=""></p>
+<ul>
+<li>&#x7F16;&#x5199;&#x89C6;&#x56FE; <code>myobject/myadmin/views/index.py</code>&#x6587;&#x4EF6; &#x5E76;&#x52A0;&#x5165;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</li>
+<li>&#x5728;<code>&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x5458;&#x64CD;&#x4F5C;</code>&#x4E2D;&#x6DFB;&#x52A0;&#x8F93;&#x51FA;&#x9A8C;&#x8BC1;&#x7801;&#x65B9;&#x6CD5; <code>verify()</code></li>
+<li>&#x5C06;&#x5B57;&#x4F53;&#x6587;&#x4EF6;<code>STXIHEI.TTF</code>&#x590D;&#x5236;&#x5230; static/&#x76EE;&#x5F55;&#x4E0B;</li>
+</ul>
+<pre><code class="lang-python">...
+
+<span class="hljs-comment"># ==============&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x5458;&#x64CD;&#x4F5C;====================</span>
+<span class="hljs-comment"># &#x4F1A;&#x5458;&#x767B;&#x5F55;&#x8868;&#x5355;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">verify</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-comment">#&#x5F15;&#x5165;&#x968F;&#x673A;&#x51FD;&#x6570;&#x6A21;&#x5757;</span>
+    <span class="hljs-keyword">import</span> random
+    <span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image, ImageDraw, ImageFont
+    <span class="hljs-comment">#&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#xFF0C;&#x7528;&#x4E8E;&#x753B;&#x9762;&#x7684;&#x80CC;&#x666F;&#x8272;&#x3001;&#x5BBD;&#x3001;&#x9AD8;</span>
+    <span class="hljs-comment">#bgcolor = (random.randrange(20, 100), random.randrange(</span>
+    <span class="hljs-comment">#    20, 100),100)</span>
+    bgcolor = (<span class="hljs-number">242</span>,<span class="hljs-number">164</span>,<span class="hljs-number">247</span>)
+    width = <span class="hljs-number">100</span>
+    height = <span class="hljs-number">25</span>
+    <span class="hljs-comment">#&#x521B;&#x5EFA;&#x753B;&#x9762;&#x5BF9;&#x8C61;</span>
+    im = Image.new(<span class="hljs-string">&apos;RGB&apos;</span>, (width, height), bgcolor)
+    <span class="hljs-comment">#&#x521B;&#x5EFA;&#x753B;&#x7B14;&#x5BF9;&#x8C61;</span>
+    draw = ImageDraw.Draw(im)
+    <span class="hljs-comment">#&#x8C03;&#x7528;&#x753B;&#x7B14;&#x7684;point()&#x51FD;&#x6570;&#x7ED8;&#x5236;&#x566A;&#x70B9;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">100</span>):
+        xy = (random.randrange(<span class="hljs-number">0</span>, width), random.randrange(<span class="hljs-number">0</span>, height))
+        fill = (random.randrange(<span class="hljs-number">0</span>, <span class="hljs-number">255</span>), <span class="hljs-number">255</span>, random.randrange(<span class="hljs-number">0</span>, <span class="hljs-number">255</span>))
+        draw.point(xy, fill=fill)
+    <span class="hljs-comment">#&#x5B9A;&#x4E49;&#x9A8C;&#x8BC1;&#x7801;&#x7684;&#x5907;&#x9009;&#x503C;</span>
+    <span class="hljs-comment">#str1 = &apos;ABCD123EFGHIJK456LMNOPQRS789TUVWXYZ0&apos;</span>
+    str1 = <span class="hljs-string">&apos;0123456789&apos;</span>
+    <span class="hljs-comment">#&#x968F;&#x673A;&#x9009;&#x53D6;4&#x4E2A;&#x503C;&#x4F5C;&#x4E3A;&#x9A8C;&#x8BC1;&#x7801;</span>
+    rand_str = <span class="hljs-string">&apos;&apos;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">4</span>):
+        rand_str += str1[random.randrange(<span class="hljs-number">0</span>, len(str1))]
+    <span class="hljs-comment">#&#x6784;&#x9020;&#x5B57;&#x4F53;&#x5BF9;&#x8C61;&#xFF0C;ubuntu&#x7684;&#x5B57;&#x4F53;&#x8DEF;&#x5F84;&#x4E3A;&#x201C;/usr/share/fonts/truetype/freefont&#x201D;</span>
+    font = ImageFont.truetype(<span class="hljs-string">&apos;static/arial.ttf&apos;</span>, <span class="hljs-number">21</span>)
+    <span class="hljs-comment">#font = ImageFont.load_default().font</span>
+    <span class="hljs-comment">#&#x6784;&#x9020;&#x5B57;&#x4F53;&#x989C;&#x8272;</span>
+    fontcolor = (<span class="hljs-number">255</span>, random.randrange(<span class="hljs-number">0</span>, <span class="hljs-number">255</span>), random.randrange(<span class="hljs-number">0</span>, <span class="hljs-number">255</span>))
+    <span class="hljs-comment">#&#x7ED8;&#x5236;4&#x4E2A;&#x5B57;</span>
+    draw.text((<span class="hljs-number">5</span>, <span class="hljs-number">-3</span>), rand_str[<span class="hljs-number">0</span>], font=font, fill=fontcolor)
+    draw.text((<span class="hljs-number">25</span>, <span class="hljs-number">-3</span>), rand_str[<span class="hljs-number">1</span>], font=font, fill=fontcolor)
+    draw.text((<span class="hljs-number">50</span>, <span class="hljs-number">-3</span>), rand_str[<span class="hljs-number">2</span>], font=font, fill=fontcolor)
+    draw.text((<span class="hljs-number">75</span>, <span class="hljs-number">-3</span>), rand_str[<span class="hljs-number">3</span>], font=font, fill=fontcolor)
+    <span class="hljs-comment">#&#x91CA;&#x653E;&#x753B;&#x7B14;</span>
+    <span class="hljs-keyword">del</span> draw
+    <span class="hljs-comment">#&#x5B58;&#x5165;session&#xFF0C;&#x7528;&#x4E8E;&#x505A;&#x8FDB;&#x4E00;&#x6B65;&#x9A8C;&#x8BC1;</span>
+    request.session[<span class="hljs-string">&apos;verifycode&apos;</span>] = rand_str
+    <span class="hljs-string">&quot;&quot;&quot;
+    python2&#x7684;&#x4E3A;
+    # &#x5185;&#x5B58;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;
+    import cStringIO
+    buf = cStringIO.StringIO()
+    &quot;&quot;&quot;</span>
+    <span class="hljs-comment"># &#x5185;&#x5B58;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;--&gt;&#x6B64;&#x65B9;&#x6CD5;&#x4E3A;python3&#x7684;</span>
+    <span class="hljs-keyword">import</span> io
+    buf = io.BytesIO()
+    <span class="hljs-comment">#&#x5C06;&#x56FE;&#x7247;&#x4FDD;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x4E3A;png</span>
+    im.save(buf, <span class="hljs-string">&apos;png&apos;</span>)
+    <span class="hljs-comment">#&#x5C06;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x56FE;&#x7247;&#x6570;&#x636E;&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;MIME&#x7C7B;&#x578B;&#x4E3A;&#x56FE;&#x7247;png</span>
+    <span class="hljs-keyword">return</span> HttpResponse(buf.getvalue(), <span class="hljs-string">&apos;image/png&apos;</span>)
+
+...
+</code></pre>
+<h3 id="3-&#x5728;&#x4E2D;&#x95F4;&#x4EF6;&#x8BBE;&#x7F6E;&#x653E;&#x884C;">(3). &#x5728;&#x4E2D;&#x95F4;&#x4EF6;&#x8BBE;&#x7F6E;&#x653E;&#x884C;</h3>
+<ul>
+<li>&#x7F16;&#x5199;&#xFF1A;myobject/common/shopmiddleware.py&#x6587;&#x4EF6;</li>
+<li>&#x5728; <code>__call__()</code>&#x65B9;&#x6CD5;&#x7684; <code>urllist</code> &#x53D8;&#x91CF;&#x4E2D;&#x52A0;&#x5165;&#xFF1A;<code>/myadmin/verify</code></li>
+</ul>
+<pre><code class="lang-python">    <span class="hljs-comment"># &#x5B9A;&#x4E49;&#x7F51;&#x7AD9;&#x540E;&#x53F0;&#x4E0D;&#x7528;&#x767B;&#x5F55;&#x4E5F;&#x53EF;&#x8BBF;&#x95EE;&#x7684;&#x8DEF;&#x7531;url</span>
+    urllist = [<span class="hljs-string">&apos;/myadmin/login&apos;</span>,<span class="hljs-string">&apos;/myadmin/dologin&apos;</span>,<span class="hljs-string">&apos;/myadmin/logout&apos;</span>,<span class="hljs-string">&apos;/myadmin/verify&apos;</span>]
+</code></pre>
+<p>&#x6D4B;&#x8BD5;&#xFF1A;<a href="http://localhost:8000/myadmin/verify" target="_blank">http://localhost:8000/myadmin/verify</a></p>
+<h3 id="4-&#x5728;&#x767B;&#x5F55;&#x6A21;&#x677F;&#x4E2D;&#x4F7F;&#x7528;&#x9A8C;&#x8BC1;&#x7801;">(4). &#x5728;&#x767B;&#x5F55;&#x6A21;&#x677F;&#x4E2D;&#x4F7F;&#x7528;&#x9A8C;&#x8BC1;&#x7801;</h3>
+<ul>
+<li>&#x767B;&#x5F55;&#x6A21;&#x677F;&#x6587;&#x4EF6;: <code>templates/myadmin/index/login.html</code> &#x4E2D;&#x52A0;&#x5165;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-html">....
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;login-box-msg&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color:red&quot;</span>&gt;</span>{{ info }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;{% url &apos;myadmin_dologin&apos; %}&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+      {% csrf_token %}
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-group has-feedback&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-control&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x8D26;&#x53F7;&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;glyphicon glyphicon-user form-control-feedback&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-group has-feedback&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;pass&quot;</span>  <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-control&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x5BC6;&#x7801;&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;glyphicon glyphicon-lock form-control-feedback&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-group has-feedback&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;code&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;display:inline;width:170px;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-control&quot;</span>  <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x9A8C;&#x8BC1;&#x7801;&quot;</span>&gt;</span>
+           <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;{% url &apos;myadmin_verify&apos;%}&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;this.src=&apos;{% url &apos;myadmin_verify&apos; %}?sn=&apos;+Math.random()&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;float:right;margin:5px 20px;&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-xs-12&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary btn-block btn-flat&quot;</span>&gt;</span>&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- /.col --&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+....
+</code></pre>
+<h3 id="5-&#x9A8C;&#x8BC1;&#x7801;&#x6821;&#x9A8C;">(5). &#x9A8C;&#x8BC1;&#x7801;&#x6821;&#x9A8C;</h3>
+<ul>
+<li>&#x7F16;&#x8F91;&#x89C6;&#x56FE;&#x6587;&#x4EF6;&#xFF1A;<code>myobject/myadmin/views/index.py</code>&#x6587;&#x4EF6;</li>
+<li>&#x5728;&#x89C6;&#x56FE;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x4F1A;&#x5458;&#x6267;&#x884C;&#x767B;&#x5F55;&#x65B9;&#x6CD5; <code>dologin()</code> &#x4E2D;&#x52A0;&#x5165;&#x9A8C;&#x8BC1;&#x4EE3;&#x7801;</li>
+</ul>
+<pre><code class="lang-python">...
+<span class="hljs-comment"># &#x4F1A;&#x5458;&#x6267;&#x884C;&#x767B;&#x5F55;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dologin</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-string">&apos;&apos;&apos;&#x6267;&#x884C;&#x767B;&#x5F55;&apos;&apos;&apos;</span>
+    <span class="hljs-comment">#&#x9A8C;&#x8BC1;&#x5224;&#x65AD;</span>
+    verifycode = request.session[<span class="hljs-string">&apos;verifycode&apos;</span>]
+    code = request.POST[<span class="hljs-string">&apos;code&apos;</span>]
+    <span class="hljs-keyword">if</span> verifycode != code:
+        context = {<span class="hljs-string">&apos;info&apos;</span>:<span class="hljs-string">&apos;&#x9A8C;&#x8BC1;&#x7801;&#x9519;&#x8BEF;&#xFF01;&apos;</span>}
+        <span class="hljs-keyword">return</span> render(request,<span class="hljs-string">&quot;myadmin/index/login.html&quot;</span>,context)
+
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-comment">#&#x6839;&#x636E;&#x767B;&#x5F55;&#x8D26;&#x53F7;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;</span>
+        user = User.objects.get(username=request.POST[<span class="hljs-string">&apos;username&apos;</span>])
+        <span class="hljs-comment"># &#x6821;&#x9A8C;&#x5F53;&#x524D;&#x7528;&#x6237;&#x72B6;&#x6001;&#x662F;&#x5426;&#x662F;&#x7BA1;&#x7406;&#x5458;</span>
+        <span class="hljs-keyword">if</span> user.status == <span class="hljs-number">6</span>:
+            <span class="hljs-comment">#&#x83B7;&#x53D6;&#x5BC6;&#x7801;&#x5E76;md5</span>
+            <span class="hljs-keyword">import</span> hashlib
+            md5 = hashlib.md5()
+            n = user.password_salt
+            s = request.POST[<span class="hljs-string">&apos;pass&apos;</span>]+str(n) 
+            md5.update(s.encode(<span class="hljs-string">&apos;utf-8&apos;</span>))
+            <span class="hljs-comment"># &#x6821;&#x9A8C;&#x5BC6;&#x7801;&#x662F;&#x5426;&#x6B63;&#x786E;</span>
+            <span class="hljs-keyword">if</span> user.password_hash == md5.hexdigest():
+                <span class="hljs-comment"># &#x5C06;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x6210;&#x529F;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x4EE5;adminuser&#x8FD9;&#x4E2A;key&#x653E;&#x5165;&#x5230;session&#x4E2D;</span>
+                request.session[<span class="hljs-string">&apos;adminuser&apos;</span>]=user.toDict()
+                <span class="hljs-keyword">return</span> redirect(reverse(<span class="hljs-string">&apos;myadmin_index&apos;</span>))
+            <span class="hljs-keyword">else</span>:
+                context={<span class="hljs-string">&quot;info&quot;</span>:<span class="hljs-string">&quot;&#x767B;&#x5F55;&#x5BC6;&#x7801;&#x9519;&#x8BEF;&#xFF01;&quot;</span>}
+        <span class="hljs-keyword">else</span>:
+            context={<span class="hljs-string">&quot;info&quot;</span>:<span class="hljs-string">&quot;&#x6B64;&#x7528;&#x6237;&#x975E;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x8D26;&#x53F7;&#xFF01;&quot;</span>}
+    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> err:
+        print(err)
+        context={<span class="hljs-string">&quot;info&quot;</span>:<span class="hljs-string">&quot;&#x767B;&#x5F55;&#x8D26;&#x53F7;&#x4E0D;&#x5B58;&#x5728;&#xFF01;&quot;</span>}
+    <span class="hljs-keyword">return</span> render(request,<span class="hljs-string">&quot;myadmin/index/login.html&quot;</span>,context)
+....
+</code></pre>
+<h3 id="&#xFF08;6&#xFF09;-&#x542F;&#x52A8;&#x670D;&#x52A1;&#x6D4B;&#x8BD5;&#xFF0C;&#x5373;&#x53EF;&#x6D4B;&#x8BD5;&#x7F51;&#x7AD9;&#x540E;&#x53F0;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x3002;&#x6CE8;&#x610F;&#x53EA;&#x6709;&#x7BA1;&#x7406;&#x5458;&#x624D;&#x5F00;&#x767B;&#x5F55;&#x3002;">&#xFF08;6&#xFF09;. &#x542F;&#x52A8;&#x670D;&#x52A1;&#x6D4B;&#x8BD5;&#xFF0C;&#x5373;&#x53EF;&#x6D4B;&#x8BD5;&#x7F51;&#x7AD9;&#x540E;&#x53F0;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x3002;&#x6CE8;&#x610F;&#x53EA;&#x6709;&#x7BA1;&#x7406;&#x5458;&#x624D;&#x5F00;&#x767B;&#x5F55;&#x3002;</h3>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6.2.html" class="navigation navigation-prev " aria-label="Previous page: ②. 登录与退出">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="7.html" class="navigation navigation-next " aria-label="Next page: 7. 项目实战之后台店铺信息管理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"③. 添加验证码","level":"1.3.6.3","depth":3,"next":{"title":"7. 项目实战之后台店铺信息管理","level":"1.3.7","depth":2,"path":"admin/7.md","ref":"admin/7.md","articles":[]},"previous":{"title":"②. 登录与退出","level":"1.3.6.2","depth":3,"path":"admin/6.2.md","ref":"admin/6.2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"admin/6.3.md","mtime":"2020-08-15T04:12:47.919Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-18T03:45:26.604Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,500 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6. 项目实战之后台管理员登陆与退出 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6.1.html" />
+    
+    
+    <link rel="prev" href="5.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    一、Django点餐项目之后台开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1. 项目需求分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="1.1.html">
+            
+                <a href="1.1.html">
+            
+                    
+                    ①. 项目开发流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="1.2.html">
+            
+                <a href="1.2.html">
+            
+                    
+                    ②. 点餐项目需求分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2. 项目的数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    3. 项目架构的程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    4. 基于Django框架的项目搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5. 项目实战之后台员工信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6. 项目实战之后台管理员登陆与退出
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="6.1.html">
+            
+                <a href="6.1.html">
+            
+                    
+                    ①. 添加中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="6.2.html">
+            
+                <a href="6.2.html">
+            
+                    
+                    ②. 登录与退出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="6.3.html">
+            
+                <a href="6.3.html">
+            
+                    
+                    ③. 添加验证码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7. 项目实战之后台店铺信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="8.html">
+            
+                <a href="8.html">
+            
+                    
+                    8. 项目实战之后台菜品类别信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="9.html">
+            
+                <a href="9.html">
+            
+                    
+                    9. 项目实战之后台菜品信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    10.项目实战之后会员信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    本周作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6. 项目实战之后台管理员登陆与退出</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="6-&#x9879;&#x76EE;&#x5B9E;&#x6218;&#x4E4B;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x5458;&#x767B;&#x9646;&#x4E0E;&#x9000;&#x51FA;">6. &#x9879;&#x76EE;&#x5B9E;&#x6218;&#x4E4B;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x5458;&#x767B;&#x9646;&#x4E0E;&#x9000;&#x51FA;</h1>
+<h4 id="&#x2460;-&#x6DFB;&#x52A0;&#x4E2D;&#x95F4;&#x4EF6;"><a href="6.1.html">&#x2460;. &#x6DFB;&#x52A0;&#x4E2D;&#x95F4;&#x4EF6;</a></h4>
+<h4 id="&#x2461;-&#x767B;&#x5F55;&#x4E0E;&#x9000;&#x51FA;"><a href="6.2.html">&#x2461;. &#x767B;&#x5F55;&#x4E0E;&#x9000;&#x51FA;</a></h4>
+<h4 id="&#x2462;-&#x6DFB;&#x52A0;&#x9A8C;&#x8BC1;&#x7801;"><a href="6.3.html">&#x2462;. &#x6DFB;&#x52A0;&#x9A8C;&#x8BC1;&#x7801;</a></h4>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x672C;&#x8282;&#x5B9E;&#x6218;&#x4F1A;&#x4F7F;&#x7528;&#x5230;Django&#x6846;&#x67B6;&#x4E2D;&#x7684;session&#xFF0C;&#x800C;session&#x4FE1;&#x606F;&#x53C8;&#x5B58;&#x653E;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x5148;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x8FC1;&#x79FB;&#x547D;&#x4EE4;&#x5728;MySQL&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5148;&#x751F;&#x6210;&#x4E00;&#x4E9B;Django&#x9ED8;&#x8BA4;&#x81EA;&#x5E26;&#x8868;&#x3002;</p>
+<pre><code>    python manage.py migrate
+</code></pre><p>&#x6216; &#x6267;&#x884C;&#x4E0B;&#x9762;sql&#x8BED;&#x53E5;&#x5728;osdb&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x521B;&#x5EFA;session&#x8868;</p>
+<pre><code class="lang-mysql">CREATE TABLE `django_session` (  
+    `session_key` varchar(40) NOT NULL,
+    `session_data` longtext NOT NULL,
+    `expire_date` datetime(6) NOT NULL,
+    PRIMARY KEY (`session_key`),
+    KEY `django_session_expire_date_a5c62663` (`expire_date`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="5.html" class="navigation navigation-prev " aria-label="Previous page: 5. 项目实战之后台员工信息管理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6.1.html" class="navigation navigation-next " aria-label="Next page: ①. 添加中间件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6. 项目实战之后台管理员登陆与退出","level":"1.3.6","depth":2,"next":{"title":"①. 添加中间件","level":"1.3.6.1","depth":3,"path":"admin/6.1.md","ref":"admin/6.1.md","articles":[]},"previous":{"title":"5. 项目实战之后台员工信息管理","level":"1.3.5","depth":2,"path":"admin/5.md","ref":"admin/5.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"admin/6.md","mtime":"2020-07-25T09:33:07.892Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-18T03:45:26.604Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
