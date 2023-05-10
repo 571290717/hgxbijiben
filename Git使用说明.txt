@@ -16,6 +16,10 @@ git clone https://github.com/571290717/huangtingting.git
 cd huangtingting
 
 
+cd D:\hgx笔记
+
+cd 571290717.github.io
+
 git pull
 
 （自己加文件）
