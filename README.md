@@ -5,7 +5,14 @@
 
 纸质的笔记容易丢失，需要转换为线上的笔记且方便回忆和分享学习成果
 
+## Python 工程师程
 
+------
+
+1. 基础：[Python 教程](https://www.w3schools.cn/python/default.html)
+2. 进阶：[SQL 教程](https://www.w3schools.cn/sql/default.html)，[MySQL 教程](https://www.w3schools.cn/mysql/default.html)
+3. 高级：[正则表达式教程](https://www.w3schools.cn/jsref/jsref_obj_regexp.html)，[Mongodb 教程](https://www.w3schools.cn/mongodb/)，[Redis 教程](https://www.w3schools.cn/redis/)， [AJAX 教程](https://www.w3schools.cn/js/js_ajax_intro.html)，[JSON 教程](https://www.w3schools.cn/js/js_json_intro.html)，[XML 教程](https://www.w3schools.cn/xml/default.html)，
+4. 开发工具：PyDev for Eclipse
 
 
 
