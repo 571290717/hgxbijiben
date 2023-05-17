@@ -24,8 +24,11 @@ LINKS = (('Pelican', 'https://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),
+SOCIAL = (('GitHub', '#'),
+         ('facebook', '#'),
+         ('GitHub2', '#'),
+          # ('You can add links in your config file', '#'),
+          # ('Another social link', '#'),
             ('phone', '13304036141'),
           )
 
@@ -34,10 +37,10 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-STATIC_PATHS = ['images', 'extra\favicon.ico']
-EXTRA_PATH_METADATA = {
-    'extra/favicon.ico': {'path': 'favicon.ico'}
-}
+# STATIC_PATHS = ['images', 'extra\favicon.ico']
+# EXTRA_PATH_METADATA = {
+#     'extra/favicon.ico': {'path': 'favicon.ico'}
+# }
 
 
 
