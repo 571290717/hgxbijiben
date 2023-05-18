@@ -63,6 +63,38 @@
     {% endif %}
   </aside>
 
+
+  <!--    外部容器-->
+<div class="top-bar-wrapper">
+  <!--     内部容器-->
+        <div class="top-bar clearfix">
+  <!--          设置父元素-->
+          <div class="top-nav">
+  <!--            鼠标移入出现下拉框元素-->
+                {% if categories %}
+                <h2>目录</h2>
+                <ul class="nav">
+                  {% for cat, null in categories %}
+                  <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                  <li>
+                    <a href="#">S系列</a>
+                 </li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+  <!--            下拉框元素-->
+              <div class="list">
+                {% for article in (articles_page.object_list if articles_page else articles) %}
+                <li>
+                  <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+               </li>
+                {% endfor %}
+              </div>
+          </div>
+        </div>
+      </div>
+
+
   <!-- Content -->
   <article>
     {% block content %}
