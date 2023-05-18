@@ -548,7 +548,7 @@ If 也可以被用作 [*内联表达式*](https://docs.jinkan.org/docs/jinja2/te
 
 - caller
 
-  如果宏访问特殊的 caller 变量且由 [*call*](https://docs.jinkan.org/docs/jinja2/templates.html#call) 标签调用，为 true 。
+  **如果宏访问特殊的** caller 变量且由 [*call*](https://docs.jinkan.org/docs/jinja2/templates.html#call) 标签调用，为 true 。
 
 如果一个宏的名称以下划线开始，它不是导出的且不能被导入。
 

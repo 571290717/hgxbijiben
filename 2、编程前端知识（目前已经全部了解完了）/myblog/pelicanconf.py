@@ -43,8 +43,15 @@ DEFAULT_PAGINATION = 10
 # }
 
 
+# DEFAULT_METADATA = {
+#     'status': 'draft',
+# }
 
 # SITEURL = '/theme/image'
 
 
 AVATAR = 'avatar.png'
+
+DEFAULT_DATA = 'fs'
+
+FILENAME_METADATA = '(?P<title>.*)'
