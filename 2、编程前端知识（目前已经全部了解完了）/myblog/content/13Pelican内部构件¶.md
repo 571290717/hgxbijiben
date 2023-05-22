@@ -1,5 +1,9 @@
 Title:# 13、Pelican内部构件[¶](https://www.osgeo.cn/pelican/internals.html#pelican-internals)
+Date: 2010-12-03 10:20
 
+
+
+Date: 2023-10-31
 本节描述Pelican如何在内部工作。正如您将看到的，它非常简单，但是一点文档并不有害。:)
 
 你也可以在 [Pelican的一些历史](https://www.osgeo.cn/pelican/report.html) 原作者写的一份报告的节选，其中包含一些软件设计信息。

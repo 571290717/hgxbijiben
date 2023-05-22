@@ -1,4 +1,5 @@
 Title:# 10、常见问题（FAQ）[¶](https://www.osgeo.cn/pelican/faq.html#frequently-asked-questions-faq)
+Date: 2023-10-31
 
 以下是一些关于Pelican的常见问题。
 

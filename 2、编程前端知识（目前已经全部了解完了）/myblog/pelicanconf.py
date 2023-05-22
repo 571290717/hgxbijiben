@@ -41,7 +41,7 @@ DEFAULT_PAGINATION = 10
 # EXTRA_PATH_METADATA = {
 #     'extra/favicon.ico': {'path': 'favicon.ico'}
 # }
-
+LOAD_CONTENT_CACHE = False 
 
 # DEFAULT_METADATA = {
 #     'status': 'draft',
@@ -50,7 +50,10 @@ DEFAULT_PAGINATION = 10
 # SITEURL = '/theme/image'
 
 
-AVATAR = 'avatar.png'
+AVATAR = '20230502-myphoto.jpg'
+
+DEFAULT_DATE_FORMAT = u'%Y-%m-%d %A %H:%M'
+
 
 DEFAULT_DATA = 'fs'
 

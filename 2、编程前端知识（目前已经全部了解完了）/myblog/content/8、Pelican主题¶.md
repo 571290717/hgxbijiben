@@ -1,5 +1,6 @@
 Title:# 8、Pelican主题[¶](https://www.osgeo.cn/pelican/pelican-themes.html#pelican-themes)
-
+Date: 2023-10-31
+\\
 ## 描述[¶](https://www.osgeo.cn/pelican/pelican-themes.html#description)
 
 `pelican-themes` 是一个用于管理Pelican主题的命令行工具。看到了吗 [主题](https://www.osgeo.cn/pelican/settings.html#settings-themes) 与主题相关的设置。

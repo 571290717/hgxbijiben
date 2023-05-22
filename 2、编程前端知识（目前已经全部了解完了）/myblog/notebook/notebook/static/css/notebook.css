@@ -17,8 +17,8 @@ h1, h2 {
 /* Body */
 body {
   margin: 0;
-  background-image: url('/theme/images/1.jpeg');
-
+  background-image: url('/theme/images/20230502-photo.jpg');
+  background-size: cover;
 }
 body > article, footer {
   line-height: 1.6em;
@@ -62,10 +62,10 @@ li.post_list:hover {
 }
 
 /* Links */;
-a  { color:#1DAEDF; text-decoration:none; }
-a:visited { color:#1DAEDF; text-decoration:none; }
-a:link { color:#1DAEDF; text-decoration:none; }
-a:active { color:#1DAEDF; text-decoration:none; }
+a  { color:#000304; text-decoration:none; }
+a:visited { color:#000304; text-decoration:none; }
+a:link { color:#000304; text-decoration:none; }
+a:active { color:#000304; text-decoration:none; }
 a:hover { text-decoration: underline; }
 
 /* Code */
@@ -148,8 +148,10 @@ aside {
   position: fixed;
   top: 0; left: 0;
   padding: 30px;
-  background-image: url('/theme/images/biplane.png');
+  background-image: url('/theme/images/20230502-left.jpg');
+  color:#494949;
   /* background-image: url(http://i.imgur.com/5nwPL.png); */
+  background-size: cover;
   color: white;
   box-shadow: 0 0 3px black;
 }
@@ -173,7 +175,7 @@ aside > h2 {
   border-radius: 50%;
   display: block;
   margin: 0 10px 10px 0;
-  box-shadow: 0px 0px 5px 3px #1DAEDF;
+  box-shadow: 0px 0px 5px 3px #0e84b5;
   -webkit-transition: 200ms;
      -moz-transition: 200ms;
       -ms-transition: 200ms;
@@ -223,12 +225,12 @@ aside > h2 {
 }
 /*鼠标移入时a的效果*/
 .nav a:hover{
-  color: deepskyblue;
+  color: rgb(0, 208, 255);
 
 }
 
-/*列表样式*/
-.top-nav .list{
+/* 列表样式 */
+/* .top-nav .list{
   display: none;
   width:900px;
   height: 600px;
@@ -244,10 +246,11 @@ aside > h2 {
 
 .top-nav:hover .list{
   display: block;
-}
+} */
+
 .nav{
   position: relative;
   z-index: 9999;
-  top: -35px;
+  top: -44px;
   margin-top: 0px;
-}
+} 

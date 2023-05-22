@@ -74,21 +74,12 @@
                 {% if categories %}
                 <h2>目录</h2>
                 <ul class="nav">
-                  {% for cat, null in categories %}
+                  {% for cat, null in categories|reverse %}
                   <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                  <li>
-                    <a href="#">S系列</a>
-                 </li>
                   {% endfor %}
                 </ul>
                 {% endif %}
-  <!--            下拉框元素-->
-              <div class="list">
-                {% for article in (articles_page.object_list if articles_page else articles) %}
-                <li>
-                  <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
-               </li>
-                {% endfor %}
+
               </div>
           </div>
         </div>
