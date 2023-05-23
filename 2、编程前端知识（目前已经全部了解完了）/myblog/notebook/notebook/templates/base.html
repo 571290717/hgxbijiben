@@ -18,10 +18,10 @@
   <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
   {% endif %}
 
-  <!-- Twitter Feed -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="{{ TWITTER_USERNAME }}">
-  <meta name="twitter:image" content="{{ SITEURL }}/{{ AVATAR }}">
+<!--  &lt;!&ndash; Twitter Feed &ndash;&gt;-->
+<!--  <meta name="twitter:card" content="summary">-->
+<!--  <meta name="twitter:site" content="{{ TWITTER_USERNAME }}">-->
+<!--  <meta name="twitter:image" content="{{ SITEURL }}/{{ AVATAR }}">-->
   {% endblock %}
 </head>
 
@@ -72,8 +72,9 @@
           <div class="top-nav">
   <!--            鼠标移入出现下拉框元素-->
                 {% if categories %}
-                <h2>目录</h2>
+
                 <ul class="nav">
+                  <a>目录</a>
                   {% for cat, null in categories|reverse %}
                   <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                   {% endfor %}
@@ -102,9 +103,6 @@
         {% endfor %}
       </div>
       {% endif %}
-      Blog powered by <a href="http://getpelican.com/">Pelican</a>, 
-      which takes great advantage of <a href="http://python.org">Python</a>.
-      Theme <a href="https://github.com/quack1/notebook/">Notebook</a> by <a href="https://twitter.com/_Quack1">@Quack1</a>.
     </address>
   </footer>
 
