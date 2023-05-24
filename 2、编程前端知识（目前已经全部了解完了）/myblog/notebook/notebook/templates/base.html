@@ -46,7 +46,7 @@
     <li><a href="{{ link }}">{{ title }}</a></li>
     {% endfor %}
     {% if DISPLAY_PAGES_ON_MENU and pages %}
-    <h2>Pages</h2>
+    <h2>页面</h2>
     <ul class="navbar">
       {% for p in pages %}
       <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
@@ -54,7 +54,7 @@
     </ul>
     {% endif %}
     {% if categories %}
-    <h2>Categories</h2>
+    <h2>目录</h2>
     <ul class="navbar">
       {% for cat, null in categories %}
       <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
@@ -64,27 +64,7 @@
   </aside>
 
 
-  <!--    外部容器-->
-<div class="top-bar-wrapper">
-  <!--     内部容器-->
-        <div class="top-bar clearfix">
-  <!--          设置父元素-->
-          <div class="top-nav">
-  <!--            鼠标移入出现下拉框元素-->
-                {% if categories %}
 
-                <ul class="nav">
-                  <a>目录</a>
-                  {% for cat, null in categories|reverse %}
-                  <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                  {% endfor %}
-                </ul>
-                {% endif %}
-
-              </div>
-          </div>
-        </div>
-      </div>
 
 
   <!-- Content -->
