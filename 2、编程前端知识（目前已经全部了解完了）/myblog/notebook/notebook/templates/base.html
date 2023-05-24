@@ -17,7 +17,7 @@
   {% if FEED_RSS %}
   <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
   {% endif %}
-
+  <link rel="shortcut icon" href="/theme/images/20230502-myphoto.jpg">
 <!--  &lt;!&ndash; Twitter Feed &ndash;&gt;-->
 <!--  <meta name="twitter:card" content="summary">-->
 <!--  <meta name="twitter:site" content="{{ TWITTER_USERNAME }}">-->
@@ -56,9 +56,11 @@
     {% if categories %}
     <h2>目录</h2>
     <ul class="navbar">
-      {% for cat, null in categories %}
+      {% for cat, null in categories|reverse  %}
       <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
       {% endfor %}
+      <li><a href="/hgxjianli.html" target="_blank">个人简历</a></li>
+      <li><a href="/hgxtester.html" target="_blank">个人介绍</a></li>
     </ul> 
     {% endif %}
   </aside>
