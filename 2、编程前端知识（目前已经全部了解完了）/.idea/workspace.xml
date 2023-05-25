@@ -23,6 +23,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\hgx笔记\hgxbijiben\2、编程前端知识（目前已经全部了解完了）\myblog\output\软件测试工程师简历_files" />
       <recent name="D:\hgx笔记\hgxbijiben\2、编程前端知识（目前已经全部了解完了）\myblog\output\theme\images" />
     </key>
   </component>
@@ -38,5 +39,11 @@
       <updated>1684978517742</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="640" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1684994211557">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1684994211557" />
   </component>
 </project>

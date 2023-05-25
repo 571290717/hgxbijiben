@@ -35,10 +35,10 @@ THEME = 'm.css/pelican-theme'
 THEME_STATIC_DIR = 'static'
 DIRECT_TEMPLATES = ['blogindex']
 
-M_CSS_FILES = ['https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700,700i%7CSource+Code+Pro:400,400i,600',
-               '/static/m-light.css']
-M_THEME_COLOR = '#297ac3'
-#这个颜色没改记得自己改
+M_CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600',
+               '/static/m-dark.css']
+M_THEME_COLOR = '#22272e'
+# 直接用黑色的了
 
 
 PLUGIN_PATHS = ['m.css/plugins']

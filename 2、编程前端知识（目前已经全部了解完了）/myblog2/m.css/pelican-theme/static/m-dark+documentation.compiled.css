@@ -2064,7 +2064,7 @@ article h1 .m-breadcrumb a:hover, article h1 a:focus, article h1 a:active {
   color: #dcdcdc;
 }
 article > header h1 {
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 article h1 a, article > header h1, article > header h1 a,
