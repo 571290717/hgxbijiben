@@ -32,6 +32,8 @@ body > article, footer {
   word-wrap: break-word;
     word-break: break-all;
     overflow: hidden;
+   margin-top: 100px;
+   padding-left: 40px;
 }
 
 /* Articles */
@@ -61,7 +63,7 @@ article > header {
   -webkit-border-radius: 5px 0;
   border-radius: 12px 12px;
   margin: 12px;
-  margin-inline-start: 40px;
+
 }
 li.post_list:hover {
   box-shadow: 0px 0px 5px 3px #52ACAE;
@@ -268,6 +270,7 @@ aside > h2 {
   padding-left: 15px;
   background-color: rgba(223, 222, 222, 0.2);
   margin-inline-start: 40px;
+  margin-left: 15px;
 }
 
 .entry-content > h1 {

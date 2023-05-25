@@ -163,7 +163,7 @@
         {% elif M_LINKS_FOOTER4 is not defined %}
         <h3><a href="{{ M_BLOG_URL|format_siteurl|e }}">Blog</a></h3>
         <ul>
-          {% for cat, null in categories %}
+          {% for cat, null in categories|reverse %}
           <li><a href="{{ cat.url|format_siteurl|e }}">{{ cat|e }}</a></li>
           {% endfor %}
         </ul>

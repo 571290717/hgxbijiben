@@ -38,7 +38,7 @@
       <div class="{% if M_SHOW_AUTHOR_LIST and tags %}m-col-s-6 m-col-m-3 m-col-l-2 m-push-l-1{% else %}m-col-s-4 m-col-l-2 {% if M_SHOW_AUTHOR_LIST %}m-push-l-1{% elif tags %}m-push-s-2 m-push-l-3{% else %}m-push-s-4 m-push-l-5{% endif %}{% endif %}">
         <h3>{{ "Categories"|hyphenate(lang='en') }}</h3>
         <ol class="m-block-bar-s">
-          {% for cat, null in categories %}
+          {% for cat, null in categories|reverse %}
           <li><a href="{{ cat.url|format_siteurl|e }}">{{ cat|e }}</a></li>
           {% endfor %}
         </ol>
@@ -73,7 +73,7 @@
         {% if not categories %}
         <li><em class="m-text m-dim">(none yet)</em></li>
         {% endif %}
-        {% for cat, null in categories %}
+        {% for cat, null in categories|reverse %}
         <li><a href="{{ cat.url|format_siteurl|e }}">{{ cat|e|hyphenate }}</a></li>
         {% endfor %}
       </ol>
