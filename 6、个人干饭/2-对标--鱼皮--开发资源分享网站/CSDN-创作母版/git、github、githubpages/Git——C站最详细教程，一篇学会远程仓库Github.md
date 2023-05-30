@@ -1,4 +1,4 @@
-# Git——C站最详细教程，一篇学会远程仓库Github
+# winows搭建远程仓库Github（linux通用）
 
 [TOC]
 
@@ -36,7 +36,7 @@
 
   
 
-  > 作者的远程仓库地址 https://github.com/qruihua/info.git
+  > 作者的远程仓库地址 https://github.com/571290717
 
 
 
@@ -492,6 +492,6 @@
 
     ![img](file:///D:/hgx%E7%AC%94%E8%AE%B0/hgxbijiben/3%E3%80%81%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/3-git/images/github%E5%BC%A0%E4%B8%89%E5%90%8C%E6%AD%A5%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6%E5%90%8E%E4%BB%A3%E7%A0%81.png)
 
->
+>个人主页： https://571290717.github.io/
 
 ![9c7bc198b36f77679bc7983f2f02810](Git%E2%80%94%E2%80%94C%E7%AB%99%E6%9C%80%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B%EF%BC%8C%E4%B8%80%E7%AF%87%E5%AD%A6%E4%BC%9A%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93Github.assets/9c7bc198b36f77679bc7983f2f02810.jpg)
