@@ -36,11 +36,11 @@
 
 ### 3. 效果图
 
-![结果1](/img/res1.png)
+![结果1](../img/res1.png)
 
 **获取执行sql语句后的数据**
 
-![结果](/img/res2.png)
+![结果](../img/res2.png)
 
 ### 4. 操作步骤
 
@@ -48,13 +48,13 @@
 
 添加数据库jar包, 添加数据库驱动
 
-![添加jar包](/img/add_jar.png)
+![添加jar包](../img/add_jar.png)
 
 配置连接信息
 
-![添加jdbc](/img/add_data_connect.png)
+![添加jdbc](../img/add_data_connect.png)
 
-![添加配置](/img/add_config.png)
+![添加配置](../img/add_config.png)
 
 #### 4.2 发送sql语句请求
 
@@ -79,7 +79,7 @@
 
 #### 5.1 JDBC Connection Configuration 参数详解
 
-![jdbc配置](/img/jdbc.png)
+![jdbc配置](../img/jdbc.png)
 
 ```
 1. Variable Name:数据库池名称【JDBC请求时要引用】
@@ -93,11 +93,11 @@
 
 ### 5.2 jdbc参数详解
 
-![jdbc请求](/img/jdbc_request.png)
+![jdbc请求](../img/jdbc_request.png)
 
 **JDBC Request** 参数：Variable names 设置图 
 
-![jdbc配置](/img/jdbc_config.png)
+![jdbc配置](../img/jdbc_config.png)
 
 ```
 1. Variable Name：数据库连接池的名字，需要与JDBC Connection Configuration的Variable Name【保持一致】
@@ -144,11 +144,11 @@
 2. 数据库池配置
 ```
 
-[MySQL连接驱动-jar包](../img/mysql-connector.jar)
+[MySQL连接驱动-jar包](..../img/mysql-connector.jar)
 
  **mysql-jdbc连接配置**
 
-![jdbc连接](/img/mysql_jdbc_con.png)
+![jdbc连接](../img/mysql_jdbc_con.png)
 
 #### 注意
 
@@ -168,11 +168,11 @@
 2. 数据库池配置   
 ```
 
-[oracle数据库驱动包](../img/ojdbc14.jar)
+[oracle数据库驱动包](..../img/ojdbc14.jar)
 
 **oracle jdbc连接配置**
 
-![oracle数据库配置](/img/oracle_data_conf.png)
+![oracle数据库配置](../img/oracle_data_conf.png)
 
 #### 注意
 
