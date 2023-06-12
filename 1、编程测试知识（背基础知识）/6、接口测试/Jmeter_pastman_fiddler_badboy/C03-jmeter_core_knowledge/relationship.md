@@ -68,9 +68,9 @@
 
 #### 2. 添加正则表达式提取器
 
-![创建正则表达式提取器](/img/create_reg.png)
+![创建正则表达式提取器](../img/create_reg.png)
 
-![添加正则提取](/img/add_reg_rule.png)
+![添加正则提取](../img/add_reg_rule.png)
 
 **参数解释:**
 
@@ -125,9 +125,9 @@ XPath 路径
 
 #### 2. 添加xpath提取器
 
-![添加测试](/img/add_xpath.png)
+![添加测试](../img/add_xpath.png)
 
-![xpath规则](/img/xpath_rule.png)
+![xpath规则](../img/xpath_rule.png)
 
 **参数解释**
 

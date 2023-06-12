@@ -1,4 +1,14 @@
-# Day15 工具篇——C站最全postman讲解
+# Day15 工具篇——C站最全postman讲解、简介、请求、响应、运行Collections、Postman（深入学习+GitHubAPI练习）、附录--HTTP 状态码详解
+
+[TOC]
+
+
+
+![image-20230612140938875](image/image-20230612140938875-16865502241661.png)
+
+
+
+
 
 
 
@@ -6,15 +16,7 @@
 
 # Postman 详解
 
-[![img](image/webp.webp)](https://www.jianshu.com/u/ed9ea9fc6a1b)
-
-[CodeMT](https://www.jianshu.com/u/ed9ea9fc6a1b)关注IP属地: 广东
-
-2019.09.27 09:59:22字数 2,038阅读 384
-
-![img](image/webp-16862955768411.webp)
-
-## 一 简介
+## 一、 简介
 
 **特点：**
 
@@ -23,7 +25,7 @@
 - **document:**依据你创建的`Clollections`自动生成`API`文档,并将其发布成规范的格式
 - **collarorate:**通过同步连接你的`team`和你的`api`，以及权限控制，`API`库
 
-## 二 请求
+## 二 、请求
 
 - **postman界面分为两部分：**左边的`sidebar`右边的`request builder：`快速创建几乎所有的请求
 
@@ -133,7 +135,7 @@ Via
 
 - `image`,`audio or video files.text files` 。 也不能保存历史，每次选择文件，提交。
 
-## 三 响应
+## 三、 响应
 
 > 保证`API`响应的正确性，就是你需要做的大部分工作。`postman`的`response viewer`部分会协助你完成该工作且使其变得简单。一个`API`的响应包含`body`,`headers`,响应状态码。`postman`将`body`和`headers`放在不同的`tabs`中。响应码和响应时间显示在`tabs`的旁边。将鼠标悬停在响应码上面可以查看更详细的信息。
 
@@ -196,7 +198,7 @@ Via
 
 - `postman`支持获得`OAuth 2.0 token`并添加到`requests`中。
 
-### 四 Writting Test
+四 、Writting Test
 
 - `Postman`的`Tests`标签可以用来写测试：
 
@@ -301,7 +303,7 @@ tests["Valid Data2"] = tv4.validate(data2, schema);
 
 ![img](image/webp-168629557684425.webp)
 
-## 五 运行Collections
+## 五 、运行Collections
 
 - `postman`允许你运行`collection`，你可以运行任意的次数。 最后会给出一个整体运行的结果。会保存每一次运行的结果，提供给你比较每一次运行解雇的不同。
   选择`collection`，选择环境。点击运行按钮。
@@ -319,9 +321,9 @@ tests["Valid Data2"] = tv4.validate(data2, schema);
 
 
 
-## [postman 简单教程-实现简单的接口测试](https://www.cnblogs.com/YouxiYouxi/p/7522326.html)
+### postman-实现简单的接口测试
 
-最近开始做接口测试了，因为公司电脑刚好有postman，于是就用postman来做接口测试，哈哈哈哈，。。。postman 功能蛮强大的，还比较好用，下面说下postman如何来测试接口
+下面说下postman如何来测试接口
 
 1.下载postman插件，网址http://chromecj.com/web-development/2014-09/60/download.html
 
@@ -355,17 +357,9 @@ d.查看返回的结果数据与预期是否一致
 
  
 
-嗯，接口测试就是这么简单，下一篇，我们开始讲postman的环境变量和如何引用postman中上一次请求返回的值
 
- 
 
- 
-
-##  
-
-## [postman简单教程，如何在请求中引用上次请求返回的值](https://www.cnblogs.com/YouxiYouxi/p/7528269.html)
-
-##  
+###  postman简单教程，如何在请求中引用上次请求返回的值
 
 做接口测试，一定会遇到这种情况，需要拿上次请求的值在本次请求中使用，比如，我们去测试一个东西，要去登录才能做其他的操作，需要拿到登录返回数据中的某些字段，比如，token啊等。。。
 
@@ -385,11 +379,9 @@ d.查看返回的结果数据与预期是否一致
 
  
 
-大概就是这样，蛮简单 的，大家学起来，学起来，下一章开始写如何判断接口是pass还是failed,postman的tests模块
 
-## [ ](https://www.cnblogs.com/YouxiYouxi/p/7525424.html)
 
-## [postman简单教程，使用tests模块来验证接口时是否通过](https://www.cnblogs.com/YouxiYouxi/p/7544914.html)
+### postman简单教程，使用tests模块来验证接口时是否通过
 
 接口测试醉重要的就是返回数据的检查，一个简单的接口，我们可以肉眼检查返回数据，但接口一旦多起来且复杂，每次的检查都会很费劲，此时我们就需要postman 的tests模块来代替
 
@@ -505,433 +497,9 @@ Postman的test本质上是JavaScript代码，通过我们编写测试代码，�
 
 
 
- 
-
-# 前言：
-
-Postman是一款功能强大的网页调试与发送网页HTTP请求的Chrome插件。
-
-![img](image/strip.jpeg)
-
-接口请求流程
-
-------
-
-# 一、get请求
-
-GET请求：点击Params，输入参数及value，可输入多个，即时显示在URL链接上，所以，GET请求的请求头与请求参数如在接口文档中无特别声明时，可以不填。
-
-![img](image/strip-168629565150359.jpeg)
-
-get请求示例
-
-GET响应：右上角显示响应HTTP状态码、请求的耗时。
-
-![img](image/strip-168629565150360.jpeg)
-
-get响应示例
-
-需特别注意的是注意区别HTTP状态码与响应正文中的状态码，只有HTTP状态码是200时，才代表这个接口请求是正确的，这个是HTTP协议定义的，而响应正文的状态码，是程序员自已定义的，可以是200，也可以定义为其它值，是为了让接口使用者去区分正常数据与异常数据。
-
-![img](image/strip-168629565150361.jpeg)
-
-状态码与响应码不一致
-
-------
-
-# 二、POST请求
-
-#### 1、POST请求一：表单提交
-
-先看下图POST表单提交示例：
-
-![img](image/strip-168629565150462.jpeg)
-
-表单提交示例
-
-上图示例中设置了请求方法，请求URL，请求参数，但没有设置请求头。有一个要明确的点是，请求头中的Content-Type与请求参数的格式之间是有关联关系的。
-
-![img](image/strip-168629565150463.jpeg)
-
-Content-Type与请求参数的格式之间的关联
-
-当选择x-www-form-urlencoded的参数方式后，postman自动的帮我们设置了Content-Type，所以不需要我们人工干预，这就是使用一款流行工具的好处，把一些基础点都帮我们处理了。
-
-#### 2、POST请求二：json提交
-
-先看下图json提交示例：
-
-![img](image/strip-168629565150464.jpeg)
-
-json提交示例
-
-上图中，当我们选择了JSON(application/json)时，postman同样帮我们自动设置了Content-Type，可以自行的去查看Headers.
-
-#### 3、post请求三：xml提交
-
-先看下图XML提交示例：
-
-![img](image/strip-168629565150465.jpeg)
-
-XML提交示例
-
-上图中，当我们选择了XML(text/xml)时，postman同样帮我们自动设置了Content-Type，可以自行的去查看Headers.
-
-#### 4、post请求四：自行设置Content-Type
-
-HTTP的POST请求的参数，都是放在请求正文中的，只是根据Content-Type来判断请求正文的格式，那么我们同样可以在表单提交时，选择raw，然后自行设置Content-Type为application/x-www-form-urlencoded。
-
-![img](image/strip-168629565150466.jpeg)
-
-POST请求的参数
-
-![img](image/strip-168629565150567.jpeg)
-
-自行设置Content-Type
-
-#### 5、POST请求五：二进制文件提交
-
-先看下图二进制文件示例：
-
-![img](image/strip-168629565150568.jpeg)
-
-二进制文件提交
-
-Body下，选择binary，在这里你可以发送视频、音频、文本等文件。
-
-------
-
-# 三、postman断言
-
-一个完整的接口测试，包括：请求->获取响应正文->断言，我们已经知道了请求与获取响应正文，下面来介绍如何用postman进行断言。
-
-![img](image/strip-168629565150569.jpeg)
-
-Tests
-
-这个”Tests”就是我们需要处理断言的地方，postman很人性化的帮我们把断言所用的函数全给准备好了：
-
-![img](image/strip-168629565150570.jpeg)
-
-SNIPPETS
-
-------
-
-举例说明：首先设置一个断言场景，根据断言场景来举例说明Postman断言如何使用。
-
-1、判断HTTP返回状态码为200
-
-2、判断响应正文中是否包含："statusCode":200
-
-3、解析响应正文，并判断statusCode的值是200，message的值是”Success”
-
-------
-
-------
-
-第一步：在SNIPPETS中，往下拉，有一项”Status code:Code is 200”，这个就是为场景中的第 1 条准备的，判断HTTP返回状态码是否为200。点击这一项，可以看到在其左边，断言代码自动添加，见下图：
-
-![img](image/strip-168629565150571.jpeg)
-
-Status code
-
-解释一下这句代码的意思：
-
-tests["Status code is 200"]中的tests是一个内置对象，tests["Status code is 200"]是指为这个断言起个名称叫”Status code is 200”，这个名称可以自行修改。
-
-responseCode.code === 200中的responseCode是内置对象，responseCode对象中有个属性是code，是指HTTP状态码的code，判断code是否为200.
-
-综合起来，这句代码的意思是：名称为”Status code is 200”的断言中，判断responseCode对象的code属性值（HTTP状态码）是否为200。
-
-------
-
-第二步：同样在SNIPPETS中，找到一项”Response body:Contains string”，这个就是为场景中的第2条准备的，判断响应正文中的字段。点击后，在其左边，断言代码自动添加，见下图：
-
-![img](image/strip-168629565150672.jpeg)
-
-Contains string1
-
-其中我们需要修改想要在响应报文中找到的内容：
-
-tests["Body matches string"] = responseBody.has('"statusCode":200');  //对照第2条场景：判断响应正文中是否包含："statusCode":200
-
-![img](image/strip-168629565150673.jpeg)
-
-Contains string2
-
-------
-
-第三步：我们需要解析JSON串了，所以，在SNIPPETS中找到”Response body:JSON value check”并点击，在其左边，断言代码自动添加，见下图：
-
-![img](image/strip-168629565150674.jpeg)
-
-JSON value check1
-
-我们可以看出，这里面其实是JS代码，jsonData变量其实是解析完JSON后的对象，在JS中，一个JSON对象获取其属性的值，直接是用jsonData.value，于是，我们把代码给修改一下，来判断第3条场景：
-
-tests["response statusCode"] = jsonData.statusCode === 200;  //判断statusCode的值是200
-
-tests["response message"] = jsonData.message === 'Success'; //判断message的值是”Success”
-
-![img](image/strip-168629565150675.webp)
-
-JSON value check2
-
-------
-
-这样一来，我们可以看到一共有Tests的断言4个，点击Send，发送请求，在响应区内可以看到如下图：表示断言全部通过。
-
-![img](image/strip-168629565150676.jpeg)
-
-------
-
-以上，SNIPPETS中还有很多的函数提供给我们,努力学习吧~~~
-
-------
-
-# 四、管理用例---Collections
-
-Collections集合：也就是将多个接口请求可以放在一起，并管理起来。什么样的接口请求可以放在同一个collection里？
-
-在这里告诉大家可以这样：一个工程一个Collection，这样方便查找及统一处理数据。
-
-![img](image/strip-168629565150777.jpeg)
-
-#### 第一步：创建Collections
-
-点击上图中的带+号的图标，输入Name:”demo”，Description:”demo for Collections”，点击Create按钮即创建成功一个Collections.
-
-![img](image/strip-168629565150778.jpeg)
-
-Create Collections
-
-第二步，在Collections里添加请求
-
-在右侧准备好接口请求的所有数据，并验证后，点击save按钮。
-
-![img](image/strip-168629565150779.jpeg)
-
-save按钮
-
-选择Collection及填写好Request name、Request description后，点击右下角的save to collection按钮，则该请求被添加到Collection中。
-
-![img](image/strip-168629565150780.jpeg)
-
-save request
-
-添加成功后，可在左侧列表中，collection中查看刚刚添加的请求。
-
-![img](image/strip-168629565150881.jpeg)
-
-#### 第三步：Collection精细化---Folder
-
-随着放入Collection的请求越来越多，混乱就又出现了，在找一个请求时，要找半天，于是将collection中的请求分门类别就很重要了，于是，在collection中就可以添加Folder了，将相同场景的请求放入同一个Folder中，于是就实现了模块化的管理了。
-
-点击下图中的Add Folder后，即可创建Folder。
-
-![img](image/strip-168629565150882.jpeg)
-
-Add Folder按钮位置
-
-添加上Folder name，即模块名称后，点击Create，创建成功一个Folder。
-
-![img](image/strip-168629565150883.jpeg)
-
-add Folder
-
-接下来，只需要把相同场景的请求拖入相同的Folder即可，这样就实现了模块化的管理了。模块化以后的结构：
-
-![img](image/strip-168629565150884.jpeg)
-
-模块化的管理结构
-
-#### 第四步：运行Collection
-
-将工程模块化的用例管理起来后，借着这个管理起来的东风，也可以将工程模块化的用例执行起来，即一次执行一整个collection里的用例，或者执行一个collection里的某一个Folder里的用例。
-
-点击下图中的Run：
-
-![img](image/strip-168629565150885.jpeg)
-
-run
-
-下图中的”Choose collection or folder”，如果选择demo，表示运行demo这一整个collection的用例，如果选择GET，即只运行demo下的GET模块下的用例。
-
-Environment，即运行环境，是开发环境还是测试环境，需事先配置，大家可以下去自已尝试一下。
-
-Iterations，即重复运行次数。会将选择好的collection中folder重复运行。
-
-Delay，间隔时间。用例与用例间的间隔时间。
-
-Data，外部数据加载，即用例的参数化，可以与Iterations结合起来用，实现参数化，也就是数据驱动。
-
-Run Demo，点击运行，运行完成后，即可得出一个简易的聚合报告。
-
-![img](image/strip-168629565150886.jpeg)
-
-#### 第五步：Collection运行参数化
-
-在Iterations重复运行时，如果某个用例希望每次运行时，使用不同的数据，那么应该满足如下2个条件：
-
-1、脚本中要用到数据的地方参数化，即用一个变量来代替，每次运行时，重新获取当前的运行数据。
-
-2、需要有一个数据池，这个数据池里的数据条数，要与重复运行的次数相同。
-
-------
-
-Postman的runner给我们提供了Iterations的输入项，也提供了Data的文件选择项，也就是意味着数据池是一个外部文件。
-
-如果Iterations里的值为2，那么，这个外部文件里也应该有两条数据，postman希望我们这个外部文件里的数据是一个json（当然也可以是其它
-
-数据格式）.
-
-为了表示两条数据，这个json应该是一个list结构(如下图)，同时，由于脚本要用到数据的地方需要参数化，需要变量，所以，每一条数据应该就是一个map，map的key对应脚本中的变量。
-
-![img](image/strip-168629565150987.jpeg)
-
-外部文件里的数据
-
-上图中表示提供了一个msg的变量，每次运行对应不同的值，预示着在脚本中可以用到msg这个变量，那在脚本中如何用？
-
-![img](image/strip-168629565150988.jpeg)
-
-使用变量
-
-如上图断言中用data.msg，其中data是个内置对象，即代表每一次运行的那个map数据，所以，可以用data.msg来获取每次运行的对应的值，当然，由于是个map，也可以用data[‘msg’]来获取对应的值。
-
-------
-
-# 五、设置环境变量
-
-有时需要在不同的环境下跑相同的测试，此时可以通过设置环境变量来动态选择。点击右上角的设置按钮-Manage Environments：
-
-![img](image/strip-168629565150989.jpeg)
-
-Manage Environments
-
-填写该环境的名称：如测试环境，并在key和value中填写需要的键值。
-
-![img](image/strip-168629565150990.jpeg)
-
-add1
-
-![img](image/strip-168629565151091.webp)
-
-add2
-
-使用这些键值的时候只需要加上两个花括号引用key，例如： {{url_base}}/admin/offer/
-
-![img](image/strip-168629565151092.webp)
-
-引用key
-
-建立多个环境时，key通常都是相同的，只是value不同。创建好所有环境后，在跑用例的时候在右上角下拉列表选择需要的环境就可以了。
-
-![img](image/strip-168629565151093.jpeg)
-
-选择环境变量
-
-------
-
-# 六、身份验证Authentication
-
-显示browser cookies，需要开启Interceptor。点击右上角的Interceptor 进行安装，并开启：
-
-![img](image/strip-168629565151094.jpeg)
-
-Interceptor
-
-身份验证Authentication：
-
-postman有一个helpers可以帮助我们简化一些重复和复杂的任务。当前的一套helpers可以帮助你解决一些authentication protocols的问题。
-
-![img](image/strip-168629565151095.jpeg)
-
-1、Basic Auth
-
-填写用户名和密码，点击update request后，headers中自动添加Authorization。图中用户名和密码均使用的key变量：
-
-![img](image/strip-168629565151296.jpeg)
-
-Basic Auth
-
-2、Digest Auth
-
-要比Basic Auth复杂的多。使用当前填写的值生成authorization header。所以在生成header之前要确保设置的正确性。如果当前的header已经存在，postman会移除之前的header。
-
-3、OAuth 1.0
-
-postman的OAuth helper让你签署支持OAuth
-
-1.0基于身份验证的请求。OAuth不用获取access token,你需要去API提供者获取的。OAuth 1.0可以在header或者查询参数中设置value。
-
-4、OAuth 2.0
-
-postman支持获得OAuth 2.0 token并添加到requests中。
-
-------
-
-------
-
-postman竟然如此之强大！我们还有什么理由去拒绝？介绍完之后，可能新的问题又来了，如何与jenkins结合实现持续集成？
-
-所以，产生了个newman，是个命令行运行postman请求的工具，建议大家自行去研究下，因为那确实就只是个命令行的工具而已！
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# [玩转 Postman：基础篇](https://www.cnblogs.com/ll-gaocheng/p/11051896.html)
+# Postman（深入学习+GitHubAPI练习）
 
 ### 前言
-
-本次 Chat 将结合业界广为推崇和使用的 RestAPI 设计典范 Github API，详细介绍 Postman 接口测试工具的使用方法和实战技巧。
 
 在开始这个教程之前，先聊一下为什么接口测试在现软件行业如此重要？ 为什么我们要学习 Postman？
 
@@ -984,7 +552,27 @@ HTTP 协议工作于客户端-服务器即 C/S 架构上 ![image](image/20181222
 如下是一个请求百度首页的请求示例：
 
 ```shell
+Request URL: https://www.baidu.com/
+Request Method: GET
+Status Code: 200 OK
 
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cache-Control: max-age=0
+Connection: keep-alive
+Cookie: PSTM=1686536494; BAIDUID=96D6939E207D38C9AF213AD2F9D84D2E:FG=1; BD_UPN=12314753; BIDUPSID=5630DE52139C696F657F88D9DAE4EA09; BA_HECTOR=21ak852k058g2l802k042lfg1i8d09i1n; BAIDUID_BFESS=96D6939E207D38C9AF213AD2F9D84D2E:FG=1; ZFY=NvdyFDLhxxOvQfvFG:AQCJUyR2zThCHaU:AtVPnRJ:ApCg:C; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; channel=baidusearch; BD_HOME=1; H_PS_PSSID=38516_36547_38686_38798_38767_38844_38832_38793_38813_38838_38640_38868_26350; BD_CK_SAM=1; PSINO=7; delPer=0; ab_sr=1.0.1_YmYzNDg0NzBlZWE0YmQ2Y2VlNWYzZTIwOGU0MmUzOWI2ZGJiNDExZTYzYzU3NDdiOTcyZWVkZjE4NjAxYzc4Y2I2MDQxYmE0Njg3ZjlkZWVmOGU5Y2Q3ZWJkMTRkNmFjMjgyMTI3ZTBlM2ZjNDBhN2M4M2I2NGVlYmEyMmZjNjgwN2JhMGRiYmQzYTM0YWJiZDYxYWI5ZDc0OTMzMTY5Ng==; H_PS_645EC=42d5i76nbzUdigDijOuYXHqnUl1bHk2wrmbthBuZ5mPEHmLSShYhVb0f7Pk; baikeVisitId=69f76140-95f4-4bac-be1c-8873346a4a97
+Host: www.baidu.com
+Referer: https://www.baidu.com/link?url=dDYjw2oSAQzt8xRnkLkpb_Bmjk6T4c-mit7A97NroNa&wd=&eqid=98c791f500008cc80000000664868bc2
+sec-ch-ua: "Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
 ```
 
 服务器接收并处理客户端发过来的请求，返回一个 HTTP 的响应消息。也由四个部分组成，分别是：
@@ -996,7 +584,21 @@ HTTP 协议工作于客户端-服务器即 C/S 架构上 ![image](image/20181222
 如下是百度首页的响应示例
 
 ```shell
-
+Bdpagetype: 1
+Bdqid: 0x8fb53e6500011f1a
+Connection: keep-alive
+Content-Encoding: gzip
+Content-Security-Policy: frame-ancestors 'self' https://chat.baidu.com http://mirror-chat.baidu.com https://fj-chat.baidu.com https://hba-chat.baidu.com https://hbe-chat.baidu.com https://njjs-chat.baidu.com https://nj-chat.baidu.com https://hna-chat.baidu.com https://hnb-chat.baidu.com http://debug.baidu-int.com;
+Content-Type: text/html; charset=utf-8
+Date: Mon, 12 Jun 2023 03:06:57 GMT
+Server: BWS/1.1
+Set-Cookie: BDSVRTM=0; path=/
+Set-Cookie: BD_HOME=1; path=/
+Set-Cookie: H_PS_PSSID=38516_36547_38686_38798_38767_38844_38832_38793_38813_38838_38640_38868_26350; path=/; domain=.baidu.com
+Strict-Transport-Security: max-age=172800
+Traceid: 1686539217055630106610355251521721016090
+Transfer-Encoding: chunked
+X-Ua-Compatible: IE=Edge,chrome=1
 ```
 
 ### HTTP 方法
@@ -1454,23 +1056,11 @@ Github API 中，使用 delete 方法可以删除 repo。
 
 删除成功后，返回 204。 ![image](image/20190106_152302.png)此时再查询账号，应该发现 Hello-World 这个 repo 已经被删除了
 
-### 结语及预告
 
-至此，我们通过 Github API 中几个实际的例子，学习了如何通过 Postman 来完成一些基本的 HTTP 方法的请求发送和响应查看，通过查看结果状态码或响应内容来判断结果正确性。
 
-当然 Postman 的功能远不止于此，API接口测试中也还有很多复杂的场景需要特别处理。
 
-欢迎大家继续关注后续 Chat：《玩转 Postman - 进阶篇》。在进阶篇中我们将继续深入讲解 Postman 的进阶功能，并结合一些复杂的实例场景来学习：
 
-- Postman 的环境和变量 
-- Postman 变量类型及其作用域
-- Postman 如何通过内建脚本实现接口预处理
-- Postman 实现测试结果的脚本校验
-- Postman 脚本执行顺序
-- 如何实现接口的关联测试
-- Postman 中的 JavaScript 扩展
-
-### 附录
+# 附录--HTTP 状态码详解
 
 HTTP 状态码详解（译自 Wiki 百科，目前所见最全面的解释）。
 
@@ -1805,3 +1395,13 @@ Nginx 上 HTTP 服务器扩展。服务器不向客户端返回任何信息，�
 ##### 511 Network Authentication Required （RFC 6585）
 
 客户端需要进行身份验证才能获得网络访问权限，旨在限制用户群访问特定网络（例如连接 WiFi 热点时的强制网络门户）。
+
+
+
+# 总结
+
+> 学完Postman就可以愉快的进行接口测试了~
+>
+> 如有不懂欢迎留言~
+
+![9c7bc198b36f77679bc7983f2f02810](image/9c7bc198b36f77679bc7983f2f02810-16865502423402.jpg)

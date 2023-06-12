@@ -98,7 +98,7 @@ csv.txt内容
 
 #### **(3)、参数配置**
 
-![crsv 配置](/img/csvread_conf.png)
+![crsv 配置](../img/csvread_conf.png)
 
 ```
 1. 选择一个功能：选择__CSVRead
@@ -147,7 +147,7 @@ http://127.0.0.1:8000/api/departments/?num=${__counter(FALSE,)}
 
 #### **(3)、参数配置**
 
-![counter 配置](/img/counter_cinf.png)
+![counter 配置](../img/counter_cinf.png)
 
 ```
 参数解释:
@@ -185,7 +185,7 @@ http://127.0.0.1:8000/api/departments/T0${__Random(1,6,)}/
 
 #### **(3)、函数配置图**
 
-![函数配置图](/img/random_conf.png)
+![函数配置图](../img/random_conf.png)
 
 ```
 1. 一个范围内的最小值:随机数生成时开始数，也是最小数
@@ -235,7 +235,7 @@ JSON报文：
 
 #### **(3)、_time函数参数配置**
 
-![参数配置](/img/time_conf.png)
+![参数配置](../img/time_conf.png)
 
 ```
 Format string for SimpleDateFormat (optional)：
@@ -291,7 +291,7 @@ property: 获取Jmeter属性值
 
 #### **(3)、setproperty函数配置图**
 
-![setproperty](/img/set_property.png)
+![setproperty](../img/set_property.png)
 
 ```
 1. 属性名称:要设置的属性名称也就是全局变量名
@@ -302,13 +302,13 @@ property: 获取Jmeter属性值
 
 作用: 可执行js的一种一种容器
 
-![beanshell](/img/beanshell.png)
+![beanshell](../img/beanshell.png)
 
 #### **(5)、property函数配置图**
 
 用来获取属性值
 
-![property](/img/property.png)
+![property](../img/property.png)
 
 ```
 选项解析:

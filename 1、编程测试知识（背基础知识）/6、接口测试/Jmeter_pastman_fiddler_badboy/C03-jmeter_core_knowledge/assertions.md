@@ -74,7 +74,7 @@
 
 #### 1.响应的状态吗
 
-![响应对象](/img/resp_assertion.png)
+![响应对象](../img/resp_assertion.png)
 
 ```
 1. 响应代码: 只有选择响应代码，Jmeter才去拿预期结果和响应代码去对比
@@ -83,7 +83,7 @@
 
 #### 2.响应的数据
 
-![响应文本](/img/resp_assertion_document.png)
+![响应文本](../img/resp_assertion_document.png)
 
 ```
 1. 响应文本：只有选择响应文本，Jmeter才去拿预期结果和响应数据去对比
@@ -117,7 +117,7 @@
 
 ### 4.3 size assertion配置图
 
-![大小断言](/img/size_assertion.png)
+![大小断言](../img/size_assertion.png)
 
 ```
 1. Response Body:选择此项判断返回主题数据Body的大小
@@ -145,7 +145,7 @@
 
 ### 5.3 持续时间配置图
 
-![持续时间](/img/duration_assertion.png)
+![持续时间](../img/duration_assertion.png)
 
 ```
 1. 持续时间(毫秒)：这里的持续时间为毫秒，比如：10 毫秒。
