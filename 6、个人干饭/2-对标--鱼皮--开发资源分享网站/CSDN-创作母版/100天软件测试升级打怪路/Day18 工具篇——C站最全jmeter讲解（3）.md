@@ -1,17 +1,12 @@
 # Day18 工具篇——C站最全jmeter讲解（3）
 
-## 学习目标
+[TOC]
 
-- 理解分布式测试原理
-- 掌握如何进行分布式测试
-- 掌握第三方插件使用
+![image-20230613111752137](image/image-20230613111752137.png)
 
-# Jmeter分布式
 
-## 学习目标
 
-- 了解Jmeter的应用场景
-- 掌握Jmeter分布式环境部署
+# 一、Jmeter分布式
 
 ## 1.  为什么使用Jmter分布式测试
 
@@ -34,6 +29,8 @@
 ## 2. 分布式测试
 
 ### 2.1 分布式测试原理
+
+> 注意：各个测试机的Jmeter版本要一致、csv文件等相对位置要相同
 
 ```
 1. 一台电脑作为控制机(Controller)，其它电脑做为执行机(Agent);
@@ -138,18 +135,9 @@
 
 
 
-# Jmeter 逻辑控制器
+# 二、Jmeter 逻辑控制器
 
-------
 
-## 目标
-
-- 了解-Jmeter中逻辑控制器
-- 掌握-If Controller(IF控制器)使用
-- 掌握-ForEach控制器使用
-- 掌握-循环控制器
-
-------
 
 ## 1 为什么要学习逻辑控制器？
 
@@ -627,9 +615,7 @@
 
 
 
-# Jmeter 图形监视器扩展插件下载及使用
-
-------
+# 三、Jmeter 图形监视器扩展插件下载及使用
 
 ## 目标
 
@@ -673,7 +659,7 @@
 
 客户端：标准插件下载地址：<https://jmeter-plugins.org/downloads/old/>
 
-![插件](C:/Users/GREE/Desktop/Jmeter_pastman_fiddler_badboy/img/jemter_plugins.png)
+![插件](image/jmeter_plugins.png)
 
 ```
 使用：
@@ -731,15 +717,27 @@
 
 
 
+# 四、总结
+
+
+
+> 学习目标：
+>
+> 理解分布式测试原理
+>
+> 掌握如何进行分布式测试
+>
+> 掌握第三方插件使用
+>
+> 了解Jmeter的应用场景
+>
+> 掌握Jmeter分布式环境部署
 
 
 
 
 
-
-
-
-
+![9c7bc198b36f77679bc7983f2f02810](image/9c7bc198b36f77679bc7983f2f02810.jpg)
 
 
 
