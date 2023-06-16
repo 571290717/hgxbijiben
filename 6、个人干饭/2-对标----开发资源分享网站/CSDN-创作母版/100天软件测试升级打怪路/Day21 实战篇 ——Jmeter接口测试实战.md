@@ -1,8 +1,18 @@
-# [Jmeter接口测试之案例实战](https://www.cnblogs.com/balllyh/p/9474372.html)
+# Day21 实战篇——Jmeter接口测试之案例实战——添加线程组、添加HTTP请求、获取所有学生接口
 
-Jmeter是apacheg公司基于Java开发的一款开源的压力测试工具，安装Jmeter之前先安装Jdk,具体JDK安装和环境变量配置自行百度。这里不概述。
+[TOC]
 
-# 1.添加线程组
+
+
+
+
+
+
+![image-20230615140019939](image/image-20230615140019939.png)
+
+Jmeter是apacheg公司基于Java开发的一款开源的压力测试工具，安装Jmeter之前先安装Jdk,这里默认已经阅读完前面的基础文章。
+
+## 1、添加线程组
 
 **测试计划->添加->Threads->线程组**
 
@@ -10,13 +20,13 @@ Jmeter是apacheg公司基于Java开发的一款开源的压力测试工具，安
 
 ![img](image/1463568-20180814205848684-1924123038.png)
 
-# 2.添加HTTP请求
+## 2、添加HTTP请求
 
 **线程组->添加->Sampler->HTTP请求**
 
 ![img](image/1463568-20180814210533089-1377162157.png)
 
-# 3.获取所有学生接口
+## 3、获取所有学生接口
 
 接口文档描述如下：
 
@@ -46,7 +56,7 @@ Jmeter是apacheg公司基于Java开发的一款开源的压力测试工具，安
 
  
 
-## 3.1 Jmeter察看结果树中乱码：
+### 3.1 Jmeter察看结果树中乱码：
 
 **（1）在jmeter的bin目录下找到jmeter.properties这个文件添加：sampleresult.default.encoding=utf-8**
 
@@ -58,7 +68,7 @@ Jmeter是apacheg公司基于Java开发的一款开源的压力测试工具，安
 
 **（2）重启jmeter**
 
-## 3.2 Jmeter参数化
+### 3.2 Jmeter参数化
 
 　　所有的接口测试的访问域名和端口都一样时，一旦服务器地址变更，修改每个接口的IP或域名很费事的。我们可以将其参数化，方便操作
 
@@ -87,13 +97,13 @@ Jmeter是apacheg公司基于Java开发的一款开源的压力测试工具，安
 
 　　　　![img](image/1463568-20180814222442836-285104907.png) 　　　![img](image/1463568-20180814222904302-1804834863.png)　　　　
 
-## 3.3 关联
+### 3.3 关联
 
 　　Jmeter中，用jp@gc-JSON PATH Extrator插件，可以获取上个接口的响应数据，用在第二个接口中。
 
 　　举例：如何从JSON响应结果中获取登录接口的Sign值，Json中的数据整体是一个字典，字典dict嵌套list，list又嵌套字典dict.
 
-　　按下标法取值，login_info是字典的第二个元素即dict.login_info.sign/dict["login_info"]["sign"]
+　　按下标法取值，login_info是字典的第二个元素即dict.login_info.sign/dict["login_info"] ["sign"]
 
 　　![img](image/1463568-20180814231107414-1291350078.png)
 
@@ -101,8 +111,16 @@ Jmeter是apacheg公司基于Java开发的一款开源的压力测试工具，安
 
  
 
-## 3.4上传文件
+### 3.4上传文件
 
 ![img](image/1463568-20180814231356025-1508666205.png)
 
  
+
+
+
+
+
+
+
+![9c7bc198b36f77679bc7983f2f02810](image/9c7bc198b36f77679bc7983f2f02810.jpg)

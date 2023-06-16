@@ -1,18 +1,16 @@
 # Day24 实战篇 ——Jmeter通过JDBC测试实战
 
-**目录**
+[TOC]
 
-- [1、业务级脚本开发](https://www.cnblogs.com/wendyw/p/12530020.html#_label0)
-- [2、接口级脚本开发](https://www.cnblogs.com/wendyw/p/12530020.html#_label1)
-- [3、JDBC脚本开发](https://www.cnblogs.com/wendyw/p/12530020.html#_label2)
-- [4、JMS Point-to-Poibt脚本开发](https://www.cnblogs.com/wendyw/p/12530020.html#_label3)
-- [5、Jmeter轻量级接口自动化测试框架](https://www.cnblogs.com/wendyw/p/12530020.html#_label4)
 
- 
 
-------
+![image-20230615152901516](image/image-20230615152901516.png)
 
-[回到顶部](https://www.cnblogs.com/wendyw/p/12530020.html#_labelTop)
+
+
+
+
+
 
 ## 1、**业务级脚本开发**
 
@@ -22,17 +20,17 @@
 
 步骤如下：
 
-\1) 访问登录页
+1) 访问登录页
 
-\2) 提交登录数据的HTTP
+2) 提交登录数据的HTTP
 
 PS:对于业务级的脚本建议更加真实地模拟用户的请求操作。
 
-[回到顶部](https://www.cnblogs.com/wendyw/p/12530020.html#_labelTop)
+
 
 ## 2、**接口级脚本开发**
 
-1） 单接口测试方法
+**1） 单接口测试方法**
 
 1. 启动Jmeter
 2. 新建线程组
@@ -41,7 +39,7 @@ PS:对于业务级的脚本建议更加真实地模拟用户的请求操作。
 5. 新建一个查看结果数监听器
 6. 运行脚本验证结果，优化脚本（比如可以对参数进行参数化）
 
-2） 接口依赖的测试方法
+**2） 接口依赖的测试方法**
 
 接口依赖->思路：建立2个接口，把接口1中接口响应的字段传递到接口2的入参中。
 
@@ -55,7 +53,9 @@ PS:对于业务级的脚本建议更加真实地模拟用户的请求操作。
 4. 在原创列表页随机选择一个书名接口的showid入参出替换为变量${good_id}即可。
 5. 我们可以来看查看结果数，看出请求成。![img](image/1087883-20200321173354679-811836716.png) ![img](image/1087883-20200321173442412-813296185.png)
 
-[回到顶部](https://www.cnblogs.com/wendyw/p/12530020.html#_labelTop)
+
+
+
 
 ## 3、**JDBC脚本开发**
 
@@ -85,7 +85,7 @@ SQL查询语句中的条件是固定值，如何设置为变量，步骤：
 1. 在Database Connection Configuration中的Database URL字段末尾加上 ?allowMultiQueries=true。
 2. 在JDBC Request的Query Type选择Update Statement,并在Query里写入两条插入的SQL语句。
 
-[回到顶部](https://www.cnblogs.com/wendyw/p/12530020.html#_labelTop)
+
 
 ## 4、**JMS Point-to-Poibt脚本开发**
 
@@ -101,6 +101,8 @@ JMS:Java Message Service，即Java消息服务应用程序接口，是一个Java
 
 每个消息只有一个消费者，一旦被消费，消息就不在消息队列中了。
 
+
+
 2、ActiveMQ
 
  ![img](image/1087883-20200321172127828-1683713207.png)
@@ -114,6 +116,8 @@ ActiveMQ工作模式中的部分解释如下：
 3. Session 是一个用于生成和使用消息的单线程上下文。它用于创建发送消息的生产者和接收消息的消费者 ，并为所发送的消息定义发送顺序。
 4. 客户端使用Message Producer向指定的物理目标发送消息。
 5. 客户端使用Message Consumer对象从指定的物理目标接收消息。消费者可以支持同步或异步消息接收。异步使用可通过想消费者注册MessageListener来实现。
+
+
 
 3、JMS Point-to-Point脚本开发
 
@@ -150,9 +154,9 @@ JMS Point-to-Pint 参数填写内容如下：
 | queue.Q.RPL             | example.B                                              | 定义了一个名为 Q.RPL 的 JNDI 队列请求指向了 example.B        |
 | Provider URL            | tcp://localhost:61616                                  | ActiveMQ 地址和端口                                          |
 
-[回到顶部](https://www.cnblogs.com/wendyw/p/12530020.html#_labelTop)
 
-## 5、**Jmeter轻量级接口自动化测试框架**
+
+## 5、**Jmeter轻量级接口自动化测试框架**（了解就行）
 
 大致思路如下：JMeter完成接口脚本，Ant完成脚本执行并收集结果生成报告，最后利用Jenkins完成整体脚本的自动集成运行。
 
@@ -194,8 +198,6 @@ JMS Point-to-Pint 参数填写内容如下：
 
 9.build.xml来设置运行时的具体配置
 
-![img](image/ContractedBlock.gif) View Code
-
 10.cmd目录下运行切换到D:\jmeter_test，输入命令：ant，执行后等待时间，出现BUILD SUCCESSFUL
 
 11、查看报告
@@ -212,6 +214,8 @@ JAVA_HOME：这个是本机JDK的安装路径（路径错误，会有红点提�
 
 Ps：每个文本框后面都有个问号，点击问号就会出现帮助信息
 
+
+
  　12.2系统管理-系统设置中，配置邮件通知
 
 　　上图，配置发件人地址System Admin e-mail address：Jenkins邮件发送地址，如果你这个没有配置，发邮件的时候，会报错 
@@ -221,6 +225,8 @@ Ps：每个文本框后面都有个问号，点击问号就会出现帮助信息
 这个就非常的简单了，根据的的邮箱提供者的参数配置就行了。
 
 Ps：小技巧：用户默认邮件后缀配置了后，以后你填写邮件地址只需要@之前的就行了
+
+
 
 　　12.3项目构建
 
@@ -255,6 +261,8 @@ Build periodically ：此选项仅仅通知Jenkins按指定的频率对项目进
 　13.邮件收到的信息
 
 　　　　无异常，构建成功的信息
+
+
 
 附录： 
 

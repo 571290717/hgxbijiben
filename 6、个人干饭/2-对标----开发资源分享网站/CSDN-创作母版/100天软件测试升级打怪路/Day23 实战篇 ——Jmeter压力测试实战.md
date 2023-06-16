@@ -1,12 +1,20 @@
 # Day23 实战篇 ——Jmeter压力测试实战
 
+[TOC]
+
+![image-20230615152326991](image/image-20230615152326991.png)
+
+
+
+
+
 项目中使用Jmeter进行大并发压测时，单机受限内存、CPU、网络IO，会出现服务器压力还没有上
 
 去，但压测服务器由于模拟的压力太大死机的情况。JMeter的集群模式可以让我们将多台机器联合起来
 
 一起产生负载，从而弥补单台机器负载生成能力不足的问题。
 
-# 分布式压测原理
+# 一、分布式压测原理
 
 [![img](image/1081351-20210804150418173-1300642496.png)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804150418173-1300642496.png)
 
@@ -32,7 +40,9 @@
 
 5、如果jmeter版本在4.0以上，需在jmeter.properties中设置 **server.rmi.ssl.disable=true** 
 
-# 分布式环境配置
+
+
+# 二、分布式环境配置
 
 ### Slaves机器配置
 
@@ -97,7 +107,9 @@ server_port=2099
 
 [![img](image/1081351-20210804162928226-141499139.jpg)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804162928226-141499139.jpg)
 
-# 分布式压测执行
+
+
+# 三、分布式压测执行
 
 ### Slave机器执行
 
@@ -109,7 +121,9 @@ server_port=2099
 
 　　确认好所有slave机器都正确启动后，在master机器上执行命令
 
- **jmeter -n -t stress0804.jmx -r -l testResult.jtl** 
+```
+ jmeter -n -t stress0804.jmx -r -l testResult.jtl
+```
 
 　　命令解析：
 
@@ -124,7 +138,9 @@ server_port=2099
 
 　　脚本中设置了5个线程，有2台负载机，所有Active为5*2=10个，运行时间2分钟。
 
-# 常见问题处理
+
+
+# 四、常见问题处理
 
 ### 问题一
 
@@ -191,3 +207,9 @@ java.io.FileNotFoundException: rmi_keystore.jks (No such file or directory)
 　　2、检查防火墙
 
 　　3、检查master机器和slave机器的服务器时间是否一致
+
+
+
+
+
+![9c7bc198b36f77679bc7983f2f02810](image/9c7bc198b36f77679bc7983f2f02810.jpg)
