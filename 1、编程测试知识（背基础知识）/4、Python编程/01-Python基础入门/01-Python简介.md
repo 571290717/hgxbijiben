@@ -1,3 +1,7 @@
+# Python简介
+
+[TOC]
+
 # 目标
 
 - 了解Python

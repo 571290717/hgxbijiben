@@ -1,0 +1,14 @@
+2019-04-18 18:20:11,093-web.py[lineno:159]-WARNING-在终端启动程序参数的个数不等于2!
+2019-04-18 18:20:27,263-web.py[lineno:56]-INFO-动态资源请求地址:/index.html
+2019-04-18 18:20:27,872-web.py[lineno:88]-INFO-静态资源请求地址:/css/bootstrap.min.css
+2019-04-18 18:20:27,885-web.py[lineno:88]-INFO-静态资源请求地址:/js/jquery-1.12.4.min.js
+2019-04-18 18:20:27,886-web.py[lineno:88]-INFO-静态资源请求地址:/js/bootstrap.min.js
+2019-04-18 18:20:31,618-web.py[lineno:56]-INFO-动态资源请求地址:/center.html
+2019-04-18 18:20:31,886-web.py[lineno:88]-INFO-静态资源请求地址:/css/bootstrap.min.css
+2019-04-18 18:20:31,887-web.py[lineno:88]-INFO-静态资源请求地址:/js/bootstrap.min.js
+2019-04-18 18:20:31,888-web.py[lineno:88]-INFO-静态资源请求地址:/js/jquery-1.12.4.min.js
+2019-04-18 18:20:32,569-web.py[lineno:56]-INFO-动态资源请求地址:/center_data.html
+2019-04-18 18:20:32,631-web.py[lineno:88]-INFO-静态资源请求地址:/fonts/glyphicons-halflings-regular.woff
+2019-04-18 18:20:37,900-web.py[lineno:56]-INFO-动态资源请求地址:/center_data.html
+2019-04-18 18:20:43,408-web.py[lineno:56]-INFO-动态资源请求地址:/center_data2.html
+2019-04-18 18:20:43,409-framework.py[lineno:187]-ERROR-没有设置相关的路由信息:/center_data2.html
