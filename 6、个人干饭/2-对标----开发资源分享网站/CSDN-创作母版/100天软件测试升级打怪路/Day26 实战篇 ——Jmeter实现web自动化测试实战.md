@@ -1,106 +1,14 @@
 # Day26 实战篇 ——Jmeter实现web自动化测试实战
 
+[TOC]
 
 
 
+## 一、前言
 
-一、下载插件安装插件：
-1.JMeterPlugins-WebDriver-1.1.2，下载地址:https://jmeter-plugins.org/downloads/old/
+jmeter是做服务端性能测试的工具，但jmeter还可以进行Web端自动化测试。参考了网上一些文章,本文就尝试体验下如何使用。
 
-2.将JMeterPlugins-WebDriver-1.1.2\lib\ext中的*.jar拷贝到D:\apache-jmeter-2.13\lib\ext下。
-
-3.将JMeterPlugins-WebDriver-1.1.2\lib中的*.jar拷贝到D:\apache-jmeter-2.13\lib下。
-
-4.重启jmeter
-
-二、添加配置
-添加插件配置元件jp@gc - Chrome Driver Config，添加chromedriver.exe的路径
-
-
-三、添加取样器
-添加sample jp@gc - WebDriver Sampler。
-
-四、取样器中写代码
-
-```
-function sleep(delay) {
-  var start = (new Date()).getTime();
-  while ((new Date()).getTime() - start < delay) {
-    continue;
-  }
-}
-WDS.sampleResult.sampleStart()
-WDS.browser.get("https://www.baidu.com/");
-var searchBox = WDS.browser.findElement(org.openqa.selenium.By.id("kw"));
-searchBox.sendKeys('csdn 茉莉咯');
-searchBox.sendKeys(org.openqa.selenium.Keys.ENTER);
-sleep(3000);
-// 4. Verify successful form submission
-var results = WDS.browser.findElements(org.openqa.selenium.By.cssSelector("div > h3 > a[target='_blank']"))
-if(results.empty) {
-    WDS.sampleResult.successful = false
-    WDS.sampleResult.responseMessage = 'There were no results returned'
-}
-WDS.sampleResult.sampleEnd()
-```
-
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
-14.
-15.
-16.
-17.
-18.
-19.
-
-五、效果
------------------------------------
-©著作权归作者所有：来自51CTO博客作者白酷可可的原创作品，请联系作者获取转载授权，否则将追究法律责任
-手把手教你用Jmeter做web自动化压测...【建议收藏】
-https://blog.51cto.com/u_15333592/3624732
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 使用jmeter做Web端自动化测试
-
-发布于 2022-06-21 16:32:10
-
-7550
-
-举报
-
-### **前言**
-
-熟悉jmeter的同学应该都知道,jmeter是做服务端性能测试的工具。jmeter还可以进行Web端自动化测试,这个功能也是我最近才知道的,个人认为比较有意思。参考了网上一些文章,文本就尝试体验下如何使用。
-
-### **下载WebDriver依赖**
+## 二、下载WebDriver依赖
 
 核心还是需要WebDriver依赖才能启动网页。
 
@@ -114,7 +22,7 @@ https://blog.51cto.com/u_15333592/3624732
 
 3.将JMeterPlugins-WebDriver-1.1.2\lib中的*.jar拷贝到D:\apache-jmeter-2.13\lib下。
 
-### **添加插件配置元件**
+## 三、添加插件配置元件
 
 重新jmeter后,在配置元件中可以看到Chromdriver Driver Config,说明插件配置成功。
 
@@ -124,7 +32,7 @@ https://blog.51cto.com/u_15333592/3624732
 
 ![img](image/1200-1686734366683117.png)
 
-### **添加WebDriver Sampler**
+## 四、添加WebDriver Sampler
 
 在取样器中选择WebDriver Sampler采样器。
 
@@ -178,6 +86,49 @@ WDS.sampleResult.sampleEnd();
 
 ![img](image/1200-1686734366683120.png)
 
-### **总结**
+
+
+
+
+
+
+示例代码2：
+
+```javascript
+function sleep(delay) {
+  var start = (new Date()).getTime();
+  while ((new Date()).getTime() - start < delay) {
+    continue;
+  }
+}
+WDS.sampleResult.sampleStart()
+WDS.browser.get("https://www.baidu.com/");
+var searchBox = WDS.browser.findElement(org.openqa.selenium.By.id("kw"));
+searchBox.sendKeys('csdn 茉莉咯');
+searchBox.sendKeys(org.openqa.selenium.Keys.ENTER);
+sleep(3000);
+// 4. Verify successful form submission
+var results = WDS.browser.findElements(org.openqa.selenium.By.cssSelector("div > h3 > a[target='_blank']"))
+if(results.empty) {
+    WDS.sampleResult.successful = false
+    WDS.sampleResult.responseMessage = 'There were no results returned'
+}
+WDS.sampleResult.sampleEnd()
+```
+
+
+
+## 五、总结
 
 基于jmeter的扩展插件WebDriver并且结合js编写测试用例,可以实现WEB端自动化测试。jmeter是可以提供继承Samlper采样器开发扩展的采样器的,WebDriver插件开发原理也是基于这个特性来开发的。 不过使用jmeter做WEB端自动化测试是能做但是不适合。所以如果有开发能力的话,还是写自动化脚本实现吧。
+
+
+
+
+
+
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)](image/9c7bc198b36f77679bc7983f2f02810 (1)-16872519912161.jpg)
+

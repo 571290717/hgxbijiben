@@ -13,31 +13,6 @@
 ## 目标
 
 ```
-1. 掌握WebDriver元素定位方法
-```
-
-------
-
-## 回顾 Selenium家族
-
-```
-对于我们只需要关注以下两点：    
-1. SeleniumIDE(已学完)
-2. Selenium2.0(WebDriver)    
-
-提示：            
-    1). Selenium2.0=Selenium1.0+WebDriver             
-    2). Selenium1.0 和 WebDriver原属于两个不同的东西，由于某种原因已合并            
-    3). Selenium2.0以后我们简称WebDriver             
-```
-
-# WebDriver概述
-
-------
-
-## 目标
-
-```
 1. 了解WebDriver概述
 2. WebDriver环境搭建
 ```
@@ -194,9 +169,18 @@ selenium2.x/3.x +Chrome驱动
 
 ## 5. 总结
 
+> 重点记忆：
+
 ```
 1. WebDriver是什么？
 2. 为什么要搭建环境？
 3. selenium 安装、卸载、查看命令
 4. 为什么推荐火狐浏览器和火狐48版本以下
 ```
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)](image/9c7bc198b36f77679bc7983f2f02810 (1)-16872523568193.jpg)
+
+
+

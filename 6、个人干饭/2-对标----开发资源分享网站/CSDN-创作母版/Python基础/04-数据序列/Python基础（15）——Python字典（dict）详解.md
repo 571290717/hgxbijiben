@@ -74,7 +74,6 @@ dict3 = dict()
 写法：==字典序列[key] = 值==
 
 > 注意：如果key存在则修改这个key对应的值；如果key不存在则新增此键值对。
->
 
 ``` python
 dict1 = {'name': 'Tom', 'age': 20, 'gender': '男'}
@@ -194,7 +193,7 @@ for key in dict1.keys():
     print(key)
 ```
 
-![image-20190212103905553](04-字典.assets/image-20190212103905553.png)
+![image-20190212103905553](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190212103905553.png)
 
 
 
@@ -206,7 +205,7 @@ for value in dict1.values():
     print(value)
 ```
 
-![image-20190212103957777](04-字典.assets/image-20190212103957777.png)
+![image-20190212103957777](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190212103957777.png)
 
 
 
@@ -218,7 +217,7 @@ for item in dict1.items():
     print(item)
 ```
 
-![image-20190212104046564](04-字典.assets/image-20190212104046564.png)
+![image-20190212104046564](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190212104046564.png)
 
 
 
@@ -230,7 +229,7 @@ for key, value in dict1.items():
     print(f'{key} = {value}')
 ```
 
-![image-20190212104223143](04-字典.assets/image-20190212104223143.png)
+![image-20190212104223143](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190212104223143.png)
 
 
 

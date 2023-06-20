@@ -1,5 +1,13 @@
 # Day30 Web自动化详解（4）——WebDriver(Selenium)——XPath、CSS定位
 
+[TOC]
+
+
+
+
+
+
+
 # XPath、CSS定位
 
 ------
@@ -366,7 +374,11 @@ driver.find_element_by_css_selector()
 总结：虽然方法一样，但WebDriver推荐 find_element_by_xxx()这种方法
 ```
 
-### 练习
+
+
+
+
+## 7.尝试练习：
 
 ```
 1. 在百度首页定位一组input标签并且找出”type”属性不是”hidden”的标签。
@@ -384,3 +396,9 @@ driver.find_element_by_css_selector()
 
 总结：虽然方法一样，但WebDriver推荐 find_element_by_xxx()这种方法
 ```
+
+
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)](image/9c7bc198b36f77679bc7983f2f02810 (1)-16872525371235.jpg)

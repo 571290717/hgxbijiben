@@ -1,5 +1,11 @@
 # Day31 Web自动化详解（5）——WebDriver(Selenium)——元素操作方法、及控制浏览器
 
+[TOC]
+
+
+
+
+
 # 元素操作方法
 
 ------
@@ -128,7 +134,9 @@ driver.quit()
     2. title、current_url：使用浏览器实例化对象直接调用；    如： driver.title
 ```
 
-### 4.3 WebDriver其他常用方法 总结
+# 5.总结
+
+### WebDriver常用方法 
 
 ```
 ....
@@ -163,3 +171,10 @@ href属性值为: http://www.sina.com.cn/
 span标签是否显示： False
 取消按钮是否可用： False
 ```
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)](image/9c7bc198b36f77679bc7983f2f02810 (1)-16872526113086.jpg)
+
+
+

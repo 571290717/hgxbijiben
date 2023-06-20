@@ -88,7 +88,7 @@ print(type(password))
 
 - 输出结果
 
-![image-20190129172920882](01-字符串.assets/image-20190129172920882.png)
+![image-20190129172920882](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190129172920882.png)
 
 
 
@@ -96,7 +96,7 @@ print(type(password))
 
 `“下标”`又叫`“索引”`，就是编号。比如火车座位号，座位号的作用：按照编号快速找到对应的座位。同理，下标的作用即是通过下标快速找到对应的数据。
 
-![image-20190129173606647](01-字符串.assets/image-20190129173606647.png)
+![image-20190129173606647](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190129173606647.png)
 
 ## 2.1 快速体验
 
@@ -114,11 +114,11 @@ print(name[2])
 
 - 输出结果
 
-![image-20190129174231104](01-字符串.assets/image-20190129174231104.png)
+![image-20190129174231104](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190129174231104.png)
 
 > 注意：下标从==0==开始。
 
-![image-20190129174231104](01-字符串.assets/2.png)
+![image-20190129174231104](https://the-toast.oss-cn-shenzhen.aliyuncs.com/2.png)
 
 
 
@@ -358,19 +358,19 @@ print(mystr.upper())
 
 - lstrip()：删除字符串左侧空白字符。
 
-![image-20190129213453010](01-字符串.assets/image-20190129213453010.png)
+![image-20190129213453010](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190129213453010.png)
 
 
 
 - rstrip()：删除字符串右侧空白字符。
 
-![image-20190129213558850](01-字符串.assets/image-20190129213558850.png)
+![image-20190129213558850](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190129213558850.png)
 
 
 
 - strip()：删除字符串两侧空白字符。
 
-![image-20190129213637584](01-字符串.assets/image-20190129213637584.png)
+![image-20190129213637584](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190129213637584.png)
 
 
 
@@ -384,14 +384,14 @@ print(mystr.upper())
 
 2. 输出效果
 
-![image-20190130141125560](01-字符串.assets/image-20190130141125560.png)
+![image-20190130141125560](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190130141125560.png)
 
 
 
 - rjust()：返回一个原字符串右对齐,并使用指定字符(默认空格)填充至对应长度 的新字符串，语法和ljust()相同。
 - center()：返回一个原字符串居中对齐,并使用指定字符(默认空格)填充至对应长度 的新字符串，语法和ljust()相同。
 
-![image-20190130141442074](01-字符串.assets/image-20190130141442074.png)
+![image-20190130141442074](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190130141442074.png)
 
 
 

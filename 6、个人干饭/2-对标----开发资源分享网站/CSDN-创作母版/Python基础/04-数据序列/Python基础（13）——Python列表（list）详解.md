@@ -158,7 +158,7 @@ name_list.append('xiaoming')
 print(name_list)
 ```
 
-![image-20190130160154636](02-列表.assets/image-20190130160154636.png)
+![image-20190130160154636](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190130160154636.png)
 
 > 列表追加数据的时候，直接在原列表里面追加了指定数据，即修改了原列表，故列表为可变类型数据。
 
@@ -408,7 +408,7 @@ while i < len(name_list):
 
 - 执行结果
 
-![image-20190130164205143](02-列表.assets/image-20190130164205143.png)
+![image-20190130164205143](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190130164205143.png)
 
 
 
@@ -427,7 +427,7 @@ for i in name_list:
 
 - 执行结果
 
-![image-20190130164227739](02-列表.assets/image-20190130164227739.png)
+![image-20190130164227739](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190130164227739.png)
 
 # 五. 列表嵌套
 
