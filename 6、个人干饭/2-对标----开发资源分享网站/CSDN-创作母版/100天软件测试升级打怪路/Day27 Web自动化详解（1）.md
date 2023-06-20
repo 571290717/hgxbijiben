@@ -8,7 +8,7 @@
 
 
 
-# 什么是Web自动化测试？
+# 一、什么是Web自动化测试？
 
 ## 目标
 
@@ -107,7 +107,7 @@
 
 
 
-# 为什么要学习Web自动化测试
+# 二、为什么要学习Web自动化测试
 
 ------
 
@@ -236,7 +236,7 @@ selenium RC与selenium webdriver的区别：
     2. Selenium2.0(WebDriver)
 ```
 
-# Selenium IDE安装与运行
+# 三、Selenium IDE安装与运行
 
 ------
 
@@ -546,13 +546,22 @@ Value：要输入的值；
     5.导出为python脚本
 ```
 
-------
 
-## 5. 总结
 
-```
-1. 为什么学习Selenium IDE插件工具
-2. Selenium安装、启动方式
-3. FireBug作用
-4. Selenium IDE常用命令
-```
+
+
+
+
+# 四、 总结
+
+
+
+> 本文重点
+>
+> 1. Selenium安装、启动方式
+> 2. FireBug作用
+> 3. Selenium IDE常用命令
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)](image/9c7bc198b36f77679bc7983f2f02810 (1)-16872521126022.jpg)
