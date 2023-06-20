@@ -8,7 +8,7 @@
 
 
 
-![image-20230615140019939](image/image-20230615140019939.png)
+![image-20230615140019939](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20230615140019939.png)
 
 Jmeter是apacheg公司基于Java开发的一款开源的压力测试工具，安装Jmeter之前先安装Jdk,这里默认已经阅读完前面的基础文章。
 
@@ -18,13 +18,13 @@ Jmeter是apacheg公司基于Java开发的一款开源的压力测试工具，安
 
 线程组相当于有多个用户,同时去执行相同的一批次任务。每个线程之间都是隔离的，互不影响的。一个线程的执行过程中，操作的变量，不会影响其他线程的变量值
 
-![img](image/1463568-20180814205848684-1924123038.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814205848684-1924123038.png)
 
 ## 2、添加HTTP请求
 
 **线程组->添加->Sampler->HTTP请求**
 
-![img](image/1463568-20180814210533089-1377162157.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814210533089-1377162157.png)
 
 ## 3、获取所有学生接口
 
@@ -44,15 +44,15 @@ Jmeter是apacheg公司基于Java开发的一款开源的压力测试工具，安
 
 **请求参数：**
 
-**![img](image/1463568-20180814212724511-237363819.png)**
+**![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814212724511-237363819.png)**
 
  
 
-![img](image/1463568-20180814211846803-1209524587.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814211846803-1209524587.png)
 
 **添加察看结构树查看程序响应数据，线程组->添加->监听器->察看结果树，如下图：**
 
-**![img](image/1463568-20180814213408506-542947986.png)**
+**![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814213408506-542947986.png)**
 
  
 
@@ -76,26 +76,26 @@ Jmeter是apacheg公司基于Java开发的一款开源的压力测试工具，安
 
 　　定义变量，填写正确的值，通过名称调用，调用格式为**${IP}，**IP也可以通过HTTP请求默认值设置
 
-　　![img](image/1463568-20180814214940436-2013826585.png)
+　　![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814214940436-2013826585.png)
 
 （2）选项-函数助手对话框中的函数
 
-- __Random（随机数）：random设置取值范围，填写值后，点击生成，调用时直接复制函数字符串即可，随机取值。![img](image/1463568-20180814215721038-681806219.png)
-- __counter（自增）：counter设置起始值无效，设置结束值无效，默认就是从1开始，只能通过线程数控制执行次数，填写值后，点击生成，调用时直接复制函数字符串即可！![img](image/1463568-20180814220303197-1821814919.png)
-- __time（时间）：时间戳${_time(,)}，时间戳表示从计算机发明那一天到现在过了多少秒，去掉后三位，再用转化器转化到现在的时分秒。![img](image/1463568-20180814220601685-1724829082.png)
+- __Random（随机数）：random设置取值范围，填写值后，点击生成，调用时直接复制函数字符串即可，随机取值。![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814215721038-681806219.png)
+- __counter（自增）：counter设置起始值无效，设置结束值无效，默认就是从1开始，只能通过线程数控制执行次数，填写值后，点击生成，调用时直接复制函数字符串即可！![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814220303197-1821814919.png)
+- __time（时间）：时间戳${_time(,)}，时间戳表示从计算机发明那一天到现在过了多少秒，去掉后三位，再用转化器转化到现在的时分秒。![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814220601685-1724829082.png)
 - 使用当时时间${__time(YYYYMMdd-HH:mm:ss,)}
 
- 　![img](image/1463568-20180814220935021-1926609762.png)
+ 　![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814220935021-1926609762.png)
 
 （3）从文件中读取参数：
 
 　　首先，点击线程组->添加->配置原件->CSV Data Set Config
 
-　　![img](image/1463568-20180814221255948-1142877414.png)
+　　![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814221255948-1142877414.png)
 
 　　第二步，准备文件，设置参数化变量名称，文件路径等。读取文件中的数据时，使用数据对应的变量名，**格式为${studi},${gold}**
 
-　　　　![img](image/1463568-20180814222442836-285104907.png) 　　　![img](image/1463568-20180814222904302-1804834863.png)　　　　
+　　　　![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814222442836-285104907.png) 　　　![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814222904302-1804834863.png)　　　　
 
 ### 3.3 关联
 
@@ -105,15 +105,15 @@ Jmeter是apacheg公司基于Java开发的一款开源的压力测试工具，安
 
 　　按下标法取值，login_info是字典的第二个元素即dict.login_info.sign/dict["login_info"] ["sign"]
 
-　　![img](image/1463568-20180814231107414-1291350078.png)
+　　![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814231107414-1291350078.png)
 
-　　![img](image/1463568-20180814224038574-978639880.png)
+　　![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814224038574-978639880.png)
 
  
 
 ### 3.4上传文件
 
-![img](image/1463568-20180814231356025-1508666205.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1463568-20180814231356025-1508666205.png)
 
  
 
@@ -123,4 +123,4 @@ Jmeter是apacheg公司基于Java开发的一款开源的压力测试工具，安
 
 
 
-![9c7bc198b36f77679bc7983f2f02810](image/9c7bc198b36f77679bc7983f2f02810.jpg)
+![9c7bc198b36f77679bc7983f2f02810](https://the-toast.oss-cn-shenzhen.aliyuncs.com/9c7bc198b36f77679bc7983f2f02810.jpg)

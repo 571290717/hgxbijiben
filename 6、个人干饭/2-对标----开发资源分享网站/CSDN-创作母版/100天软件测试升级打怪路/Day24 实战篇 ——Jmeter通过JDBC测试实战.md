@@ -4,7 +4,7 @@
 
 
 
-![image-20230615152901516](image/image-20230615152901516.png)
+![image-20230615152901516](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20230615152901516.png)
 
 
 
@@ -16,7 +16,7 @@
 
 登录脚本->思路：在线程组下新建两个HTTP请求，一个是完成访问登录页，一个是完成登录的数据提交。
 
-![img](image/1087883-20200321173109982-1240269627.png)　 ![img](image/1087883-20200321173214041-1189473325.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1087883-20200321173109982-1240269627.png)　 ![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1087883-20200321173214041-1189473325.png)
 
 步骤如下：
 
@@ -51,7 +51,7 @@ PS:对于业务级的脚本建议更加真实地模拟用户的请求操作。
 2. 新建一个HTTP请求，命名为原创列表页随机选择一个书名
 3. 提取点击书名接口中的响应数据good_id字段的值，在点击书名下面建立正则表达式来完成。其中正则表达式，通过取出书名ID的值，后续用这个值在需要的时候填入${good_id}即可使用。
 4. 在原创列表页随机选择一个书名接口的showid入参出替换为变量${good_id}即可。
-5. 我们可以来看查看结果数，看出请求成。![img](image/1087883-20200321173354679-811836716.png) ![img](image/1087883-20200321173442412-813296185.png)
+5. 我们可以来看查看结果数，看出请求成。![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1087883-20200321173354679-811836716.png) ![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1087883-20200321173442412-813296185.png)
 
 
 
@@ -66,9 +66,9 @@ PS:对于业务级的脚本建议更加真实地模拟用户的请求操作。
 3. 新增一个取样器-JDBC请求，用于JDBC连接。
 4. 建议一个监控器-查看结果数。
 
- ![img](image/1087883-20200321173528195-886669815.png)
+ ![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1087883-20200321173528195-886669815.png)
 
- ![img](image/1087883-20200321173637058-1494566634.png)
+ ![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1087883-20200321173637058-1494566634.png)
 
 SQL查询语句中的条件是固定值，如何设置为变量，步骤：
 
@@ -78,7 +78,7 @@ SQL查询语句中的条件是固定值，如何设置为变量，步骤：
 4. Parameter value添加用户自定义的变量，变量为测试计划中变量的值
 5. Parameter types中的参数类型，取决于测试计划->用户定义的变量类型。
 
-![img](image/1087883-20200321173734477-654599093.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1087883-20200321173734477-654599093.png)
 
  多SQL语句测试与单SQL语句的区别：
 
@@ -93,7 +93,7 @@ SQL查询语句中的条件是固定值，如何设置为变量，步骤：
 
 JMS:Java Message Service，即Java消息服务应用程序接口，是一个Java平台中关于面向消息中间件(MOM)的API，用于在两个应用程序之间，或分布式系统中发送消息，进行一步通信。通俗的讲，JMS是一个标准或者是一个协议，用于企业级应用的消息传递。
 
- ![img](image/1087883-20200321172119034-1989100493.png)
+ ![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1087883-20200321172119034-1989100493.png)
 
 发送者和接受者。接受者从队列中获取消息，且在成功接收消息之后需向队列应答成功。发送者和接收者之间在时间上没有依赖性，也就是说当发送者发送了消息之后，不管接收者有没有正在运行，都不会影响消息被发送到队列。
 
@@ -105,7 +105,7 @@ JMS:Java Message Service，即Java消息服务应用程序接口，是一个Java
 
 2、ActiveMQ
 
- ![img](image/1087883-20200321172127828-1683713207.png)
+ ![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1087883-20200321172127828-1683713207.png)
 
 ActiveMQ是开源消息队列服务，是面向消息中间件（MOM）的最终实现，是真正的服务提供者。消息生产者将消息发送至消息服务，消息消费者则从消息服务接收这些消息。这些消息的传送操作是使用一组实现了ActiveMQ应用编程接口的对象来执行的。
 
@@ -121,9 +121,9 @@ ActiveMQ工作模式中的部分解释如下：
 
 3、JMS Point-to-Point脚本开发
 
-![img](image/1087883-20200321173838298-1517578532.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1087883-20200321173838298-1517578532.png)
 
- ![img](image/1087883-20200321173907407-1734274999.png) 
+ ![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1087883-20200321173907407-1734274999.png) 
 
 场景：对中间件进行性能测试，可以使用工具Jmeter中的JMS。
 
@@ -288,7 +288,7 @@ source /etc/profile使配置生效，执行 ant -version，测试ant是否生效
 
 
 
-
+![9c7bc198b36f77679bc7983f2f02810](https://the-toast.oss-cn-shenzhen.aliyuncs.com/9c7bc198b36f77679bc7983f2f02810.jpg)
 
 
 

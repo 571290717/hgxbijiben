@@ -2,7 +2,7 @@
 
 [TOC]
 
-![image-20230615152326991](image/image-20230615152326991.png)
+![image-20230615152326991](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20230615152326991.png)
 
 
 
@@ -16,9 +16,9 @@
 
 # 一、分布式压测原理
 
-[![img](image/1081351-20210804150418173-1300642496.png)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804150418173-1300642496.png)
+[![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1081351-20210804150418173-1300642496.png)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804150418173-1300642496.png)
 
-[![img](image/1081351-20210804150427622-1900269772.png)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804150427622-1900269772.png)
+[![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1081351-20210804150427622-1900269772.png)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804150427622-1900269772.png)
 
 1、控制机为Master，负载机为Slave
 
@@ -103,9 +103,9 @@ server_port=2099
 
 **份参数化文件**。
 
-[![img](image/1081351-20210804162717415-1819936581.jpg)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804162717415-1819936581.jpg)
+[![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1081351-20210804162717415-1819936581.jpg)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804162717415-1819936581.jpg)
 
-[![img](image/1081351-20210804162928226-141499139.jpg)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804162928226-141499139.jpg)
+[![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1081351-20210804162928226-141499139.jpg)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804162928226-141499139.jpg)
 
 
 
@@ -115,7 +115,7 @@ server_port=2099
 
 　　在所有的slave机器上执行 **./jmeter-server** 命令，出现以下界面为执行成功。
 
-[![img](image/1081351-20210804163652575-2032846874.jpg)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804163652575-2032846874.jpg)
+[![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1081351-20210804163652575-2032846874.jpg)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804163652575-2032846874.jpg)
 
 ### Master机器执行
 
@@ -134,7 +134,7 @@ server_port=2099
 
 　　执行结果：
 
-[![img](image/1081351-20210804165127711-2004538152.jpg)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804165127711-2004538152.jpg)
+[![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1081351-20210804165127711-2004538152.jpg)](https://img2020.cnblogs.com/blog/1081351/202108/1081351-20210804165127711-2004538152.jpg)
 
 　　脚本中设置了5个线程，有2台负载机，所有Active为5*2=10个，运行时间2分钟。
 
@@ -212,4 +212,4 @@ java.io.FileNotFoundException: rmi_keystore.jks (No such file or directory)
 
 
 
-![9c7bc198b36f77679bc7983f2f02810](image/9c7bc198b36f77679bc7983f2f02810.jpg)
+![9c7bc198b36f77679bc7983f2f02810](https://the-toast.oss-cn-shenzhen.aliyuncs.com/9c7bc198b36f77679bc7983f2f02810.jpg)
