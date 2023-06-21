@@ -194,7 +194,7 @@ for index, char in enumerate(list1, start=1):
     print(f'下标是{index}, 对应的字符是{char}')
 ```
 
-![image-20190213115919040](06-公共操作.assets/image-20190213115919040.png)
+![image-20190213115919040](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190213115919040.png)
 
 
 
@@ -264,5 +264,5 @@ print(set(t1))
 
 
 
-![9c7bc198b36f77679bc7983f2f02810 (1)](C:/Users/GREE/Desktop/9c7bc198b36f77679bc7983f2f02810 (1).jpg)
+![9c7bc198b36f77679bc7983f2f02810 (1)](https://the-toast.oss-cn-shenzhen.aliyuncs.com/9c7bc198b36f77679bc7983f2f02810%20(1).jpg)
 

@@ -35,7 +35,7 @@ s5 = {}
 print(type(s5))  # dict
 ```
 
-![image-20190318104620690](05-集合.assets/image-20190318104620690.png)
+![image-20190318104620690](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190318104620690.png)
 
 > 特点：
 >
@@ -69,7 +69,7 @@ s1.update('abc')
 print(s1)
 ```
 
-![image-20190318121424514](05-集合.assets/image-20190318121424514.png)
+![image-20190318121424514](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190318121424514.png)
 
 ## 2.2 删除数据
 
@@ -144,6 +144,7 @@ print(10 not in s1)
   ```
 
 - 常见操作
+
   - 增加数据
     - add()
     - update()
@@ -153,4 +154,4 @@ print(10 not in s1)
 
 
 
-![9c7bc198b36f77679bc7983f2f02810 (1)](image/9c7bc198b36f77679bc7983f2f02810 (1).jpg)
+![9c7bc198b36f77679bc7983f2f02810 (image/9c7bc198b36f77679bc7983f2f02810 (1).jpg)](https://the-toast.oss-cn-shenzhen.aliyuncs.com/9c7bc198b36f77679bc7983f2f02810%20(1).jpg)

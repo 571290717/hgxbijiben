@@ -353,7 +353,7 @@ print(sum_result)
 
 - 执行结果
 
-![image-20181229145115121](03-函数加强.assets/1.png)
+![image-20181229145115121](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1.png)
 
 # 三. lambda 表达式
 
@@ -669,4 +669,4 @@ print(list(result))  # [2, 4, 6, 8, 10]
 
 
 
-![9c7bc198b36f77679bc7983f2f02810 (1)](C:/Users/GREE/Desktop/9c7bc198b36f77679bc7983f2f02810 (1).jpg)
+![9c7bc198b36f77679bc7983f2f02810 (1)](https://the-toast.oss-cn-shenzhen.aliyuncs.com/9c7bc198b36f77679bc7983f2f02810%20(1).jpg)

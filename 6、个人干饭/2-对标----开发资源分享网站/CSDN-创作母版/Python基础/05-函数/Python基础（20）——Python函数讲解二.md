@@ -407,7 +407,7 @@ test1(c)
 
 效果图如下：
 
-![image-20190220111744493](02-函数二.assets/image-20190220111744493.png)
+![image-20190220111744493](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190220111744493.png)
 
 # 七. 可变和不可变类型
 
@@ -455,4 +455,4 @@ return 表达式1, 表达式2...
 
 
 
-![9c7bc198b36f77679bc7983f2f02810 (1)](C:/Users/GREE/Desktop/9c7bc198b36f77679bc7983f2f02810 (1).jpg)
+![9c7bc198b36f77679bc7983f2f02810 (1)](https://the-toast.oss-cn-shenzhen.aliyuncs.com/9c7bc198b36f77679bc7983f2f02810%20(1).jpg)

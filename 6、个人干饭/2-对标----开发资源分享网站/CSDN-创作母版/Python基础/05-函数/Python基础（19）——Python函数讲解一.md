@@ -23,7 +23,7 @@
 
 > 特点：显示“选择功能”界面需要重复输出给用户，怎么实现？
 
-![image-20181231211912413](01-函数一.assets/image-20181231211912413-6262352.png)
+![image-20181231211912413](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20181231211912413-6262352.png)
 
 函数就是将==一段具有独立功能的代码块== 整合到一个整体并命名，在需要的位置==调用这个名称==即可完成对应的需求。
 
@@ -220,7 +220,7 @@ def sum_num(a, b):
 help(sum_num)
 ```
 
-![image-20190219112749727](01-函数一.assets/image-20190219112749727.png)
+![image-20190219112749727](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190219112749727.png)
 
 
 
@@ -246,11 +246,11 @@ testA()
 
 - 效果
 
-![image-20190219113648783](01-函数一.assets/image-20190219113648783.png)
+![image-20190219113648783](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190219113648783.png)
 
 - 执行流程
 
-![image-20190219113648783](01-函数一.assets/1.png)
+![image-20190219113648783](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1.png)
 
 > - 如果函数A中，调用了另外一个函数B，那么先把函数B中的任务都执行完毕之后才会回到上次 函数A执行的位置。
 
@@ -268,7 +268,7 @@ def print_line():
 print_line()
 ```
 
-![image-20190219155107988](01-函数一.assets/image-20190219155107988.png)
+![image-20190219155107988](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190219155107988.png)
 
 2. 打印多条横线
 
@@ -287,7 +287,7 @@ def print_lines(num):
 print_lines(5)
 ```
 
-![image-20190219155040124](01-函数一.assets/image-20190219155040124.png)
+![image-20190219155040124](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190219155040124.png)
 
 ## 7.2 函数计算
 
@@ -362,4 +362,4 @@ print(result)  # 2.0
 
 - 函数嵌套调用：一个函数内部嵌套调用另外一个函数
 
-![9c7bc198b36f77679bc7983f2f02810 (1)](C:/Users/GREE/Desktop/9c7bc198b36f77679bc7983f2f02810 (1).jpg)
+![9c7bc198b36f77679bc7983f2f02810 (1)](https://the-toast.oss-cn-shenzhen.aliyuncs.com/9c7bc198b36f77679bc7983f2f02810%20(1).jpg)
