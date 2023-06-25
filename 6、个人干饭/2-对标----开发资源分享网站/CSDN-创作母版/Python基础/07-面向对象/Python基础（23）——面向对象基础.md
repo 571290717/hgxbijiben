@@ -1,4 +1,4 @@
-# Python基础（21）——面向对象基础
+# Python基础（23）——面向对象基础
 
 
 
@@ -66,7 +66,7 @@
 
 类比如是制造洗衣机时要用到的图纸，也就是说==类是用来创建对象==。
 
-![image-20190222154356953](01-面向对象基础.assets/image-20190222154356953.png)
+![image-20190222154356953](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190222154356953.png)
 
 
 
@@ -76,7 +76,7 @@
 
 > 注意：开发中，先有类，再有对象。
 
-![image-20190222154727379](01-面向对象基础.assets/image-20190222154727379.png)
+![image-20190222154727379](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190222154727379.png)
 
 
 
@@ -763,6 +763,7 @@ a = A()
 
 A.instance_method('x')
 ```
+
 
 
 

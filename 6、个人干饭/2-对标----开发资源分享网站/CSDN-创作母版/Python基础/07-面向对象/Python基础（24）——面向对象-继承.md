@@ -21,7 +21,7 @@
 
 生活中的继承，一般指的是子女继承父辈的财产。
 
-![](02-面向对象-继承.assets/1.png)
+![](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1.png)
 
 - 拓展1：经典类或旧式类
 

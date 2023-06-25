@@ -22,7 +22,7 @@
 
 思考：什么是文件？
 
-![](文件操作.assets/1.jpg)
+![](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1.jpg)
 
 思考：文件操作包含什么？
 
@@ -163,7 +163,7 @@ print(f'第二行：{content}')
 f.close()
 ```
 
-![image-20190222105332438](文件操作.assets/image-20190222105332438.png)
+![image-20190222105332438](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190222105332438.png)
 
 
 
@@ -461,4 +461,7 @@ for name in file_list:
 
 
 
-![1687656874418](C:\Users\GREE\Desktop\1687656874418.jpg)
+![](https://the-toast.oss-cn-shenzhen.aliyuncs.com/9c7bc198b36f77679bc7983f2f02810%20(1).jpg)
+
+
+

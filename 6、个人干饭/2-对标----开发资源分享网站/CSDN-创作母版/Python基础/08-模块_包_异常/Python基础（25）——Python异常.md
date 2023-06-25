@@ -25,7 +25,7 @@
 open('test.txt', 'r')
 ```
 
-![image-20190305154200725](01-异常.assets/image-20190305154200725.png)
+![image-20190305154200725](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190305154200725.png)
 
 
 

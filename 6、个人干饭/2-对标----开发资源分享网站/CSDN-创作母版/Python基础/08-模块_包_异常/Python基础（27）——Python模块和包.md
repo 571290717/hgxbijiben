@@ -231,7 +231,7 @@ testA()
 testB()
 ```
 
-![image-20190305175727272](02-模块_包.assets/image-20190305175727272.png)
+![image-20190305175727272](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20190305175727272.png)
 
 
 
