@@ -1,4 +1,4 @@
-# Day30 Web自动化详解（4）——WebDriver(Selenium)——XPath、CSS定位
+# Day30 Web自动化详解（4）——WebDriver(Selenium)——XPath、CSS定位       （已上传）
 
 [TOC]
 
@@ -87,7 +87,7 @@ DOM的说明：
 范例文档对应的DOM结构：
 ```
 
-![转换成python](image/xpath_DOMexample.jpg)
+![转换成python](https://the-toast.oss-cn-shenzhen.aliyuncs.com/xpath_DOMexample.jpg)
 
 ## 3. Xpath定位策略(方式)
 
@@ -220,7 +220,7 @@ driver.find_element_by_css_selector()
 
 #### 通过伪类名、id、标签名定位
 
-![转换成python](image/css_regular_1.png)
+![转换成python](https://the-toast.oss-cn-shenzhen.aliyuncs.com/css_regular_1.png)
 
 #### class选择器
 
@@ -253,19 +253,19 @@ driver.find_element_by_css_selector()
 
 #### 通过元素之前嵌套关系
 
-![转换成python](image/css_regular_2.png)
+![转换成python](https://the-toast.oss-cn-shenzhen.aliyuncs.com/css_regular_2.png)
 
 #### 通过属性
 
-![转换成python](image/css_regular_3_1.jpg) ![转换成python](image/css_regular_3_2.png)
+![转换成python](https://the-toast.oss-cn-shenzhen.aliyuncs.com/css_regular_3_1.jpg) ![转换成python](https://the-toast.oss-cn-shenzhen.aliyuncs.com/css_regular_3_2.png)
 
 #### 通过父子关系
 
-![转换成python](image/css_regular_4.png)
+![转换成python](https://the-toast.oss-cn-shenzhen.aliyuncs.com/css_regular_4.png)
 
 #### 元素状态
 
-![转换成python](image/css_regular_5.jpg)
+![转换成python](https://the-toast.oss-cn-shenzhen.aliyuncs.com/css_regular_5.jpg)
 
 #### 3.3 练习
 
@@ -397,4 +397,4 @@ driver.find_element_by_css_selector()
 
 
 
-![9c7bc198b36f77679bc7983f2f02810 (1)](image/9c7bc198b36f77679bc7983f2f02810 (1)-16872525371235.jpg)
+![9c7bc198b36f77679bc7983f2f02810 (image/9c7bc198b36f77679bc7983f2f02810 (1)-16872525371235.jpg)](https://the-toast.oss-cn-shenzhen.aliyuncs.com/9c7bc198b36f77679bc7983f2f02810%20(1)-16872525371235.jpg)

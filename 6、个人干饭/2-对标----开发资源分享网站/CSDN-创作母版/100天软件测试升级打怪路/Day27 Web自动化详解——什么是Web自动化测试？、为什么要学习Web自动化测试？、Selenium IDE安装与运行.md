@@ -130,11 +130,11 @@
     
 ```
 
-![智慧星光](image/%E6%99%BA%E6%85%A7%E6%98%9F%E5%85%89%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-16867941002545.jpg)
+![智慧星光](https://the-toast.oss-cn-shenzhen.aliyuncs.com/%E6%99%BA%E6%85%A7%E6%98%9F%E5%85%89%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-16867941002545.jpg)
 
 
 
-![中铁信息](image/%E4%B8%AD%E9%93%81%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-16867940860484.jpg)
+![中铁信息](https://the-toast.oss-cn-shenzhen.aliyuncs.com/%E4%B8%AD%E9%93%81%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E9%9B%86%E5%9B%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-16867940860484.jpg)
 
 ### 1.1 Web自动化测试的课程目标
 
@@ -204,7 +204,7 @@ selenium测试直接运行在浏览器中，模拟手动界面操作。
 
 ### 5.1 Selenium家族(发展史) 【了解】
 
-![selenium家族](image/selenium-16867940433563.png)
+![selenium家族](https://the-toast.oss-cn-shenzhen.aliyuncs.com/selenium-16867940433563.png)
 
 ### 5.2 Selenium RC和Selenium webdriver的工作原理对比
 
@@ -212,13 +212,13 @@ selenium测试直接运行在浏览器中，模拟手动界面操作。
 1. Selenium RC工作原理图
 ```
 
-![seleniumRC工作原理](image/seleniumRC_principle-16867940345422.jpg)
+![seleniumRC工作原理](https://the-toast.oss-cn-shenzhen.aliyuncs.com/seleniumRC_principle-16867940345422.jpg)
 
 ```
 2. Selenium webdriver工作原理图
 ```
 
-![seleniumwebdriver工作原理](image/seleniumwebdriver_principle-16867940261871.jpg)
+![seleniumwebdriver工作原理](https://the-toast.oss-cn-shenzhen.aliyuncs.com/seleniumwebdriver_principle-16867940261871.jpg)
 
 ```
 selenium webdriver执行效率更高的原因：
@@ -267,7 +267,7 @@ seleniumIDE作用：
 
 ### 1.2 安装方式
 
-![seleniumIDE](image/IDE02-16867942193516.jpg)
+![seleniumIDE](https://the-toast.oss-cn-shenzhen.aliyuncs.com/IDE02-16867942193516.jpg)
 
 ```
 1. 官网安装
@@ -287,19 +287,19 @@ seleniumIDE作用：
 
 ##### 在线安装 搜索selenium IDE示意图
 
-![在线安装](image/selenium01.png)
+![在线安装](https://the-toast.oss-cn-shenzhen.aliyuncs.com/selenium01.png)
 
 ##### 在线安装 点击查看全部XX项结果
 
-![在线安装](image/selenium04.png)
+![在线安装](https://the-toast.oss-cn-shenzhen.aliyuncs.com/selenium04.png)
 
 ##### 在线安装 选择selenium IDE安装
 
-![在线安装](image/IDE03.jpg)
+![在线安装](https://the-toast.oss-cn-shenzhen.aliyuncs.com/IDE03.jpg)
 
 ##### 滚动条下拉选择 查看所有版本
 
-![在线安装](image/IDE04.jpg)
+![在线安装](https://the-toast.oss-cn-shenzhen.aliyuncs.com/IDE04.jpg)
 
 ```
     火狐浏览器 V35.0 选择 selenium IDE 2.9.1.1        
@@ -312,7 +312,7 @@ seleniumIDE作用：
 2. 工具栏——>Selenium IDE
 ```
 
-![IDE 运行](image/selenium05.png)
+![IDE 运行](https://the-toast.oss-cn-shenzhen.aliyuncs.com/selenium05.png)
 
 ```
 1. 文件：创建、打开和保存测试案例和测试案例集。编辑：复制、粘贴、删除、撤销和选择测试案例中的所有命
@@ -342,7 +342,7 @@ seleniumIDE作用：
 
 ### 练习1 脚本
 
-![练习1](image/IDE01.png)
+![练习1](https://the-toast.oss-cn-shenzhen.aliyuncs.com/IDE01.png)
 
 #### 重点分析：
 
@@ -375,7 +375,7 @@ seleniumIDE作用：
 
 ### 2.1 Firebug 插件安装
 
-![Firebug插件](image/firebug01.png)
+![Firebug插件](https://the-toast.oss-cn-shenzhen.aliyuncs.com/firebug01.png)
 
 ```
 在线安装： 
@@ -391,7 +391,7 @@ seleniumIDE作用：
 
 ### 将练习2脚本 转换成Python语言
 
-![转换成python](image/export01.png)
+![转换成python](https://the-toast.oss-cn-shenzhen.aliyuncs.com/export01.png)
 
 ```
 将录制的动作导出为脚本：
@@ -425,7 +425,7 @@ seleniumIDE作用：
     3. value：对页面元素输入的数据
 ```
 
-![编辑seleniumIDE命令](image/seleniumIDE_modcmd.jpg)
+![编辑seleniumIDE命令](https://the-toast.oss-cn-shenzhen.aliyuncs.com/seleniumIDE_modcmd.jpg)
 
 ### 3.2 插入命令
 
@@ -490,7 +490,7 @@ Target：要打开的URL；value值为空
 waitTime：等待时间，单位为ms；//Target=1000
 ```
 
-![seleniumIDE pause命令](image/seleniumIDE_pause.png)
+![seleniumIDE pause命令](https://the-toast.oss-cn-shenzhen.aliyuncs.com/seleniumIDE_pause.png)
 
 ### 4.3 goBack()
 
@@ -564,4 +564,4 @@ Value：要输入的值；
 
 
 
-![9c7bc198b36f77679bc7983f2f02810 (1)](image/9c7bc198b36f77679bc7983f2f02810 (1)-16872521126022.jpg)
+![9c7bc198b36f77679bc7983f2f02810 (image/9c7bc198b36f77679bc7983f2f02810 (1)-16872521126022.jpg)](https://the-toast.oss-cn-shenzhen.aliyuncs.com/9c7bc198b36f77679bc7983f2f02810%20(1)-16872521126022.jpg)

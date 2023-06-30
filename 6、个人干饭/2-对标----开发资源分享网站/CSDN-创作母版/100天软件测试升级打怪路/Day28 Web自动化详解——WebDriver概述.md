@@ -1,10 +1,10 @@
-# Day28 Web自动化详解——WebDriver概述
+# Day28 Web自动化详解（2）——WebDriver概述  （已上传）
 
 [TOC]
 
+![image-20230630092440214](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20230630092440214.png)
 
 
-![image-20230630090856856](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20230630090856856.png)
 
 # 目标
 
@@ -101,7 +101,7 @@ Windows系统（在这里我们以Windows7为案例）需要安装的工具
 4. 安装PyCharm              --- 集成开发环境      --- 用于编辑、执行python脚本
 ```
 
-![安装工具关系图](image/install_pkgs.jpg)
+![安装工具关系图](https://the-toast.oss-cn-shenzhen.aliyuncs.com/install_pkgs.jpg)
 
 ```
 说明：Python3 和PyCharm咱们上阶段课已使用，在这里不在重复；        
@@ -148,7 +148,7 @@ Windows系统（在这里我们以Windows7为案例）需要安装的工具
 selenium2.x/3.x +Chrome驱动
 ```
 
-![驱动和浏览器版本说明](image/Chrome01.png)
+![驱动和浏览器版本说明](https://the-toast.oss-cn-shenzhen.aliyuncs.com/Chrome01.png)
 
 #### 4.5 浏览器-总结
 
@@ -176,7 +176,7 @@ selenium2.x/3.x +Chrome驱动
 
 
 
-![9c7bc198b36f77679bc7983f2f02810 (1)](image/9c7bc198b36f77679bc7983f2f02810 (1)-16872523568193.jpg)
+![9c7bc198b36f77679bc7983f2f02810 (D:\hgx笔记\hgxbijiben\6、个人干饭\2-对标----开发资源分享网站\CSDN-创作母版\100天软件测试升级打怪路\image\9c7bc198b36f77679bc7983f2f02810 (1)-16872523568193.jpg)](https://the-toast.oss-cn-shenzhen.aliyuncs.com/9c7bc198b36f77679bc7983f2f02810%20(1)-16872523568193.jpg)
 
 
 

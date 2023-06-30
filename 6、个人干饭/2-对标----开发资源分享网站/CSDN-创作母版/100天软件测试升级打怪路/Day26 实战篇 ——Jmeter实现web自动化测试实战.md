@@ -2,7 +2,7 @@
 
 [TOC]
 
-
+![image-20230630084943203](https://the-toast.oss-cn-shenzhen.aliyuncs.com/image-20230630084943203.png)
 
 ## 一、前言
 
@@ -14,11 +14,11 @@ jmeter是做服务端性能测试的工具，但jmeter还可以进行Web端自�
 
 1. 下载地址(https://jmeter-plugins.org/downloads/old/)JMeterPlugins-WebDriver-1.1.2 。
 
-![img](image/1200.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1200.png)
 
 2.将JMeterPlugins-WebDriver-1.1.2\lib\ext中的*.jar拷贝到D:\apache-jmeter-2.13\lib\ext下。
 
-![img](image/1200-1686734366683115.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1200-1686734366683115.png)
 
 3.将JMeterPlugins-WebDriver-1.1.2\lib中的*.jar拷贝到D:\apache-jmeter-2.13\lib下。
 
@@ -26,23 +26,23 @@ jmeter是做服务端性能测试的工具，但jmeter还可以进行Web端自�
 
 重新jmeter后,在配置元件中可以看到Chromdriver Driver Config,说明插件配置成功。
 
-![img](image/1200-1686734366683116.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1200-1686734366683116.png)
 
 配置本地Chrome Driver地址,Chrome Driver需要提前下载好。
 
-![img](image/1200-1686734366683117.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1200-1686734366683117.png)
 
 ## 四、添加WebDriver Sampler
 
 在取样器中选择WebDriver Sampler采样器。
 
-![img](image/1200-1686734366683118.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1200-1686734366683118.png)
 
 WebDriver Sampler采样器支持多种语言(java、beanshell、js),我们使用js语言编写自动化测试代码。
 
 测试流程: 打开网页 -> 点击搜索 -> 输入文字  -> 点击完成
 
-![img](image/1200-1686734366683119.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1200-1686734366683119.png)
 
 代码片段
 
@@ -84,7 +84,7 @@ WDS.sampleResult.sampleEnd();
 
 调试脚本的时候,打开debug日志比较方便调试。
 
-![img](image/1200-1686734366683120.png)
+![img](https://the-toast.oss-cn-shenzhen.aliyuncs.com/1200-1686734366683120.png)
 
 
 
@@ -130,5 +130,5 @@ WDS.sampleResult.sampleEnd()
 
 
 
-![9c7bc198b36f77679bc7983f2f02810 (1)](image/9c7bc198b36f77679bc7983f2f02810 (1)-16872519912161.jpg)
+![9c7bc198b36f77679bc7983f2f02810 (D:\hgx笔记\hgxbijiben\6、个人干饭\2-对标----开发资源分享网站\CSDN-创作母版\100天软件测试升级打怪路\image\9c7bc198b36f77679bc7983f2f02810 (1)-16872519912161.jpg)](https://the-toast.oss-cn-shenzhen.aliyuncs.com/9c7bc198b36f77679bc7983f2f02810%20(1)-16872519912161.jpg)
 
