@@ -1,0 +1,98 @@
+.printing .header{border-bottom:1.5px solid #2e5586;margin-bottom:2px;}
+.printing .header_search{visibility: hidden;}
+.printing .header_toolbar{visibility: hidden;}
+
+.printing .footer_r{visibility: hidden;}
+.printing .footer_wrap{border-top: #2e5586 2px solid;margin-top:1px;}
+/* 针对底部外链 */
+.printing .footer_links{display: none;border-bottom:0 !important;}
+
+.printing .content{width:auto;}
+
+.printing .pages_content{line-height: 1.4;word-break: break-word;width: 880px;box-sizing: border-box;margin:0 auto;}
+/* .printing .pages_content p *{font-size:inherit !important;;} */
+
+.printing .oneColumn.pub_border{padding: 10px 0 66px;width: 950px;}
+
+.printing strong{text-shadow: 0 0 #333;}
+.printing [style*='font-weight: bold']{text-shadow: 0 0 #333;}
+
+.printing .pages-date{text-align: center;}
+.printing .printing_none{display: none !important;}
+.printing .noneBorder{border-width:0px !important;}
+
+.printing .BreadcrumbNav{visibility: hidden;}
+.printing .pages_print{visibility: hidden;}
+
+.printing .editor{display:none;}
+.printing .footer_nav{display:none;}
+
+
+/*  */
+#UCAP-CONTENT-FORPRINT p{position:relative;}
+
+
+/* 针对 嵌套 解读 */
+.printing .jiedu-blk{display: none;}
+
+
+
+/* .printing .content{position:relative;left:50%;margin-left:-610px;} */
+
+
+.locationHref{display: none;word-break: break-word;}
+.printing .locationHref{display: block;}
+/* .printing.printingFontSizeDefault .article{font-size:29px !important;}
+.printing.printingFontSizeBig .article{font-size:34px !important;}
+.printing.printingFontSizeBigger .article{font-size:36px !important;} */
+
+
+.docImgEleO{display: none;}
+
+.docImgEleO+*[style*='font-family: 宋体, SimSun; color: rgb(0, 0, 255)'],
+.docImgEleO+*[style*='color: rgb(0, 0, 255)']{display: none;}
+
+.docImgEleO+*>*[style*='font-family: 宋体, SimSun; color: rgb(0, 0, 255)'],
+.docImgEleO+*>*[style*='color: rgb(0, 0, 255)']{display: none;}
+
+.docImgEleO+*+*>*[style*='font-family: 宋体, SimSun; color: rgb(0, 0, 255)'],
+.docImgEleO+*+*>*[style*='color: rgb(0, 0, 255)']{display: none;}
+
+/* 针对 信息公开_国务院文件 细览 */
+.printing.XXGK_GWYWJ .sj_index_box{padding:.1px 6px 70px;}
+.printing.XXGK_GWYWJ .sj_container{width:950px !important;}
+.printing.XXGK_GWYWJ .pages_content{width:940px !important;padding: 40px 0 0px 0;}
+.printing.XXGK_GWYWJ .bd1{width:880px;margin:0 auto;}
+.printing.XXGK_GWYWJ .w90{width:120px;}
+.printing.XXGK_GWYWJ .w340{width:auto;}
+
+/* 针对 政策_国务院部门文件细览 */
+.printing .policyLibraryOverview_header{margin: 0 15px 21px;border: 2px dashed #a4a4a4;box-sizing: border-box;}
+
+/* 针对 政策_行政法规库细览 */
+.printing.ZCXZFGK .padd_xzfgk{width: 950px;box-sizing:border-box;margin:0 auto;border-width: 0;}
+.printing.ZCXZFGK .padd_xzfgk .pages_content{width:800px;box-sizing:border-box;margin:0 auto;}
+.printing.ZCXZFGK .padd_xzfgk .editor{width:800px;}
+.printing.ZCXZFGK .padd_xzfgk .oneColumn{width:auto;}
+.printing.ZCXZFGK .oneColumn_xzfgk{padding:0 66px 80px !important;}
+.printing.ZCXZFGK .bottom_xzfgk{padding-bottom: 0;}
+
+/* 针对 国务院公报细览 */
+.printing.GWYGBXL .gwy_gb{width:950px !important;padding-bottom:0px !important;}
+.printing.GWYGBXL .pages_content{width:auto !important;}
+.printing.GWYGBXL .oneColumn.oneColumn_gwygb{padding-top:50px !important;}
+
+
+/* 政策文件库_国务院文件细览 */
+.printing.ZCWJK_GWYWJ .sj_container{width:950px !important;}
+.printing.ZCWJK_GWYWJ .pages_content{width:940px !important;}
+.printing.ZCWJK_GWYWJ .bd1{width:880px;margin:0 auto;}
+.printing.ZCWJK_GWYWJ .w90{width:120px;}
+.printing.ZCWJK_GWYWJ .w340{width:auto;}
+.printing.ZCWJK_GWYWJ .wrap{padding-bottom:1px;}/*减少二维码与footer距离*/
+
+
+/* 针对 细览_国情（二级栏目） */
+.printing.XL_GQ_EJLM .pub_border{border-width:0;padding:10px 0 80px !important;}
+.printing.XL_GQ_EJLM .padd{padding: 0 0px 0px 0px !important;}
+

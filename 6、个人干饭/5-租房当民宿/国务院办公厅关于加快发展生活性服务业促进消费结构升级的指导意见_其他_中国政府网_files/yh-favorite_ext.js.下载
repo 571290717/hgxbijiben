@@ -1,0 +1,206 @@
+//收藏留言初始化值
+var yh_gofavoriteadd = false;
+var yh_gocomment = false;
+var yh_gosuggestadd = false;
+
+$(function(){
+	$('body').on('click','#yh_btn_login',function(){
+		$('#yh_login').attr("src",$('#yh_login').data("src"));
+		easyDialog.open({
+			container : 'yh_logindialog',
+			callback : callFn
+		});
+	})
+
+	//注册页面
+	$('body').on('click','#yh_btn_reg',function(){
+		idm.user.openreg();
+	})
+
+	//账号登出demo
+	$('body').on('click','#yh_btn_logout',function(){
+		idm.user.logout({
+			success:function(){	// 回调函数（成功）
+				islogin();
+			},
+			fail:function(r){// 回调函数(失败)
+
+			}
+		})
+	})
+
+	$('body').on('click','.yh_close',function(){
+		easyDialog.close();
+		$('#yh_suggest').attr("src","");
+		$('#yh_favorite').attr("src","");
+		$('#yh_login').attr("src","");
+	})
+
+	$('body').on('click','#yh_btn_suggestadd',function(){
+		var $this = $(this);
+		idm.user.islogin ({
+			success:function(r){//已登录 打开收藏页面
+				var id = $this.data("id");
+				var title = $this.data("title");
+				var url = $this.data("url");
+				var publishtime = $this.data("publishtime");
+				var src = $('#yh_suggest').data("src");
+				var urlC = $this.data("urlc");
+				var servicecode = $this.data("servicecode");
+				//获取频道常量,目前为1.服务 2.政策
+				var channel = $this.data("channel");
+				if(!channel){
+					channel = 1;
+				}
+				if(src.indexOf("?") == -1){
+					src = src + "?";
+				}else{
+					src = src + "&";
+				}
+				src = src+"title="+encodeURIComponent(idm.base64.encode(title))+"&url="+encodeURIComponent(url)+"&id="+id+"&publishtime="+publishtime+"&servicecode="+servicecode+"&urlC="+urlC+"&useragent=pc&channel="+channel;
+
+				$('#yh_suggest').attr("src",src);
+				easyDialog.open({
+					container : 'yh_suggestdialog',
+					callback : callFn
+				});
+			},
+			fail:function(r){//未登录打开登录界面
+				yh_gosuggestadd = true;
+				$('#yh_btn_login').click();
+			}
+		});
+	})
+
+	$('body').on('click','#yh_btn_favoriteadd',function(){
+		var $this = $(this);
+		idm.user.islogin ({
+			success:function(r){//已登录 打开收藏页面
+				var id = $this.data("id");
+				var title = $this.data("title");
+				var url = $this.data("url");
+				var publishtime = $this.data("publishtime");
+				var src = $('#yh_favorite').data("src");
+				var urlC = $this.data("urlc");
+				//获取频道常量,目前为1.服务 2.政策
+				var channel = $this.data("channel");
+				if(!channel){
+					channel = 1;
+				}
+				if(src.indexOf("?") == -1){
+					src = src + "?";
+				}else{
+					src = src + "&";
+				}
+				src = src+"title="+encodeURIComponent(idm.base64.encode(title))+"&url="+encodeURIComponent(url)+"&id="+id+"&publishtime="+publishtime+"&urlC="+urlC+"&useragent=pc&channel="+channel;
+
+				$('#yh_favorite').attr("src",src);
+				easyDialog.open({
+					container : 'yh_favoritedialog',
+					callback : callFn
+				});
+			},
+			fail:function(r){//未登录打开登录界面
+				yh_gofavoriteadd = true;
+				$('#yh_btn_login').click();
+			}
+		});
+	})
+
+	$('body').on('click','#yh_btn_comment',function(){
+		var $this = $(this);
+		idm.user.islogin ({
+			success:function(r){//已登录 打开收藏页面
+				var id = $this.data("id");
+				var title = $this.data("title");
+				var url = $this.data("url");
+				var publishtime = $this.data("publishtime");
+				var urlC = $this.data("urlc");
+				var servicecode = $this.data("servicecode");
+				//获取频道常量,目前为1.服务 2.政策
+				var channel = $this.data("channel");
+				if(!channel){
+					channel = 1;
+				}
+				var src = $('#yh_comment').data("src");
+				if(src.indexOf("?") == -1){
+					src = src + "?";
+				}else{
+					src = src + "&";
+				}
+				src = src+"title="+encodeURIComponent(idm.base64.encode(title))+"&url="+encodeURIComponent(url)+"&id="+id+"&publishtime="+publishtime+"&servicecode="+servicecode+"&urlC="+urlC+"&useragent=pc&channel="+channel;
+
+				$('#yh_comment').attr("src",src);
+				easyDialog.open({
+					container : 'yh_commentdialog',
+					callback : callFn
+				});
+			},
+			fail:function(r){//未登录打开登录界面
+				yh_gocomment = true;
+				$('#yh_btn_login').click();
+			}
+		});
+	})
+})
+
+
+//是否登录
+function islogin(){
+	idm.user.islogin ({
+		success:function(r){
+			$('#yh_username').html(r.showname);
+			$('#yh_userinfo').removeClass("hide");
+			$('#yh_loginreg').addClass("hide");
+		},
+		fail:function(r)	{
+			$('#yh_loginreg').removeClass("hide");
+			$('#yh_userinfo').addClass("hide");
+		}
+	});
+}
+
+//评论页面高度调整
+function hashH(hash) {
+	document.getElementById("commentIframe").height = hash+"px";
+}
+//打开登录界面
+function openlogin(){
+	$('#yh_btn_login').click();
+}
+//设置弹出层关闭后执行的回调函数。
+var callFn = function(){
+	idm.user.islogin ({
+		success:function(r){//已登录 打开收藏页面
+			if(yh_gofavoriteadd || yh_gocomment || yh_gosuggestadd){
+				//idm.user.loginapp();
+				//window.location.reload();
+				window.location.replace(window.location.href);
+			}
+		},
+		fail:function(r){//未登录打开登录界面
+			yh_gosuggestadd = false;
+			yh_gofavoriteadd = false;
+			yh_gocomment = false;
+		}
+	});
+};
+//关闭dialog
+function closeDialog(){
+	if($('#easyDialogBox').is(":visible")){
+		easyDialog.close();
+	}
+}
+//刷新页面
+function refreshHtml(){
+	if(yh_gofavoriteadd){
+		$('#yh_btn_favoriteadd').click();
+	}else if(yh_gocomment){
+		$('#yh_btn_comment').click();
+	}else if(yh_gosuggestadd){
+		$('#yh_btn_suggestadd').click();
+	} else {
+		idm.user.loginapp();
+	}
+}
+	
