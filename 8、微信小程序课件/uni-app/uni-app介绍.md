@@ -693,6 +693,243 @@ https://www.w3cschool.cn/uni_app/uni_app-kg6i370j.html
 
 
 
+## 页面样式与布局
+
+### 尺寸单位
+
+uni-app 支持的通用 css 单位包括 px、rpx
+
+- px 即屏幕像素
+- rpx 即响应式px，一种根据屏幕宽度自适应的动态单位。以750宽的屏幕为基准，750rpx恰好为屏幕宽度。屏幕变宽，rpx 实际显示效果会等比放大。
+
+
+
+vue页面支持普通H5单位，但在nvue里不支持：
+
+- rem 默认根字体大小为 屏幕宽度/20（微信小程序、字节跳动小程序、App、H5）
+- vh viewpoint height，视窗高度，1vh等于视窗高度的1%
+- vw viewpoint width，视窗宽度，1vw等于视窗宽度的1%
+
+
+
+
+
+开发者可以通过设计稿基准宽度计算页面元素 rpx 值，设计稿 1px 与框架样式 1rpx 转换公式如下：
+
+设计稿 1px / 设计稿基准宽度 = 框架样式 1rpx / 750rpx
+
+
+
+uni-app 规定屏幕基准宽度 750rpx。
+
+
+
+
+
+
+
+
+
+### 样式导入
+
+使用@import语句可以导入外联样式表，@import后跟需要导入的外联样式表的相对路径，用;表示语句结束。
+
+示例代码：
+
+```
+<style>
+    @import "../../common/uni.css";
+
+    .uni-card {
+        box-shadow: none;
+    }
+</style>
+```
+
+### 内联样式
+
+框架组件上支持使用 style、class 属性来控制组件的样式。
+
+- style：静态的样式统一写到 class 中。style 接收动态的样式，在运行时会进行解析，请尽量避免将静态的样式写进 style 中，以免影响渲染速度。<view :style="{color:color}" />
+- class：用于指定样式规则，其属性值是样式规则中类选择器名(样式类名)的集合，样式类名不需要带上.，样式类名之间用空格分隔。<view class="normal_view" />
+
+
+
+
+
+### 选择器
+
+目前支持的选择器有：
+
+| 选择器           | 样例           | 样例描述                                            |
+| :--------------- | :------------- | :-------------------------------------------------- |
+| .class           | .intro         | 选择所有拥有 class="intro" 的组件                   |
+| #id              | #firstname     | 选择拥有 id="firstname" 的组件                      |
+| element          | view           | 选择所有 view 组件                                  |
+| element, element | view, checkbox | 选择所有文档的 view 组件和所有的 checkbox 组件      |
+| ::after          | view::after    | 在 view 组件后边插入内容，**仅微信小程序和App生效** |
+| ::before         | view::before   | 在 view 组件前边插入内容，**仅微信小程序和App生效** |
+
+
+
+注意：
+
+- 在 uni-app 中不能使用 * 选择器。
+- page 相当于 body 节点，例如：<!-- 设置页面背景颜色 --> page { background-color:#ccc; }
+
+
+
+
+
+
+
+
+
+### 全局样式与局部样式
+
+定义在 App.vue 中的样式为全局样式，作用于每一个页面。在 pages 目录下 的 vue 文件中定义的样式为局部样式，只作用在对应的页面，并会覆盖 App.vue 中相同的选择器。
+
+注意：
+
+- App.vue 中通过 @import 语句可以导入外联样式，一样作用于每一个页面。
+- nvue页面暂不支持全局样式
+
+
+
+### CSS变量
+
+uni-app 提供内置 CSS 变量
+
+| CSS变量             | 描述                   | App                          | 小程序 | H5                   |
+| :------------------ | :--------------------- | :--------------------------- | :----- | :------------------- |
+| --status-bar-height | 系统状态栏高度         | 系统状态栏高度、nvue注意见下 | 25px   | 0                    |
+| --window-top        | 内容区域距离顶部的距离 | 0                            | 0      | NavigationBar 的高度 |
+| --window-bottom     | 内容区域距离底部的距离 | 0                            | 0      | TabBar 的高度        |
+
+
+
+
+
+https://www.w3cschool.cn/uni_app/uni_app-kg6i370j.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
