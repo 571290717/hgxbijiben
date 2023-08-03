@@ -1,0 +1,15 @@
+<view>
+    <view class="cover">
+            <image src="/images/logo.png" class="logo" />
+    </view>
+    <view class="title" bind:tap="change">{{hello}}</view>
+    <view class="title"> 嗨，欢迎来到元岛世界</view>
+    <view class="desc"> 这里是元岛的分组小程序v1.0 </view>
+    <view class="choose">
+        <navigator class="join" url="/pages/form/index">创建小组</navigator>
+        <navigator class="join" url="/pages/list/index">加入小组</navigator>
+        <navigator class="join" url="/pages/tip/index">其它小组</navigator>
+        <navigator class="join" url="/pages/group/index">我的小组</navigator>
+        <navigator class="join" url="/pages/form/index">创建小组</navigator>
+    </view>
+</view>
