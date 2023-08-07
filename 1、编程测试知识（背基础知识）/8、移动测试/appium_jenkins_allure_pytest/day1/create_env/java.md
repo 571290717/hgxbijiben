@@ -1,13 +1,14 @@
-### 1. Wind 安装java环境
+### 1. Windows 安装java环境
 
 安装步骤:
 
-#### 1.1 安装jdk1.8
+#### 1.1 安装jdk
 
 ```
 运行jdk-8u151-windows-x64.exe⽂件,默认安装即可
 
-(例如我的安装⽬录：C:\Program Files\Java\jdk1.8.0)
+或者官网下载压缩包解压
+(https://jdk.java.net/19/)
 ```
 
 #### 1.2 配置java环境变量(windows为例)
