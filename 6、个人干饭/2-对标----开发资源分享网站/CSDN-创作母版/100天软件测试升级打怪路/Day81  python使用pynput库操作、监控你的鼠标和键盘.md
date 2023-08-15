@@ -316,4 +316,4 @@ with Listener(on_press=on_press, on_release=on_release) as listener:
 此时返回的就是普通的键的名称，没有Key.这个前缀了。
 以上就是这个模块的内容了，具体怎么使用可以由你自己决定。另外这个模块在Linux上也是可以运行的，但前提是必须有显示器，而公司用的服务器肯定是不带显示器的，所以不推荐Linux上使用
 
-以上就是python使用pynput库操作、监控你的鼠标和键盘的详细内容，更多关于python pynput库操作监控鼠标键盘的资料请关注Wordpress教程网其它相关文章！
+以上就是python使用pynput库操作、监控你的鼠标和键盘的详细内容
