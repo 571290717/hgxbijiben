@@ -1,0 +1,1 @@
+# pywinauto可操作windows图形化的一个自动测试工具 ——可用来测试Navicat（数据库图形操作工具）
