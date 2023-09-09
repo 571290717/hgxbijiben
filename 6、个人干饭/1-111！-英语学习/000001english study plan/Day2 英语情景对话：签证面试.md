@@ -2,11 +2,11 @@
 
 补充音标　
 
-<img src="images/image-20230816144952072.png" alt="image-20230816144952072" style="zoom: 25%;" />
+<img src="images/image-20230816144952072.png" alt="image-20230816144952072"  />
 
 
 
-<img src="images/image-20230816145015548.png" alt="image-20230816145015548" style="zoom:25%;" />
+<img src="images/image-20230816145015548.png" alt="image-20230816145015548"  />
 
 ![4fd659034f73a23582df395cc40f319c](images/4fd659034f73a23582df395cc40f319c.jpeg)
 
@@ -291,9 +291,19 @@
 
 　　**信息只是媒介。比起你给出的答卷，面试官更在意你回答时的自信、热忱和激情，你回答的速度本身就是答案。而你可能犯的最严重失误就是支支吾吾的样子，这就坐实了你缺乏自信，和自我认知。**
 
+
+
+
+
+
+
 　　**立即抓住眼球**
 
 　　“I can summarize who I am in three words.” Grabs their attention immediately. Demonstrates your ability to be concise, creative and compelling.
+
+
+
+
 
 　　**座右铭**
 
