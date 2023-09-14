@@ -1,10 +1,10 @@
 # Day 84  部署项目——virtualenv使用技巧大全,python新手必备知识
 
-# virtualenv使用技巧大全,python新手必备知识
 
-2018年07月10日 
 
-点击次数：53860
+## virtualenv使用技巧大全,python新手必备知识
+
+
 
 搞Python开发时，总会遇到需要同时运行多个不同软件版本项目的时候。每个项目的依赖需求也不一样，那咋整？这个时候我们就需要用到Virtualenv了。
 
@@ -85,4 +85,3 @@ Linux下任意目录
 
 **温馨提示：**安装virtualenv的时候，一定要留意自己系统默认的Python版本，不同版本安装出来的virtualenv版本可能不一样。
 
-联系站长
