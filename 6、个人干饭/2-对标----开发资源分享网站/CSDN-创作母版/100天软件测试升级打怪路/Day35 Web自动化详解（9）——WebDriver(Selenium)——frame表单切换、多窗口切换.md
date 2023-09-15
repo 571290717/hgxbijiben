@@ -1,10 +1,16 @@
 # Day35 Web自动化详解（9）——WebDriver(Selenium)——frame表单切换、多窗口切换
 
-# frame表单切换、多窗口切换
 
-------
 
-## 目标
+[TOC]
+
+![image-20230915142638007](images/image-20230915142638007.png)
+
+
+
+
+
+# 目标
 
 ```
 1. 掌握WebDriver切换frame表单方法
@@ -13,7 +19,7 @@
 
 ------
 
-## 1. frame表单
+# 1. frame表单
 
 ```
 frame：HTML页面中的一种框架，主要作用是在当前页面中指定区域显示另一页面元素；
@@ -88,7 +94,7 @@ frame：HTML页面中的一种框架，主要作用是在当前页面中指定�
     driver.switch_to.parent_frame()   -- 进行向上的单层切换
 ```
 
-![frame切换](../03img/switchtoframe_exec_bing.png) 
+
 
 ### 1.5 案例-2解决方案
 
@@ -110,7 +116,7 @@ frame：HTML页面中的一种框架，主要作用是在当前页面中指定�
 
 ------
 
-## 2. 多窗口
+# 2. 多窗口切换
 
 ```
 说明：在HTML页面中，经常有a标签也就是超链接，这些链接在被执行时，有的会在新的窗口打开链接；
@@ -161,3 +167,15 @@ frame：HTML页面中的一种框架，主要作用是在当前页面中指定�
 3. 获取所有窗口句柄方法
 4. 切换指定句柄窗口方法
 ```
+
+
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)](images/9c7bc198b36f77679bc7983f2f02810 (1)-16947592124783.jpg)
+
+ [Python-100-Days-master.zip](C:\Users\GREE\Desktop\Python-100-Days-master.zip) 
+
+ [HBuilderX - 快捷方式.lnk](C:\Users\GREE\Desktop\HBuilderX - 快捷方式.lnk) 
+
+ [httpscloudstudio.net.md](C:\Users\GREE\Desktop\httpscloudstudio.net.md) 

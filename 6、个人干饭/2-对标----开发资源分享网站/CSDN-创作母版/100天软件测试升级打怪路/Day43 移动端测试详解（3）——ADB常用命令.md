@@ -1,16 +1,18 @@
-# Day42 移动端测试详解（3）——ADB常用命令
+# Day43 移动端测试详解（3）——ADB常用命令
+
+[TOC]
+
+![image-20230915151707116](images/image-20230915151707116.png)
 
 
 
 
 
-# ADB常用命令
-
-## 学习目标
+# 学习目标
 
 - 掌握常用的ADB命令
 
-### 1. ADB命令简介
+# 1. ADB命令简介
 
 ```
 ADB全名Andorid Debug Bridge。 是一个Debug工具。为何称之为Bridge呢? 
@@ -22,7 +24,7 @@ ADB全名Andorid Debug Bridge。 是一个Debug工具。为何称之为Bridge呢
     3.Server端, 作为一个后台进程运行在开发机器中, 即你的开发PC机. 用来管理PC中的Client端和手机的Daemon之间的通信。
 ```
 
-### 2. 常用命令
+# 2. 常用命令
 
 - adb 帮助
 
@@ -109,17 +111,9 @@ adb shell am start -W 包名/.启动名
 
 
 
+# 3. 主流移动端自动化测试工具
 
 
-
-
-# 主流移动端自动化测试工具
-
-## 学习目标
-
-- 了解都有哪些移动端自动化测试工具
-
-### 主流工具
 
 ![常用工具](D:/hgx笔记/hgxbijiben/1、编程测试知识（背基础知识）/8、移动测试/appium_jenkins_allure_pytest/day1/img/choice_appium_cause.png)
 
@@ -156,3 +150,4 @@ adb shell am start -W 包名/.启动名
 3.是否支持跨应用
 ```
 
+![9c7bc198b36f77679bc7983f2f02810 (1)](images/9c7bc198b36f77679bc7983f2f02810 (1)-169476214409811.jpg)

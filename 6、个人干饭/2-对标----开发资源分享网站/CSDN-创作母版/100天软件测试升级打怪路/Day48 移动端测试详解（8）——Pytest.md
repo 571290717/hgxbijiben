@@ -1,21 +1,23 @@
 # Day48 移动端测试详解（8）——Pytest
 
+[TOC]
+
+
+
+![image-20230915154335045](images/image-20230915154335045.png)
 
 
 
 
-## 学习目标
+
+# 学习目标
 
 - 掌握pytest使用
 - 掌握pytest测试报告的生成
 - 掌握pytest函数执行顺序
 - 掌握pytest函数参数化
 
-
-
-
-
-## 1、Pytest安装和介绍
+# 1、Pytest安装和介绍
 
 ### 1.1 Pytest介绍
 
@@ -46,7 +48,7 @@ pytest是python的一种单元测试框架，同自带的Unittest测试框架类
 安装成功校验: pytest --version # 会展示当前已安装版本
 ```
 
-## 2、pytest第一个例子
+# 2、pytest第一个例子
 
 ```
 # 创建文件: test_abc.py
@@ -76,7 +78,7 @@ if __name__ == "__main__":
         F # F(代表失败)
 ```
 
-## 3、运行方式
+# 3、运行方式
 
 ### 3.1 测试类主函数模式
 
@@ -92,7 +94,7 @@ pytest。文件路径/测试文件名
 例如: pytest ./test_abc.py
 ```
 
-# setup和teardown函数
+# 4、setup和teardown函数
 
 ## 学习目标
 
@@ -192,7 +194,7 @@ F
 ------->teardown_class # 第一次 teardown_class()
 ```
 
-## 1. pytest配置文件
+# 5、 pytest配置文件
 
 pytest的配置文件通常放在测试目录下，名称为pytest.ini，命令运行时会使用该配置文件中的配置
 
@@ -238,7 +240,7 @@ python_functions = test_*
 
 
 
-# 常用插件
+# 6、 常用插件
 
 ## 学习目标
 
@@ -419,7 +421,7 @@ if __name__ == "__main__":
 
 
 
-# pytest提高--fixture
+# 7、pytest提高--fixture装饰器
 
 ## 学习目标
 
@@ -653,7 +655,7 @@ if __name__ == '__main__':
 
 
 
-# Pytest 提高2
+# 8、Pytest 函数数据参数化
 
 ## 学习目标
 
@@ -814,3 +816,4 @@ teardown
 
 ```
 
+![9c7bc198b36f77679bc7983f2f02810 (1)](images/9c7bc198b36f77679bc7983f2f02810 (1)-169476362808516.jpg)

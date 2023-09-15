@@ -2,15 +2,15 @@
 
 
 
+[TOC]
+
+![image-20230915104433055](images/image-20230915104433055.png)
 
 
 
 
-# WebDriver鼠标、键盘操作
 
-------
-
-## 目标
+# 目标
 
 ```
 1. 了解WebDriver操作鼠标方法
@@ -19,7 +19,7 @@
 
 ------
 
-### 1. 鼠标事件
+# 1. 鼠标事件
 
 ```
 说明：WebDriver库对模拟鼠标操作封装的一些方法，此知识点作为了解
@@ -134,7 +134,7 @@
 
 ------
 
-### 2. 键盘操作
+# 2. 键盘操作
 
 ```
 说明：
@@ -190,7 +190,7 @@ element.send_keys(Keys.CONTROL,'c')
 driver.find_element_by_id('passwordA').send_keys(Keys.CONTROL,'v')
 ```
 
-### 3. 鼠标、键盘-总结
+# 3. 鼠标、键盘-总结
 
 ```
 1. ActionChains作用和位置
@@ -198,3 +198,9 @@ driver.find_element_by_id('passwordA').send_keys(Keys.CONTROL,'v')
 3. Keys类 位置
 4. 键盘操作调用方法
 ```
+
+
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)](images/9c7bc198b36f77679bc7983f2f02810 (1).jpg)

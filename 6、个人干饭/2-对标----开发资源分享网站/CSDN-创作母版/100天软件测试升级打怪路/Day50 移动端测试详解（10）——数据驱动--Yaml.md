@@ -2,22 +2,15 @@
 
 
 
+[TOC]
 
-
-
-
-## 学习目标
-
-- 了解什么是yaml
-- 掌握yaml语法
-- 掌握yaml文件读取
-- 掌握yanl文件写入
+![image-20230915165057578](images/image-20230915165057578.png)
 
 
 
 
 
-# Yaml介绍
+# 1、Yaml介绍
 
 ## 学习目标
 
@@ -161,7 +154,7 @@ name:
 
 
 
-# python解析yaml文件
+# 2、python解析yaml文件
 
 ## 学习目标
 
@@ -272,7 +265,7 @@ Search_Data:
 
 
 
-# yaml数据驱动案例
+# 3、yaml数据驱动案例
 
 ## 学习目标
 
@@ -492,3 +485,4 @@ python_functions = test_*
 
 
 
+![9c7bc198b36f77679bc7983f2f02810 (1)](images/9c7bc198b36f77679bc7983f2f02810 (1)-169476779618317.jpg)

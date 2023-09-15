@@ -1,18 +1,20 @@
 # Day44 移动端测试详解（4）——Appium环境搭建+入门案例
 
+[TOC]
+
+![image-20230915152115613](images/image-20230915152115613.png)
 
 
 
 
 
+# 学习目标
 
-# Appium环境搭建
+- **掌握appium的环境搭建**
 
-## 学习目标
 
-- 掌握appium的环境搭建
 
-## 1. Appium 背景介绍
+# 1. Appium 背景介绍
 
 ```
 1.官网：www.appium.io,由SauceLab公司开发
@@ -22,7 +24,7 @@ Appium使用WebDriver的json wire协议，
 来驱动Apple系统的UIAutomation库、Android系统的UIAutomator框架
 ```
 
-## 2. appium安装的2种方式
+# 2. appium安装的2种方式
 
 ### 方式1. Appium 桌面客户端安装
 
@@ -77,7 +79,7 @@ npm国内一般被墙，所以选择淘宝镜像安装,官网:http://npm.taobao.
 
 ![img](image/b1.png)
 
-## 3. Appium-python库安装
+# 3. Appium-python库安装
 
 ```
 我们使用Python语言编写脚本,所以要安装appium的python库
@@ -85,11 +87,9 @@ npm国内一般被墙，所以选择淘宝镜像安装,官网:http://npm.taobao.
 安装命令: pip install Appium-Python-Client
 ```
 
-# appium入门案例
 
-## 学习目标
 
-- 掌握如何实现python和android的启动
+# 4. appium入门案例
 
 ## 1.打开PyCharm 创建一个新项目
 
@@ -143,3 +143,9 @@ resetKeyboard        键盘设置(允许中文输入)
 ## 4. 运行hello.py观看模拟器的设置应用是否被打开
 
 ![image-20230807102145606](D:\hgx笔记\hgxbijiben\6、个人干饭\2-对标----开发资源分享网站\CSDN-创作母版\100天软件测试升级打怪路\image\image-20230807102145606.png)
+
+
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)](images/9c7bc198b36f77679bc7983f2f02810 (1)-169476233464912.jpg)
