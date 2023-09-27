@@ -1,5 +1,19 @@
 # Day57 HTTP协议和静态Web服务器
 
+[TOC]
+
+
+
+
+
+
+
+![image-20230920151516268](images/image-20230920151516268.png)
+
+
+
+
+
 # HTTP 协议
 
 **学习目标**
@@ -1027,3 +1041,9 @@ if __name__ == '__main__':
     def __init__(self, port):
         self.tcp_server_socket.bind((“”, port))
    ```
+
+
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)](images/9c7bc198b36f77679bc7983f2f02810 (1)-16951941247185.jpg)

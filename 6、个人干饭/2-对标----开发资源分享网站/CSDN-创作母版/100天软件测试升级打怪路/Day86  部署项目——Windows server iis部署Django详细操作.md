@@ -1,5 +1,11 @@
 # Day86  部署项目——Windows server iis部署Django详细操作
 
+[TOC]
+
+
+
+
+
 # Windows server iis部署Django详细操作
 
 2018年10月19日 
@@ -254,3 +260,8 @@ python manage.py runserver
 ### [使用宝塔面板快速部署Django项目（新手建议直接使用这种方法）](https://www.django.cn/article/show-30.html)
 
 在部署的过程中，如果发现其它问题，可以文章后面留言，方便我收集错误和更新处理方法。
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458](images/9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458-169527890958525.jpg)
+

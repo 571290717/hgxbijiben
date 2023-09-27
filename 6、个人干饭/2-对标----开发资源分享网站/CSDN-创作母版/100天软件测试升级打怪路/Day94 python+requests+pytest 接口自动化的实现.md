@@ -1,5 +1,13 @@
 # Day94 python+requests+pytest 接口自动化的实现
 
+[TOC]
+
+
+
+
+
+
+
 主要思路：
 ①对 requests 进行二次封装，做到定制化效果
 ②使用 excel 存放接口请求数据，作为数据驱动
@@ -263,3 +271,9 @@ import pytestfrom project.utils.base_dir import *if __name__ == '__main__':
 附上百度网盘链接，有需要的可以拿走，谢谢支持！
 链接：https://pan.baidu.com/s/1IhDP2PwNGEkJycqgopDmjg
 提取码：ztje
+
+
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458](images/9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458-169527922958732.jpg)

@@ -1,5 +1,11 @@
 # Day88  部署项目——Django如何把SQLite数据库转换为Mysql数据库
 
+[TOC]
+
+
+
+
+
 # Django如何把SQLite数据库转换为Mysql数据库
 
 2018年09月12日 
@@ -221,3 +227,8 @@ mysql -u root -p mysql < timezone_posix.sql
 ```
     ./manage.py loaddata backup.json
 ```
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458](images/9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458-169527897612427.jpg)
+

@@ -1,12 +1,16 @@
 # Day 87  部署项目——CentOS7下部署Django项目详细操作步骤
 
+[TOC]
+
+
+
+
+
 # CentOS7下部署Django项目详细操作步骤
 
-2018年07月09日 
 
-点击次数：78796
 
-# **部署是基于：centos7+nginx+uwsgi+python3+django 之上做的**
+## **部署是基于：centos7+nginx+uwsgi+python3+django 之上做的**
 
 软件版本详细介绍，纯净操作系统：Centos7.0 Python版本：python3.6 Django版本:django2.0.6
 本文包括以下几个部分内容：
@@ -808,3 +812,10 @@ firewall-cmd --query-port=80/tcp
 ### [使用宝塔面板快速部署Django项目（新手建议直接使用这种方法）](https://www.django.cn/article/show-30.html)
 
 在部署的过程中，如果发现其它问题，可以文章后面留言，方便我收集错误和更新处理方法。理方法。
+
+
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458](images/9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458-169527896486526.jpg)
+

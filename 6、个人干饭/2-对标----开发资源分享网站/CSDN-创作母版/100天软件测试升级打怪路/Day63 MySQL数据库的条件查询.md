@@ -1,5 +1,13 @@
 # Day63 MySQL数据库的条件查询
 
+[TOC]
+
+![image-20230921091041901](images/image-20230921091041901.png)
+
+
+
+
+
 # 聚合函数
 
 **学习目标**
@@ -641,3 +649,9 @@ insert into goods values(0,'商务双肩背包','笔记本配件','索尼','99',
     where price > (select round(avg(price),2) as avg_price from goods) 
     order by price desc;
    ```
+
+
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)](images/9c7bc198b36f77679bc7983f2f02810 (1)-169525865127211.jpg)

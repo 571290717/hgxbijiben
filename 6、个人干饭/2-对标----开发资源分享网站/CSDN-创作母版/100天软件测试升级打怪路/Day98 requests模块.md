@@ -1,5 +1,11 @@
 # Day98 requests模块
 
+[TOC]
+
+
+
+
+
 ##### 知识点：
 
 - 掌握 headers参数的使用
@@ -19,7 +25,7 @@
 
 
 
-## 1. requests模块介绍
+# 1. requests模块介绍
 
 > requests文档<http://docs.python-requests.org/zh_CN/latest/index.html>
 
@@ -59,7 +65,7 @@ print(response.text)
 
 
 
-## 2. response响应对象
+# 2. response响应对象
 
 > 观察上边代码运行结果发现，有好多乱码；这是因为编解码使用的字符集不同早造成的；我们尝试使用下边的办法来解决中文乱码问题
 
@@ -159,7 +165,7 @@ print(response.cookies)						# 打印响应中携带的cookies
 
 
 
-## 3. requests模块发送请求
+# 3. requests模块发送请求
 
 ### 3.1 发送带header的请求
 
@@ -564,7 +570,7 @@ response = requests.get(url,verify=False)
 
 
 
-## 4. requests模块发送post请求
+# 4. requests模块发送post请求
 
 > 思考：哪些地方我们会用到POST请求？
 >
@@ -687,7 +693,7 @@ if __name__ == '__main__':
 
 
 
-## 5. 利用requests.session进行状态保持
+# 5. 利用requests.session进行状态保持
 
 > requests模块中的Session类能够自动处理发送请求获取响应过程中产生的cookie，进而达到状态保持的目的。接下来我们就来学习它
 

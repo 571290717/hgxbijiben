@@ -1,11 +1,21 @@
 # Day65 Redis详解
 
-# 学习目标
+[TOC]
+
+
+
+![image-20230921095320133](images/image-20230921095320133.png)
+
+
+
+
+
+# nosql介绍
+
+## 学习目标
 
 - 能够描述出什么是 nosql
 - 能够说出 Redis 的特点
-
-# nosql介绍
 
 ## NoSQL：一类新出现的数据库(not only sql)
 
@@ -30,33 +40,33 @@
 - Redis是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。从2010年3月15日起，Redis的开发工作由VMware主持。从2013年5月开始，Redis的开发由Pivotal赞助。
 - Redis是 NoSQL技术阵营中的一员，它通过多种键值数据类型来适应不同场景下的存储需求，借助一些高层级的接口使用其可以胜任，如缓存、队列系统的不同角色
 
-# Redis特性
+## Redis特性
 
 - Redis 与其他 key - value 缓存产品有以下三个特点：
 - Redis支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用。
 - Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储。
 - Redis支持数据的备份，即master-slave模式的数据备份。
 
-# Redis 优势
+## Redis 优势
 
 - 性能极高 – Redis能读的速度是110000次/s,写的速度是81000次/s 。
 - 丰富的数据类型 – Redis支持二进制案例的 Strings, Lists, Hashes, Sets 及 Ordered Sets 数据类型操作。
 - 原子 – Redis的所有操作都是原子性的。
 - 丰富的特性 – Redis还支持 publish/subscribe, 通知, key 过期等等特性。
 
-# Redis应用场景
+## Redis应用场景
 
 - 用来做缓存(ehcache/memcached)——redis的所有数据是放在内存中的（内存数据库）
 - 可以在某些特定应用场景下替代传统数据库——比如社交类的应用
 - 在一些大型系统中，巧妙地实现一些特定的功能：session共享、购物车
 - 只要你有丰富的想象力，redis可以用在可以给你无限的惊喜…….
 
-# 推荐阅读
+## 推荐阅读
 
 - [redis官方网站](https://redis.io/)
 - [redis中文官网](http://redis.cn/)
 
-# Redis 安装
+## Redis 安装
 
 - 当前redis最新稳定版本是4.0.9
 
@@ -127,11 +137,15 @@
 
   > https://www.cnblogs.com/cloudshadow/p/mac_brew_install_redis.html
 
-# 学习目标
+
+
+
+
+## 学习目标
 
 - 能够根据参考资料修改常用Redis配置
 
-# 配置
+## 配置
 
 - Redis的配置信息在`/etc/redis/redis.conf`下。
 
@@ -139,7 +153,7 @@
 
   > sudo vi /etc/redis/redis.conf
 
-# 核心配置选项
+## 核心配置选项
 
 - 绑定ip：如果需要远程访问，可将此⾏注释，或绑定⼀个真实ip
 
@@ -178,15 +192,15 @@
 
   > slaveof
 
-# 参考资料
+## 参考资料
 
 redis配置信息http://blog.csdn.net/ljphilp/article/details/52934933
 
-# 学习目标
+## 学习目标
 
 - 了解Redis服务器端和客户端的命令
 
-  # 服务器端
+  ## 服务器端
 
 - 服务器端的命令为redis-server
 
@@ -200,7 +214,7 @@ redis配置信息http://blog.csdn.net/ljphilp/article/details/52934933
   > sudo kill -9 pid 杀死redis服务器
   > sudo redis-server /etc/redis/redis.conf 指定加载的配置文件
 
-# 客户端
+## 客户端
 
 - 客户端的命令为redis-cli
 
@@ -228,7 +242,7 @@ redis配置信息http://blog.csdn.net/ljphilp/article/details/52934933
 
   ![img](assets/redis选择数据库.png)
 
-# 学习目标
+## 学习目标
 
 - 能够写出Redis中string类型数据的增删改查操作命令
 - 能够写出Redis中hash类型数据的增删改查相关命令
@@ -256,7 +270,7 @@ redis配置信息http://blog.csdn.net/ljphilp/article/details/52934933
   - 集合set
   - 有序集合zset
 
-# 数据操作行为
+## 数据操作行为
 
 - 保存
 - 修改
@@ -269,7 +283,7 @@ redis配置信息http://blog.csdn.net/ljphilp/article/details/52934933
 
 - 字符串类型是 Redis 中最为基础的数据存储类型，它在 Redis 中是二进制安全的，这便意味着该类型可以接受任何格式的数据，如JPEG图像数据或Json对象描述信息等。在Redis中字符串类型的Value最多可以容纳的数据长度是512M。
 
-# 保存
+## 保存
 
 如果设置的键不存在则为添加，如果设置的键已经存在则修改
 
@@ -313,7 +327,7 @@ redis配置信息http://blog.csdn.net/ljphilp/article/details/52934933
 
   ![img](assets/p1_18.png)
 
-# 获取
+## 获取
 
 - 获取：根据键获取值，如果不存在此键则返回`nil`
 
@@ -333,15 +347,15 @@ redis配置信息http://blog.csdn.net/ljphilp/article/details/52934933
 
   ![img](assets/mget.png)
 
-# 删除
+## 删除
 
 详⻅下节键的操作，删除键时会将值删除
 
-# 学习目标
+## 学习目标
 
 - 能够写出删除指定键的相关命令
 
-# 键命令
+## 键命令
 
 - 查找键，参数⽀持正则表达式
 
@@ -411,7 +425,7 @@ redis配置信息http://blog.csdn.net/ljphilp/article/details/52934933
 
 ![img](image/p1_27.png)
 
-# 学习目标
+## 学习目标
 
 - 能够写出Redis中hash类型数据的增删改查相关命令
 
@@ -509,7 +523,7 @@ redis配置信息http://blog.csdn.net/ljphilp/article/details/52934933
 - 解决方案：
   - 运行config set stop-writes-on-bgsave-error no　命令后，关闭配置项stop-writes-on-bgsave-error解决该问题。
 
-# 学习目标
+## 学习目标
 
 - 能够说出Redis中 list 保存的数据类型
 
@@ -732,7 +746,7 @@ redis配置信息http://blog.csdn.net/ljphilp/article/details/52934933
 
   ![获取](assets/p1_51.png)
 
-# 安装包
+## 安装包
 
 安装Redis的有3种方式https://github.com/andymccurdy/redis-py
 
@@ -751,15 +765,15 @@ redis配置信息http://blog.csdn.net/ljphilp/article/details/52934933
   > cd redis-py-master
   > sudo python setup.py install
 
-# 调⽤模块
+## 调用模块
 
-- 引⼊模块
+- 引用模块
 
   > from redis import StrictRedis
 
-- 这个模块中提供了`StrictRedis对象`，⽤于连接redis服务器，并按照不同类型提供 了不同⽅法，进⾏交互操作
+- 这个模块中提供了`StrictRedis对象`，⽤于连接redis服务器，并按照不同类型提供 了不同用法，进⾏交互操作
 
-# StrictRedis对象⽅法
+# StrictRedis对象用法
 
 - 通过init创建对象，指定参数host、port与指定的服务器和端⼝连接，host默认为localhost，port默认为6379，db默认为0
 
@@ -770,7 +784,7 @@ sr = StrictRedis(host='localhost', port=6379, db=0)
 sr=StrictRedis()
 ```
 
-- 根据不同的类型，拥有不同的实例⽅法可以调⽤，与前⾯学的redis命令对应，⽅法需要的参数与命令的参数⼀致
+- 根据不同的类型，拥有不同的实例用法可以调⽤，与前⾯学的redis命令对应，用法需要的参数与命令的参数⼀致
 
 ## string
 
@@ -825,11 +839,11 @@ sr=StrictRedis()
 - zrem
 - zremrangebyscore
 
-# 学习目标
+## 学习目标
 
 - 能够使用StrictRedis对象对string类型数据进行增删改查
 
-# 准备
+## 准备
 
 - 在桌面上创建redis目录
 - 使用pycharm打开 redis目录
@@ -846,9 +860,9 @@ if __name__=="__main__":
         print(e)
 ```
 
-# string-增加
+## string-增加
 
-- ⽅法set，添加键、值，如果添加成功则返回True，如果添加失败则返回False
+- 用法set，添加键、值，如果添加成功则返回True，如果添加失败则返回False
 - 编写代码如下
 
 ```python
@@ -865,9 +879,9 @@ if __name__=="__main__":
         print(e)
 ```
 
-# string-获取
+## string-获取
 
-- ⽅法get，添加键对应的值，如果键存在则返回对应的值，如果键不存在则返回None
+- 用法get，添加键对应的值，如果键存在则返回对应的值，如果键不存在则返回None
 - 编写代码如下
 
 ```python
@@ -884,9 +898,9 @@ if __name__=="__main__":
         print(e)
 ```
 
-# string-修改
+## string-修改
 
-- ⽅法set，如果键已经存在则进⾏修改，如果键不存在则进⾏添加
+- 用法set，如果键已经存在则进⾏修改，如果键不存在则进⾏添加
 - 编写代码如下
 
 ```python
@@ -903,9 +917,9 @@ if __name__=="__main__":
         print(e)
 ```
 
-# string-删除
+## string-删除
 
-- ⽅法delete，删除键及对应的值，如果删除成功则返回受影响的键数，否则则返 回0
+- 用法delete，删除键及对应的值，如果删除成功则返回受影响的键数，否则则返 回0
 - 编写代码如下
 
 ```python
@@ -922,9 +936,9 @@ if __name__=="__main__":
         print(e)
 ```
 
-# 获取键
+## 获取键
 
-- ⽅法keys，根据正则表达式获取键
+- 用法keys，根据正则表达式获取键
 - 编写代码如下
 
 ```python
@@ -941,11 +955,13 @@ if __name__=="__main__":
         print(e)
 ```
 
-# 学习目标
 
-- 能够根据课件中的步骤搭建 Redis 的主从
 
 # 主从概念
+
+## 学习目标
+
+- 能够根据课件中的步骤搭建 Redis 的主从
 
 - ⼀个master可以拥有多个slave，⼀个slave⼜可以拥有多个slave，如此下去，形成了强⼤的多级服务器集群架构
 
@@ -957,7 +973,7 @@ if __name__=="__main__":
 
 - master和slave都是一个redis实例(redis服务)
 
-# 主从配置
+## 主从配置
 
 ## 配置主
 
@@ -1023,12 +1039,12 @@ if __name__=="__main__":
 
   > get aa
 
-# 为什么要有集群
+## 为什么要有集群
 
 - 之前我们已经讲了主从的概念，一主可以多从，如果同时的访问量过大(1000w),主服务肯定就会挂掉，数据服务就挂掉了或者发生自然灾难
 - 大公司都会有很多的服务器(华东地区、华南地区、华中地区、华北地区、西北地区、西南地区、东北地区、台港澳地区机房)
 
-# 集群的概念
+## 集群的概念
 
 - 集群是一组相互独立的、通过高速网络互联的计算机，它们构成了一个组，并以单一系统的模式加以管理。一个客户与集群相互作用时，集群像是一个独立的服务器。集群配置是用于提高可用性和可缩放性。 ![集群](assets/p1_58.png)
 
@@ -1047,11 +1063,15 @@ if __name__=="__main__":
 
 ![硬件层面](assets/p1_6.png)
 
-# 搭建集群
+## 搭建集群
 
 - 当前拥有两台主机172.16.179.130、172.16.179.131，这⾥的IP在使⽤时要改为实际值
 
-# 参考阅读
+## 参考阅读
 
 - redis集群搭建 http://www.cnblogs.com/wuxl360/p/5920330.html
 - [Python]搭建redis集群 http://blog.5ibc.net/p/51020.html
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)](images/9c7bc198b36f77679bc7983f2f02810 (1)-169526120603913.jpg)

@@ -1,5 +1,15 @@
 # Day68 Python Web 框架 Django（2）——Django模型
 
+[TOC]
+
+
+
+
+
+
+
+
+
 # 模型
 
 ## 重点
@@ -15,7 +25,7 @@
   - 关联查询
   - 查询集QuerySet
 
-#### MVT图解
+## MVT图解
 
 ![img](assets/new_mvt.png)
 
@@ -990,3 +1000,8 @@ page_skus = paginator.page(1)
 #获取分页数据
 total_page=paginator.num_pages
 ```
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458](images/9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458-16952781179033.jpg)
+

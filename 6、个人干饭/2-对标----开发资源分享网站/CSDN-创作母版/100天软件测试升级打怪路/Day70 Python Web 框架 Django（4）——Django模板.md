@@ -1,5 +1,11 @@
 # Day70 Python Web 框架 Django（4）——Django模板
 
+[TOC]
+
+
+
+
+
 # 模板
 
 ## 重点
@@ -578,3 +584,10 @@ Django默认是开启CSRF的
 或者
 <input type="hidden" value="{{ csrf_token }}">
 ```
+
+
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458](images/9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458-16952781778515.jpg)
+

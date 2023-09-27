@@ -1,6 +1,6 @@
 # Day103 mongodb详解
 
-
+[TOC]
 
 ## Mongodb的介绍和安装
 

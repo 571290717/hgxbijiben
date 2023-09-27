@@ -1,5 +1,11 @@
 # Day79 Django项目实践（1）
 
+[TOC]
+
+
+
+
+
 # 欢迎来到美多商城！
 
 ![img](file:///D:/hgx%E7%AC%94%E8%AE%B0/hgxbijiben/3%E3%80%81%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/6-%E7%BE%8E%E5%A4%9A%E5%95%86%E5%9F%8E%E5%89%8D%E5%8F%B0%E3%80%90+%E3%80%91/project-preparation/images/08%E9%A6%96%E9%A1%B5%E5%B9%BF%E5%91%8A.png)
@@ -291,7 +297,7 @@ python manage.py runserver
 
 
 
-
+![9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458](images/9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458-169527858204514.jpg)
 
 
 

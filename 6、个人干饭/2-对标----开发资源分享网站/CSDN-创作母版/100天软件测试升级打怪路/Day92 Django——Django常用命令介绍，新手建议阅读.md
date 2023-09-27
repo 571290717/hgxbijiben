@@ -1,5 +1,9 @@
 # Day92 Django——Django常用命令介绍，新手建议阅读
 
+
+
+[TOC]
+
 在DJango里django-admin.py和manage.py都是Django的命令工具集，用于处理系统管理相关操作，而manage.py是在创建Django工程时自动生成的，manage.py是对django-admin.py的简单包装，二者的作用基本一致。
 
 区别：
@@ -205,3 +209,7 @@ python manage.py showmigrations
 ![clipboard2.png](images/clipboard2_20190417034426_899.png)
 
 **留意：**记录前有[X]的表示已经部署到数据库里去了，没有的则显示 [ ]
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458](images/9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458-169527915757830.jpg)

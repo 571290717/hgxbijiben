@@ -1,5 +1,13 @@
 # Day67 Python Web 框架 Django（1）——Django流程 
 
+[TOC]
+
+
+
+
+
+
+
 # Python Web 框架要点
 
 ## 1. Web应用程序处理流程
@@ -965,3 +973,8 @@ class BookConfig(AppConfig):
       name = 'book'
       verbose_name = '图书管理'
   ```
+
+
+
+![9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458](images/9c7bc198b36f77679bc7983f2f02810 (1)-16947612810458-16952780683132.jpg)
+
