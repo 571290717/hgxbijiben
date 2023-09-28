@@ -11,3 +11,11 @@ pip freeze > requirements.txt
 ```
 pip install -r requirements.txt
 ```
+
+
+
+
+
+```
+ln -s /usr/local/python3/bin/python3.6 /usr/bin/python3
+```
