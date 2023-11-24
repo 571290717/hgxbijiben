@@ -1,10 +1,18 @@
 # Day40 Web自动化详解（14）——高级篇——实战脚本示例
 
+[TOC]
+
+![image-20231121093630667](C:\Users\GREE\AppData\Roaming\Typora\typora-user-images\image-20231121093630667.png)
 
 
 
+## 阶段复习代码
 
-# 自动化测试
+这篇文章是针对自动化测试的阶段复习和实践，完全前面的学习，各位同学应该是可以完成自动化脚本的简单编写，完成一下浏览器操作。
+
+个人编写推荐：
+
+eg：一键打开百度、一键登录系统、一键截图保存工资条，一键启动项目自动化测试
 
 ```python
 #开展自动化测试需要的工具：
@@ -408,6 +416,7 @@ if __name__ == '__main__':
 
 
 
+    
 1. 复制HTMLTestRunner.py文件到项目文件夹
 2. 导入HTMLTestRunner、UnitTest包    
 3. discover加载要执行的用例
@@ -424,7 +433,6 @@ if __name__ == '__main__':
                        description：为说明；比如操作系统、浏览器等版本
                )
 7. 执行：runner.run(discover)
-
 
 
 
@@ -453,7 +461,7 @@ if __name__ == '__main__':
 
 
 
-
+## 示例代码
 
 ```Python
 from selenium import webdriver
@@ -470,17 +478,18 @@ driver.get(url)
 #定位输入框
 sleep(3)
 userId=driver.find_element_by_xpath('//*[@id="UserIDShort"]')
-userId.send_keys("180927")
+userId.send_keys("账号xxxx")
 
 #定位密码框输入密码
-driver.find_element_by_xpath('//*[@id="text2"]').send_keys("qwe!23456789")
+driver.find_element_by_xpath('//*[@id="text2"]').send_keys("密码xxxx")
 
 #点击登录
 driver.find_element_by_xpath('//*[@id="modalButton"]').click()
 
+
 import csv
 #读取本地CSv文件（改一下位置喽~）
-date = csv.reader(open(r"./a工作/格力互联/qwe.csv","r",encoding='utf-8'))
+date = csv.reader(open(r"./工作/文件夹/测试.csv","r",encoding='utf-8'))
 # 循环输出每一行信息
 for user in date:
     print(user)
@@ -498,7 +507,7 @@ for user in date:
     driver.find_element_by_xpath('//*[@id="searchInput"]').clear()
     sleep(1)
     # driver.switch_to_default_content()
-    # driver.switch_to.active_element().sendkeys("180981")
+    # driver.switch_to.active_element().sendkeys("xxxx")
 
 
 sleep(120)
@@ -506,7 +515,16 @@ sleep(120)
 driver.close()
 # 关闭浏览器及驱动程序
 driver.quit()
+
 ```
+
+
+
+## 阶段性任务
+
+>大家可以尝试自己也写一下脚本代码，并可以在评论区分享一下
+>
+>
 
 
 

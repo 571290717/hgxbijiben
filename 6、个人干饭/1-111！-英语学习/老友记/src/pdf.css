@@ -1,0 +1,79 @@
+@page {
+  size: 5.5in 8.5in;
+  margin: 20pt 20pt 20pt 20pt;
+
+  @bottom-left {
+    margin: 0pt 0 10pt 0;
+    border-bottom: 0.5pt solid #333;
+    content: string(doctitle);
+    font-size: 5pt;
+    color: #333;
+  }
+
+  @bottom-right {
+    margin: 0pt 0 10pt 0;
+    border-bottom: 0.5pt solid #333;
+    content: counter(page);
+    font-size: 5pt;
+    color: #333;
+  }
+
+  @footnote {
+    border-top: solid #333 0.5pt;
+    margin-top: 2pt;
+    padding-top: 4pt;
+    padding-bottom: 4pt;
+  }
+}
+
+html {
+  font-family: "Trebuchet MS", "PingFang SC", "Lucida Grande",
+    "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  line-height: 1.4;
+  font-size: 7pt;
+}
+
+p {
+  margin: 5px 0;
+  -prince-footnote-policy: keep-with-line;
+}
+
+h1 + p,
+h2 + p,
+h3 + p {
+  page-break-before: avoid;
+}
+
+.footnote {
+  float: footnote;
+  footnote-style-position: inside;
+}
+.footnote-term {
+  text-decoration: underline;
+}
+
+.title {
+  font-family: "Helvetica";
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  string-set: doctitle content();
+}
+.title a {
+  color: black;
+}
+
+.comment {
+  color: #666;
+}
+
+.person {
+  font-weight: bold;
+}
+
+.highlight {
+  font-weight: bold;
+}

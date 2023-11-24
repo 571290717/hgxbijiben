@@ -54,7 +54,7 @@
 
 # 3. 测试报告 生成步骤分析
 
-[HTMLTestRunner.zip]
+[HTMLTestRunner.py]（第4部分附上了源码）
 
 ```
 1. 复制HTMLTestRunner.py文件到项目文件夹

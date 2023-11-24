@@ -6,11 +6,13 @@
 
 
 
+![image-20231121104453990](images/image-20231121104453990.png)
 
 
 
 
-# 视图
+
+# Django 视图
 
 ## 重点
 
@@ -27,11 +29,11 @@
   - 类视图的定义和使用
   - 类视图装饰器(难点)
 
-# 视图介绍和项目准备
+## 视图介绍和项目准备
 
 ![img](assets/new_mvt.png)
 
-## 视图介绍
+### 视图介绍
 
 - 视图就是`应用`中`views.py`文件中的函数
 
@@ -87,7 +89,7 @@
 > 1. 配置`URLconf`
 > 2. 在`应用/views.py`中定义视图
 
-## 项目准备
+### 项目准备
 
 - 创建项目+创建应用+安装应用+配置模板路径+本地化+mysql数据库+URLconf+视图
 
@@ -233,12 +235,64 @@ insert into peopleinfo(name, gender, book_id, description, is_delete)  values
     ('袁紫衣', 0, 4, '六合拳', 0);
 ```
 
-# URLconf
+
+
+# URL配置（URLconf）
 
 - 浏览者通过在浏览器的地址栏中输入网址请求网站
 - 对于Django开发的网站，由哪一个视图进行处理请求，是由url匹配找到的
 
-### 配置URLconf
+URL配置(URLconf)就像Django所支撑网站的目录。
+
+它的本质是URL与要为该URL调用的视图函数之间的映射表。
+你就是以这种方式告诉Django，对于URL(1)调用代码(1), 对于URL(2)调用代码(2)
+
+> ```
+> urlpatterns = [
+>     url(正则表达式, views视图函数, 参数, 别名),
+> ]
+> ```
+
+参数说明：
+
+> 一个正则表达式字符串
+> 一个可调用对象，通常为一个视图函数或一个指定视图函数路径的字符串
+> 可选的要传递给视图函数的默认参数（字典形式）
+> 一个可选的name参数
+
+1. URLconf的正则字符串参数
+2. 1.1 简单配置
+
+```
+from django.conf.urls import url
+ 
+from . import views
+ 
+urlpatterns = [
+    url(r'^articles/2003/$', views.special_case_2003),
+    url(r'^articles/([0-9]{4})/$', views.year_archive),
+    url(r'^articles/([0-9]{4})/([0-9]{2})/$', views.month_archive),
+    url(r'^articles/([0-9]{4})/([0-9]{2})/([0-9]+)/$', views.article_detail),
+]
+```
+
+注意：
+
+- 一旦匹配成功则不再继续。若要从URL中捕获一个值，只需要在它周围放置一对圆括号。
+- 不需要添加一个前导的反斜杠，因为每个URL都有。例如，应该是【^articles】，而不是【^/articles】。
+- 每个正则表达式前面的“r”，是可选的，但是建议加上。
+
+一些请求的例子：
+
+```
+/articles/2005/3/: 不需要匹配任何URL，因为列表中第三个模式要求月份应该是两个数字。
+/articles/2003/: 将匹配列表中第一个模式，不是第二个。因为模式按顺序匹配，第一个会首先测试是否匹配。
+/artic/2005/03/: 请求将匹配列表中的第三个模式。Django将调用函数views.month_archive(request, "2005", "03")
+```
+
+[URLconf扩展](https://www.cnblogs.com/yang-wei/p/9979515.html)
+
+## 配置URLconf
 
 - 1.`settings.py`中
 
@@ -491,7 +545,7 @@ def post(request):
     return HttpResponse('OK')
 ```
 
-## 4.2 非表单类型 Non-Form Data
+### 4.2 非表单类型 Non-Form Data
 
 非表单类型的请求体数据，Django无法自动解析，可以通过**request.body**属性获取最原始的请求体数据，自己按照请求体格式（JSON、XML等）进行解析。**request.body返回bytes类型。**
 
@@ -640,19 +694,19 @@ def response(request):
   - 在客户端存储信息使用`Cookie`
   - 在服务器端存储信息使用`Session`
 
-# Cookie
+## Cookie
 
 Cookie，有时也用其复数形式Cookies，指某些网站为了辨别用户身份、进行session跟踪而储存在用户本地终端上的数据（通常经过加密）。Cookie最早是网景公司的前雇员Lou Montulli在1993年3月的发明。Cookie是由服务器端生成，发送给User-Agent（一般是浏览器），浏览器会将Cookie的key/value保存到某个目录下的文本文件内，下次请求同一网站时就发送该Cookie给服务器（前提是浏览器设置为启用cookie）。Cookie名称和值可以由服务器端开发自己定义，这样服务器可以知道该用户是否是合法用户以及是否需要重新登录等。服务器可以利用Cookies包含信息的任意性来筛选并经常性维护这些信息，以判断在HTTP传输中的状态。Cookies最典型记住用户名。
 
 Cookie是存储在浏览器中的一段纯文本信息，建议不要存储敏感信息如密码，因为电脑上的浏览器可能被其它人使用。
 
-#### Cookie的特点
+### Cookie的特点
 
 - Cookie以键值对的格式进行信息的存储。
 - Cookie基于域名安全，不同域名的Cookie是不能互相访问的，如访问itcast.cn时向浏览器中写了Cookie信息，使用同一浏览器访问baidu.com时，无法访问到itcast.cn写的Cookie信息。
 - 当浏览器请求某网站时，会将浏览器存储的跟网站相关的所有Cookie信息提交给网站服务器。
 
-## 1 设置Cookie
+### 1 设置Cookie
 
 可以通过**HttpResponse**对象中的**set_cookie**方法来设置cookie。
 
@@ -672,7 +726,7 @@ def cookie(request):
     return response
 ```
 
-## 2 读取Cookie
+### 2 读取Cookie
 
 可以通过**HttpResponse**对象的**COOKIES**属性来读取本次请求携带的cookie值。**request.COOKIES为字典类型**。
 
@@ -683,7 +737,7 @@ def cookie(request):
     return HttpResponse('OK')
 ```
 
-## 3 删除Cookie
+### 3 删除Cookie
 
 可以通过**HttpResponse**对象中的delete_cookie方法来删除。
 
@@ -691,9 +745,9 @@ def cookie(request):
 response.delete_cookie('itcast2')
 ```
 
-# Session
+## Session
 
-## 1 启用Session
+### 1 启用Session
 
 **Django项目默认启用Session。**
 
@@ -703,11 +757,11 @@ response.delete_cookie('itcast2')
 
 如需禁用session，将上图中的session中间件注释掉即可。
 
-## 2 存储方式
+### 2 存储方式
 
 在settings.py文件中，可以设置session数据的存储方式，可以保存在数据库、本地缓存等。
 
-### 2.1 数据库
+#### 2.1 数据库
 
 存储在数据库中，如下设置可以写，也可以不写，**这是默认存储方式**。
 
@@ -729,7 +783,7 @@ SESSION_ENGINE='django.contrib.sessions.backends.db'
 
 由表结构可知，操作Session包括三个数据：键，值，过期时间。
 
-### 2.2 本地缓存
+#### 2.2 本地缓存
 
 存储在本机内存中，如果丢失则不能找回，比数据库的方式读写更快。
 
@@ -737,7 +791,7 @@ SESSION_ENGINE='django.contrib.sessions.backends.db'
 SESSION_ENGINE='django.contrib.sessions.backends.cache'
 ```
 
-### 2.3 混合存储
+#### 2.3 混合存储
 
 优先从本机内存中存取，如果没有则从数据库中存取。
 
@@ -745,7 +799,7 @@ SESSION_ENGINE='django.contrib.sessions.backends.cache'
 SESSION_ENGINE='django.contrib.sessions.backends.cached_db'
 ```
 
-### 2.4 Redis
+#### 2.4 Redis
 
 在redis中保存session，需要引入第三方扩展，我们可以使用**django-redis**来解决。
 
@@ -801,7 +855,7 @@ sudo vim /etc/redis/redis.conf
 sudo service redis-server restart
 ```
 
-## 3 Session操作
+### 3 Session操作
 
 通过HttpRequest对象的session属性进行会话的读写操作。
 
@@ -847,15 +901,15 @@ request.session.set_expiry(value)
 
 # 类视图与中间件
 
-# 类视图
+## 类视图
 
 思考：一个视图，是否可以处理两种逻辑？比如get和post请求逻辑。
 
-## 如何在一个视图中处理get和post请求
+### 如何在一个视图中处理get和post请求
 
 ![img](assets/view.png)
 
-## 注册视图处理get和post请求
+### 注册视图处理get和post请求
 
 以函数的方式定义的视图称为**函数视图**，函数视图便于理解。但是遇到一个视图对应的路径提供了多种不同HTTP请求方式的支持时，便需要在一个函数中编写不同的业务逻辑，代码可读性与复用性都不佳。
 
@@ -872,7 +926,7 @@ def register(request):
         return HttpResponse('这里实现注册逻辑')
 ```
 
-## 类视图使用
+### 类视图使用
 
 在Django中也可以使用类来定义一个视图，称为**类视图**。
 
@@ -911,7 +965,7 @@ urlpatterns = [
 ]
 ```
 
-## 类视图原理
+### 类视图原理
 
 ```
 @classonlymethod
@@ -948,7 +1002,7 @@ urlpatterns = [
         return handler(request, *args, **kwargs)
 ```
 
-## 类视图的多继承重写dispatch
+### 类视图的多继承重写dispatch
 
 ```
 class CenterView(View):
@@ -972,7 +1026,7 @@ class CenterView(LoginRequireMixin,View):
         return HttpResponse("OK")
 ```
 
-# 中间件
+## 中间件
 
 Django中的中间件是一个轻量级、底层的插件系统，可以介入Django的请求和响应处理过程，修改Django的输入或输出。中间件的设计为开发者提供了一种无侵入式的开发方式，增强了Django框架的健壮性。
 
@@ -980,7 +1034,7 @@ Django中的中间件是一个轻量级、底层的插件系统，可以介入Dj
 
 [中间件文档](https://docs.djangoproject.com/en/1.11/topics/http/middleware/)
 
-## 1 中间件的定义方法
+### 1 中间件的定义方法
 
 定义一个中间件工厂函数，然后返回一个可以被调用的中间件。
 
@@ -1046,7 +1100,7 @@ def middleware(request):
 
 **注意：Django运行在调试模式下，中间件init部分有可能被调用两次。**
 
-## 2 多个中间件的执行顺序
+### 2 多个中间件的执行顺序
 
 - 在请求视图被处理**前**，中间件**由上至下**依次执行
 - 在请求视图被处理**后**，中间件**由下至上**依次执行
@@ -1104,6 +1158,12 @@ view 视图被调用
 after response 2 被调用
 after response 被调用
 ```
+
+
+
+>对应的部分有详细内容得文档链接，感兴趣和想深度学习建议研究一下~
+>
+>
 
 
 

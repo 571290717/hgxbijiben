@@ -2,6 +2,7 @@
 
 [TOC]
 
+![image-20231121095905962](images/image-20231121095905962.png)
 
 
 
@@ -9,8 +10,7 @@
 
 
 
-
-# 模型
+# Django模型
 
 ## 重点
 
@@ -33,125 +33,127 @@
 
 1.创建项目
 
-- ```
-  django-admin startproject bookmanager
-  ```
+```
+django-admin startproject bookmanager
+```
 
-- 2.创建应用
+2.创建应用
+
+```
+python manager.py startapp book
+```
+
+3.更换python解释器：按需选择
+
+```
+  # 进入指定虚拟环境
+  which python
+
+  # python2
+  /home/python/.virtualenvs/py_django/bin/python
+
+  # python3
+  /home/python/.virtualenvs/py3_django/bin/python
+```
+
+4.安装应用
+
+```
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    #添加子应用
+    'book.apps.BookConfig'
+]
+```
+
+5.本地化
+
+```
+#设置中文
+LANGUAGE_CODE = 'zh-Hans'
+#亚洲上海时区
+TIME_ZONE = 'Asia/Shanghai'
+```
+
+6.模板路径
+
+- 在应用同级目录下,创建`templates`模板文件夹
 
   ```
-  python manager.py startapp book
-  ```
-
-- 3.更换python解释器：按需选择
-
-  ```
-    # 进入指定虚拟环境
-    which python
-  
-    # python2
-    /home/python/.virtualenvs/py_django/bin/python
-  
-    # python3
-    /home/python/.virtualenvs/py3_django/bin/python
-  ```
-
-- 4.安装应用
-
-  ```
-  INSTALLED_APPS = [
-      'django.contrib.admin',
-      'django.contrib.auth',
-      'django.contrib.contenttypes',
-      'django.contrib.sessions',
-      'django.contrib.messages',
-      'django.contrib.staticfiles',
-      #添加子应用
-      'book.apps.BookConfig'
+  TEMPLATES = [
+      {
+          'BACKEND': 'django.template.backends.django.DjangoTemplates',
+          'DIRS': [os.path.join(BASE_DIR,'templates')],
+          'APP_DIRS': True,
+          'OPTIONS': {
+              'context_processors': [
+                  'django.template.context_processors.debug',
+                  'django.template.context_processors.request',
+                  'django.contrib.auth.context_processors.auth',
+                  'django.contrib.messages.context_processors.messages',
+              ],
+          },
+      },
   ]
   ```
 
-- 5.本地化
+7.项目中匹配urls
+
+- 正则 : 路径只要不是`admin/`就算匹配成功。并包含到应用中的`urls.py`
 
   ```
-  #设置中文
-  LANGUAGE_CODE = 'zh-Hans'
-  #亚洲上海时区
-  TIME_ZONE = 'Asia/Shanghai'
-  ```
-
-- 6.模板路径
-
-  - 在应用同级目录下,创建`templates`模板文件夹
-
-    ```
-    TEMPLATES = [
-        {
-            'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [os.path.join(BASE_DIR,'templates')],
-            'APP_DIRS': True,
-            'OPTIONS': {
-                'context_processors': [
-                    'django.template.context_processors.debug',
-                    'django.template.context_processors.request',
-                    'django.contrib.auth.context_processors.auth',
-                    'django.contrib.messages.context_processors.messages',
-                ],
-            },
-        },
-    ]
-    ```
-
-- 7.项目中匹配urls
-
-  - 正则 : 路径只要不是`admin/`就算匹配成功。并包含到应用中的`urls.py`
-
-    ```
-    from django.conf.urls import url,include
-    from django.contrib import admin
-    
-    urlpatterns = [
-        url(r'^admin/', admin.site.urls),
-        #正则为：只要不是 admin/ 就算匹配成功
-        url(r'^',include('book.urls'))
-    ]
-    ```
-
-- 8.应用中匹配`urls.py`
-
-  - 应用中创建 `urls.py`
-
-  - 正则 : 路径中包含`booklist/`，就调用视图中对应的`bookList`函数
-
-    ```
-    from django.conf.urls import url
-    from book.views import bookList
-    
-    urlpatterns = [
-    
-        # 匹配书籍列表信息的URL,调用对应的bookList视图
-        url(r'^booklist/$',bookList)
-    ]
-    ```
-
-- 9.准备视图
-
-  ```
-  # 定义视图：提供书籍列表信息
-  def bookList(request):
+  from django.conf.urls import url,include
+  from django.contrib import admin
   
-      return HttpResponse('OK!')
+  urlpatterns = [
+      url(r'^admin/', admin.site.urls),
+      #正则为：只要不是 admin/ 就算匹配成功
+      url(r'^',include('book.urls'))
+  ]
   ```
 
-- 10.开启服务器, 测试项目
+8.应用中匹配`urls.py`
+
+- 应用中创建 `urls.py`
+
+- 正则 : 路径中包含`booklist/`，就调用视图中对应的`bookList`函数
 
   ```
-   # 进入项目文件中, 开启项目对应的服务器
-   python manage.py runserver
+  from django.conf.urls import url
+  from book.views import bookList
   
-   # 浏览器中输入网址
-   http://127.0.0.1:8000/booklist/
+  urlpatterns = [
+  
+      # 匹配书籍列表信息的URL,调用对应的bookList视图
+      url(r'^booklist/$',bookList)
+  ]
   ```
+
+9.准备视图
+
+```
+# 定义视图：提供书籍列表信息
+def bookList(request):
+
+    return HttpResponse('OK!')
+```
+
+10.开启服务器, 测试项目
+
+```
+ # 进入项目文件中, 开启项目对应的服务器
+ python manage.py runserver
+
+ # 浏览器中输入网址
+ http://127.0.0.1:8000/booklist/
+```
+
+
 
 # 配置
 
@@ -368,7 +370,7 @@ insert into peopleinfo(name, gender, book_id, description, is_delete)  values
 
 ## shell工具和查看MySQL数据库日志
 
-## 1 shell工具
+### 1 shell工具
 
 Django的manage工具提供了**shell**命令，帮助我们配置好当前工程的运行环境（如连接好数据库等），以便可以直接在终端中执行测试python语句。
 
@@ -386,7 +388,7 @@ python manage.py shell
 from book.models import BookInfo,PeopleInfo
 ```
 
-## 2 查看MySQL数据库日志
+### 2 查看MySQL数据库日志
 
 查看mysql数据库日志可以查看对数据库的操作记录。 mysql日志文件默认没有产生，需要做如下配置：
 
@@ -410,7 +412,7 @@ tail -f /var/log/mysql/mysql.log  # 可以实时查看数据库的日志内容
 # sudo tail -f /var/log/mysql/mysql.log
 ```
 
-# 数据库操作-增、删、改
+# 数据库操作-增、删、改、查
 
 ## 1 增加
 
@@ -493,9 +495,9 @@ tail -f /var/log/mysql/mysql.log  # 可以实时查看数据库的日志内容
 (1, {'book.BookInfo': 1, 'book.PeopleInfo': 0})
 ```
 
-# 数据库操作-查询
+## 4 数据库操作-查询
 
-# 基础条件查询
+
 
 ### 1 基本查询
 
@@ -653,7 +655,9 @@ BookInfo.objects.filter(id__gt=3)
 <QuerySet [<BookInfo: 笑傲江湖>]>
 ```
 
-# F和Q对象
+
+
+## F和Q对象
 
 #### F对象
 
@@ -730,7 +734,7 @@ Q对象前可以使用~操作符，表示非not。
 <QuerySet [<BookInfo: 射雕英雄传>, <BookInfo: 天龙八部>, <BookInfo: 雪山飞狐>]>
 ```
 
-# 聚合函数和排序函数
+## 聚合函数和排序函数
 
 ### 1. 聚合函数
 
@@ -777,7 +781,7 @@ BookInfo.objects.count()
 <QuerySet [<BookInfo: 雪山飞狐>, <BookInfo: 天龙八部>, <BookInfo: 笑傲江湖>, <BookInfo: 射雕英雄传>]>
 ```
 
-# 关联查询
+## 关联查询
 
 ```
 查询书籍为1的所有人物信息
@@ -884,7 +888,7 @@ person.book
 <QuerySet [<PeopleInfo: 乔峰>, <PeopleInfo: 段誉>, <PeopleInfo: 虚竹>, <PeopleInfo: 王语嫣>, <PeopleInfo: 胡斐>, <PeopleInfo: 苗若兰>, <PeopleInfo: 程灵素>, <PeopleInfo: 袁紫衣>]>
 ```
 
-# 查询集QuerySet
+## 查询集QuerySet
 
 ## 1 概念
 
@@ -986,7 +990,7 @@ books=BookInfo.objects.all()
 
 ## 4.分页
 
-[文档](https://docs.djangoproject.com/en/1.11/topics/pagination/)
+[官方分页文档](https://docs.djangoproject.com/en/1.11/topics/pagination/)
 
 ```
 #查询数据

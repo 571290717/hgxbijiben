@@ -547,3 +547,7 @@ class SmsPage(BaseAction):
 # 7、总结
 
 到此为止我们已经把发送短信的所有功能全部抽取完成,经过抽取我们发现我们的代码文件越来越多,但是维护起来更加容易,也容易扩展,代码的复用率提高了很多.
+
+
+
+![image-20231121143903183](https://the-toast.oss-cn-shenzhen.aliyuncs.com/csdn/blogimage-20231121143903183.png)

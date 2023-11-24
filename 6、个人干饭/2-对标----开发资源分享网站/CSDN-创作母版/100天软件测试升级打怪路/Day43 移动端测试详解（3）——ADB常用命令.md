@@ -150,4 +150,4 @@ adb shell am start -W 包名/.启动名
 3.是否支持跨应用
 ```
 
-![9c7bc198b36f77679bc7983f2f02810 (1)](images/9c7bc198b36f77679bc7983f2f02810 (1)-169476214409811.jpg)
+![9c7bc198b36f77679bc7983f2f02810](https://the-toast.oss-cn-shenzhen.aliyuncs.com/csdn/blog9c7bc198b36f77679bc7983f2f02810%20(1)-169476214409811.jpg)

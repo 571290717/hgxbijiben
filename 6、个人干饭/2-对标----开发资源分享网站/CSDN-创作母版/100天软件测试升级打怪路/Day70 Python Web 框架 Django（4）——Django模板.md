@@ -2,11 +2,13 @@
 
 [TOC]
 
+![image-20231121135453854](images/image-20231121135453854.png)
 
 
 
 
-# 模板
+
+# Django 模板
 
 ## 重点
 
@@ -23,7 +25,7 @@
 
 ### Django使用自带模板
 
-## 1 配置
+### 1 配置
 
 在工程中创建模板目录templates。
 
@@ -158,7 +160,7 @@ not
 
 ![img](assets/right.png)
 
-### 4.3 注释
+#### 4.3 注释
 
 1）单行注释语法如下：
 
@@ -168,7 +170,7 @@ not
 
 ![img](assets/comment_mutil.png)
 
-# 过滤器
+### 5 过滤器
 
 语法如下:
 
@@ -313,7 +315,7 @@ def do_listreverse(li):
         return "哈哈"
 ```
 
-# CSRF
+# 跨站请求伪造 （CSRF）
 
 - `CSRF`全拼为`Cross Site Request Forgery`，译为跨站请求伪造。
 
@@ -571,7 +573,7 @@ class AdsView(View):
 
 运行测试，用户直接在网站 A 操作没有问题，再去网站B进行操作，发现转账不成功，因为网站 B 获取不到表单中的 csrf_token 的隐藏字段，而且浏览器有**同源策略**，网站B是获取不到网站A的 cookie 的，所以就解决了**跨站请求伪造**的问题
 
-## 在 Django项目中解决 CSRF 攻击
+### 在 Django项目中解决 CSRF 攻击
 
 Django默认是开启CSRF的
 

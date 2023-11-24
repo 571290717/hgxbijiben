@@ -4,6 +4,8 @@
 
 
 
+![image-20231121094742645](images/image-20231121094742645.png)
+
 
 
 
@@ -38,21 +40,6 @@
   - 数据库
   - 模板
   - admin
-
-# Django流程
-
-## 重点
-
-- **MVT流程:掌握M,V,T的每个模块的功能,了解MVT的流程**
-
-![img](assets/new_mvt.png)
-
-- **创建Django项目和应用**
-  - django-admin startproject name
-  - python manager.py startapp name
-- **视图和ULR**
-  - 视图的请求和响应
-  - URL的匹配路径
 
 # Django介绍
 
@@ -117,7 +104,20 @@ Django的**主要目的是简便、快速的开发数据库驱动的网站。**�
 
 
 
+# Django流程
 
+## 重点
+
+- **MVT流程:掌握M,V,T的每个模块的功能,了解MVT的流程**
+
+![img](assets/new_mvt.png)
+
+- **创建Django项目和应用**
+  - django-admin startproject name
+  - python manager.py startapp name
+- **视图和ULR**
+  - 视图的请求和响应
+  - URL的匹配路径
 
 ## 为什么要搭建虚拟环境?
 
@@ -274,7 +274,7 @@ pip list
 
 # 创建Django项目
 
-[文档](https://docs.djangoproject.com/en/1.11/intro/tutorial01/)
+[官方文档](https://docs.djangoproject.com/en/1.11/intro/tutorial01/)
 
 ## 步骤
 
@@ -746,7 +746,7 @@ python manage.py startapp book
 
 ![img](assets/view_url.png)
 
-# 板
+
 
 > 思考 : 网站如何向客户端返回一个漂亮的页面呢？
 
@@ -802,7 +802,7 @@ python manage.py startapp book
 
 ![img](assets/view_template.png)
 
-# 展示书籍列表
+## 展示书籍列表
 
 ## 需求
 
@@ -872,9 +872,9 @@ python manage.py startapp book
 
 # 配置和静态文件
 
-# 配置文件
+## 配置文件
 
-## 1. BASE_DIR
+### 1. BASE_DIR
 
 ```
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -882,7 +882,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 当前工程的根目录，Django会依此来定位工程内的相关文件，我们也可以使用该参数来构造文件路径。
 
-## 2. DEBUG
+### 2. DEBUG
 
 调试模式，创建工程后初始值为**True**，即默认工作在调试模式下。
 
@@ -898,7 +898,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 **注意：部署线上运行的Django不要运行在调式模式下，记得修改DEBUG=False和ALLOW_HOSTS。**
 
-## 3. 本地语言与时区
+### 3. 本地语言与时区
 
 Django支持本地化处理，即显示语言与时区支持本地化。
 
@@ -918,7 +918,7 @@ LANGUAGE_CODE = 'zh-Hans'
 TIME_ZONE = 'Asia/Shanghai'
 ```
 
-# 静态文件
+## 静态文件
 
 项目中的CSS、图片、js都是静态文件。一般会将静态文件放到一个单独的目录中，以方便管理。在html页面中调用时，也需要指定静态文件的路径，Django中提供了一种解析的方式配置静态文件路径。静态文件可以放在项目根目录下，也可以放在应用的目录下，由于有些静态文件在项目中是通用的，所以推荐放在项目的根目录下，方便管理。
 
@@ -927,7 +927,7 @@ TIME_ZONE = 'Asia/Shanghai'
 - **STATICFILES_DIRS**存放查找静态文件的目录
 - **STATIC_URL**访问静态文件的URL前缀
 
-## 示例
+### 示例
 
 1） 在项目根目录下创建static目录来保存静态文件。
 
@@ -946,7 +946,7 @@ STATICFILES_DIRS = [
 
 或者我们在static目录中添加了一个子目录和文件book/detail.html，在浏览器中就可以使用127.0.0.1:8000/static/book/detail.html来访问。
 
-# App应用配置
+## App应用配置
 
 在每个应用目录中都包含了apps.py文件，用于保存该应用的相关信息。
 
@@ -973,6 +973,8 @@ class BookConfig(AppConfig):
       name = 'book'
       verbose_name = '图书管理'
   ```
+
+
 
 
 
